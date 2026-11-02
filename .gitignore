@@ -1,0 +1,15 @@
+/target/
+/.dev/
+/.venv/
+__pycache__/
+*.pyc
+
+# Local tooling, secrets, and disposable infrastructure
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+.pytest_cache/
+/scripts/oci-provision.py

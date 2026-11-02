@@ -1,0 +1,17 @@
+[package]
+name = "pg_broker"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+[lib]
+crate-type = ["cdylib", "lib"]
+[features]
+default = ["pg17"]
+pg17 = ["pgrx/pg17"]
+pg_test = []
+[dependencies]
+pgrx = "=0.16.1"
+serde_json.workspace = true
+broker-protocol = { path = "../protocol" }
+hex = "=0.4.3"

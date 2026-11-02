@@ -1,0 +1,35 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: broker-db
+spec:
+  imageName: pg-broker-postgres:17.5-0.1.1
+  imagePullPolicy: IfNotPresent
+  instances: 3
+  enableSuperuserAccess: false
+  bootstrap:
+    initdb:
+      database: broker
+      owner: broker_app
+      dataChecksums: true
+      postInitApplicationSQL:
+        - CREATE EXTENSION pg_broker VERSION '0.1.1'
+        - GRANT EXECUTE ON FUNCTION public.broker_call(jsonb) TO broker_app
+  postgresql:
+    synchronous:
+      method: any
+      number: 1
+      dataDurability: required
+    parameters:
+      max_connections: '100'
+      shared_buffers: 128MB
+    pg_hba:
+      - hostnossl all all all reject
+  storage:
+    size: 2Gi
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      memory: 512Mi

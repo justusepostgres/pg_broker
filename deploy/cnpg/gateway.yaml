@@ -1,0 +1,97 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: broker
+spec:
+  selector:
+    app: pg-broker-gateway
+  ports:
+    - name: kafka
+      port: 9092
+      targetPort: kafka
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pg-broker-gateway
+  template:
+    metadata:
+      labels:
+        app: pg-broker-gateway
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+      containers:
+        - name: gateway
+          image: pg-broker-gateway:0.1.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: kafka
+              containerPort: 9092
+            - name: health
+              containerPort: 9093
+          env:
+            - name: PGHOST
+              value: broker-db-rw
+            - name: PGPORT
+              value: '5432'
+            - name: PGDATABASE
+              value: broker
+            - name: PGUSER
+              valueFrom:
+                secretKeyRef:
+                  name: broker-db-app
+                  key: username
+            - name: PGPASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: broker-db-app
+                  key: password
+            - name: PGSSLROOTCERT
+              value: /etc/postgres-ca/ca.crt
+            - name: HEALTH_ADDR
+              value: 0.0.0.0:9093
+            - name: LISTEN_ADDR
+              value: 0.0.0.0:9092
+            - name: ADVERTISED_HOST
+              value: broker.pg-broker.svc.cluster.local
+            - name: ADVERTISED_PORT
+              value: '9092'
+          volumeMounts:
+            - name: postgres-ca
+              mountPath: /etc/postgres-ca
+              readOnly: true
+          startupProbe:
+            httpGet: {path: /ready, port: health}
+            periodSeconds: 2
+            failureThreshold: 60
+          readinessProbe:
+            timeoutSeconds: 5
+            httpGet: {path: /ready, port: health}
+            periodSeconds: 5
+          livenessProbe:
+            httpGet: {path: /live, port: health}
+            periodSeconds: 10
+          resources:
+            requests: {cpu: 100m, memory: 128Mi}
+            limits: {memory: 512Mi}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: [ALL]}
+      volumes:
+        - name: postgres-ca
+          secret:
+            secretName: broker-db-ca
+            items:
+              - key: ca.crt
+                path: ca.crt

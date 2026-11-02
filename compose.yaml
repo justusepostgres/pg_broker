@@ -1,0 +1,31 @@
+services:
+  db:
+    build:
+      context: .
+      target: runtime
+    image: pg-broker-dev:0.1.0
+    command: [container-db.sh]
+    environment:
+      POSTGRES_PASSWORD: local-development-only
+    ports: ["127.0.0.1:55432:5432"]
+    volumes: ["broker-data:/data"]
+    healthcheck:
+      test: [CMD-SHELL, "test -f /data/.broker-ready && pg_isready -U postgres"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+  gateway:
+    image: pg-broker-dev:0.1.0
+    build:
+      context: .
+      target: runtime
+    depends_on:
+      db: {condition: service_healthy}
+    environment:
+      DATABASE_URL: host=db user=postgres password=local-development-only dbname=postgres
+      LISTEN_ADDR: 0.0.0.0:9092
+      ADVERTISED_HOST: 127.0.0.1
+      ADVERTISED_PORT: "9092"
+    ports: ["127.0.0.1:9092:9092"]
+volumes:
+  broker-data:

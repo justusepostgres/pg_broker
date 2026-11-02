@@ -1,0 +1,12 @@
+.git
+.dev
+.venv
+target
+
+.env
+.env.*
+*.pem
+*.key
+**/__pycache__
+.pytest_cache
+scripts/oci-provision.py

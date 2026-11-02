@@ -1,0 +1,9 @@
+[package]
+name = "broker-protocol"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+[dependencies]
+anyhow.workspace = true
+crc32c = "=0.6.8"

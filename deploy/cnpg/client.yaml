@@ -1,0 +1,22 @@
+# Acceptance-test pod only; intentionally not included in the base Kustomization.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kafka-client
+  namespace: pg-broker
+spec:
+  automountServiceAccountToken: false
+  restartPolicy: Never
+  containers:
+    - name: client
+      image: python:3.11.14-slim-bookworm
+      command: [sh, -c]
+      args:
+        - pip install --no-cache-dir kafka-python==2.0.2 confluent-kafka==2.6.1 && touch /tmp/ready && sleep infinity
+      readinessProbe:
+        exec:
+          command: [test, -f, /tmp/ready]
+        periodSeconds: 3
+      resources:
+        requests: {cpu: 100m, memory: 128Mi}
+        limits: {memory: 512Mi}
