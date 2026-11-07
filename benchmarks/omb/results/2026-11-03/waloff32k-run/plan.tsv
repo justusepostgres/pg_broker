@@ -1,0 +1,4 @@
+trial	order	results
+1	kafka-first	/home/ubuntu/results/omb-pair-017-waloff32k-1
+2	broker-first	/home/ubuntu/results/omb-pair-017-waloff32k-2
+3	kafka-first	/home/ubuntu/results/omb-pair-017-waloff32k-3

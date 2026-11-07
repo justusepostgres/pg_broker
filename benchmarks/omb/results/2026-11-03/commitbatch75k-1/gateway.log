@@ -1,0 +1,19 @@
+pg-broker listening on 10.84.0.247:9092
+unix_ms=1793750018606 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750018695 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750018736 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750078620 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750138726 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750198835 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750258945 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750319050 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750379159 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750439264 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750499374 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750559484 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750619590 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750679697 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750739803 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750799910 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750860015 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793750920121 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed

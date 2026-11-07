@@ -1,0 +1,8 @@
+{
+  "scope": "Targeted offset_commit and group_versions tests, including new per-partition managed ownership/generation/left-member case; no production change",
+  "tests": "10 passed, 15 deselected in 4.30s",
+  "sha256": {
+    "tests/test_wire.py": "a8f46770c90f93a66a3da1cdd2e992807ee2b13f9a53c5a7ca49450e5ddfb3cb",
+    "target/debug/pg-broker-gateway": "52fb61d8a7464a22f08eadd015374e51cd403bf508f496623caba0b62cb13228"
+  }
+}

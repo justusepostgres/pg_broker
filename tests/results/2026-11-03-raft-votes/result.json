@@ -1,0 +1,12 @@
+[
+  {
+    "suite": "rust",
+    "exit_code": 0,
+    "seconds": 0.2117939580057282
+  },
+  {
+    "suite": "sql",
+    "exit_code": 0,
+    "seconds": 1.8937299170065671
+  }
+]

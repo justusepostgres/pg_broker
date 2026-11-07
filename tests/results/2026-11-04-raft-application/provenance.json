@@ -1,0 +1,25 @@
+{
+  "timestamp_utc": "2026-11-04T00:43:22.940262+00:00",
+  "postgres": "17.11",
+  "opt_in_sql": "0.1.12",
+  "default_sql": "0.1.7",
+  "rust_integration_passed": 13,
+  "initial_sql_passed": 12,
+  "final_sql_passed": 7,
+  "final_sql_skipped": 1,
+  "separate_crash_passed": 1,
+  "scope": "Local atomic committed-entry application; no RaftStateMachine snapshots, transport or replicated broker claim. Purge guard added after initial13Rust+12SQL run and verified by final7SQL cases; earlier crash test verified unchanged apply function.",
+  "source_sha256": {
+    "crates/extension/sql/pg_broker--0.1.11--0.1.12.sql": "7a97b9b559b916458880be1813146c193ea5a4a0404f90eca9ef476cdff2acd2",
+    "scripts/package-extension.sh": "2356860b06e2737596fd11e45308374e4015547f63bb10cc5065c4ea71cec7c0",
+    "crates/cluster/src/application.rs": "385ef0b0ebca2c16534cb302c7cda9254a3dd43989ca67c9401a7dac5866e669",
+    "crates/cluster/src/votes.rs": "9836d8dbd20eb8728c8e92b572bd27f427a3ff0061a521087d2c152b391427cf",
+    "crates/cluster/src/journal.rs": "4ea79b40b1381ee9a17b45bc45ca8c40feab1ef2ff025419e2815203ee7d78f6",
+    "crates/cluster/tests/application_postgres.rs": "22b4ccb69c9db561077d7734ae7a66da39162c4c3e796fe3dd7e54af19ea5385",
+    "crates/cluster/tests/fixtures/append-batch.hex": "4669dd88ac475628f9b88c111076b5640b8399896a0f51ad40cc85ed2ddd7362",
+    "tests/test_raft_apply.py": "224aa0a96d2fe14153d93a327a7d9fc34b05d5b39f44886960cac9bed962d28a",
+    "Cargo.lock": "b8e538d46c7658694702c7e2c718715257e7a604f348a04486a7ff576c917bef",
+    ".dev/run-raft-application-native.py": "1943ab7eddccb3a711cfb2224f2f84d167df1218170e8533905f05d877669065",
+    ".dev/run-raft-apply-crash-native.py": "956897dd011e31bad56cdd467d058865d23934eb9caef92d99cbad42d10c0f3a"
+  }
+}

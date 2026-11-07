@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "2026-11-04T01:01:12.255966+00:00",
+  "postgres": "17.11",
+  "opt_in_sql": "0.1.14",
+  "default_sql": "0.1.7",
+  "sql_passed": 7,
+  "rust_integration_passed": 4,
+  "clippy": "all targets with warnings denied; passed",
+  "scope": "Bounded reads of local completed snapshot images; not network transport, atomic installation or a performance result.",
+  "source_sha256": {
+    "crates/extension/sql/pg_broker--0.1.13--0.1.14.sql": "699341742bd314db50f1d759f7cbf376c2d98b36c8ecd4e4b02aefc32fd4cc86",
+    "scripts/package-extension.sh": "dba017a2f82ba4402f97d5d322d843b3b9cd91b17b0794e31377a2b1bcc51887",
+    "crates/cluster/src/snapshot.rs": "3cc586a8969879dbc41a7c2a4edb406bc7dc6f2fc2b8d20e1ad19b78f7c60f47",
+    "crates/cluster/src/application.rs": "dbdf26085d9c494e78baff2b2ad8970afb2f0f274527aa61bed5f3373d66240c",
+    "crates/cluster/tests/snapshot_read_postgres.rs": "dda58150b7a1587c1fa1085b9edaef36282d47fd916091f77032295a029e2472",
+    "tests/test_raft_snapshot_read.py": "97d15eea6e67d303dd0487f6a99fd779422cb01a8087553223d84cc62d6e5a95",
+    ".dev/run-raft-snapshot-read-native.py": "fa94c6dc3068302e8ed3cbcc0207ae54ac3af8b1ea16305c7a21c7944e3d26db",
+    ".dev/run-raft-snapshot-read-rust-native.py": "da6ee0a3efcf15c0f0076bc797ef313d7f6666241bd3f12154c30dad7c455a8e",
+    "Cargo.lock": "8a43979daf21182f69a4f9ece56b66aa88517aa7091c0547ea01eda72b9b7ba8"
+  }
+}

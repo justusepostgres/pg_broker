@@ -1,0 +1,25 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-018-partitionguard-1-broker/result.json",
+    "workload": "100k-1-topic-16-partitions-1kb",
+    "samples": 89,
+    "publish_msg_s_mean": 88227.6804181534,
+    "consume_msg_s_mean": 88228.8166397139,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 3036,
+    "backlog_last": 2783,
+    "backlog_max": 4807,
+    "publish_p99_ms": 595.927,
+    "publish_delay_p99_us": 60000255,
+    "end_to_end_p99_ms": 626.003,
+    "publish_p999_ms": 718.591,
+    "publish_p9999_ms": 998.055,
+    "publish_max_ms": 1097.639,
+    "publish_delay_p999_us": 60000255,
+    "publish_delay_p9999_us": 60000255,
+    "publish_delay_max_us": 60000255,
+    "end_to_end_p999_ms": 749.003,
+    "end_to_end_p9999_ms": 1027.003,
+    "end_to_end_max_ms": 1125.007
+  }
+]

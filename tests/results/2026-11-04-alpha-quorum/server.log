@@ -1,0 +1,27 @@
+2026-11-04 15:23:43.329 +04 [89217] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 15:23:43.330 +04 [89217] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 15:23:43.330 +04 [89217] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 15:23:43.333 +04 [89220] LOG:  database system was shut down at 2026-11-04 15:23:43 +04
+2026-11-04 15:23:43.336 +04 [89217] LOG:  database system is ready to accept connections
+2026-11-04 15:23:52.670 +04 [89283] ERROR:  Replica offset diverged
+2026-11-04 15:23:52.670 +04 [89283] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 75 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 15:23:52.670 +04 [89283] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 15:23:52.671 +04 [89282] LOG:  could not receive data from client: Connection reset by peer
+2026-11-04 15:23:58.670 +04 [89312] ERROR:  Raft log writer fenced
+2026-11-04 15:23:58.670 +04 [89312] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 15:23:58.670 +04 [89312] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 15:23:58.671 +04 [89312] LOG:  could not receive data from client: Connection reset by peer
+2026-11-04 15:24:00.279 +04 [89316] LOG:  could not receive data from client: Connection reset by peer
+2026-11-04 15:24:00.279 +04 [89316] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 15:24:01.544 +04 [89354] ERROR:  Committed reader fenced
+2026-11-04 15:24:01.544 +04 [89354] CONTEXT:  PL/pgSQL function public.broker_raft_committed_page(text,bigint,jsonb) line 13 at RAISE
+2026-11-04 15:24:01.544 +04 [89354] STATEMENT:  SELECT public.broker_raft_committed_page($1,$2,$3)
+2026-11-04 15:24:01.544 +04 [89354] LOG:  could not receive data from client: Connection reset by peer
+2026-11-04 15:24:01.595 +04 [89217] LOG:  received fast shutdown request
+2026-11-04 15:24:01.596 +04 [89217] LOG:  aborting any active transactions
+2026-11-04 15:24:01.596 +04 [89217] LOG:  background worker "logical replication launcher" (PID 89223) exited with exit code 1
+2026-11-04 15:24:01.597 +04 [89218] LOG:  shutting down
+2026-11-04 15:24:01.597 +04 [89218] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 15:24:01.822 +04 [89218] LOG:  checkpoint complete: wrote 4502 buffers (27.5%); 0 WAL file(s) added, 0 removed, 2 recycled; write=0.153 s, sync=0.069 s, total=0.225 s; sync files=1204, longest=0.004 s, average=0.001 s; distance=31997 kB, estimate=31997 kB; lsn=0/3459E78, redo lsn=0/3459E78
+2026-11-04 15:24:01.834 +04 [89217] LOG:  database system is shut down

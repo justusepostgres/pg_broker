@@ -1,0 +1,15 @@
+2026-11-04 14:49:35.639 +04 [79039] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 14:49:35.640 +04 [79039] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 14:49:35.640 +04 [79039] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 14:49:35.642 +04 [79042] LOG:  database system was shut down at 2026-11-04 14:49:35 +04
+2026-11-04 14:49:35.644 +04 [79039] LOG:  database system is ready to accept connections
+2026-11-04 14:49:37.100 +04 [79057] ERROR:  Committed reader fenced
+2026-11-04 14:49:37.100 +04 [79057] CONTEXT:  PL/pgSQL function public.broker_raft_committed_page(text,bigint,jsonb) line 13 at RAISE
+2026-11-04 14:49:37.100 +04 [79057] STATEMENT:  SELECT public.broker_raft_committed_page($1,$2,$3)
+2026-11-04 14:49:37.113 +04 [79039] LOG:  received fast shutdown request
+2026-11-04 14:49:37.113 +04 [79039] LOG:  aborting any active transactions
+2026-11-04 14:49:37.114 +04 [79039] LOG:  background worker "logical replication launcher" (PID 79045) exited with exit code 1
+2026-11-04 14:49:37.114 +04 [79040] LOG:  shutting down
+2026-11-04 14:49:37.114 +04 [79040] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 14:49:37.126 +04 [79040] LOG:  checkpoint complete: wrote 972 buffers (5.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.005 s, sync=0.006 s, total=0.012 s; sync files=128, longest=0.002 s, average=0.001 s; distance=8655 kB, estimate=8655 kB; lsn=0/1D8E7C8, redo lsn=0/1D8E7C8
+2026-11-04 14:49:37.128 +04 [79039] LOG:  database system is shut down

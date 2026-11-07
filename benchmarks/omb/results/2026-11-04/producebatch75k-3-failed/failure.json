@@ -1,0 +1,8 @@
+{
+  "scope": "Failed pair, not acceptance evidence",
+  "cause": "Server client-handoff deadline expired before desktop controller delivered completed broker evidence",
+  "broker_client_invocation": "9baa7fe9e47b4a52921b7b50c554f548",
+  "kafka_phase": "not started",
+  "broker_restart_check": "not performed",
+  "observed_utc": "2026-11-04T05:32:09.632820+00:00"
+}

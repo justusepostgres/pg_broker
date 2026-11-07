@@ -1,0 +1,41 @@
+{
+  "data": [
+    {
+      "aggregated-datapoints": [
+        {
+          "timestamp": "2026-11-04T06:11:00+00:00",
+          "value": 4728135680.0
+        },
+        {
+          "timestamp": "2026-11-04T06:12:00+00:00",
+          "value": 1418108928.0
+        },
+        {
+          "timestamp": "2026-11-04T06:13:00+00:00",
+          "value": 2205945856.0
+        },
+        {
+          "timestamp": "2026-11-04T06:14:00+00:00",
+          "value": 2617520128.0
+        },
+        {
+          "timestamp": "2026-11-04T06:15:00+00:00",
+          "value": 2621566976.0
+        }
+      ],
+      "compartment-id": "ocid1.tenancy.oc1..aaaaaaaafe6p7erknwb3ekqbeztffxdnirwuf6kel3nkt2ofrmi7iygx4apa",
+      "dimensions": {
+        "attachmentId": "ocid1.instance.oc1.us-sanjose-1.anzwuljrsjflizycskhftwpeg4nzak4sk2rb7pwrvv3fjxdn7u2qg3474bna",
+        "resourceId": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq"
+      },
+      "metadata": {
+        "displayName": "Write Throughput",
+        "unit": "bytes"
+      },
+      "name": "VolumeWriteThroughput",
+      "namespace": "oci_blockstore",
+      "resolution": null,
+      "resource-group": null
+    }
+  ]
+}

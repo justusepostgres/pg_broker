@@ -1,0 +1,20 @@
+pg-broker listening on 10.84.0.247:9092
+unix_ms=1793774194515 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774194528 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774194605 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774194661 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774254635 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774314742 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774374849 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774434957 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774495062 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774555170 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774615279 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774675383 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774735487 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774795596 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774855701 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774915807 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793774975913 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793775036022 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793775096127 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed

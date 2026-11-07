@@ -1,6 +1,6 @@
 [workspace]
-members = ["crates/extension", "crates/gateway", "crates/protocol"]
-default-members = ["crates/gateway", "crates/protocol"]
+members = ["crates/extension", "crates/gateway", "crates/protocol", "crates/cluster"]
+default-members = ["crates/gateway", "crates/protocol", "crates/cluster"]
 resolver = "2"
 [workspace.package]
 version = "0.1.0"

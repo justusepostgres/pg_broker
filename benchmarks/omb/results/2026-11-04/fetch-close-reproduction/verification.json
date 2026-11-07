@@ -1,0 +1,16 @@
+{
+  "command": [
+    "java",
+    "-cp",
+    ".dev/fetch-close-repro/*:.dev/fetch-close-repro",
+    "FetchCloseReproduction"
+  ],
+  "exit_code": 0,
+  "java": "openjdk version \"19.0.2\" 2023-01-17\nOpenJDK Runtime Environment Zulu19.32+13-CA (build 19.0.2+7)\nOpenJDK 64-Bit Server VM Zulu19.32+13-CA (build 19.0.2+7, mixed mode, sharing)\n",
+  "dependencies": {
+    "slf4j-api-1.7.36.jar": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0",
+    "slf4j-simple-1.7.36.jar": "2f39bed943d624dfa8f4102d0571283a10870b6aa36f197a8a506f147010c10f",
+    "kafka-clients-3.6.1.jar": "62668fd9840f6d84fbf345bdbf245b1c160f51ccb42fc89211ecac789640b197"
+  },
+  "scope": "Unmodified client-state reproduction only; no network or gateway conformance claim."
+}

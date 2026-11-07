@@ -1,0 +1,12 @@
+{
+  "rust_postgres_cases": 5,
+  "sql_cases": 7,
+  "crash_cases": 2,
+  "rust_unit_tests": 12,
+  "clippy": "passed --all-targets -D warnings",
+  "default_sql": "0.1.7",
+  "live_benchmark_sql": "0.1.18",
+  "opt_in_sql": "0.1.19",
+  "production_openraft": "0.9.25",
+  "scope": "Local committed-page storage, not state-machine/network catch-up"
+}

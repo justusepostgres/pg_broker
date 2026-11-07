@@ -1,0 +1,2 @@
+/omb-pair-018-primarypipeline-1-db 0,1 8589934592
+/omb-pair-018-primarypipeline-1-gateway 0,1 1073741824

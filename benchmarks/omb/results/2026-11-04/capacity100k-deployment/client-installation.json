@@ -1,0 +1,10 @@
+{
+  "kind": "client",
+  "bundle_sha256": "b3cdf211417eef97b75c54f94d38f3d2058dbdb2180c559b07bd890b8a98dfa3",
+  "installed": {
+    "/home/ubuntu/pg-broker/benchmarks/omb/oci-pair.sh": "a7c12babebe2a91e0e3a9827ced955192f201c5fdd44d9fc1d6757a922f5b25f",
+    "/home/ubuntu/pg-broker/benchmarks/omb/client-workload.sh": "f39e0ebf0805050cfba7f60e1a8ca86761c9c76d0a205b8934af14a1426076aa",
+    "/home/ubuntu/pg-broker/benchmarks/omb/run.sh": "e325ce250ff63818149c7f2bb795c91831596c436593abf07047cb38160babe3",
+    "/home/ubuntu/pg-broker/benchmarks/omb/100k.yaml": "313db105ce7cef85577a9230d0f65692747bd28223af8cee7f374974270e5bc4"
+  }
+}

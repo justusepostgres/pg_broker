@@ -1,0 +1,20 @@
+{
+  "phase": "running",
+  "unit": "omb-commitbatch017-75k-1.service",
+  "pair_label": "017-commitbatch75k-1",
+  "binary_sha256": "09f7592c2abb6e98c50fc2d3dad3dded9732b243a216fe80e7b4d528e6ea6cda",
+  "runner_sha256": "a0ef0ceb0c2674d0e863a0c4c8a95d620e9df0e0f66b903fa23f535f4dab8647",
+  "rate": 75000,
+  "volume_size_gib": 320,
+  "kafka_flush_policy": "background",
+  "next": "Poll sequence35869 and collector87360. Original orchestrator52447 exited after local lock collision before any client launch; lock ownership fixed and child resumed against original server6cf0e07... No workload restart. Controllers own both handoffs and collection.",
+  "invocation": "6cf0e07ee5d144ec937762a36bea2288",
+  "observed": {
+    "MainPID": "89375",
+    "SubState": "running",
+    "InvocationID": "6cf0e07ee5d144ec937762a36bea2288"
+  },
+  "sequence_session": 35869,
+  "collector_session": 87360,
+  "interim_observation": "At 2026-11-04 00:01:24 UTC, client still running with zero ERROR events so far. Recent publish windows 70.6k\u201375.3k/s; producer scheduling delay grew to about2.2s average, so sustainable75k not established. Wait full aggregate and preserve all slow windows. Controllers35869/87360 own bothphases; no restart."
+}

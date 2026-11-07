@@ -1,0 +1,16 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-compression-lz4015-32k-1/pglz.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32022.75268742242,
+    "consume_msg_s_mean": 32022.254213339278,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 174,
+    "backlog_last": 150,
+    "backlog_max": 886,
+    "publish_p99_ms": 17.557,
+    "publish_delay_p99_us": 198,
+    "end_to_end_p99_ms": 44.0
+  }
+]

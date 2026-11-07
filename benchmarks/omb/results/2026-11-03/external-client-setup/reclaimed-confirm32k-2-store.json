@@ -1,0 +1,13 @@
+{
+  "store": "/home/ubuntu/omb-pair-017-confirm32k-2-kafka-data",
+  "retained_results": "/home/ubuntu/results/omb-pair-017-confirm32k-2",
+  "verified_artifacts": {
+    "kafka.json": "1c1680b052932507fec79f37d432ccb3a6d34e2f82d11ce234a70ab21b22efbf",
+    "kafka.properties": "d8d5ed13198fc1ada61756a4a56ac5e390e9cd8c30e6b179e4c422a51e8386a3",
+    "kafka-offsets-after.txt": "13b9320be8118e929b370ecfc0f82d48da88e0acc5bcd5da87754b068ed6ddaf"
+  },
+  "free_before": 31104274432,
+  "status": "reclaimed",
+  "free_after": 43077869568,
+  "completed_utc": "2026-11-03T21:53:54.289778+00:00"
+}

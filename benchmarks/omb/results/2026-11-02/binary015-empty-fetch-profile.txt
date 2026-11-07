@@ -1,0 +1,44 @@
+BEGIN
+SET
+SET
+                                                                     QUERY PLAN                                                                     
+----------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=3253.14..3253.15 rows=1 width=8) (actual time=65.234..65.237 rows=1 loops=1)
+   Buffers: shared hit=16326 read=41
+   CTE request
+     ->  Aggregate  (cost=1.85..1.86 rows=1 width=32) (actual time=0.186..0.188 rows=1 loops=1)
+           Buffers: shared hit=4 read=2
+           InitPlan 1
+             ->  Limit  (cost=0.15..0.21 rows=1 width=32) (actual time=0.056..0.057 rows=1 loops=1)
+                   Buffers: shared read=2
+                   ->  Index Only Scan using topics_pkey on topics  (cost=0.15..65.10 rows=1130 width=32) (actual time=0.056..0.056 rows=1 loops=1)
+                         Heap Fetches: 1
+                         Buffers: shared read=2
+           ->  Sort  (cost=1.52..1.56 rows=16 width=39) (actual time=0.100..0.102 rows=16 loops=1)
+                 Sort Key: partitions.partition
+                 Sort Method: quicksort  Memory: 25kB
+                 Buffers: shared hit=4 read=2
+                 ->  Seq Scan on partitions  (cost=0.00..1.20 rows=16 width=39) (actual time=0.070..0.073 rows=16 loops=1)
+                       Filter: (topic = (InitPlan 1).col1)
+                       Buffers: shared hit=1 read=2
+   ->  Nested Loop  (cost=0.26..3001.28 rows=100000 width=0) (actual time=4.078..65.113 rows=1600 loops=1)
+         Buffers: shared hit=16326 read=41
+         ->  CTE Scan on request  (cost=0.00..0.02 rows=1 width=32) (actual time=0.188..0.190 rows=1 loops=1)
+               Buffers: shared hit=4 read=2
+         ->  Nested Loop  (cost=0.26..2001.26 rows=100000 width=0) (actual time=3.887..64.765 rows=1600 loops=1)
+               Buffers: shared hit=16322 read=39
+               ->  Function Scan on generate_series iteration  (cost=0.00..1.00 rows=100 width=4) (actual time=0.014..0.030 rows=100 loops=1)
+               ->  Function Scan on broker_fetch_binary result  (cost=0.26..10.26 rows=1000 width=0) (actual time=0.644..0.645 rows=16 loops=100)
+                     Buffers: shared hit=16322 read=39
+ Planning:
+   Buffers: shared hit=189 read=3
+ Planning Time: 0.570 ms
+ Execution Time: 65.346 ms
+(31 rows)
+
+ schemaname |      funcname       | calls | total_time | self_time 
+------------+---------------------+-------+------------+-----------
+ public     | broker_fetch_binary |   100 |  62.872515 | 62.872515
+(1 row)
+
+COMMIT

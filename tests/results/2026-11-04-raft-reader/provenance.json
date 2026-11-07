@@ -1,0 +1,19 @@
+{
+  "verified_at": "2026-11-04T00:22:37.611278+00:00",
+  "rust_integration_tests": 9,
+  "sql_tests": 8,
+  "unit_tests": 1,
+  "clippy": "all targets, warnings denied: passed",
+  "scope": "Bounded local RaftLogReader only. No complete RaftLogStorage, state machine, snapshots or network replication. Active OMB deployment unchanged.",
+  "sha256": {
+    "Cargo.lock": "b8e538d46c7658694702c7e2c718715257e7a604f348a04486a7ff576c917bef",
+    "crates/cluster/src/reader.rs": "658ccca9601cbc6effb4b7bb521b05900ae0cb14601641b43c2595bc1d58f2a6",
+    "crates/cluster/src/journal.rs": "f85590772182a244d0051ba8499ea024fda61bb361cb1c8af3a8e4bb52caf988",
+    "crates/cluster/src/votes.rs": "c9d8cc05ec2e66a2925897cf00151828d4b66dcdbf8552e5061d79af4041a9b8",
+    "crates/cluster/src/lib.rs": "2b11309784952a2b17944235e4c5b995e5a7335f9f839423c3342bd918d09d99",
+    "crates/cluster/tests/reader_postgres.rs": "7a8629f9d3adac8b63ee252124ec01a21552b2c6e7359f80e5d7fb7917179073",
+    "tests/test_raft_reader.py": "7abf8c7ba18e8b4744fd3e68d465d4c684c593812526b7290d8c086a7afea64e",
+    "crates/extension/sql/pg_broker--0.1.10--0.1.11.sql": "ecc32af8a8dbe84d3315be4cc3d3289102027acfd8b2e19831dc23772524bc8d",
+    "scripts/package-extension.sh": "15c9b9d217211628c68fb8884dd613834898058484d419e5060acdeff46fa5e7"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "reference_system": "baseline",
+  "candidate_system": "retention",
+  "trials": [
+    {
+      "directory": "benchmarks/omb/results/2026-11-03/retention32k-1",
+      "offered_messages_per_second": 32000,
+      "results": {
+        "baseline": {
+          "file": "benchmarks/omb/results/2026-11-03/retention32k-1/baseline.json",
+          "workload": "32k-1-topic-16-partitions-1kb",
+          "samples": 30,
+          "publish_msg_s_mean": 32021.49563361688,
+          "consume_msg_s_mean": 32021.49674979282,
+          "publish_error_msg_s_max": 0.0,
+          "backlog_first": 0,
+          "backlog_last": 0,
+          "backlog_max": 346,
+          "publish_p99_ms": 11.673,
+          "publish_delay_p99_us": 176,
+          "end_to_end_p99_ms": 18.0,
+          "client_warning_error_matches": 0,
+          "offered_rate_fraction_published": 1.0006717385505275,
+          "offered_rate_fraction_consumed": 1.0006717734310255,
+          "backlog_linear_trend_messages_per_second": 0.11450500556173526
+        },
+        "retention": {
+          "file": "benchmarks/omb/results/2026-11-03/retention32k-1/retention.json",
+          "workload": "32k-1-topic-16-partitions-1kb",
+          "samples": 30,
+          "publish_msg_s_mean": 32022.92800937097,
+          "consume_msg_s_mean": 32023.473152536815,
+          "publish_error_msg_s_max": 0.0,
+          "backlog_first": 161,
+          "backlog_last": 0,
+          "backlog_max": 338,
+          "publish_p99_ms": 11.468,
+          "publish_delay_p99_us": 172,
+          "end_to_end_p99_ms": 17.0,
+          "client_warning_error_matches": 0,
+          "offered_rate_fraction_published": 1.0007165002928429,
+          "offered_rate_fraction_consumed": 1.0007335360167755,
+          "backlog_linear_trend_messages_per_second": 0.03886540600667408
+        }
+      },
+      "candidate_to_reference_end_to_end_p99_ratio": 0.9444444444444444,
+      "conclusion": "Observed fixed-load trial only; no capacity, repeatability, RF=3 or scaling acceptance."
+    }
+  ],
+  "trial_count": 1,
+  "at_least_three_trials": false,
+  "end_to_end_p99_ratios": [
+    0.9444444444444444
+  ]
+}

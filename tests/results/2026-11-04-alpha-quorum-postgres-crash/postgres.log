@@ -1,0 +1,52 @@
+    Finished `test` profile [unoptimized] target(s) in 0.09s
+     Running unittests src/main.rs (target/openraft-format-probe/debug/deps/openraft_format_probe-ab8c9625b63d1c4f)
+
+running 8 tests
+test alpha_node_tests::failed_application_does_not_report_a_successful_client_write ... ok
+test alpha_node_tests::real_client_callback_waits_for_application_and_restart_recovers ... ok
+test alpha_node_tests::real_engine_recovers_a_large_committed_application_jump ... ok
+test alpha_node_tests::replaced_storage_owner_fences_a_running_engine ... ok
+test alpha_quorum_tests::tcp_quorum_replicates_elects_recovers_and_requires_majority ... ok
+test alpha_quorum_tests::tcp_quorum_survives_leader_postgres_crash ... FAILED
+test postgres_stream::postgres_stream_reads_large_committed_jump_with_real_payloads ... FAILED
+test postgres_stream::postgres_stream_terminates_on_owner_replacement_between_pages ... FAILED
+
+failures:
+
+---- alpha_quorum_tests::tcp_quorum_survives_leader_postgres_crash stdout ----
+
+thread 'alpha_quorum_tests::tcp_quorum_survives_leader_postgres_crash' (10674104) panicked at src/alpha_quorum_tests.rs:38:10:
+called `Result::unwrap()` on an `Err` value: Error occurred while creating a new object: error connecting to server
+
+Caused by:
+    0: error connecting to server
+    1: Connection refused (os error 61)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- postgres_stream::postgres_stream_reads_large_committed_jump_with_real_payloads stdout ----
+
+thread 'postgres_stream::postgres_stream_reads_large_committed_jump_with_real_payloads' (10674252) panicked at src/postgres_stream.rs:105:67:
+called `Result::unwrap()` on an `Err` value: Error occurred while creating a new object: error connecting to server
+
+Caused by:
+    0: error connecting to server
+    1: Connection refused (os error 61)
+
+---- postgres_stream::postgres_stream_terminates_on_owner_replacement_between_pages stdout ----
+
+thread 'postgres_stream::postgres_stream_terminates_on_owner_replacement_between_pages' (10674253) panicked at src/postgres_stream.rs:105:67:
+called `Result::unwrap()` on an `Err` value: Error occurred while creating a new object: error connecting to server
+
+Caused by:
+    0: error connecting to server
+    1: Connection refused (os error 61)
+
+
+failures:
+    alpha_quorum_tests::tcp_quorum_survives_leader_postgres_crash
+    postgres_stream::postgres_stream_reads_large_committed_jump_with_real_payloads
+    postgres_stream::postgres_stream_terminates_on_owner_replacement_between_pages
+
+test result: FAILED. 5 passed; 3 failed; 0 ignored; 0 measured; 11 filtered out; finished in 12.20s
+
+error: test failed, to rerun pass `--bin openraft-format-probe`

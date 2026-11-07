@@ -1,0 +1,8 @@
+NAME             SIZE FSTYPE   MOUNTPOINTS
+loop0        51535872 squashfs /snap/core18/3085
+loop1       110202880 squashfs /snap/oracle-cloud-agent/138
+loop2        40513536 squashfs /snap/snapd/28255
+sda     1099511627776          
+├─sda1  1098436820480 ext4     /
+├─sda15     103809536 vfat     /boot/efi
+└─sda16     967836160 ext4     /boot

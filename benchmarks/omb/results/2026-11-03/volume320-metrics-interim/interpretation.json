@@ -1,0 +1,17 @@
+{
+  "broker": {
+    "start_minute": "2026-11-03T23:16",
+    "end_minute": "2026-11-03T23:29",
+    "points": 14,
+    "throttled_ios": 0.0,
+    "nonzero_minutes": 0
+  },
+  "kafka_interim": {
+    "start_minute": "2026-11-03T23:34",
+    "end_minute": "2026-11-03T23:41",
+    "points": 8,
+    "throttled_ios": 3512.0,
+    "nonzero_minutes": 8
+  },
+  "scope": "Interior minute aggregates from existing OCI metrics. Kafka phase incomplete at query time. Missing points are not assumed zero. Does not attribute individual latency spikes. New profile still exhibits volume throttling; no unconstrained Kafka parity claim."
+}

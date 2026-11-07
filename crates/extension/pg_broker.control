@@ -1,4 +1,4 @@
 comment = 'Durable partitioned event log with a Kafka gateway'
-default_version = '0.1.1'
+default_version = '0.1.7'
 module_pathname = '$libdir/pg_broker'
 relocatable = false

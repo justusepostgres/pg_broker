@@ -1,0 +1,361 @@
+{
+  "reference": {
+    "file": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-04/bulkcommit-2/broker.json",
+    "workload": "100k-1-topic-16-partitions-1kb",
+    "samples": 89,
+    "publish_msg_s_mean": 85260.78536821027,
+    "consume_msg_s_mean": 85261.93234126733,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 2783,
+    "backlog_last": 1771,
+    "backlog_max": 4807,
+    "publish_p99_ms": 613.543,
+    "publish_delay_p99_us": 60000255,
+    "end_to_end_p99_ms": 644.003,
+    "publish_delay_avg_windows": {
+      "first_us": 12247644.438803833,
+      "last_us": 60000128.0,
+      "max_us": 60000128.0,
+      "change_us": 47752483.56119616,
+      "linear_trend_us_per_sample": 385207.39708195644
+    },
+    "publish_p999_ms": 717.243,
+    "publish_p9999_ms": 944.019,
+    "publish_max_ms": 1035.795,
+    "publish_delay_p999_us": 60000255,
+    "publish_delay_p9999_us": 60000255,
+    "publish_delay_max_us": 60000255,
+    "end_to_end_p999_ms": 748.003,
+    "end_to_end_p9999_ms": 974.003,
+    "end_to_end_max_ms": 1074.007,
+    "producer_histogram_limit": {
+      "cap_us": 60000000,
+      "publish_at_cap": false,
+      "scheduling_delay_at_cap": true,
+      "scope": "Pinned upstream producer metrics clamp at 60s; values at the cap may be censored. This cap does not apply to the end-to-end histogram."
+    },
+    "measurement": {
+      "timing_verified": true,
+      "samples": 89,
+      "requested_seconds": 900,
+      "measured_seconds": 900.6150000000016,
+      "shortest_interval_seconds": 10.096000000001368,
+      "longest_interval_seconds": 10.174999999999272
+    },
+    "client_events": {
+      "warning_events": 0,
+      "error_events": 0,
+      "offset_commit_failure_events": 0,
+      "invalid_fetch_response_events": 1,
+      "scope": "Entire retained client log, including warmup/shutdown; event counts are not lost-record counts or measurement-only rates."
+    },
+    "database_lifetime": {
+      "seconds": 990.976651,
+      "wal": {
+        "wal_records": 5150836,
+        "wal_fpi": 322,
+        "wal_bytes": 1755186851,
+        "wal_buffers_full": 0,
+        "wal_write": 274909,
+        "wal_sync": 274598,
+        "wal_write_time": 7228.135,
+        "wal_sync_time": 278208.759
+      },
+      "database": {
+        "xact_commit": 810456,
+        "xact_rollback": 0,
+        "blks_read": 121517,
+        "blks_hit": 21590584,
+        "tup_inserted": 1292523,
+        "tup_updated": 778403,
+        "tup_deleted": 2
+      },
+      "wal_timing_enabled": true,
+      "functions": [
+        {
+          "function": "public.broker_append_bytes",
+          "funcid": "16484",
+          "calls": 323119,
+          "total_ms": 215642.423,
+          "self_ms": 67946.339,
+          "mean_total_ms": 0.6673777246153894
+        },
+        {
+          "function": "broker.append_bytes",
+          "funcid": "16483",
+          "calls": 323119,
+          "total_ms": 147694.14,
+          "self_ms": 105353.494,
+          "mean_total_ms": 0.45708899817095255
+        },
+        {
+          "function": "public.broker_commit_many",
+          "funcid": "16618",
+          "calls": 192035,
+          "total_ms": 98790.339,
+          "self_ms": 21214.685,
+          "mean_total_ms": 0.5144392376389721
+        },
+        {
+          "function": "broker.commit_many",
+          "funcid": "16617",
+          "calls": 192035,
+          "total_ms": 77573.751,
+          "self_ms": 60919.27,
+          "mean_total_ms": 0.4039563152550317
+        },
+        {
+          "function": "public.broker_fetch_binary",
+          "funcid": "16482",
+          "calls": 90446,
+          "total_ms": 57098.937,
+          "self_ms": 57098.937,
+          "mean_total_ms": 0.6313041704442429
+        },
+        {
+          "function": "broker.raft_require_application",
+          "funcid": "16609",
+          "calls": 646238,
+          "total_ms": 32623.158,
+          "self_ms": 32623.158,
+          "mean_total_ms": 0.05048164608085566
+        },
+        {
+          "function": "broker.raft_guard_batches",
+          "funcid": "16610",
+          "calls": 323119,
+          "total_ms": 23026.642,
+          "self_ms": 4409.855,
+          "mean_total_ms": 0.07126365828069535
+        },
+        {
+          "function": "broker.raft_guard_partition",
+          "funcid": "16612",
+          "calls": 323119,
+          "total_ms": 19310.214,
+          "self_ms": 5302.048,
+          "mean_total_ms": 0.05976192672049616
+        },
+        {
+          "function": "broker.expire_members",
+          "funcid": "16472",
+          "calls": 192376,
+          "total_ms": 16677.611,
+          "self_ms": 16677.611,
+          "mean_total_ms": 0.0866927839231505
+        },
+        {
+          "function": "public.broker_call",
+          "funcid": "16476",
+          "calls": 931,
+          "total_ms": 396.948,
+          "self_ms": 57.151,
+          "mean_total_ms": 0.4263673469387755
+        },
+        {
+          "function": "broker.dispatch",
+          "funcid": "16473",
+          "calls": 931,
+          "total_ms": 339.569,
+          "self_ms": 313.919,
+          "mean_total_ms": 0.3647357679914071
+        },
+        {
+          "function": "broker.rebalance",
+          "funcid": "16471",
+          "calls": 2,
+          "total_ms": 0.606,
+          "self_ms": 0.606,
+          "mean_total_ms": 0.303
+        }
+      ],
+      "wal_sync_mean_ms": 1.0131492545466465,
+      "wal_write_mean_ms": 0.026292827808474806,
+      "wal_bytes_per_second": 1771168.724539404,
+      "scope": "Whole diagnostic lifetime, including warmup and sampler transactions. Database commits include read-only work; they are not Kafka Produce request counts. Function totals include nested calls and must not be added together; statistics can lag activity. Disabled WAL timing is missing latency evidence, not zero latency."
+    },
+    "commit_settings_provenance": "both statistics snapshots",
+    "ownership_helper_calls_per_append_entry": 2.0
+  },
+  "candidate": {
+    "file": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-04/partitionguard-1/broker.json",
+    "workload": "100k-1-topic-16-partitions-1kb",
+    "samples": 89,
+    "publish_msg_s_mean": 88227.6804181534,
+    "consume_msg_s_mean": 88228.8166397139,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 3036,
+    "backlog_last": 2783,
+    "backlog_max": 4807,
+    "publish_p99_ms": 595.927,
+    "publish_delay_p99_us": 60000255,
+    "end_to_end_p99_ms": 626.003,
+    "publish_delay_avg_windows": {
+      "first_us": 8945853.215546126,
+      "last_us": 60000128.0,
+      "max_us": 60000128.0,
+      "change_us": 51054274.78445388,
+      "linear_trend_us_per_sample": 500422.56136766844
+    },
+    "publish_p999_ms": 718.591,
+    "publish_p9999_ms": 998.055,
+    "publish_max_ms": 1097.639,
+    "publish_delay_p999_us": 60000255,
+    "publish_delay_p9999_us": 60000255,
+    "publish_delay_max_us": 60000255,
+    "end_to_end_p999_ms": 749.003,
+    "end_to_end_p9999_ms": 1027.003,
+    "end_to_end_max_ms": 1125.007,
+    "producer_histogram_limit": {
+      "cap_us": 60000000,
+      "publish_at_cap": false,
+      "scheduling_delay_at_cap": true,
+      "scope": "Pinned upstream producer metrics clamp at 60s; values at the cap may be censored. This cap does not apply to the end-to-end histogram."
+    },
+    "measurement": {
+      "timing_verified": true,
+      "samples": 89,
+      "requested_seconds": 900,
+      "measured_seconds": 900.3899999999994,
+      "shortest_interval_seconds": 10.091999999996915,
+      "longest_interval_seconds": 10.165000000000873
+    },
+    "client_events": {
+      "warning_events": 0,
+      "error_events": 0,
+      "offset_commit_failure_events": 0,
+      "invalid_fetch_response_events": 1,
+      "scope": "Entire retained client log, including warmup/shutdown; event counts are not lost-record counts or measurement-only rates."
+    },
+    "database_lifetime": {
+      "seconds": 993.000286,
+      "wal": {
+        "wal_records": 5338236,
+        "wal_fpi": 326,
+        "wal_bytes": 1819045004,
+        "wal_buffers_full": 0,
+        "wal_write": 285118,
+        "wal_sync": 284792,
+        "wal_write_time": 7385.703,
+        "wal_sync_time": 282146.841
+      },
+      "database": {
+        "xact_commit": 841242,
+        "xact_rollback": 0,
+        "blks_read": 127761,
+        "blks_hit": 21625546,
+        "tup_inserted": 1339563,
+        "tup_updated": 806451,
+        "tup_deleted": 2
+      },
+      "wal_timing_enabled": true,
+      "functions": [
+        {
+          "function": "public.broker_append_bytes",
+          "funcid": "16484",
+          "calls": 334887,
+          "total_ms": 212905.337,
+          "self_ms": 69317.286,
+          "mean_total_ms": 0.6357527673513752
+        },
+        {
+          "function": "broker.append_bytes",
+          "funcid": "16483",
+          "calls": 334887,
+          "total_ms": 143586.113,
+          "self_ms": 107613.308,
+          "mean_total_ms": 0.4287598891566409
+        },
+        {
+          "function": "public.broker_commit_many",
+          "funcid": "16618",
+          "calls": 199252,
+          "total_ms": 100396.785,
+          "self_ms": 21176.547,
+          "mean_total_ms": 0.503868392789031
+        },
+        {
+          "function": "broker.commit_many",
+          "funcid": "16617",
+          "calls": 199252,
+          "total_ms": 79218.278,
+          "self_ms": 61921.881,
+          "mean_total_ms": 0.3975783329652902
+        },
+        {
+          "function": "public.broker_fetch_binary",
+          "funcid": "16482",
+          "calls": 94200,
+          "total_ms": 58933.047,
+          "self_ms": 58933.047,
+          "mean_total_ms": 0.6256162101910828
+        },
+        {
+          "function": "broker.raft_guard_batches",
+          "funcid": "16610",
+          "calls": 334887,
+          "total_ms": 23916.404,
+          "self_ms": 4576.111,
+          "mean_total_ms": 0.0714163404372221
+        },
+        {
+          "function": "broker.raft_require_application",
+          "funcid": "16609",
+          "calls": 334887,
+          "total_ms": 19338.448,
+          "self_ms": 19338.448,
+          "mean_total_ms": 0.05774618901301036
+        },
+        {
+          "function": "broker.expire_members",
+          "funcid": "16472",
+          "calls": 199593,
+          "total_ms": 17321.436,
+          "self_ms": 17321.436,
+          "mean_total_ms": 0.08678378500248006
+        },
+        {
+          "function": "broker.raft_guard_partition",
+          "funcid": "16612",
+          "calls": 334887,
+          "total_ms": 12052.581,
+          "self_ms": 12052.581,
+          "mean_total_ms": 0.03598999363964561
+        },
+        {
+          "function": "public.broker_call",
+          "funcid": "16476",
+          "calls": 935,
+          "total_ms": 391.874,
+          "self_ms": 57.985,
+          "mean_total_ms": 0.419116577540107
+        },
+        {
+          "function": "broker.dispatch",
+          "funcid": "16473",
+          "calls": 935,
+          "total_ms": 333.642,
+          "self_ms": 306.257,
+          "mean_total_ms": 0.3568363636363636
+        },
+        {
+          "function": "broker.rebalance",
+          "funcid": "16471",
+          "calls": 2,
+          "total_ms": 0.472,
+          "self_ms": 0.472,
+          "mean_total_ms": 0.236
+        }
+      ],
+      "wal_sync_mean_ms": 0.9907119617124077,
+      "wal_write_mean_ms": 0.025904022194319545,
+      "wal_bytes_per_second": 1831867.552956576,
+      "scope": "Whole diagnostic lifetime, including warmup and sampler transactions. Database commits include read-only work; they are not Kafka Produce request counts. Function totals include nested calls and must not be added together; statistics can lag activity. Disabled WAL timing is missing latency evidence, not zero latency."
+    },
+    "commit_settings_provenance": "both statistics snapshots",
+    "ownership_helper_calls_per_append_entry": 1.0
+  },
+  "candidate_publish_rate_ratio": 1.0347978855358906,
+  "candidate_end_to_end_p99_ratio": 0.9720498196436973,
+  "scope": "One instrumented fresh-store SQL-only comparison; same gateway, workload and resource limits. Function counts cover the whole sampling lifetime, including warmup. No repeatability, sustainable-capacity, RF3 or Kafka-parity acceptance."
+}

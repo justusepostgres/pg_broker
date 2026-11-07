@@ -181,6 +181,21 @@ impl Writer {
     pub fn array(&mut self, n: usize) {
         self.i32(n as i32)
     }
+
+    /// Frame a response once so its length prefix and payload can share a write.
+    pub fn into_response_frame(self, correlation: i32) -> Result<Vec<u8>> {
+        let length = self
+            .0
+            .len()
+            .checked_add(4)
+            .ok_or_else(|| anyhow::anyhow!("response size overflow"))?;
+        ensure!(length <= MAX_FRAME, "response size limit");
+        let mut frame = Vec::with_capacity(length + 4);
+        frame.extend_from_slice(&(length as i32).to_be_bytes());
+        frame.extend_from_slice(&correlation.to_be_bytes());
+        frame.extend_from_slice(&self.0);
+        Ok(frame)
+    }
 }
 /// Return validated producer timestamps in offset order. Compression, control records,
 /// transactions and producer IDs are deliberately unsupported.
@@ -242,6 +257,35 @@ mod tests {
         assert!(Reader::new(&[0]).i32().is_err());
         assert!(Reader::new(&(-2i32).to_be_bytes()).count().is_err());
         assert!(validate_batch(&[0; 61]).is_err());
+    }
+
+    #[test]
+    fn response_frame_preserves_prefix_correlation_and_body() {
+        let mut body = Writer::default();
+        body.i16(7);
+        assert_eq!(
+            body.into_response_frame(-1).unwrap(),
+            vec![0, 0, 0, 6, 255, 255, 255, 255, 0, 7]
+        );
+        assert_eq!(
+            Writer::default().into_response_frame(9).unwrap(),
+            vec![0, 0, 0, 4, 0, 0, 0, 9]
+        );
+    }
+
+    #[test]
+    fn response_frame_enforces_limit_including_correlation() {
+        let mut body = Writer::default();
+        body.0.resize(MAX_FRAME - 4, 0);
+        let frame = body.into_response_frame(1).unwrap();
+        assert_eq!(frame.len(), MAX_FRAME + 4);
+        assert_eq!(
+            i32::from_be_bytes(frame[..4].try_into().unwrap()) as usize,
+            MAX_FRAME
+        );
+        let mut oversized = Writer::default();
+        oversized.0.resize(MAX_FRAME - 3, 0);
+        assert!(oversized.into_response_frame(1).is_err());
     }
 }
 

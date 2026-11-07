@@ -1,0 +1,3 @@
+RuntimeMaxUSec=26min 40s
+AllowedCPUs=0-1
+MemoryMax=2147483648

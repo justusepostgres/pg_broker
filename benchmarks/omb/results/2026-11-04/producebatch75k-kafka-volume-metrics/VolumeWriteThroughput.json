@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "aggregated-datapoints": [
+        {
+          "timestamp": "2026-11-04T01:29:00+00:00",
+          "value": 506560512.0
+        },
+        {
+          "timestamp": "2026-11-04T01:30:00+00:00",
+          "value": 373186560.0
+        },
+        {
+          "timestamp": "2026-11-04T01:31:00+00:00",
+          "value": 4939431936.0
+        },
+        {
+          "timestamp": "2026-11-04T01:32:00+00:00",
+          "value": 4619530240.0
+        },
+        {
+          "timestamp": "2026-11-04T01:33:00+00:00",
+          "value": 5248475136.0
+        },
+        {
+          "timestamp": "2026-11-04T01:34:00+00:00",
+          "value": 3846201344.0
+        },
+        {
+          "timestamp": "2026-11-04T01:35:00+00:00",
+          "value": 5051514880.0
+        },
+        {
+          "timestamp": "2026-11-04T01:38:00+00:00",
+          "value": 4203630592.0
+        },
+        {
+          "timestamp": "2026-11-04T01:39:00+00:00",
+          "value": 4277366784.0
+        },
+        {
+          "timestamp": "2026-11-04T01:40:00+00:00",
+          "value": 8992563200.0
+        },
+        {
+          "timestamp": "2026-11-04T01:41:00+00:00",
+          "value": 4033875968.0
+        },
+        {
+          "timestamp": "2026-11-04T01:42:00+00:00",
+          "value": 5340545024.0
+        },
+        {
+          "timestamp": "2026-11-04T01:43:00+00:00",
+          "value": 4377669632.0
+        },
+        {
+          "timestamp": "2026-11-04T01:44:00+00:00",
+          "value": 4526358528.0
+        },
+        {
+          "timestamp": "2026-11-04T01:45:00+00:00",
+          "value": 4720889856.0
+        }
+      ],
+      "compartment-id": "ocid1.tenancy.oc1..aaaaaaaafe6p7erknwb3ekqbeztffxdnirwuf6kel3nkt2ofrmi7iygx4apa",
+      "dimensions": {
+        "attachmentId": "ocid1.instance.oc1.us-sanjose-1.anzwuljrsjflizycskhftwpeg4nzak4sk2rb7pwrvv3fjxdn7u2qg3474bna",
+        "resourceId": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq"
+      },
+      "metadata": {
+        "displayName": "Write Throughput",
+        "unit": "bytes"
+      },
+      "name": "VolumeWriteThroughput",
+      "namespace": "oci_blockstore",
+      "resolution": null,
+      "resource-group": null
+    }
+  ]
+}

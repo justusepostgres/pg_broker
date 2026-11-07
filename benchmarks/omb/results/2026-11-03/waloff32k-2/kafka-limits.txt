@@ -1,0 +1,2 @@
+AllowedCPUs=0-1
+MemoryMax=9663676416

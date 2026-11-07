@@ -1,0 +1,55 @@
+{
+  "reference_system": "baseline",
+  "candidate_system": "tail",
+  "trials": [
+    {
+      "directory": "benchmarks/omb/results/2026-11-03/tail32k-1",
+      "offered_messages_per_second": 32000,
+      "results": {
+        "baseline": {
+          "file": "benchmarks/omb/results/2026-11-03/tail32k-1/baseline.json",
+          "workload": "32k-1-topic-16-partitions-1kb",
+          "samples": 30,
+          "publish_msg_s_mean": 32021.15779199197,
+          "consume_msg_s_mean": 32021.159475578024,
+          "publish_error_msg_s_max": 0.0,
+          "backlog_first": 0,
+          "backlog_last": 0,
+          "backlog_max": 350,
+          "publish_p99_ms": 280.871,
+          "publish_delay_p99_us": 194,
+          "end_to_end_p99_ms": 307.001,
+          "client_warning_error_matches": 0,
+          "offered_rate_fraction_published": 1.000661180999749,
+          "offered_rate_fraction_consumed": 1.0006612336118133,
+          "backlog_linear_trend_messages_per_second": 0.16978865406006674
+        },
+        "tail": {
+          "file": "benchmarks/omb/results/2026-11-03/tail32k-1/tail.json",
+          "workload": "32k-1-topic-16-partitions-1kb",
+          "samples": 30,
+          "publish_msg_s_mean": 32021.970638524086,
+          "consume_msg_s_mean": 32021.999859232226,
+          "publish_error_msg_s_max": 0.0,
+          "backlog_first": 186,
+          "backlog_last": 158,
+          "backlog_max": 191,
+          "publish_p99_ms": 9.242,
+          "publish_delay_p99_us": 144,
+          "end_to_end_p99_ms": 12.0,
+          "client_warning_error_matches": 0,
+          "offered_rate_fraction_published": 1.0006865824538778,
+          "offered_rate_fraction_consumed": 1.000687495601007,
+          "backlog_linear_trend_messages_per_second": 0.07730812013348165
+        }
+      },
+      "candidate_to_reference_end_to_end_p99_ratio": 0.03908782056084508,
+      "conclusion": "Observed fixed-load trial only; no capacity, repeatability, RF=3 or scaling acceptance."
+    }
+  ],
+  "trial_count": 1,
+  "at_least_three_trials": false,
+  "end_to_end_p99_ratios": [
+    0.03908782056084508
+  ]
+}

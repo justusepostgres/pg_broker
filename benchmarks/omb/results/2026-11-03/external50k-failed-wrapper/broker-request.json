@@ -1,0 +1,6 @@
+{
+  "label": "017-external50k-1-broker",
+  "rate": "50k",
+  "bootstrap": "10.84.0.247:9092",
+  "system": "broker"
+}

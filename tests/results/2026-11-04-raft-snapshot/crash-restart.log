@@ -1,0 +1,27 @@
+2026-11-04 04:54:09.012 +04 [63793] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 04:54:09.013 +04 [63793] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 04:54:09.013 +04 [63793] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 04:54:09.016 +04 [63796] LOG:  database system was interrupted; last known up at 2026-11-04 04:54:08 +04
+2026-11-04 04:54:09.061 +04 [63796] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-04 04:54:09.062 +04 [63796] LOG:  redo starts at 0/32C07A8
+2026-11-04 04:54:09.062 +04 [63796] WARNING:  could not open directory "base/17650": No such file or directory
+2026-11-04 04:54:09.062 +04 [63796] CONTEXT:  WAL redo at 0/32C0878 for Database/DROP: dir 1663/17650
+2026-11-04 04:54:09.062 +04 [63796] WARNING:  some useless files may be left behind in old database directory "base/17650"
+2026-11-04 04:54:09.062 +04 [63796] CONTEXT:  WAL redo at 0/32C0878 for Database/DROP: dir 1663/17650
+2026-11-04 04:54:09.074 +04 [63796] LOG:  invalid record length at 0/37B0258: expected at least 24, got 0
+2026-11-04 04:54:09.074 +04 [63796] LOG:  redo done at 0/37B0230 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-04 04:54:09.075 +04 [63794] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-04 04:54:09.129 +04 [63794] LOG:  checkpoint complete: wrote 1045 buffers (6.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.044 s, sync=0.009 s, total=0.054 s; sync files=359, longest=0.001 s, average=0.001 s; distance=5054 kB, estimate=5054 kB; lsn=0/37B0258, redo lsn=0/37B0258
+2026-11-04 04:54:09.131 +04 [63793] LOG:  database system is ready to accept connections
+2026-11-04 04:54:09.225 +04 [63800] ERROR:  Snapshot owner fenced
+2026-11-04 04:54:09.225 +04 [63800] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_copy(text,bigint,uuid) line 5 at RAISE
+2026-11-04 04:54:09.225 +04 [63800] STATEMENT:  SELECT public.broker_raft_snapshot_copy($1,$2,$3)
+2026-11-04 04:54:09.236 +04 [63794] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:54:09.237 +04 [63794] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=6, longest=0.001 s, average=0.001 s; distance=28 kB, estimate=4552 kB; lsn=0/37B75D0, redo lsn=0/37B7578
+2026-11-04 04:54:09.359 +04 [63793] LOG:  received fast shutdown request
+2026-11-04 04:54:09.359 +04 [63793] LOG:  aborting any active transactions
+2026-11-04 04:54:09.359 +04 [63793] LOG:  background worker "logical replication launcher" (PID 63799) exited with exit code 1
+2026-11-04 04:54:09.359 +04 [63794] LOG:  shutting down
+2026-11-04 04:54:09.359 +04 [63794] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 04:54:09.360 +04 [63794] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=4096 kB; lsn=0/37B76D8, redo lsn=0/37B76D8
+2026-11-04 04:54:09.361 +04 [63793] LOG:  database system is shut down

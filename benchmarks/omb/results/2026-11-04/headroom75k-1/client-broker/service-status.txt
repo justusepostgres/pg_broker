@@ -1,0 +1,6 @@
+Result=success
+ExecMainStatus=0
+LoadState=loaded
+ActiveState=active
+SubState=exited
+InvocationID=dfd7f6d30d7b46bd885c913511331e69

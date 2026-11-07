@@ -1,0 +1,25 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-017-bulkcommit-2-broker/result.json",
+    "workload": "100k-1-topic-16-partitions-1kb",
+    "samples": 89,
+    "publish_msg_s_mean": 85260.78536821027,
+    "consume_msg_s_mean": 85261.93234126733,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 2783,
+    "backlog_last": 1771,
+    "backlog_max": 4807,
+    "publish_p99_ms": 613.543,
+    "publish_delay_p99_us": 60000255,
+    "end_to_end_p99_ms": 644.003,
+    "publish_p999_ms": 717.243,
+    "publish_p9999_ms": 944.019,
+    "publish_max_ms": 1035.795,
+    "publish_delay_p999_us": 60000255,
+    "publish_delay_p9999_us": 60000255,
+    "publish_delay_max_us": 60000255,
+    "end_to_end_p999_ms": 748.003,
+    "end_to_end_p9999_ms": 974.003,
+    "end_to_end_max_ms": 1074.007
+  }
+]

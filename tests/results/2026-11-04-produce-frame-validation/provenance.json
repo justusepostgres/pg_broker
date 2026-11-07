@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-11-04T00:36:56.305456+00:00",
+  "tests_passed": 8,
+  "tests_deselected": 23,
+  "clippy": "cargo clippy --locked -p pg-broker-gateway --all-targets -- -D warnings; passed",
+  "database": "PostgreSQL17.11/defaultSQL0.1.7",
+  "scope": "Native-only correctness fix. OCI benchmark continues with immutable09f759gateway without this change.",
+  "sha256": {
+    "crates/gateway/src/produce.rs": "85b6bc7b551ab963b5f1123d3c98272003454cae71932a0c663205b5f4ba6006",
+    "tests/test_wire.py": "9edcb522c5e1e1301e57d018f1741765e1dbbe2b99e0466d4b91c37ed31af88e",
+    ".dev/run-produce-frame-native.py": "61929065a300abe011407042d34724a37dfe5e1ca3f16ff4f36195e18ea241d9",
+    "Cargo.lock": "b8e538d46c7658694702c7e2c718715257e7a604f348a04486a7ff576c917bef"
+  }
+}

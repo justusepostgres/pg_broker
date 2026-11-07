@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "aggregated-datapoints": [
+        {
+          "timestamp": "2026-11-04T00:32:00+00:00",
+          "value": 4685.0
+        },
+        {
+          "timestamp": "2026-11-04T00:33:00+00:00",
+          "value": 6982.0
+        },
+        {
+          "timestamp": "2026-11-04T00:34:00+00:00",
+          "value": 6440.0
+        },
+        {
+          "timestamp": "2026-11-04T00:35:00+00:00",
+          "value": 6790.0
+        },
+        {
+          "timestamp": "2026-11-04T00:37:00+00:00",
+          "value": 4137.0
+        },
+        {
+          "timestamp": "2026-11-04T00:38:00+00:00",
+          "value": 2733.0
+        },
+        {
+          "timestamp": "2026-11-04T00:39:00+00:00",
+          "value": 2303.0
+        },
+        {
+          "timestamp": "2026-11-04T00:40:00+00:00",
+          "value": 3047.0
+        },
+        {
+          "timestamp": "2026-11-04T00:41:00+00:00",
+          "value": 2541.0
+        },
+        {
+          "timestamp": "2026-11-04T00:42:00+00:00",
+          "value": 2513.0
+        },
+        {
+          "timestamp": "2026-11-04T00:43:00+00:00",
+          "value": 1192.0
+        },
+        {
+          "timestamp": "2026-11-04T00:44:00+00:00",
+          "value": 2661.0
+        },
+        {
+          "timestamp": "2026-11-04T00:45:00+00:00",
+          "value": 1479.0
+        },
+        {
+          "timestamp": "2026-11-04T00:46:00+00:00",
+          "value": 2665.0
+        },
+        {
+          "timestamp": "2026-11-04T00:47:00+00:00",
+          "value": 2514.0
+        },
+        {
+          "timestamp": "2026-11-04T00:48:00+00:00",
+          "value": 2600.0
+        }
+      ],
+      "compartment-id": "ocid1.tenancy.oc1..aaaaaaaafe6p7erknwb3ekqbeztffxdnirwuf6kel3nkt2ofrmi7iygx4apa",
+      "dimensions": {
+        "attachmentId": "ocid1.instance.oc1.us-sanjose-1.anzwuljrsjflizycskhftwpeg4nzak4sk2rb7pwrvv3fjxdn7u2qg3474bna",
+        "resourceId": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq"
+      },
+      "metadata": {
+        "displayName": "Write Ops",
+        "unit": "operations"
+      },
+      "name": "VolumeWriteOps",
+      "namespace": "oci_blockstore",
+      "resolution": null,
+      "resource-group": null
+    }
+  ]
+}

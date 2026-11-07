@@ -1,0 +1,2 @@
+/omb-server-wal-017-1-on-db 0,1 8589934592
+/omb-server-wal-017-1-on-gateway 0,1 1073741824

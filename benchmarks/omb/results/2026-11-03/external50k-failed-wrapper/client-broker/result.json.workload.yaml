@@ -1,0 +1,12 @@
+name: 50k-1-topic-16-partitions-1kb
+topics: 1
+partitionsPerTopic: 16
+messageSize: 1024
+payloadFile: payload/payload-1Kb.data
+subscriptionsPerTopic: 1
+consumerPerSubscription: 1
+producersPerTopic: 1
+producerRate: 50000
+consumerBacklogSizeGB: 0
+warmupDurationMinutes: 1
+testDurationMinutes: 15

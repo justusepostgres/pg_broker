@@ -1,0 +1,106 @@
+   Compiling libc v0.2.191
+   Compiling typenum v1.20.1
+   Compiling serde_core v1.0.228
+   Compiling futures-sink v0.3.34
+   Compiling futures-core v0.3.34
+   Compiling scopeguard v1.2.0
+   Compiling lock_api v0.4.14
+   Compiling parking_lot_core v0.9.12
+   Compiling hybrid-array v0.4.15
+   Compiling errno v0.3.14
+   Compiling signal-hook-registry v1.4.8
+   Compiling parking_lot v0.12.5
+   Compiling futures-channel v0.3.34
+   Compiling mio v1.2.4
+   Compiling socket2 v0.6.5
+   Compiling cmov v0.5.4
+   Compiling futures-util v0.3.34
+   Compiling ctutils v0.4.7
+   Compiling tokio v1.48.0
+   Compiling serde v1.0.228
+   Compiling getrandom v0.4.3
+   Compiling block-buffer v0.12.1
+   Compiling crypto-common v0.2.2
+   Compiling const-oid v0.10.2
+   Compiling digest v0.11.3
+   Compiling rand v0.10.3
+   Compiling tinyvec v1.13.3
+   Compiling unicode-normalization v0.1.26
+   Compiling generic-array v0.14.7
+   Compiling getrandom v0.3.4
+   Compiling cpufeatures v0.3.1
+   Compiling unicode-bidi v0.3.18
+   Compiling unicode-properties v0.1.5
+   Compiling stringprep v0.1.5
+   Compiling sha2 v0.11.1
+   Compiling rand_core v0.9.5
+   Compiling zmij v1.0.23
+   Compiling chrono v0.4.45
+   Compiling hmac v0.13.0
+   Compiling md-5 v0.11.0
+   Compiling anyerror v0.1.13
+   Compiling getrandom v0.2.17
+   Compiling fallible-iterator v0.2.0
+   Compiling base64 v0.22.1
+   Compiling byteorder v1.5.0
+   Compiling serde_json v1.0.154
+   Compiling postgres-protocol v0.6.12
+   Compiling rand_core v0.6.4
+   Compiling validit v0.2.6
+   Compiling rand_chacha v0.9.0
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling phf_shared v0.13.1
+   Compiling phf v0.13.1
+   Compiling digest v0.10.7
+   Compiling rand v0.9.5
+   Compiling rand_chacha v0.3.1
+   Compiling postgres-types v0.2.14
+   Compiling clap v4.6.7
+   Compiling tokio-util v0.7.19
+   Compiling deadpool-runtime v0.1.4
+   Compiling futures-executor v0.3.34
+   Compiling cpufeatures v0.2.17
+   Compiling num_cpus v1.17.0
+   Compiling whoami v1.6.1
+   Compiling lazy_static v1.5.1
+   Compiling percent-encoding v2.3.2
+   Compiling log v0.4.35
+   Compiling tokio-postgres v0.7.15
+   Compiling deadpool v0.12.3
+   Compiling sha2 v0.10.9
+   Compiling futures v0.3.34
+   Compiling openraft-rt v0.10.0-alpha.37
+   Compiling rand v0.8.8
+   Compiling crc32c v0.6.8
+   Compiling chrono-tz v0.8.6
+   Compiling anyhow v1.0.104
+   Compiling thiserror v2.0.21
+   Compiling openraft v0.9.25
+   Compiling broker-protocol v0.1.0 (/Users/salah/Documents/ChatGPT/pg_kafka/crates/protocol)
+   Compiling display-more v0.2.6
+   Compiling openraft-rt-tokio v0.10.0-alpha.37
+   Compiling quorum-set v0.2.3
+   Compiling deadpool-postgres v0.14.1
+   Compiling hex v0.4.3
+   Compiling openraft v0.10.0-alpha.37
+   Compiling broker-cluster v0.1.0 (/Users/salah/Documents/ChatGPT/pg_kafka/crates/cluster)
+   Compiling openraft-format-probe v0.0.0 (/Users/salah/Documents/ChatGPT/pg_kafka/tests/experiments/openraft-compatibility)
+    Finished `test` profile [unoptimized] target(s) in 34.06s
+     Running unittests src/main.rs (target/openraft-format-probe/debug/deps/openraft_format_probe-ab8c9625b63d1c4f)
+
+running 11 tests
+test postgres_stream::postgres_stream_reads_large_committed_jump_with_real_payloads ... ignored, requires disposable PostgreSQL SQL0.1.19
+test postgres_stream::postgres_stream_terminates_on_owner_replacement_between_pages ... ignored, requires disposable PostgreSQL SQL0.1.19
+test stream_tests::default_stream_does_not_chunk_a_large_committed_range ... ok
+test paged_stream::empty_and_maximum_index_ranges_do_not_wrap ... ok
+test selected_json_fixtures_round_trip ... ok
+test paged_stream::cancellation_during_page_read_stops_without_background_work ... ok
+test paged_stream::page_failure_and_gap_are_terminal_without_partial_bad_page ... ok
+test stream_tests::default_stream_fetches_the_whole_range_before_first_poll ... ok
+test paged_stream::oversized_entry_is_rejected_without_yielding_or_looping ... ok
+test paged_stream::byte_budget_and_drop_prevent_prefetch ... ok
+test paged_stream::committed_jump_streams_over_4096_entries_with_bounded_pages ... ok
+
+test result: ok. 9 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.05s
+

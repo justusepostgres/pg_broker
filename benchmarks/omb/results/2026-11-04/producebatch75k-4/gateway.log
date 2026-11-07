@@ -1,0 +1,19 @@
+pg-broker listening on 10.84.0.247:9092
+unix_ms=1793770700004 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793770700094 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793770700128 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793770760012 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793770820121 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793770880227 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793770940336 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793771000441 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793771060547 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793771120653 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793771180758 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793771240864 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793771300969 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793771361076 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793771421180 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793771481285 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793771541392 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793771601505 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed

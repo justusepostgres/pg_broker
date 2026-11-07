@@ -1,0 +1,6 @@
+{
+  "postgresql_locking": "https://www.postgresql.org/docs/17/explicit-locking.html",
+  "postgresql_trigger_source": "https://raw.githubusercontent.com/postgres/postgres/REL_17_STABLE/src/backend/commands/trigger.c",
+  "reasoning": "ExecBRUpdateTriggersNew calls GetTupleForTrigger using ExecUpdateLockMode before invoking the row trigger. This is an ordinary local heap table, not an FDW. Binding updates the same partition tuple. READ COMMITTED and REPEATABLE READ race tests verify blocking and fencing.",
+  "scope": "Local correctness verification only; no cloud throughput claim"
+}

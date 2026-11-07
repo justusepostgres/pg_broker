@@ -1,0 +1,20 @@
+   Compiling broker-cluster v0.1.0 (/Users/salah/Documents/ChatGPT/pg_kafka/crates/cluster)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.16s
+     Running unittests src/lib.rs (target/debug/deps/broker_cluster-447f300c57502543)
+
+running 12 tests
+test reader::tests::range_bounds_never_wrap_at_u64_edges ... ok
+test application::tests::validated_command_round_trips_and_preserves_wire_bytes ... ok
+test application::tests::retention_command_round_trip_and_admission_bounds ... ok
+test application::tests::invalid_commands_are_rejected_before_proposal_or_decode_acceptance ... ok
+test snapshot_stream::tests::round_trip_empty_and_multiple_pages ... ok
+test snapshot_stream::tests::rejects_reordering_gaps_and_changed_manifest_even_with_valid_checksum ... ok
+test snapshot_stream::tests::rejects_every_truncation_corruption_and_budget_shortfall ... ok
+test snapshot_stream::tests::cancellation_poisons_partial_reader ... ok
+test snapshot_file::tests::cancellation_never_publishes_partial ... ok
+test snapshot_file::tests::restart_revalidates_partial_before_publication ... ok
+test snapshot_file::tests::rejects_bad_checksum_truncation_trailing_bytes_and_quota ... ok
+test snapshot_file::tests::publish_round_trip_and_reopen_without_overwrite ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+

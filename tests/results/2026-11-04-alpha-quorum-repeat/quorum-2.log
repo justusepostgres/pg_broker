@@ -1,0 +1,8 @@
+    Finished `test` profile [unoptimized] target(s) in 0.09s
+     Running unittests src/main.rs (target/openraft-format-probe/debug/deps/openraft_format_probe-ab8c9625b63d1c4f)
+
+running 1 test
+test alpha_quorum_tests::tcp_quorum_replicates_elects_recovers_and_requires_majority ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 17 filtered out; finished in 4.16s
+

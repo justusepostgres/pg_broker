@@ -1,0 +1,23 @@
+{
+  "measurement_start_utc": "2026-11-04T05:38:23.112Z",
+  "measurement_aggregate_utc": "2026-11-04T05:53:27.029Z",
+  "conservative_interior_minutes": [
+    "2026-11-04T05:40:00+00:00",
+    "2026-11-04T05:41:00+00:00",
+    "2026-11-04T05:42:00+00:00",
+    "2026-11-04T05:43:00+00:00",
+    "2026-11-04T05:44:00+00:00",
+    "2026-11-04T05:45:00+00:00",
+    "2026-11-04T05:46:00+00:00",
+    "2026-11-04T05:47:00+00:00",
+    "2026-11-04T05:48:00+00:00",
+    "2026-11-04T05:49:00+00:00",
+    "2026-11-04T05:50:00+00:00",
+    "2026-11-04T05:51:00+00:00",
+    "2026-11-04T05:52:00+00:00"
+  ],
+  "observed_minutes": 13,
+  "missing_minutes": [],
+  "observed_throttled_io_sum": 0.0,
+  "scope": "Minute aggregates only, not attribution of individual latency stalls. Missing points are not zero; observed sum is a full interior-window sum only when all expected minutes are present."
+}

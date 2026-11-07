@@ -1,0 +1,16 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-pipeline-015-32k-1/pipeline.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32022.554722095254,
+    "consume_msg_s_mean": 32022.34811562907,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 0,
+    "backlog_last": 226,
+    "backlog_max": 833,
+    "publish_p99_ms": 11.835,
+    "publish_delay_p99_us": 204,
+    "end_to_end_p99_ms": 19.0
+  }
+]

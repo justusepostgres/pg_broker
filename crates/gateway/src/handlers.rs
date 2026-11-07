@@ -1,6 +1,6 @@
 use crate::server::State;
 use anyhow::{ensure, Result};
-use broker_protocol::{batches, Reader, Writer, APIS};
+use broker_protocol::{Reader, Writer, APIS};
 use serde_json::{json, Value};
 fn error(v: &Value) -> i16 {
     v["error"].as_i64().unwrap_or(0) as i16
@@ -101,33 +101,7 @@ pub async fn handle(
                 w.i16(error(&v))
             }
         }
-        0 => {
-            ensure!(r.nullable_string()?.is_none(), "transactions unsupported");
-            let acks = r.i16()?;
-            ensure!([-1, 0, 1].contains(&acks), "invalid acks");
-            r.i32()?;
-            let n = r.count()?;
-            w.array(n);
-            for _ in 0..n {
-                let t = r.string()?;
-                w.string(&t);
-                let n = r.count()?;
-                w.array(n);
-                for _ in 0..n {
-                    let p = r.i32()?;
-                    let bytes = r.bytes()?;
-                    let v=match batches(&bytes){Ok(_)=>s.db(json!({"op":"append","topic":t,"partition":p,"data":hex::encode(bytes)})).await?,Err(_)=>json!({"error":2})};
-                    w.i32(p);
-                    w.i16(error(&v));
-                    w.i64(num(&v, "offset", -1));
-                    w.i64(-1);
-                }
-            }
-            w.i32(0);
-            if acks == 0 {
-                return Ok(None);
-            }
-        }
+        0 => return crate::produce::handle(s, r).await,
         1 => fetch(s, r, &mut w).await?,
         2 => {
             ensure!(r.i32()? == -1, "replica fetch unsupported");
@@ -157,26 +131,7 @@ pub async fn handle(
             broker(&mut w, s)
         }
         8 => {
-            let g = r.string()?;
-            let generation = r.i32()?;
-            let member = r.string()?;
-            r.i64()?;
-            let n = r.count()?;
-            w.array(n);
-            for _ in 0..n {
-                let t = r.string()?;
-                w.string(&t);
-                let n = r.count()?;
-                w.array(n);
-                for _ in 0..n {
-                    let p = r.i32()?;
-                    let offset = r.i64()?;
-                    let metadata = r.nullable_string()?.unwrap_or_default();
-                    let v=s.db(json!({"op":"commit","group":g,"generation":generation,"member":member,"topic":t,"partition":p,"offset":offset,"metadata":metadata})).await?;
-                    w.i32(p);
-                    w.i16(error(&v));
-                }
-            }
+            w = crate::offsets::commit(s, r).await?;
         }
         9 => {
             let g = r.string()?;
@@ -327,16 +282,31 @@ async fn fetch(s: &State, r: &mut Reader<'_>, w: &mut Writer) -> Result<()> {
     // Kafka transactions are rejected on produce, so all visible batches are committed.
     ensure!((0..=1).contains(&r.i8()?), "invalid isolation level");
     let mut topics = vec![];
+    let mut requests = vec![];
     for _ in 0..r.count()? {
         let t = r.string()?;
         let mut ps = vec![];
         for _ in 0..r.count()? {
-            ps.push((r.i32()?, r.i64()?, r.i32()?.clamp(1, 1048576)))
+            let p = r.i32()?;
+            let off = r.i64()?;
+            let limit = r.i32()?.clamp(1, 1048576);
+            ensure!(requests.len() < 4096, "fetch partition count limit");
+            requests.push(json!({"topic":t,"partition":p,"offset":off,"max":limit}));
+            ps.push(p);
         }
         topics.push((t, ps));
     }
     let end = tokio::time::Instant::now() + std::time::Duration::from_millis(wait);
+    let requested: std::collections::HashSet<_> = topics
+        .iter()
+        .flat_map(|(topic, partitions)| partitions.iter().map(|p| (topic.clone(), *p)))
+        .collect();
     loop {
+        // Subscribe before the snapshot: a commit during the SQL call must not
+        // be lost between checking the log and starting the wait.
+        let mut events = s.events.subscribe();
+        let fetched = s.fetch_partitions(&requests, max).await?;
+        let mut rows = fetched.iter();
         let mut total = 0;
         let mut failed = false;
         let mut body = Writer::default();
@@ -345,31 +315,36 @@ async fn fetch(s: &State, r: &mut Reader<'_>, w: &mut Writer) -> Result<()> {
         for (t, ps) in &topics {
             body.string(t);
             body.array(ps.len());
-            for &(p, off, limit) in ps {
-                let v=s.db(json!({"op":"fetch","topic":t,"partition":p,"offset":off,"allow_first":total==0,"max":limit.min((max-total).max(0))})).await?;
-                failed |= error(&v) != 0;
+            for &p in ps {
+                let v = rows.next().expect("fetch result count checked");
+                failed |= v.error != 0;
                 body.i32(p);
-                body.i16(error(&v));
-                body.i64(num(&v, "high", 0));
-                body.i64(num(&v, "high", 0));
+                body.i16(v.error);
+                body.i64(v.high);
+                body.i64(v.high);
                 body.i32(-1);
-                let mut bytes = vec![];
-                if let Some(batches) = v["batches"].as_array() {
-                    for b in batches {
-                        let mut data = hex::decode(text(b, "data"))?;
-                        data[..8].copy_from_slice(&num(b, "offset", 0).to_be_bytes());
-                        bytes.extend(data)
-                    }
-                }
-                total += bytes.len() as i32;
-                body.bytes(&bytes);
+                total += v.data.len() as i32;
+                body.bytes(&v.data);
             }
         }
         if failed || total >= min || tokio::time::Instant::now() >= end {
             *w = body;
             return Ok(());
         }
-        tokio::time::sleep(std::time::Duration::from_millis(25)).await;
+        let changed = async {
+            loop {
+                match events.recv().await {
+                    Ok(partition) if requested.contains(&partition) => break,
+                    Ok(_) => {}
+                    Err(_) => break, // Lagged notifications require a fresh read.
+                }
+            }
+        };
+        tokio::select! {
+            _ = changed => {},
+            _ = tokio::time::sleep_until(end.min(tokio::time::Instant::now()
+                + std::time::Duration::from_millis(25))) => {},
+        }
     }
 }
 async fn join(s: &State, r: &mut Reader<'_>, w: &mut Writer, version: i16) -> Result<()> {

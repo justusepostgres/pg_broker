@@ -1,0 +1,19 @@
+pg-broker listening on 10.84.0.247:9092
+unix_ms=1793757941915 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793757942007 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793757942036 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758001923 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758062031 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758122136 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758182242 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758242349 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758302454 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758362559 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758422663 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758482770 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758542876 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758602980 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758663085 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758723192 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758783298 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793758843403 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed

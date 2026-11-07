@@ -1,0 +1,1 @@
+{"kind":"client-jvm-gc-safepoint","heap_min":"1G","heap_max":"1G","logging":"gc*=info,safepoint=info","decorators":"time,uptime,level,tags","rotation_files":4,"rotation_size":"16M","acceptance_run":false}

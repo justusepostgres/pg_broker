@@ -1,0 +1,25 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-017-commitbatch75k-1-kafka/result.json",
+    "workload": "75k-1-topic-16-partitions-1kb",
+    "samples": 90,
+    "publish_msg_s_mean": 75044.24503346528,
+    "consume_msg_s_mean": 75046.31058103415,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 0,
+    "backlog_last": 0,
+    "backlog_max": 3289,
+    "publish_p99_ms": 710.691,
+    "publish_delay_p99_us": 333997,
+    "end_to_end_p99_ms": 725.003,
+    "publish_p999_ms": 1086.207,
+    "publish_p9999_ms": 1258.751,
+    "publish_max_ms": 1308.591,
+    "publish_delay_p999_us": 648131,
+    "publish_delay_p9999_us": 804163,
+    "publish_delay_max_us": 853147,
+    "end_to_end_p999_ms": 1104.007,
+    "end_to_end_p9999_ms": 1263.007,
+    "end_to_end_max_ms": 1316.007
+  }
+]

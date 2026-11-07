@@ -1,0 +1,27 @@
+2026-11-04 15:40:49.134 +04 [97085] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 15:40:49.135 +04 [97085] LOG:  listening on IPv4 address "127.0.0.1", port 55433
+2026-11-04 15:40:49.135 +04 [97085] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55433"
+2026-11-04 15:40:49.138 +04 [97088] LOG:  database system was interrupted; last known up at 2026-11-04 15:40:47 +04
+2026-11-04 15:40:49.185 +04 [97088] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-04 15:40:49.187 +04 [97088] LOG:  redo starts at 0/2BE87D0
+2026-11-04 15:40:49.187 +04 [97088] WARNING:  could not open directory "base/17097": No such file or directory
+2026-11-04 15:40:49.187 +04 [97088] CONTEXT:  WAL redo at 0/2BE88A0 for Database/DROP: dir 1663/17097
+2026-11-04 15:40:49.187 +04 [97088] WARNING:  some useless files may be left behind in old database directory "base/17097"
+2026-11-04 15:40:49.187 +04 [97088] CONTEXT:  WAL redo at 0/2BE88A0 for Database/DROP: dir 1663/17097
+2026-11-04 15:40:49.198 +04 [97088] LOG:  invalid record length at 0/30A42C8: expected at least 24, got 0
+2026-11-04 15:40:49.198 +04 [97088] LOG:  redo done at 0/30A42A0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-04 15:40:49.200 +04 [97086] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-04 15:40:49.262 +04 [97086] LOG:  checkpoint complete: wrote 1032 buffers (50.4%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.051 s, sync=0.012 s, total=0.063 s; sync files=359, longest=0.001 s, average=0.001 s; distance=4846 kB, estimate=4846 kB; lsn=0/30A42C8, redo lsn=0/30A42C8
+2026-11-04 15:40:49.264 +04 [97085] LOG:  database system is ready to accept connections
+2026-11-04 15:40:51.752 +04 [97086] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:40:51.754 +04 [97086] LOG:  checkpoint complete: wrote 8 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.003 s; sync files=6, longest=0.001 s, average=0.001 s; distance=22 kB, estimate=4364 kB; lsn=0/30A9C20, redo lsn=0/30A9BC8
+2026-11-04 15:40:52.919 +04 [97121] ERROR:  Committed reader fenced
+2026-11-04 15:40:52.919 +04 [97121] CONTEXT:  PL/pgSQL function public.broker_raft_committed_page(text,bigint,jsonb) line 13 at RAISE
+2026-11-04 15:40:52.919 +04 [97121] STATEMENT:  SELECT public.broker_raft_committed_page($1,$2,$3)
+2026-11-04 15:40:52.986 +04 [97085] LOG:  received fast shutdown request
+2026-11-04 15:40:52.986 +04 [97085] LOG:  aborting any active transactions
+2026-11-04 15:40:52.986 +04 [97085] LOG:  background worker "logical replication launcher" (PID 97093) exited with exit code 1
+2026-11-04 15:40:52.986 +04 [97086] LOG:  shutting down
+2026-11-04 15:40:52.987 +04 [97086] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 15:40:52.995 +04 [97086] LOG:  checkpoint complete: wrote 935 buffers (45.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.005 s, total=0.009 s; sync files=8, longest=0.003 s, average=0.001 s; distance=8701 kB, estimate=8701 kB; lsn=0/39291E0, redo lsn=0/39291E0
+2026-11-04 15:40:52.996 +04 [97085] LOG:  database system is shut down

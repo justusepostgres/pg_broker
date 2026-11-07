@@ -1,0 +1,23 @@
+2026-11-04 15:37:39.936 +04 [95878] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 15:37:39.938 +04 [95878] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-11-04 15:37:39.938 +04 [95878] LOG:  listening on IPv6 address "::1", port 5432
+2026-11-04 15:37:39.938 +04 [95878] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2026-11-04 15:37:39.940 +04 [95881] LOG:  database system was interrupted; last known up at 2026-11-04 15:37:38 +04
+2026-11-04 15:37:39.993 +04 [95881] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-04 15:37:39.995 +04 [95881] LOG:  redo starts at 0/2BE8770
+2026-11-04 15:37:39.995 +04 [95881] WARNING:  could not open directory "base/17097": No such file or directory
+2026-11-04 15:37:39.995 +04 [95881] CONTEXT:  WAL redo at 0/2BE8840 for Database/DROP: dir 1663/17097
+2026-11-04 15:37:39.995 +04 [95881] WARNING:  some useless files may be left behind in old database directory "base/17097"
+2026-11-04 15:37:39.995 +04 [95881] CONTEXT:  WAL redo at 0/2BE8840 for Database/DROP: dir 1663/17097
+2026-11-04 15:37:40.007 +04 [95881] LOG:  invalid record length at 0/30A4268: expected at least 24, got 0
+2026-11-04 15:37:40.007 +04 [95881] LOG:  redo done at 0/30A4240 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-04 15:37:40.009 +04 [95879] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-04 15:37:40.049 +04 [95879] LOG:  checkpoint complete: wrote 1032 buffers (6.3%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.031 s, sync=0.010 s, total=0.041 s; sync files=359, longest=0.001 s, average=0.001 s; distance=4846 kB, estimate=4846 kB; lsn=0/30A4268, redo lsn=0/30A4268
+2026-11-04 15:37:40.052 +04 [95878] LOG:  database system is ready to accept connections
+2026-11-04 15:37:40.171 +04 [95878] LOG:  received fast shutdown request
+2026-11-04 15:37:40.171 +04 [95878] LOG:  aborting any active transactions
+2026-11-04 15:37:40.172 +04 [95878] LOG:  background worker "logical replication launcher" (PID 95886) exited with exit code 1
+2026-11-04 15:37:40.172 +04 [95879] LOG:  shutting down
+2026-11-04 15:37:40.172 +04 [95879] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 15:37:40.173 +04 [95879] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=4362 kB; lsn=0/30A4318, redo lsn=0/30A4318
+2026-11-04 15:37:40.174 +04 [95878] LOG:  database system is shut down

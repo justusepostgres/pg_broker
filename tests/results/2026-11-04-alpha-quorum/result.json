@@ -1,0 +1,12 @@
+[
+  {
+    "suite": "unit",
+    "exit_code": 0,
+    "seconds": 8.752794958010782
+  },
+  {
+    "suite": "postgres",
+    "exit_code": 101,
+    "seconds": 9.354615874995943
+  }
+]

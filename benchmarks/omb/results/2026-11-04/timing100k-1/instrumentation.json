@@ -1,0 +1,11 @@
+{
+  "kind": "broker-only-process-io-postgres-waits",
+  "acceptance_run": false,
+  "interval_seconds": 2,
+  "maximum_samples": 550,
+  "slow_sql_logging": false,
+  "gateway_changed": false,
+  "io_and_wal_timing": true,
+  "track_functions": "all",
+  "host_proc_stat": true
+}

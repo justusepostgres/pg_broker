@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "aggregated-datapoints": [
+        {
+          "timestamp": "2026-11-04T02:05:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:06:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:07:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:08:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:09:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:10:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:11:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:12:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:13:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:14:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:15:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:16:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:17:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:18:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:19:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:20:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T02:21:00+00:00",
+          "value": 0.0
+        }
+      ],
+      "compartment-id": "ocid1.tenancy.oc1..aaaaaaaafe6p7erknwb3ekqbeztffxdnirwuf6kel3nkt2ofrmi7iygx4apa",
+      "dimensions": {
+        "attachmentId": "ocid1.instance.oc1.us-sanjose-1.anzwuljrsjflizycskhftwpeg4nzak4sk2rb7pwrvv3fjxdn7u2qg3474bna",
+        "resourceId": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq"
+      },
+      "metadata": {
+        "displayName": "Throttled IOs",
+        "unit": "operations"
+      },
+      "name": "VolumeThrottledIOs",
+      "namespace": "oci_blockstore",
+      "resolution": null,
+      "resource-group": null
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+............F.................s.......s........s..........s............. [ 69%]
+................................                                         [100%]
+=================================== FAILURES ===================================
+__________________ test_uncommitted_append_cannot_be_skipped ___________________
+
+gateway = <conftest.Gateway object at 0x1078f2dd0>
+
+    def test_uncommitted_append_cannot_be_skipped(gateway):
+        t = create()
+        conn = psycopg.connect(DSN)
+        p = producer()
+        c = consumer(name())
+        tp = TopicPartition(t, 0)
+        c.assign([tp])
+        try:
+            # Establish client connections before entering the two-second lock window.
+            assert p.partitions_for(t) == {0}
+            assert c.end_offsets([tp])[tp] == 0
+            assert db(dict(op='append', topic=t, partition=0, data=make_batch().hex()), conn)['offset'] == 0
+            future = p.send(t, partition=0, value=b'next')
+            deadline = time.monotonic() + 1
+            with psycopg.connect(DSN, autocommit=True) as observer:
+                while time.monotonic() < deadline:
+                    if observer.execute("SELECT count(*) FROM pg_stat_activity WHERE wait_event_type='Lock' AND (query LIKE 'SELECT public.broker_call%' OR query LIKE 'SELECT public.broker_append_bytes%')").fetchone()[0]:
+                        break
+                    time.sleep(.01)
+                else:
+>                   raise AssertionError('second append never reached the partition lock')
+E                   AssertionError: second append never reached the partition lock
+
+tests/test_broker.py:183: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_broker.py::test_uncommitted_append_cannot_be_skipped - Asse...
+1 failed, 99 passed, 4 skipped in 90.91s (0:01:30)

@@ -1,0 +1,19 @@
+2026-11-04 04:45:49.330 +04 [62513] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 04:45:49.330 +04 [62513] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 04:45:49.331 +04 [62513] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 04:45:49.333 +04 [62516] LOG:  database system was shut down at 2026-11-04 04:45:49 +04
+2026-11-04 04:45:49.335 +04 [62513] LOG:  database system is ready to accept connections
+2026-11-04 04:45:51.819 +04 [62559] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 04:45:51.840 +04 [62562] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 04:45:51.840 +04 [62562] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 16 at RAISE
+2026-11-04 04:45:51.840 +04 [62562] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:45:51.856 +04 [62563] ERROR:  Raft application owner fenced
+2026-11-04 04:45:51.856 +04 [62563] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at RAISE
+2026-11-04 04:45:51.856 +04 [62563] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:45:51.917 +04 [62513] LOG:  received fast shutdown request
+2026-11-04 04:45:51.917 +04 [62513] LOG:  aborting any active transactions
+2026-11-04 04:45:51.917 +04 [62513] LOG:  background worker "logical replication launcher" (PID 62519) exited with exit code 1
+2026-11-04 04:45:51.918 +04 [62514] LOG:  shutting down
+2026-11-04 04:45:51.918 +04 [62514] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 04:45:51.926 +04 [62514] LOG:  checkpoint complete: wrote 177 buffers (1.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.004 s, total=0.009 s; sync files=112, longest=0.001 s, average=0.001 s; distance=834 kB, estimate=834 kB; lsn=0/15EB398, redo lsn=0/15EB398
+2026-11-04 04:45:51.928 +04 [62513] LOG:  database system is shut down

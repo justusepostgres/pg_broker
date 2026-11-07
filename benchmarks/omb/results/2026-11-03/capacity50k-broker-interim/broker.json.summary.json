@@ -1,0 +1,16 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-pair-017-capacity50k-1/broker.json",
+    "workload": "50k-1-topic-16-partitions-1kb",
+    "samples": 90,
+    "publish_msg_s_mean": 50019.63523478048,
+    "consume_msg_s_mean": 50019.36076893385,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 0,
+    "backlog_last": 249,
+    "backlog_max": 388,
+    "publish_p99_ms": 30.197,
+    "publish_delay_p99_us": 235,
+    "end_to_end_p99_ms": 40.0
+  }
+]

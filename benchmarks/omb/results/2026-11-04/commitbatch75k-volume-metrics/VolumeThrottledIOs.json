@@ -1,0 +1,161 @@
+{
+  "data": [
+    {
+      "aggregated-datapoints": [
+        {
+          "timestamp": "2026-11-03T23:53:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:54:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:55:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:56:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:57:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:58:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:59:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:00:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:01:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:02:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:03:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:04:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:05:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:06:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:07:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:08:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:09:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:10:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:11:00+00:00",
+          "value": 135.0
+        },
+        {
+          "timestamp": "2026-11-04T00:12:00+00:00",
+          "value": 444.0
+        },
+        {
+          "timestamp": "2026-11-04T00:13:00+00:00",
+          "value": 402.0
+        },
+        {
+          "timestamp": "2026-11-04T00:14:00+00:00",
+          "value": 403.0
+        },
+        {
+          "timestamp": "2026-11-04T00:15:00+00:00",
+          "value": 447.0
+        },
+        {
+          "timestamp": "2026-11-04T00:16:00+00:00",
+          "value": 511.0
+        },
+        {
+          "timestamp": "2026-11-04T00:17:00+00:00",
+          "value": 558.0
+        },
+        {
+          "timestamp": "2026-11-04T00:18:00+00:00",
+          "value": 424.0
+        },
+        {
+          "timestamp": "2026-11-04T00:19:00+00:00",
+          "value": 524.0
+        },
+        {
+          "timestamp": "2026-11-04T00:20:00+00:00",
+          "value": 611.0
+        },
+        {
+          "timestamp": "2026-11-04T00:21:00+00:00",
+          "value": 463.0
+        },
+        {
+          "timestamp": "2026-11-04T00:22:00+00:00",
+          "value": 368.0
+        },
+        {
+          "timestamp": "2026-11-04T00:23:00+00:00",
+          "value": 462.0
+        },
+        {
+          "timestamp": "2026-11-04T00:24:00+00:00",
+          "value": 580.0
+        },
+        {
+          "timestamp": "2026-11-04T00:25:00+00:00",
+          "value": 413.0
+        },
+        {
+          "timestamp": "2026-11-04T00:26:00+00:00",
+          "value": 453.0
+        },
+        {
+          "timestamp": "2026-11-04T00:27:00+00:00",
+          "value": 414.0
+        }
+      ],
+      "compartment-id": "ocid1.tenancy.oc1..aaaaaaaafe6p7erknwb3ekqbeztffxdnirwuf6kel3nkt2ofrmi7iygx4apa",
+      "dimensions": {
+        "attachmentId": "ocid1.instance.oc1.us-sanjose-1.anzwuljrsjflizycskhftwpeg4nzak4sk2rb7pwrvv3fjxdn7u2qg3474bna",
+        "resourceId": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq"
+      },
+      "metadata": {
+        "displayName": "Throttled IOs",
+        "unit": "operations"
+      },
+      "name": "VolumeThrottledIOs",
+      "namespace": "oci_blockstore",
+      "resolution": null,
+      "resource-group": null
+    }
+  ]
+}

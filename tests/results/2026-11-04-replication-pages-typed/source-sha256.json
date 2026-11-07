@@ -1,0 +1,8 @@
+{
+  "crates/extension/sql/pg_broker--0.1.19--0.1.20.sql": "2d1b49d70d82ac61fb62ae285d36620d3efdda6af7169ce21ccc41b12a138051",
+  "crates/cluster/src/reader.rs": "0039ccc2350e447c6292355440763a0dfe926514ed457e55471e34f7316bca4c",
+  "crates/cluster/src/votes.rs": "90f95c6e346c8c3ed66a1183b8d372ccd570e5ad9f2b225b97666e88912ff70c",
+  "crates/cluster/tests/replication_pages_postgres.rs": "19d84af2e7248bcb3b1505be679cb691a90729ed0fa3680daae060703e262b6b",
+  "tests/test_raft_replication_pages.py": "a9ab43422614f83da477000db1d32f509c7031b462e5825bc086452e750587ea",
+  "scripts/package-extension.sh": "e91cd928c9d3c94dda6c2358debaed0c70aba65f2c17a53c481157567b63a7cc"
+}

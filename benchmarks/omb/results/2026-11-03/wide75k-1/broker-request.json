@@ -1,0 +1,6 @@
+{
+  "label": "017-wide75k-1-broker",
+  "rate": "75k",
+  "bootstrap": "10.84.0.247:9092",
+  "system": "broker"
+}

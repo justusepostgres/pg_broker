@@ -1,0 +1,7 @@
+fsync|on|
+full_page_writes|on|
+synchronous_commit|on|
+wal_init_zero|on|
+wal_recycle|on|
+wal_segment_size|16777216|B
+wal_sync_method|fdatasync|

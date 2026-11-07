@@ -1,0 +1,27 @@
+   Compiling openraft-format-probe v0.0.0 (/Users/salah/Documents/ChatGPT/pg_kafka/tests/experiments/openraft-compatibility)
+    Finished `test` profile [unoptimized] target(s) in 6.60s
+     Running unittests src/main.rs (target/openraft-format-probe/debug/deps/openraft_format_probe-ab8c9625b63d1c4f)
+
+running 19 tests
+test alpha_node_tests::failed_application_does_not_report_a_successful_client_write ... ignored, requires disposable SQL0.1.19
+test alpha_node_tests::real_client_callback_waits_for_application_and_restart_recovers ... ignored, requires disposable SQL0.1.19
+test alpha_node_tests::real_engine_recovers_a_large_committed_application_jump ... ignored, requires disposable SQL0.1.19
+test alpha_node_tests::replaced_storage_owner_fences_a_running_engine ... ignored, requires disposable SQL0.1.19
+test alpha_quorum_tests::tcp_quorum_replicates_elects_recovers_and_requires_majority ... ignored, requires disposable SQL0.1.20 with database creation privilege
+test alpha_quorum_tests::tcp_quorum_survives_leader_postgres_crash ... ignored, requires three explicitly disposable PostgreSQL servers
+test paged_stream::empty_and_maximum_index_ranges_do_not_wrap ... ok
+test paged_stream::cancellation_during_page_read_stops_without_background_work ... ok
+test postgres_stream::postgres_stream_reads_large_committed_jump_with_real_payloads ... ignored, requires disposable PostgreSQL SQL0.1.19
+test postgres_stream::postgres_stream_terminates_on_owner_replacement_between_pages ... ignored, requires disposable PostgreSQL SQL0.1.19
+test stream_tests::default_stream_does_not_chunk_a_large_committed_range ... ok
+test selected_json_fixtures_round_trip ... ok
+test alpha_tcp::incoming_frames_reject_oversized_and_truncated_payloads ... ok
+test paged_stream::page_failure_and_gap_are_terminal_without_partial_bad_page ... ok
+test stream_tests::default_stream_fetches_the_whole_range_before_first_poll ... ok
+test paged_stream::oversized_entry_is_rejected_without_yielding_or_looping ... ok
+test paged_stream::byte_budget_and_drop_prevent_prefetch ... ok
+test paged_stream::committed_jump_streams_over_4096_entries_with_bounded_pages ... ok
+test alpha_tcp::outgoing_frame_is_bounded_during_serialization ... ok
+
+test result: ok. 11 passed; 0 failed; 8 ignored; 0 measured; 0 filtered out; finished in 0.30s
+

@@ -1,0 +1,19 @@
+4eaffe54b4fe6b34e97d5d1cd9acfbf95b113fc3a3f865bd1ff263dd7c6b8cf2  candidate-final/pg-broker-gateway
+a56000680ad41a91b74e58340bdc7c4d8814a4738cfca6fd0e5ff167a9f1cf2f  candidate-final/libpg_broker.so
+f693f548155b2e8183514df68a3a772b718df4d7b2d5f320c4758a847b0df40c  pg_broker--0.1.1--0.1.2.sql
+5d8ba33975afb6f2d1779dea11d6517a99524bf445ec3211a96cb0346156a632  notify-src/database.rs
+b8c1e87b42e04a3353d530a8ec49abcaddada43e19bafeff9020c75cc01b0768  notify-src/handlers.rs
+89995e5a6481781d201fc1e785b73585d9afcd3fb3f162e9dd34ae7ad9b7fe65  notify-src/health.rs
+213e695dc849edce50345fc1161fc60d4620929ff46759790eff80d1b2a35744  notify-src/main.rs
+0ebfa0bed72cc170e00226f02b4ff15bceb69feee13e595f185b981d8f2823e9  notify-src/server.rs
+98f3054344aab390ccfdea4bad0df1840e8ed62760ad484b7d375f653ef4b9e2  extension-final-src/lib.rs
+sha256:81f34be4d38ad617648e1399b91cfc67098fdd90e2e8d759393a09d5cb6fc820
+openjdk version "17.0.20.1" 2026-08-18
+OpenJDK Runtime Environment (build 17.0.20.1+1-1-24.04-Ubuntu)
+OpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-24.04-Ubuntu, mixed mode, sharing)
+
+SQL bulk-fetch / extension 0.1.3 follow-up:
+8f22eec0e2f74db3c9a1c040abcc5a6446323e9f71a67dacbeb94430b01bb2aa  candidate-sql013/pg-broker-gateway
+a56000680ad41a91b74e58340bdc7c4d8814a4738cfca6fd0e5ff167a9f1cf2f  candidate-final/libpg_broker.so
+fa459e1c9e1ba75af3d94c845b5bf2398103d60a180b6b7ccd63c999e1543827  pg_broker--0.1.2--0.1.3.sql
+Gateway source hashes verified against sql013-source-hashes.json.

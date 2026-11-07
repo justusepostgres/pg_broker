@@ -1,0 +1,19 @@
+pg-broker listening on 10.84.0.247:9092
+unix_ms=1793779483388 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793779483475 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793779483497 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793779543397 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793779603507 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793779663613 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793779723718 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793779783823 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793779843927 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793779904032 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793779964136 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793780024241 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793780084348 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793780144454 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793780204559 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793780264665 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793780324771 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793780384878 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed

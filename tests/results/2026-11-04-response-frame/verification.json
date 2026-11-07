@@ -1,0 +1,7 @@
+{
+  "native_tests": 51,
+  "protocol_tests": 3,
+  "build": "passed --locked",
+  "clippy": "passed --locked -D warnings",
+  "scope": "Combined response buffer; write_all may still need multiple underlying writes. No cloud throughput claim."
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-017-external32k-1-broker/result.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32026.164319421885,
+    "consume_msg_s_mean": 32025.626942866973,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 0,
+    "backlog_last": 162,
+    "backlog_max": 177,
+    "publish_p99_ms": 10.566,
+    "publish_delay_p99_us": 311,
+    "end_to_end_p99_ms": 14.0,
+    "publish_p999_ms": 42.218,
+    "publish_p9999_ms": 104.115,
+    "publish_max_ms": 137.54,
+    "publish_delay_p999_us": 755,
+    "publish_delay_p9999_us": 1724,
+    "publish_delay_max_us": 4818,
+    "end_to_end_p999_ms": 46.0,
+    "end_to_end_p9999_ms": 110.0,
+    "end_to_end_max_ms": 131.0
+  }
+]

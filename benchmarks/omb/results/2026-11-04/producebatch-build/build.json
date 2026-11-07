@@ -1,0 +1,19 @@
+{
+  "phase": "complete",
+  "unit": "omb-build-producebatch017.service",
+  "host": "170.9.24.220",
+  "source_sha256": "e9767fecf0f3cc7795108ad1c111459ebd87aec83ed2142998e43e2b0406decc",
+  "source_manifest": ".dev/producebatch017-source-hashes.json",
+  "output": "/home/ubuntu/candidate-producebatch017",
+  "builder": "sha256:dccffb5d7a3ac4a4ae357dfcf851613e38a1d8b0ee25d7834f75185aee827c28",
+  "previous_pair_invocation": "16d2bb8e353a4c2db595918701d8d307",
+  "invocation": "7fe262e183d44e88b4acb2ff09b1cdc1",
+  "observed": {
+    "MainPID": "116001",
+    "Result": "success",
+    "ExecMainStatus": "0",
+    "SubState": "running",
+    "InvocationID": "7fe262e183d44e88b4acb2ff09b1cdc1"
+  },
+  "binary_sha256": "0e0b5024eb643859f18b23a111870a45f28a2e65e522505ddeac8592bddb41fc"
+}

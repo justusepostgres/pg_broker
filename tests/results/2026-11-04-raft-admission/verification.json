@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "2026-11-04T00:46:20.676153+00:00",
+  "unit_tests_passed": 3,
+  "integration_tests_passed": 2,
+  "clippy": "all targets with warnings denied; passed",
+  "scope": "Typed command admission only; not network consensus or a performance result.",
+  "source_sha256": {
+    "crates/cluster/src/application.rs": "a9f84c079220106678fe8258d563b93ffd15ae3497bb011c763963e4f8232fd5",
+    "crates/cluster/Cargo.toml": "b72b0b487b6d27a921f6776014fd91d0d2216f817f1544916da067d4972451f4",
+    "crates/cluster/tests/application_postgres.rs": "078f145fdd03ac9e90dfe4e6edd523df0a59078fcf78c7b26075bf3e085409c8",
+    "crates/protocol/src/lib.rs": "8a03fd0542e84f4c31c9fccd597dcc7b22952fe21792722d32bc460fc330d706",
+    "Cargo.lock": "8a43979daf21182f69a4f9ece56b66aa88517aa7091c0547ea01eda72b9b7ba8",
+    ".dev/run-raft-admission-native.py": "a0b48e719a4ecf4afcf9de224cec26fa4d562f03d8aa93988fa0744b43cef4de"
+  }
+}

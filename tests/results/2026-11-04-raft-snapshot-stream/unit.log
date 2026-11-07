@@ -1,0 +1,14 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.08s
+     Running unittests src/lib.rs (target/debug/deps/broker_cluster-d5fb24be8397474f)
+
+running 7 tests
+test reader::tests::range_bounds_never_wrap_at_u64_edges ... ok
+test application::tests::validated_command_round_trips_and_preserves_wire_bytes ... ok
+test application::tests::invalid_commands_are_rejected_before_proposal_or_decode_acceptance ... ok
+test snapshot_stream::tests::round_trip_empty_and_multiple_pages ... ok
+test snapshot_stream::tests::rejects_reordering_gaps_and_changed_manifest_even_with_valid_checksum ... ok
+test snapshot_stream::tests::rejects_every_truncation_corruption_and_budget_shortfall ... ok
+test snapshot_stream::tests::cancellation_poisons_partial_reader ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

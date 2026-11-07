@@ -1,0 +1,17 @@
+{
+  "postgresql": "17.11",
+  "default_extension": "0.1.7",
+  "identity_database_versions": [
+    "0.1.7 upgraded to 0.1.8",
+    "0.1.8 fresh"
+  ],
+  "tests_passed": 53,
+  "seconds": 77.35,
+  "sha256": {
+    "crates/extension/sql/pg_broker--0.1.7--0.1.8.sql": "484fa1ee78c2f7474310d751c3462ad3ec6918693305df587645d669166f0481",
+    "tests/test_topic_identity.py": "68adb91186b4bd2215822c61fff147da1ec6f48cae08cc6eea08ebc15427c3b1",
+    "scripts/package-extension.sh": "8fd44a397c9e50c30c49f9c752f00cdb5e2298b921fa313ee5d6185ffeb27a6b",
+    "target/debug/pg-broker-gateway": "e1df18f5ad277bf3cad796eccd03fa264d70cabdfd245b6c323bb947acbea0d9",
+    "/opt/homebrew/lib/postgresql@17/pg_broker.dylib": "9a5ad0f725483d5d494348da35bc3905b725c422639c056bfe785bce4ab2f0b3"
+  }
+}

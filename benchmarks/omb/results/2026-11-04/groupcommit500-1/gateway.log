@@ -1,0 +1,19 @@
+pg-broker listening on 10.84.0.247:9092
+unix_ms=1793777991614 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793777991698 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793777991735 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778051625 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778111732 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778171838 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778231944 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778292051 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778352159 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778412264 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778472370 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778532476 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778592583 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778652687 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778712794 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778772901 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778833009 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793778893114 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed

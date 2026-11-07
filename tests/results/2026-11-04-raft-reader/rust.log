@@ -1,0 +1,29 @@
+   Compiling broker-cluster v0.1.0 (/Users/salah/Documents/ChatGPT/pg_kafka/crates/cluster)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.77s
+     Running tests/journal_postgres.rs (target/debug/deps/journal_postgres-0b958e3632883f34)
+
+running 3 tests
+test cancellation_discards_connection_and_does_not_commit_append_later ... ok
+test confirmed_durability_and_request_bounds ... ok
+test typed_entries_votes_and_prefixes_survive_owner_replacement ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.24s
+
+     Running tests/reader_postgres.rs (target/debug/deps/reader_postgres-1248a1e55154e6ec)
+
+running 3 tests
+test byte_bounds_never_silently_shorten_complete_reads ... ok
+test cancelled_reader_discards_connection_without_fencing_the_writer ... ok
+test complete_and_limited_ranges_have_distinct_contracts_and_fencing ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.76s
+
+     Running tests/votes_postgres.rs (target/debug/deps/votes_postgres-884a3427559e813c)
+
+running 3 tests
+test cancelling_blocked_vote_discards_connection_and_never_commits_it_later ... ok
+test persisted_vote_survives_new_owner_and_fences_old_cached_operations ... ok
+test session_async_commit_is_overridden_and_invalid_inputs_are_bounded ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+

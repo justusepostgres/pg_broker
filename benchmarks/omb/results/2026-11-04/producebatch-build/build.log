@@ -1,0 +1,26 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling serde_core v1.0.228
+   Compiling quote v1.0.47
+   Compiling syn v2.0.119
+   Compiling serde_json v1.0.154
+   Compiling syn v3.0.9
+   Compiling tokio-macros v2.6.1
+   Compiling tokio v1.48.0
+   Compiling openssl-macros v0.1.1
+   Compiling futures-task v0.3.34
+   Compiling openssl v0.10.82
+   Compiling tokio-util v0.7.19
+   Compiling futures-util v0.3.34
+   Compiling async-trait v0.1.92
+   Compiling postgres-types v0.2.14
+   Compiling native-tls v0.2.14
+   Compiling tokio-postgres v0.7.15
+   Compiling deadpool-runtime v0.1.4
+   Compiling tracing-attributes v0.1.31
+   Compiling deadpool v0.12.3
+   Compiling tracing v0.1.44
+   Compiling tokio-native-tls v0.3.1
+   Compiling postgres-native-tls v0.5.2
+   Compiling deadpool-postgres v0.14.1
+   Compiling pg-broker-gateway v0.1.0 (/src/crates/gateway)
+    Finished `release` profile [optimized] target(s) in 43.62s

@@ -1,0 +1,12 @@
+{
+  "tests/test_bulk_commit.py": "228f3da61bb5a4da83aa04ec00159e42d4bfbe2fd23c053cbdcd2173f0bb95f8",
+  "crates/extension/sql/pg_broker--0.1.16--0.1.17.sql": "6bd69bb1214a08718432998f8bdca2682d2afbc9346da0d026aaae80527c4dcd",
+  "crates/gateway/src/server.rs": "f1d75bdc596022dc37f22b8fa1069be7e88f094ddfa7dbaca6afa51963f530d3",
+  "scripts/package-extension.sh": "94968da294a5783b8cf5aa9a30f6fa20147cbf80cde8781a7d603df05d9c99fe",
+  ".dev/run-bulk-commit-native.py": "d355dcd5d0ee63e5786d19aadeefbef2a3ec5efab335d80068f8bead54690234",
+  ".dev/run-bulk-commit-capability-native.py": "6290470cde284b1c632cd82c95eb2f7f791dc270e982318adf266c5a799d1ca5",
+  ".dev/bulk-commit-native-tests.log": "b51288d1b0e90e775685012a38cf2334d527e4d5d3d0951f4cc333b7d0db36a6",
+  ".dev/bulk-commit-native-result.json": "67419c54be64844e42475ba7aa04e54428048b939c40dd48f1372f914cef0787",
+  ".dev/bulk-commit-capability-native-tests.log": "7cbd3cc6c4248d4b310209e74942fee77a2200d36969992e73cbb745bfd179e0",
+  ".dev/bulk-commit-capability-native-result.json": "67419c54be64844e42475ba7aa04e54428048b939c40dd48f1372f914cef0787"
+}

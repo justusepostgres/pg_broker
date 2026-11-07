@@ -1,0 +1,20 @@
+Nov 04 08:01:10 pg-broker-omb-verification-1 systemd[1]: Started omb-cloud-controller-bulkcommit-1.service - /usr/bin/python3 -u /home/ubuntu/omb-cloud-controller/cloud-controller.py 017-bulkcommit-1 --order broker-first --rate 100k --runner-sha256 df772a20cce7a4ccb8cc0d93db0f2efa4bd7d0a62aa7ff6b8b776077943732ba --volume-size-gib 1024 --diagnostic-broker-only --diagnostic-timing --bulk-commit-binary /home/ubuntu/candidate-bulkcommit017/pg-broker-gateway --bulk-commit-sha256 81ceb16a9475cc5e35cd7f34e67c9132e8efe7418a4e3e9e3489f4abf4802103.
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228209]:   ubuntu : PWD=/ ; USER=root ; COMMAND=/usr/bin/docker ps -q
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228209]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228209]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:10 pg-broker-omb-verification-1 python3[228225]: /home/ubuntu/pg-broker/benchmarks/omb/oci-pair.sh: OK
+Nov 04 08:01:10 pg-broker-omb-verification-1 python3[228225]: /home/ubuntu/candidate-bulkcommit017/pg-broker-gateway: OK
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228226]:   ubuntu : PWD=/ ; USER=root ; COMMAND=/usr/bin/systemd-run --unit=omb-cloud-pair-017-bulkcommit-1.service --uid=ubuntu --property=RuntimeMaxSec=3600 --property=RemainAfterExit=yes --setenv=OMB_EXTERNAL_CLIENT=1 --setenv=OMB_SERVER_HOST=10.84.0.247 --setenv=OMB_DIAGNOSTIC_BROKER_ONLY=1 --setenv=OMB_DIAGNOSTIC_TIMING=1 --setenv=OMB_DIAGNOSTIC_COMMIT_DELAY_US=0 --setenv=OMB_SQL_VERSION=0.1.17 --setenv=OMB_KAFKA_FLUSH_POLICY=background --setenv=OMB_GATEWAY_PATH=/home/ubuntu/candidate-bulkcommit017/pg-broker-gateway --setenv=OMB_GATEWAY_SHA256=81ceb16a9475cc5e35cd7f34e67c9132e8efe7418a4e3e9e3489f4abf4802103 /bin/bash /home/ubuntu/pg-broker/benchmarks/omb/oci-pair.sh 017-bulkcommit-1 100k broker-first off
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228226]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:10 pg-broker-omb-verification-1 python3[228227]: Running as unit: omb-cloud-pair-017-bulkcommit-1.service; invocation ID: d03625d99c39414e98e0bed3f08639b6
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228226]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:20 pg-broker-omb-verification-1 python3[228208]: Traceback (most recent call last):
+Nov 04 08:01:20 pg-broker-omb-verification-1 python3[228208]:   File "/home/ubuntu/omb-cloud-controller/cloud-controller.py", line 186, in <module>
+Nov 04 08:01:20 pg-broker-omb-verification-1 python3[228208]:     if __name__=='__main__':main()
+Nov 04 08:01:20 pg-broker-omb-verification-1 python3[228208]:                             ^^^^^^
+Nov 04 08:01:20 pg-broker-omb-verification-1 python3[228208]:   File "/home/ubuntu/omb-cloud-controller/cloud-controller.py", line 135, in main
+Nov 04 08:01:20 pg-broker-omb-verification-1 python3[228208]:     assert observed['InvocationID']==invocation and observed['SubState']=='running',observed
+Nov 04 08:01:20 pg-broker-omb-verification-1 python3[228208]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Nov 04 08:01:20 pg-broker-omb-verification-1 python3[228208]: AssertionError: {'MainPID': '0', 'Result': 'exit-code', 'ExecMainStatus': '1', 'SubState': 'failed', 'InvocationID': 'd03625d99c39414e98e0bed3f08639b6'}
+Nov 04 08:01:20 pg-broker-omb-verification-1 systemd[1]: omb-cloud-controller-bulkcommit-1.service: Main process exited, code=exited, status=1/FAILURE
+Nov 04 08:01:20 pg-broker-omb-verification-1 systemd[1]: omb-cloud-controller-bulkcommit-1.service: Failed with result 'exit-code'.

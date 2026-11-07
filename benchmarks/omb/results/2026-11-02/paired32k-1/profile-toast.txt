@@ -1,0 +1,64 @@
+BEGIN
+SET
+SET
+SET
+SET
+CREATE TABLE
+ALTER TABLE
+INSERT 0 100
+DO
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+                                             QUERY PLAN                                              
+-----------------------------------------------------------------------------------------------------
+ Insert on omb_toast_pglz  (cost=0.00..25.88 rows=0 width=0) (actual rows=0 loops=1)
+   Buffers: shared hit=2, local hit=1169 read=2039 dirtied=55 written=879
+   ->  Seq Scan on omb_toast_sample  (cost=0.00..25.88 rows=1270 width=36) (actual rows=100 loops=1)
+         Buffers: local hit=470 read=2038 written=798
+ Planning Time: 0.027 ms
+ Execution Time: 121.788 ms
+(6 rows)
+
+                                             QUERY PLAN                                              
+-----------------------------------------------------------------------------------------------------
+ Insert on omb_toast_external  (cost=0.00..25.88 rows=0 width=0) (actual rows=0 loops=1)
+   Buffers: shared hit=2, local hit=31253 read=2244 dirtied=2241 written=3991
+   ->  Seq Scan on omb_toast_sample  (cost=0.00..25.88 rows=1270 width=36) (actual rows=100 loops=1)
+         Buffers: local hit=265 read=2243 written=869
+ Planning Time: 0.039 ms
+ Execution Time: 42.207 ms
+(6 rows)
+
+ variant  | batches | logical_bytes | stored_value_bytes | relation_bytes 
+----------+---------+---------------+--------------------+----------------
+ pglz     |     100 |      17606837 |             350527 |         483328
+ external |     100 |      17606837 |           17606841 |       18374656
+(2 rows)
+
+                                            QUERY PLAN                                             
+---------------------------------------------------------------------------------------------------
+ Aggregate  (cost=32.23..32.23 rows=1 width=8) (actual rows=1 loops=1)
+   Buffers: local hit=156 read=50 written=13
+   ->  Seq Scan on omb_toast_pglz  (cost=0.00..22.70 rows=1270 width=32) (actual rows=100 loops=1)
+         Buffers: local hit=2
+ Planning Time: 0.018 ms
+ Execution Time: 2.174 ms
+(6 rows)
+
+                                              QUERY PLAN                                               
+-------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=32.23..32.23 rows=1 width=8) (actual rows=1 loops=1)
+   Buffers: local hit=271 read=2237 written=734
+   ->  Seq Scan on omb_toast_external  (cost=0.00..22.70 rows=1270 width=32) (actual rows=100 loops=1)
+         Buffers: local hit=1
+ Planning Time: 0.021 ms
+ Execution Time: 10.415 ms
+(6 rows)
+
+ checked_batches | identical_bytes 
+-----------------+-----------------
+             100 | t
+(1 row)
+
+ROLLBACK

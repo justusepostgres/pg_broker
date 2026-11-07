@@ -1,0 +1,493 @@
+23:52:37.711 [main] INFO Benchmark - Starting benchmark with config: {
+  "drivers" : [ "/home/ubuntu/results/omb-client-017-commitbatch75k-1-broker/result.json.driver.yaml" ],
+  "workers" : null,
+  "workersFile" : null,
+  "workloads" : [ "/home/ubuntu/results/omb-client-017-commitbatch75k-1-broker/result.json.workload.yaml" ],
+  "output" : "/home/ubuntu/results/omb-client-017-commitbatch75k-1-broker/result.json"
+}
+23:52:37.752 [main] INFO Benchmark - Workloads: {
+  "result.json.workload" : {
+    "name" : "75k-1-topic-16-partitions-1kb",
+    "topics" : 1,
+    "partitionsPerTopic" : 16,
+    "keyDistributor" : "NO_KEY",
+    "messageSize" : 1024,
+    "messageSizeDistribution" : null,
+    "useRandomizedPayloads" : false,
+    "randomBytesRatio" : 0.0,
+    "randomizedPayloadPoolSize" : 0,
+    "payloadFile" : "payload/payload-1Kb.data",
+    "subscriptionsPerTopic" : 1,
+    "producersPerTopic" : 1,
+    "consumerPerSubscription" : 1,
+    "producerRate" : 75000,
+    "consumerBacklogSizeGB" : 0,
+    "backlogDrainRatio" : 1.0,
+    "testDurationMinutes" : 15,
+    "warmupDurationMinutes" : 1
+  }
+}
+23:52:37.797 [main] INFO Benchmark - --------------- WORKLOAD : 75k-1-topic-16-partitions-1kb --- DRIVER : Kafka-compatible-RF1---------------
+23:52:38.221 [main] INFO LocalWorker - Driver: {
+  "name" : "Kafka-compatible-RF1",
+  "driverClass" : "io.openmessaging.benchmark.driver.kafka.KafkaBenchmarkDriver"
+}
+23:52:38.242 [main] INFO AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [10.84.0.247:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+23:52:38.303 [main] INFO AppInfoParser - Kafka version: 3.6.1
+23:52:38.303 [main] INFO AppInfoParser - Kafka commitId: 5e3c2b738d253ff5
+23:52:38.303 [main] INFO AppInfoParser - Kafka startTimeMs: 1793749958301
+23:52:38.620 [main] INFO LocalWorker - Created 1 topics in 311.600852 ms
+23:52:38.620 [main] INFO WorkloadGenerator - Created 1 topics in 312.087652 ms
+23:52:38.632 [main] INFO ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [10.84.0.247:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-sub-000-Ue4RR-g-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 4194304
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = sub-000-Ue4RR-g
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+23:52:38.672 [main] INFO AppInfoParser - Kafka version: 3.6.1
+23:52:38.672 [main] INFO AppInfoParser - Kafka commitId: 5e3c2b738d253ff5
+23:52:38.672 [main] INFO AppInfoParser - Kafka startTimeMs: 1793749958672
+23:52:38.674 [main] INFO KafkaConsumer - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Subscribed to topic(s): test-topic-0000000-AXm1pz8
+23:52:38.679 [main] INFO LocalWorker - Created 1 consumers in 57.388899 ms
+23:52:38.680 [main] INFO WorkloadGenerator - Created 1 consumers in 57.610379 ms
+23:52:38.692 [main] INFO ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 262144
+	bootstrap.servers = [10.84.0.247:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+23:52:38.706 [pool-3-thread-1] INFO Metadata - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Cluster ID: pg-broker
+23:52:38.708 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Discovered group coordinator 10.84.0.247:9092 (id: 2147483646 rack: null)
+23:52:38.710 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] (Re-)joining group
+23:52:38.725 [main] INFO ProducerConfig - These configurations '[default.api.timeout.ms]' were supplied but are not used yet.
+23:52:38.725 [main] INFO AppInfoParser - Kafka version: 3.6.1
+23:52:38.726 [main] INFO AppInfoParser - Kafka commitId: 5e3c2b738d253ff5
+23:52:38.726 [main] INFO AppInfoParser - Kafka startTimeMs: 1793749958725
+23:52:38.727 [main] INFO LocalWorker - Created 1 producers in 47.064357 ms
+23:52:38.733 [main] INFO WorkloadGenerator - Created 1 producers in 52.824507 ms
+23:52:38.733 [main] INFO WorkloadGenerator - Waiting for consumers to be ready
+23:52:38.736 [kafka-producer-network-thread | producer-1] INFO Metadata - [Producer clientId=producer-1] Cluster ID: pg-broker
+23:52:38.746 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Successfully joined group with generation Generation{generationId=1, memberId='b8fef0fa-0827-4049-878d-e034698e3c49', protocol='range'}
+23:52:38.761 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Finished assignment for group at generation 1: {b8fef0fa-0827-4049-878d-e034698e3c49=Assignment(partitions=[test-topic-0000000-AXm1pz8-0, test-topic-0000000-AXm1pz8-1, test-topic-0000000-AXm1pz8-2, test-topic-0000000-AXm1pz8-3, test-topic-0000000-AXm1pz8-4, test-topic-0000000-AXm1pz8-5, test-topic-0000000-AXm1pz8-6, test-topic-0000000-AXm1pz8-7, test-topic-0000000-AXm1pz8-8, test-topic-0000000-AXm1pz8-9, test-topic-0000000-AXm1pz8-10, test-topic-0000000-AXm1pz8-11, test-topic-0000000-AXm1pz8-12, test-topic-0000000-AXm1pz8-13, test-topic-0000000-AXm1pz8-14, test-topic-0000000-AXm1pz8-15])}
+23:52:38.769 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Successfully synced group in generation Generation{generationId=1, memberId='b8fef0fa-0827-4049-878d-e034698e3c49', protocol='range'}
+23:52:38.770 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Notifying assignor about the new Assignment(partitions=[test-topic-0000000-AXm1pz8-0, test-topic-0000000-AXm1pz8-1, test-topic-0000000-AXm1pz8-2, test-topic-0000000-AXm1pz8-3, test-topic-0000000-AXm1pz8-4, test-topic-0000000-AXm1pz8-5, test-topic-0000000-AXm1pz8-6, test-topic-0000000-AXm1pz8-7, test-topic-0000000-AXm1pz8-8, test-topic-0000000-AXm1pz8-9, test-topic-0000000-AXm1pz8-10, test-topic-0000000-AXm1pz8-11, test-topic-0000000-AXm1pz8-12, test-topic-0000000-AXm1pz8-13, test-topic-0000000-AXm1pz8-14, test-topic-0000000-AXm1pz8-15])
+23:52:38.777 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Adding newly assigned partitions: test-topic-0000000-AXm1pz8-0, test-topic-0000000-AXm1pz8-1, test-topic-0000000-AXm1pz8-2, test-topic-0000000-AXm1pz8-3, test-topic-0000000-AXm1pz8-4, test-topic-0000000-AXm1pz8-5, test-topic-0000000-AXm1pz8-6, test-topic-0000000-AXm1pz8-7, test-topic-0000000-AXm1pz8-8, test-topic-0000000-AXm1pz8-9, test-topic-0000000-AXm1pz8-10, test-topic-0000000-AXm1pz8-11, test-topic-0000000-AXm1pz8-12, test-topic-0000000-AXm1pz8-13, test-topic-0000000-AXm1pz8-14, test-topic-0000000-AXm1pz8-15
+23:52:38.789 [main] INFO WorkloadGenerator - Waiting for topics to be ready -- Sent: 0, Received: 0
+23:52:38.824 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-15
+23:52:38.824 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-6
+23:52:38.825 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-5
+23:52:38.825 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-4
+23:52:38.825 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-3
+23:52:38.826 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-2
+23:52:38.826 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-1
+23:52:38.826 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-0
+23:52:38.826 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-14
+23:52:38.827 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-13
+23:52:38.827 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-12
+23:52:38.827 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-11
+23:52:38.827 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-10
+23:52:38.827 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-9
+23:52:38.827 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-8
+23:52:38.827 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Found no committed offset for partition test-topic-0000000-AXm1pz8-7
+23:52:38.849 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-15 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.851 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-6 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.851 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-5 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.852 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-4 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.852 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-3 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.852 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.852 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.852 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.853 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-14 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.853 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-13 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.853 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-12 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.854 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-11 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.854 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-10 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.854 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-9 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.854 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-8 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:38.855 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting offset for partition test-topic-0000000-AXm1pz8-7 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[10.84.0.247:9092 (id: 1 rack: null)], epoch=absent}}.
+23:52:40.790 [main] INFO WorkloadGenerator - Waiting for topics to be ready -- Sent: 1, Received: 1
+23:52:40.790 [main] INFO WorkloadGenerator - All consumers are ready
+23:52:40.810 [main] INFO WorkloadGenerator - ----- Starting warm-up traffic (1m) ------
+23:52:50.976 [main] INFO WorkloadGenerator - Pub rate 73135.1 msg/s / 71.4 MB/s | Pub err     0.0 err/s | Cons rate 72657.0 msg/s / 71.0 MB/s | Backlog:  4.8 K | Pub Latency (ms) avg: 367.7 - 50%: 375.8 - 99%: 705.6 - 99.9%: 804.3 - Max: 960.2 | Pub Delay Latency (us) avg: 59237.7 - 50%: 29080.0 - 99%: 194800.0 - 99.9%: 201665.0 - Max: 206407.0
+23:53:01.076 [main] INFO WorkloadGenerator - Pub rate 76317.0 msg/s / 74.5 MB/s | Pub err     0.0 err/s | Cons rate 76536.8 msg/s / 74.7 MB/s | Backlog:  2.6 K | Pub Latency (ms) avg: 74.6 - 50%: 48.1 - 99%: 331.7 - 99.9%: 418.4 - Max: 466.8 | Pub Delay Latency (us) avg: 110.9 - 50%: 42.0 - 99%: 1621.0 - 99.9%: 4125.0 - Max: 8479.0
+23:53:11.145 [main] INFO WorkloadGenerator - Pub rate 74836.9 msg/s / 73.1 MB/s | Pub err     0.0 err/s | Cons rate 75016.2 msg/s / 73.3 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 44.2 - 50%: 38.2 - 99%: 129.4 - 99.9%: 159.7 - Max: 192.3 | Pub Delay Latency (us) avg: 79.1 - 50%: 36.0 - 99%: 1138.0 - 99.9%: 3292.0 - Max: 5863.0
+23:53:21.204 [main] INFO WorkloadGenerator - Pub rate 75279.6 msg/s / 73.5 MB/s | Pub err     0.0 err/s | Cons rate 75297.8 msg/s / 73.5 MB/s | Backlog:  0.6 K | Pub Latency (ms) avg: 68.3 - 50%: 49.3 - 99%: 262.6 - 99.9%: 340.2 - Max: 352.0 | Pub Delay Latency (us) avg: 71.5 - 50%: 35.0 - 99%: 955.0 - 99.9%: 3363.0 - Max: 6143.0
+23:53:31.268 [main] INFO WorkloadGenerator - Pub rate 74857.0 msg/s / 73.1 MB/s | Pub err     0.0 err/s | Cons rate 74738.2 msg/s / 73.0 MB/s | Backlog:  1.8 K | Pub Latency (ms) avg: 58.0 - 50%: 37.2 - 99%: 234.4 - 99.9%: 313.5 - Max: 328.7 | Pub Delay Latency (us) avg: 60.4 - 50%: 34.0 - 99%: 683.0 - 99.9%: 2726.0 - Max: 6780.0
+23:53:38.608 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+23:53:38.696 [pool-3-thread-1] INFO NetworkClient - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Node -1 disconnected.
+23:53:38.737 [kafka-producer-network-thread | producer-1] INFO NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+23:53:41.323 [main] INFO WorkloadGenerator - Pub rate 73066.3 msg/s / 71.4 MB/s | Pub err     0.0 err/s | Cons rate 73066.3 msg/s / 71.4 MB/s | Backlog:  1.8 K | Pub Latency (ms) avg: 182.4 - 50%: 159.9 - 99%: 515.3 - 99.9%: 577.8 - Max: 615.0 | Pub Delay Latency (us) avg: 79.5 - 50%: 36.0 - 99%: 932.0 - 99.9%: 5881.0 - Max: 13627.0
+23:53:41.401 [main] INFO WorkloadGenerator - ----- Aggregated Pub Latency (ms) avg: 131.3 - 50%: 58.5 - 95%: 457.0 - 99%: 570.2 - 99.9%: 725.1 - 99.99%: 875.5 - Max: 960.2 | Pub Delay (us)  avg: 9732.7 - 50%: 43.0 - 95%: 100402.0 - 99%: 180814.0 - 99.9%: 196844.0 - 99.99%: 202556.0 - Max: 206407.0
+23:53:41.656 [main] INFO WorkloadGenerator - ----- Starting benchmark traffic (15m)------
+23:53:51.737 [main] INFO WorkloadGenerator - Pub rate 74961.8 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 74911.5 msg/s / 73.2 MB/s | Backlog:  2.3 K | Pub Latency (ms) avg: 421.6 - 50%: 423.0 - 99%: 686.2 - 99.9%: 768.3 - Max: 834.6 | Pub Delay Latency (us) avg: 91322.6 - 50%: 68567.0 - 99%: 233595.0 - 99.9%: 238363.0 - Max: 241331.0
+23:54:01.815 [main] INFO WorkloadGenerator - Pub rate 73053.9 msg/s / 71.3 MB/s | Pub err     0.0 err/s | Cons rate 73079.0 msg/s / 71.4 MB/s | Backlog:  2.0 K | Pub Latency (ms) avg: 442.9 - 50%: 445.2 - 99%: 693.7 - 99.9%: 754.5 - Max: 799.4 | Pub Delay Latency (us) avg: 418010.8 - 50%: 464989.0 - 99%: 500373.0 - 99.9%: 504541.0 - Max: 508281.0
+23:54:11.889 [main] INFO WorkloadGenerator - Pub rate 75125.9 msg/s / 73.4 MB/s | Pub err     0.0 err/s | Cons rate 75226.3 msg/s / 73.5 MB/s | Backlog:  1.0 K | Pub Latency (ms) avg: 430.4 - 50%: 432.0 - 99%: 681.5 - 99.9%: 769.8 - Max: 808.6 | Pub Delay Latency (us) avg: 470095.9 - 50%: 467609.0 - 99%: 509591.0 - 99.9%: 517335.0 - Max: 519223.0
+23:54:21.982 [main] INFO WorkloadGenerator - Pub rate 77740.8 msg/s / 75.9 MB/s | Pub err     0.0 err/s | Cons rate 77565.3 msg/s / 75.7 MB/s | Backlog:  2.8 K | Pub Latency (ms) avg: 416.3 - 50%: 419.1 - 99%: 675.3 - 99.9%: 794.4 - Max: 849.0 | Pub Delay Latency (us) avg: 327365.1 - 50%: 357895.0 - 99%: 474405.0 - 99.9%: 480151.0 - Max: 483623.0
+23:54:32.086 [main] INFO WorkloadGenerator - Pub rate 77810.7 msg/s / 76.0 MB/s | Pub err     0.0 err/s | Cons rate 77910.9 msg/s / 76.1 MB/s | Backlog:  1.8 K | Pub Latency (ms) avg: 303.4 - 50%: 302.1 - 99%: 595.3 - 99.9%: 654.8 - Max: 681.5 | Pub Delay Latency (us) avg: 14262.1 - 50%: 49.0 - 99%: 110047.0 - 99.9%: 120540.0 - Max: 127643.0
+23:54:38.620 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+23:54:42.165 [main] INFO WorkloadGenerator - Pub rate 75565.4 msg/s / 73.8 MB/s | Pub err     0.0 err/s | Cons rate 75540.3 msg/s / 73.8 MB/s | Backlog:  2.0 K | Pub Latency (ms) avg: 53.5 - 50%: 43.9 - 99%: 194.9 - 99.9%: 270.8 - Max: 333.8 | Pub Delay Latency (us) avg: 78.6 - 50%: 35.0 - 99%: 1116.0 - 99.9%: 4239.0 - Max: 8723.0
+23:54:52.216 [main] INFO WorkloadGenerator - Pub rate 75376.8 msg/s / 73.6 MB/s | Pub err     0.0 err/s | Cons rate 75477.6 msg/s / 73.7 MB/s | Backlog:  1.0 K | Pub Latency (ms) avg: 59.9 - 50%: 42.6 - 99%: 253.7 - 99.9%: 368.8 - Max: 429.9 | Pub Delay Latency (us) avg: 61.6 - 50%: 34.0 - 99%: 702.0 - 99.9%: 3021.0 - Max: 7681.0
+23:55:02.269 [main] INFO WorkloadGenerator - Pub rate 74848.0 msg/s / 73.1 MB/s | Pub err     0.0 err/s | Cons rate 74873.1 msg/s / 73.1 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 47.4 - 50%: 39.4 - 99%: 162.5 - 99.9%: 224.3 - Max: 266.4 | Pub Delay Latency (us) avg: 58.4 - 50%: 34.0 - 99%: 679.0 - 99.9%: 2151.0 - Max: 4188.0
+23:55:12.323 [main] INFO WorkloadGenerator - Pub rate 75206.7 msg/s / 73.4 MB/s | Pub err     0.0 err/s | Cons rate 75156.4 msg/s / 73.4 MB/s | Backlog:  1.3 K | Pub Latency (ms) avg: 61.7 - 50%: 55.0 - 99%: 168.3 - 99.9%: 234.1 - Max: 269.2 | Pub Delay Latency (us) avg: 72.6 - 50%: 35.0 - 99%: 984.0 - 99.9%: 2777.0 - Max: 5626.0
+23:55:22.381 [main] INFO WorkloadGenerator - Pub rate 74572.0 msg/s / 72.8 MB/s | Pub err     0.0 err/s | Cons rate 74622.3 msg/s / 72.9 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 94.0 - 50%: 69.1 - 99%: 310.9 - 99.9%: 374.6 - Max: 384.6 | Pub Delay Latency (us) avg: 63.4 - 50%: 35.0 - 99%: 726.0 - 99.9%: 2876.0 - Max: 6073.0
+23:55:32.443 [main] INFO WorkloadGenerator - Pub rate 75082.4 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 75157.7 msg/s / 73.4 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg: 47.3 - 50%: 42.8 - 99%: 128.5 - 99.9%: 194.4 - Max: 280.1 | Pub Delay Latency (us) avg: 61.9 - 50%: 34.0 - 99%: 750.0 - 99.9%: 2577.0 - Max: 7152.0
+23:55:38.727 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+23:55:42.491 [main] INFO WorkloadGenerator - Pub rate 75066.6 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 74965.9 msg/s / 73.2 MB/s | Backlog:  1.0 K | Pub Latency (ms) avg: 41.1 - 50%: 37.6 - 99%: 108.3 - 99.9%: 137.3 - Max: 170.4 | Pub Delay Latency (us) avg: 56.5 - 50%: 34.0 - 99%: 629.0 - 99.9%: 1928.0 - Max: 5301.0
+23:55:52.540 [main] INFO WorkloadGenerator - Pub rate 74897.3 msg/s / 73.1 MB/s | Pub err     0.0 err/s | Cons rate 74922.5 msg/s / 73.2 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 92.7 - 50%: 75.2 - 99%: 299.1 - 99.9%: 367.4 - Max: 389.4 | Pub Delay Latency (us) avg: 73.2 - 50%: 35.0 - 99%: 967.0 - 99.9%: 3406.0 - Max: 9654.0
+23:56:02.598 [main] INFO WorkloadGenerator - Pub rate 75117.0 msg/s / 73.4 MB/s | Pub err     0.0 err/s | Cons rate 75091.8 msg/s / 73.3 MB/s | Backlog:  1.0 K | Pub Latency (ms) avg: 69.7 - 50%: 59.6 - 99%: 234.5 - 99.9%: 344.8 - Max: 384.2 | Pub Delay Latency (us) avg: 61.5 - 50%: 34.0 - 99%: 760.0 - 99.9%: 3207.0 - Max: 6432.0
+23:56:12.663 [main] INFO WorkloadGenerator - Pub rate 75034.6 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 75051.4 msg/s / 73.3 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 62.6 - 50%: 57.5 - 99%: 163.0 - 99.9%: 206.5 - Max: 242.9 | Pub Delay Latency (us) avg: 58.8 - 50%: 34.0 - 99%: 626.0 - 99.9%: 2632.0 - Max: 6212.0
+23:56:22.732 [main] INFO WorkloadGenerator - Pub rate 74324.0 msg/s / 72.6 MB/s | Pub err     0.0 err/s | Cons rate 74332.4 msg/s / 72.6 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 83.5 - 50%: 59.1 - 99%: 286.8 - 99.9%: 361.7 - Max: 385.8 | Pub Delay Latency (us) avg: 60.5 - 50%: 34.0 - 99%: 703.0 - 99.9%: 2956.0 - Max: 6301.0
+23:56:32.792 [main] INFO WorkloadGenerator - Pub rate 75386.6 msg/s / 73.6 MB/s | Pub err     0.0 err/s | Cons rate 75260.8 msg/s / 73.5 MB/s | Backlog:  2.0 K | Pub Latency (ms) avg: 155.1 - 50%: 145.8 - 99%: 356.6 - 99.9%: 436.7 - Max: 450.8 | Pub Delay Latency (us) avg: 78.1 - 50%: 36.0 - 99%: 1095.0 - 99.9%: 4512.0 - Max: 7526.0
+23:56:38.836 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+23:56:42.873 [main] INFO WorkloadGenerator - Pub rate 74433.0 msg/s / 72.7 MB/s | Pub err     0.0 err/s | Cons rate 74433.0 msg/s / 72.7 MB/s | Backlog:  2.0 K | Pub Latency (ms) avg: 116.7 - 50%: 105.0 - 99%: 304.5 - 99.9%: 367.5 - Max: 421.7 | Pub Delay Latency (us) avg: 71.2 - 50%: 35.0 - 99%: 870.0 - 99.9%: 5498.0 - Max: 10662.0
+23:56:52.935 [main] INFO WorkloadGenerator - Pub rate 76123.1 msg/s / 74.3 MB/s | Pub err     0.0 err/s | Cons rate 76229.3 msg/s / 74.4 MB/s | Backlog:  1.0 K | Pub Latency (ms) avg: 73.8 - 50%: 59.2 - 99%: 254.4 - 99.9%: 327.6 - Max: 439.2 | Pub Delay Latency (us) avg: 61.6 - 50%: 34.0 - 99%: 759.0 - 99.9%: 3151.0 - Max: 6710.0
+23:57:03.002 [main] INFO WorkloadGenerator - Pub rate 74551.6 msg/s / 72.8 MB/s | Pub err     0.0 err/s | Cons rate 74458.4 msg/s / 72.7 MB/s | Backlog:  1.9 K | Pub Latency (ms) avg: 70.3 - 50%: 59.2 - 99%: 212.0 - 99.9%: 280.0 - Max: 323.4 | Pub Delay Latency (us) avg: 59.5 - 50%: 34.0 - 99%: 675.0 - 99.9%: 2404.0 - Max: 4750.0
+23:57:13.073 [main] INFO WorkloadGenerator - Pub rate 75121.4 msg/s / 73.4 MB/s | Pub err     0.0 err/s | Cons rate 75058.2 msg/s / 73.3 MB/s | Backlog:  2.5 K | Pub Latency (ms) avg: 73.1 - 50%: 66.5 - 99%: 202.9 - 99.9%: 261.2 - Max: 283.5 | Pub Delay Latency (us) avg: 65.9 - 50%: 35.0 - 99%: 841.0 - 99.9%: 2653.0 - Max: 5128.0
+23:57:23.129 [main] INFO WorkloadGenerator - Pub rate 74937.4 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 74962.6 msg/s / 73.2 MB/s | Backlog:  2.3 K | Pub Latency (ms) avg: 68.4 - 50%: 56.4 - 99%: 229.6 - 99.9%: 298.0 - Max: 336.6 | Pub Delay Latency (us) avg: 61.7 - 50%: 34.0 - 99%: 744.0 - 99.9%: 2563.0 - Max: 5225.0
+23:57:33.182 [main] INFO WorkloadGenerator - Pub rate 74974.0 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 75175.4 msg/s / 73.4 MB/s | Backlog:  0.3 K | Pub Latency (ms) avg: 54.9 - 50%: 52.0 - 99%: 129.6 - 99.9%: 155.3 - Max: 173.4 | Pub Delay Latency (us) avg: 55.9 - 50%: 34.0 - 99%: 636.0 - 99.9%: 1882.0 - Max: 3782.0
+23:57:38.947 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+23:57:43.228 [main] INFO WorkloadGenerator - Pub rate 74883.6 msg/s / 73.1 MB/s | Pub err     0.0 err/s | Cons rate 74833.0 msg/s / 73.1 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 63.7 - 50%: 56.5 - 99%: 198.5 - 99.9%: 271.1 - Max: 321.6 | Pub Delay Latency (us) avg: 67.4 - 50%: 35.0 - 99%: 914.0 - 99.9%: 2582.0 - Max: 4848.0
+23:57:53.282 [main] INFO WorkloadGenerator - Pub rate 74811.1 msg/s / 73.1 MB/s | Pub err     0.0 err/s | Cons rate 74081.2 msg/s / 72.3 MB/s | Backlog:  8.1 K | Pub Latency (ms) avg: 110.0 - 50%: 87.5 - 99%: 356.5 - 99.9%: 434.6 - Max: 492.9 | Pub Delay Latency (us) avg: 63.5 - 50%: 34.0 - 99%: 821.0 - 99.9%: 3577.0 - Max: 6529.0
+23:58:03.346 [main] INFO WorkloadGenerator - Pub rate 75131.2 msg/s / 73.4 MB/s | Pub err     0.0 err/s | Cons rate 75860.4 msg/s / 74.1 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 91.1 - 50%: 79.1 - 99%: 252.4 - 99.9%: 311.0 - Max: 376.0 | Pub Delay Latency (us) avg: 59.4 - 50%: 34.0 - 99%: 719.0 - 99.9%: 3002.0 - Max: 5040.0
+23:58:13.429 [main] INFO WorkloadGenerator - Pub rate 74914.2 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 74813.8 msg/s / 73.1 MB/s | Backlog:  1.8 K | Pub Latency (ms) avg: 79.4 - 50%: 69.3 - 99%: 243.9 - 99.9%: 317.4 - Max: 381.5 | Pub Delay Latency (us) avg: 61.7 - 50%: 34.0 - 99%: 794.0 - 99.9%: 2991.0 - Max: 5260.0
+23:58:23.487 [main] INFO WorkloadGenerator - Pub rate 75077.4 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 75023.2 msg/s / 73.3 MB/s | Backlog:  2.3 K | Pub Latency (ms) avg: 84.3 - 50%: 70.2 - 99%: 270.0 - 99.9%: 348.3 - Max: 383.3 | Pub Delay Latency (us) avg: 63.9 - 50%: 35.0 - 99%: 803.0 - 99.9%: 2868.0 - Max: 5227.0
+23:58:33.545 [main] INFO WorkloadGenerator - Pub rate 74240.1 msg/s / 72.5 MB/s | Pub err     0.0 err/s | Cons rate 74093.1 msg/s / 72.4 MB/s | Backlog:  3.8 K | Pub Latency (ms) avg: 105.3 - 50%: 86.4 - 99%: 346.3 - 99.9%: 418.7 - Max: 467.4 | Pub Delay Latency (us) avg: 63.2 - 50%: 34.0 - 99%: 732.0 - 99.9%: 3504.0 - Max: 6176.0
+23:58:39.051 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+23:58:43.607 [main] INFO WorkloadGenerator - Pub rate 75237.1 msg/s / 73.5 MB/s | Pub err     0.0 err/s | Cons rate 74859.9 msg/s / 73.1 MB/s | Backlog:  7.6 K | Pub Latency (ms) avg: 151.2 - 50%: 142.5 - 99%: 364.5 - 99.9%: 457.3 - Max: 481.2 | Pub Delay Latency (us) avg: 68.2 - 50%: 35.0 - 99%: 762.0 - 99.9%: 4835.0 - Max: 7865.0
+23:58:53.678 [main] INFO WorkloadGenerator - Pub rate 75036.5 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 75689.8 msg/s / 73.9 MB/s | Backlog:  1.0 K | Pub Latency (ms) avg: 119.5 - 50%: 100.8 - 99%: 337.5 - 99.9%: 403.9 - Max: 441.4 | Pub Delay Latency (us) avg: 64.1 - 50%: 34.0 - 99%: 753.0 - 99.9%: 3907.0 - Max: 7386.0
+23:59:03.749 [main] INFO WorkloadGenerator - Pub rate 75647.1 msg/s / 73.9 MB/s | Pub err     0.0 err/s | Cons rate 75546.6 msg/s / 73.8 MB/s | Backlog:  2.0 K | Pub Latency (ms) avg: 97.9 - 50%: 83.0 - 99%: 278.0 - 99.9%: 347.1 - Max: 373.8 | Pub Delay Latency (us) avg: 71.0 - 50%: 35.0 - 99%: 950.0 - 99.9%: 3716.0 - Max: 6039.0
+23:59:13.827 [main] INFO WorkloadGenerator - Pub rate 74375.9 msg/s / 72.6 MB/s | Pub err     0.0 err/s | Cons rate 74300.5 msg/s / 72.6 MB/s | Backlog:  2.8 K | Pub Latency (ms) avg: 72.5 - 50%: 59.4 - 99%: 238.1 - 99.9%: 321.7 - Max: 403.5 | Pub Delay Latency (us) avg: 58.7 - 50%: 34.0 - 99%: 668.0 - 99.9%: 2141.0 - Max: 5121.0
+23:59:23.889 [main] INFO WorkloadGenerator - Pub rate 75032.6 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 74932.0 msg/s / 73.2 MB/s | Backlog:  3.8 K | Pub Latency (ms) avg: 137.6 - 50%: 124.9 - 99%: 341.5 - 99.9%: 432.8 - Max: 460.1 | Pub Delay Latency (us) avg: 66.5 - 50%: 35.0 - 99%: 753.0 - 99.9%: 4591.0 - Max: 7814.0
+23:59:33.960 [main] INFO WorkloadGenerator - Pub rate 75302.2 msg/s / 73.5 MB/s | Pub err     0.0 err/s | Cons rate 75578.5 msg/s / 73.8 MB/s | Backlog:  1.0 K | Pub Latency (ms) avg: 106.7 - 50%: 96.3 - 99%: 279.2 - 99.9%: 343.4 - Max: 375.3 | Pub Delay Latency (us) avg: 67.3 - 50%: 35.0 - 99%: 820.0 - 99.9%: 4278.0 - Max: 7936.0
+23:59:39.159 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+23:59:44.025 [main] INFO WorkloadGenerator - Pub rate 75489.2 msg/s / 73.7 MB/s | Pub err     0.0 err/s | Cons rate 75332.8 msg/s / 73.6 MB/s | Backlog:  2.6 K | Pub Latency (ms) avg: 93.9 - 50%: 85.7 - 99%: 248.2 - 99.9%: 303.7 - Max: 343.5 | Pub Delay Latency (us) avg: 66.2 - 50%: 35.0 - 99%: 806.0 - 99.9%: 3656.0 - Max: 6057.0
+23:59:54.085 [main] INFO WorkloadGenerator - Pub rate 74259.4 msg/s / 72.5 MB/s | Pub err     0.0 err/s | Cons rate 74089.0 msg/s / 72.4 MB/s | Backlog:  4.3 K | Pub Latency (ms) avg: 90.1 - 50%: 77.7 - 99%: 273.8 - 99.9%: 350.9 - Max: 387.9 | Pub Delay Latency (us) avg: 63.8 - 50%: 34.0 - 99%: 721.0 - 99.9%: 3958.0 - Max: 6683.0
+00:00:04.144 [main] INFO WorkloadGenerator - Pub rate 72534.3 msg/s / 70.8 MB/s | Pub err     0.0 err/s | Cons rate 72785.9 msg/s / 71.1 MB/s | Backlog:  1.8 K | Pub Latency (ms) avg: 289.0 - 50%: 279.1 - 99%: 605.0 - 99.9%: 669.8 - Max: 689.8 | Pub Delay Latency (us) avg: 1668.8 - 50%: 45.0 - 99%: 31692.0 - 99.9%: 51600.0 - Max: 54916.0
+00:00:14.224 [main] INFO WorkloadGenerator - Pub rate 71709.6 msg/s / 70.0 MB/s | Pub err     0.0 err/s | Cons rate 71684.5 msg/s / 70.0 MB/s | Backlog:  2.0 K | Pub Latency (ms) avg: 450.9 - 50%: 450.9 - 99%: 718.9 - 99.9%: 811.7 - Max: 841.6 | Pub Delay Latency (us) avg: 255840.1 - 50%: 320463.0 - 99%: 483421.0 - 99.9%: 488467.0 - Max: 491437.0
+00:00:24.315 [main] INFO WorkloadGenerator - Pub rate 71797.7 msg/s / 70.1 MB/s | Pub err     0.0 err/s | Cons rate 71722.5 msg/s / 70.0 MB/s | Backlog:  2.8 K | Pub Latency (ms) avg: 450.1 - 50%: 445.8 - 99%: 760.4 - 99.9%: 841.0 - Max: 872.8 | Pub Delay Latency (us) avg: 571455.7 - 50%: 559991.0 - 99%: 668747.0 - 99.9%: 930355.0 - Max: 935731.0
+00:00:34.413 [main] INFO WorkloadGenerator - Pub rate 74393.4 msg/s / 72.6 MB/s | Pub err     0.0 err/s | Cons rate 74393.4 msg/s / 72.6 MB/s | Backlog:  2.8 K | Pub Latency (ms) avg: 435.0 - 50%: 434.6 - 99%: 719.4 - 99.9%: 829.3 - Max: 880.4 | Pub Delay Latency (us) avg: 980802.4 - 50%: 988995.0 - 99%: 1023259.0 - 99.9%: 1028943.0 - Max: 1032255.0
+00:00:39.265 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+00:00:44.487 [main] INFO WorkloadGenerator - Pub rate 73214.5 msg/s / 71.5 MB/s | Pub err     0.0 err/s | Cons rate 73114.0 msg/s / 71.4 MB/s | Backlog:  3.8 K | Pub Latency (ms) avg: 441.8 - 50%: 445.4 - 99%: 667.6 - 99.9%: 764.5 - Max: 863.7 | Pub Delay Latency (us) avg: 1100095.2 - 50%: 1102271.0 - 99%: 1225207.0 - 99.9%: 1236543.0 - Max: 1252783.0
+00:00:54.564 [main] INFO WorkloadGenerator - Pub rate 71212.8 msg/s / 69.5 MB/s | Pub err     0.0 err/s | Cons rate 71212.8 msg/s / 69.5 MB/s | Backlog:  3.8 K | Pub Latency (ms) avg: 455.3 - 50%: 461.4 - 99%: 733.6 - 99.9%: 823.8 - Max: 824.9 | Pub Delay Latency (us) avg: 1615451.4 - 50%: 1715775.0 - 99%: 1765727.0 - 99.9%: 1769887.0 - Max: 1772847.0
+00:01:04.654 [main] INFO WorkloadGenerator - Pub rate 72019.8 msg/s / 70.3 MB/s | Pub err     0.0 err/s | Cons rate 72120.1 msg/s / 70.4 MB/s | Backlog:  2.8 K | Pub Latency (ms) avg: 448.8 - 50%: 447.9 - 99%: 774.2 - 99.9%: 923.7 - Max: 986.0 | Pub Delay Latency (us) avg: 2061889.4 - 50%: 2102383.0 - 99%: 2141071.0 - 99.9%: 2146991.0 - Max: 2150591.0
+00:01:14.735 [main] INFO WorkloadGenerator - Pub rate 75277.3 msg/s / 73.5 MB/s | Pub err     0.0 err/s | Cons rate 75377.6 msg/s / 73.6 MB/s | Backlog:  1.8 K | Pub Latency (ms) avg: 430.7 - 50%: 434.3 - 99%: 660.8 - 99.9%: 779.9 - Max: 845.2 | Pub Delay Latency (us) avg: 2153103.5 - 50%: 2156463.0 - 99%: 2200751.0 - 99.9%: 2205215.0 - Max: 2207503.0
+00:01:24.822 [main] INFO WorkloadGenerator - Pub rate 70630.2 msg/s / 69.0 MB/s | Pub err     0.0 err/s | Cons rate 70655.3 msg/s / 69.0 MB/s | Backlog:  1.5 K | Pub Latency (ms) avg: 455.6 - 50%: 464.1 - 99%: 755.8 - 99.9%: 828.5 - Max: 894.6 | Pub Delay Latency (us) avg: 2237742.1 - 50%: 2222191.0 - 99%: 2622735.0 - 99.9%: 2659055.0 - Max: 2670991.0
+00:01:34.922 [main] INFO WorkloadGenerator - Pub rate 70999.7 msg/s / 69.3 MB/s | Pub err     0.0 err/s | Cons rate 71021.8 msg/s / 69.4 MB/s | Backlog:  1.3 K | Pub Latency (ms) avg: 457.6 - 50%: 463.8 - 99%: 740.4 - 99.9%: 804.7 - Max: 860.2 | Pub Delay Latency (us) avg: 3080868.9 - 50%: 3183775.0 - 99%: 3271103.0 - 99.9%: 3276287.0 - Max: 3278575.0
+00:01:39.375 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+00:01:45.009 [main] INFO WorkloadGenerator - Pub rate 82510.0 msg/s / 80.6 MB/s | Pub err     0.0 err/s | Cons rate 82262.3 msg/s / 80.3 MB/s | Backlog:  3.8 K | Pub Latency (ms) avg: 393.0 - 50%: 399.9 - 99%: 627.4 - 99.9%: 717.4 - Max: 776.4 | Pub Delay Latency (us) avg: 2760119.6 - 50%: 2746911.0 - 99%: 3268031.0 - 99.9%: 3274719.0 - Max: 3277455.0
+00:01:55.110 [main] INFO WorkloadGenerator - Pub rate 81825.0 msg/s / 79.9 MB/s | Pub err     0.0 err/s | Cons rate 82025.3 msg/s / 80.1 MB/s | Backlog:  1.8 K | Pub Latency (ms) avg: 395.1 - 50%: 401.9 - 99%: 622.2 - 99.9%: 716.9 - Max: 768.8 | Pub Delay Latency (us) avg: 1831988.4 - 50%: 1852735.0 - 99%: 2266863.0 - 99.9%: 2284527.0 - Max: 2289327.0
+00:02:05.202 [main] INFO WorkloadGenerator - Pub rate 78711.5 msg/s / 76.9 MB/s | Pub err     0.0 err/s | Cons rate 78661.3 msg/s / 76.8 MB/s | Backlog:  2.3 K | Pub Latency (ms) avg: 411.8 - 50%: 413.0 - 99%: 691.1 - 99.9%: 827.1 - Max: 889.4 | Pub Delay Latency (us) avg: 1122054.9 - 50%: 1122623.0 - 99%: 1361135.0 - 99.9%: 1369311.0 - Max: 1372415.0
+00:02:15.317 [main] INFO WorkloadGenerator - Pub rate 81623.7 msg/s / 79.7 MB/s | Pub err     0.0 err/s | Cons rate 81373.3 msg/s / 79.5 MB/s | Backlog:  4.8 K | Pub Latency (ms) avg: 394.2 - 50%: 400.4 - 99%: 607.2 - 99.9%: 681.8 - Max: 699.0 | Pub Delay Latency (us) avg: 408435.4 - 50%: 411775.0 - 99%: 854587.0 - 99.9%: 877395.0 - Max: 884463.0
+00:02:25.403 [main] INFO WorkloadGenerator - Pub rate 77521.5 msg/s / 75.7 MB/s | Pub err     0.0 err/s | Cons rate 77947.1 msg/s / 76.1 MB/s | Backlog:  0.5 K | Pub Latency (ms) avg: 63.8 - 50%: 18.1 - 99%: 445.4 - 99.9%: 542.6 - Max: 588.0 | Pub Delay Latency (us) avg: 67.5 - 50%: 35.0 - 99%: 677.0 - 99.9%: 5457.0 - Max: 11204.0
+00:02:35.456 [main] INFO WorkloadGenerator - Pub rate 74986.4 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 74967.4 msg/s / 73.2 MB/s | Backlog:  0.7 K | Pub Latency (ms) avg: 44.7 - 50%: 20.0 - 99%: 303.3 - 99.9%: 365.4 - Max: 372.5 | Pub Delay Latency (us) avg: 58.0 - 50%: 34.0 - 99%: 693.0 - 99.9%: 2061.0 - Max: 6839.0
+00:02:39.485 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+00:02:45.508 [main] INFO WorkloadGenerator - Pub rate 75072.8 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 75091.8 msg/s / 73.3 MB/s | Backlog:  0.5 K | Pub Latency (ms) avg: 22.4 - 50%: 18.5 - 99%: 79.9 - 99.9%: 108.2 - Max: 127.7 | Pub Delay Latency (us) avg: 70.1 - 50%: 37.0 - 99%: 877.0 - 99.9%: 2243.0 - Max: 5322.0
+00:02:55.561 [main] INFO WorkloadGenerator - Pub rate 74870.0 msg/s / 73.1 MB/s | Pub err     0.0 err/s | Cons rate 74895.2 msg/s / 73.1 MB/s | Backlog:  0.3 K | Pub Latency (ms) avg: 17.6 - 50%: 17.0 - 99%: 33.4 - 99.9%: 41.4 - Max: 44.7 | Pub Delay Latency (us) avg: 58.9 - 50%: 42.0 - 99%: 334.0 - 99.9%: 1618.0 - Max: 4603.0
+00:03:05.599 [main] INFO WorkloadGenerator - Pub rate 75087.2 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 75062.0 msg/s / 73.3 MB/s | Backlog:  0.5 K | Pub Latency (ms) avg: 24.1 - 50%: 17.3 - 99%: 143.6 - 99.9%: 221.9 - Max: 234.3 | Pub Delay Latency (us) avg: 58.1 - 50%: 34.0 - 99%: 655.0 - 99.9%: 1850.0 - Max: 4811.0
+00:03:15.645 [main] INFO WorkloadGenerator - Pub rate 74976.0 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 74950.8 msg/s / 73.2 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 18.9 - 50%: 17.9 - 99%: 41.6 - 99.9%: 68.4 - Max: 79.3 | Pub Delay Latency (us) avg: 58.7 - 50%: 34.0 - 99%: 727.0 - 99.9%: 1655.0 - Max: 3034.0
+00:03:25.678 [main] INFO WorkloadGenerator - Pub rate 75060.7 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 75060.7 msg/s / 73.3 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 19.3 - 50%: 18.5 - 99%: 40.4 - 99.9%: 50.1 - Max: 59.6 | Pub Delay Latency (us) avg: 61.2 - 50%: 35.0 - 99%: 748.0 - 99.9%: 1691.0 - Max: 2674.0
+00:03:35.716 [main] INFO WorkloadGenerator - Pub rate 75003.1 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 74977.8 msg/s / 73.2 MB/s | Backlog:  1.0 K | Pub Latency (ms) avg: 25.9 - 50%: 19.3 - 99%: 145.9 - 99.9%: 212.3 - Max: 251.0 | Pub Delay Latency (us) avg: 55.6 - 50%: 34.0 - 99%: 643.0 - 99.9%: 1524.0 - Max: 2550.0
+00:03:39.591 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+00:03:45.759 [main] INFO WorkloadGenerator - Pub rate 74931.5 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 74984.3 msg/s / 73.2 MB/s | Backlog:  0.5 K | Pub Latency (ms) avg: 17.9 - 50%: 17.3 - 99%: 34.3 - 99.9%: 47.0 - Max: 51.4 | Pub Delay Latency (us) avg: 56.8 - 50%: 34.0 - 99%: 677.0 - 99.9%: 1628.0 - Max: 3480.0
+00:03:55.793 [main] INFO WorkloadGenerator - Pub rate 74887.5 msg/s / 73.1 MB/s | Pub err     0.0 err/s | Cons rate 74809.5 msg/s / 73.1 MB/s | Backlog:  1.3 K | Pub Latency (ms) avg: 21.0 - 50%: 18.6 - 99%: 60.1 - 99.9%: 91.7 - Max: 108.8 | Pub Delay Latency (us) avg: 57.3 - 50%: 34.0 - 99%: 677.0 - 99.9%: 1823.0 - Max: 3061.0
+00:04:05.842 [main] INFO WorkloadGenerator - Pub rate 75109.3 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 75235.3 msg/s / 73.5 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg: 49.5 - 50%: 24.3 - 99%: 292.1 - 99.9%: 357.8 - Max: 392.7 | Pub Delay Latency (us) avg: 67.0 - 50%: 40.0 - 99%: 727.0 - 99.9%: 2173.0 - Max: 4758.0
+00:04:15.888 [main] INFO WorkloadGenerator - Pub rate 75024.4 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 74974.1 msg/s / 73.2 MB/s | Backlog:  0.5 K | Pub Latency (ms) avg: 18.2 - 50%: 17.6 - 99%: 35.4 - 99.9%: 52.0 - Max: 56.3 | Pub Delay Latency (us) avg: 60.2 - 50%: 42.0 - 99%: 374.0 - 99.9%: 1491.0 - Max: 4264.0
+00:04:25.930 [main] INFO WorkloadGenerator - Pub rate 75034.1 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 75027.6 msg/s / 73.3 MB/s | Backlog:  0.6 K | Pub Latency (ms) avg: 36.9 - 50%: 25.6 - 99%: 181.4 - 99.9%: 250.2 - Max: 298.7 | Pub Delay Latency (us) avg: 60.1 - 50%: 42.0 - 99%: 341.0 - 99.9%: 1966.0 - Max: 5212.0
+00:04:35.978 [main] INFO WorkloadGenerator - Pub rate 74958.4 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 74964.9 msg/s / 73.2 MB/s | Backlog:  0.5 K | Pub Latency (ms) avg: 23.1 - 50%: 18.2 - 99%: 107.6 - 99.9%: 155.4 - Max: 172.6 | Pub Delay Latency (us) avg: 58.4 - 50%: 37.0 - 99%: 477.0 - 99.9%: 1910.0 - Max: 5542.0
+00:04:39.698 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+00:04:46.016 [main] INFO WorkloadGenerator - Pub rate 75016.4 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 75041.6 msg/s / 73.3 MB/s | Backlog:  0.3 K | Pub Latency (ms) avg: 19.6 - 50%: 18.8 - 99%: 40.4 - 99.9%: 50.4 - Max: 53.2 | Pub Delay Latency (us) avg: 68.0 - 50%: 34.0 - 99%: 717.0 - 99.9%: 5089.0 - Max: 14476.0
+00:04:56.063 [main] INFO WorkloadGenerator - Pub rate 74993.1 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 74967.9 msg/s / 73.2 MB/s | Backlog:  0.5 K | Pub Latency (ms) avg: 22.9 - 50%: 18.1 - 99%: 124.4 - 99.9%: 181.4 - Max: 216.5 | Pub Delay Latency (us) avg: 58.1 - 50%: 34.0 - 99%: 675.0 - 99.9%: 1868.0 - Max: 4423.0
+00:05:06.106 [main] INFO WorkloadGenerator - Pub rate 75084.7 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 73632.8 msg/s / 71.9 MB/s | Backlog: 15.1 K | Pub Latency (ms) avg: 16.5 - 50%: 16.4 - 99%: 30.0 - 99.9%: 38.5 - Max: 42.4 | Pub Delay Latency (us) avg: 55.3 - 50%: 34.0 - 99%: 641.0 - 99.9%: 1625.0 - Max: 2938.0
+00:05:16.150 [main] INFO WorkloadGenerator - Pub rate 74922.1 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 76399.6 msg/s / 74.6 MB/s | Backlog:  0.3 K | Pub Latency (ms) avg: 18.7 - 50%: 17.9 - 99%: 39.8 - 99.9%: 48.9 - Max: 56.5 | Pub Delay Latency (us) avg: 60.9 - 50%: 34.0 - 99%: 735.0 - 99.9%: 1761.0 - Max: 3459.0
+00:05:26.197 [main] INFO WorkloadGenerator - Pub rate 74885.8 msg/s / 73.1 MB/s | Pub err     0.0 err/s | Cons rate 74911.0 msg/s / 73.2 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg: 27.5 - 50%: 20.9 - 99%: 149.9 - 99.9%: 245.2 - Max: 271.3 | Pub Delay Latency (us) avg: 65.2 - 50%: 35.0 - 99%: 837.0 - 99.9%: 2021.0 - Max: 4253.0
+00:05:36.251 [main] INFO WorkloadGenerator - Pub rate 75149.0 msg/s / 73.4 MB/s | Pub err     0.0 err/s | Cons rate 74844.8 msg/s / 73.1 MB/s | Backlog:  3.1 K | Pub Latency (ms) avg: 16.9 - 50%: 16.3 - 99%: 39.1 - 99.9%: 49.4 - Max: 54.6 | Pub Delay Latency (us) avg: 60.5 - 50%: 34.0 - 99%: 786.0 - 99.9%: 1962.0 - Max: 3537.0
+00:05:39.804 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+00:05:46.308 [main] INFO WorkloadGenerator - Pub rate 74532.4 msg/s / 72.8 MB/s | Pub err     0.0 err/s | Cons rate 74711.0 msg/s / 73.0 MB/s | Backlog:  1.3 K | Pub Latency (ms) avg: 39.4 - 50%: 30.2 - 99%: 123.7 - 99.9%: 159.5 - Max: 193.0 | Pub Delay Latency (us) avg: 56.1 - 50%: 34.0 - 99%: 629.0 - 99.9%: 1966.0 - Max: 5854.0
+00:05:56.387 [main] INFO WorkloadGenerator - Pub rate 73625.1 msg/s / 71.9 MB/s | Pub err     0.0 err/s | Cons rate 73650.2 msg/s / 71.9 MB/s | Backlog:  1.0 K | Pub Latency (ms) avg: 114.6 - 50%: 86.2 - 99%: 361.7 - 99.9%: 440.5 - Max: 470.0 | Pub Delay Latency (us) avg: 70.1 - 50%: 35.0 - 99%: 851.0 - 99.9%: 4870.0 - Max: 10286.0
+00:06:06.467 [main] INFO WorkloadGenerator - Pub rate 72733.1 msg/s / 71.0 MB/s | Pub err     0.0 err/s | Cons rate 72532.3 msg/s / 70.8 MB/s | Backlog:  3.0 K | Pub Latency (ms) avg: 347.6 - 50%: 349.5 - 99%: 638.7 - 99.9%: 715.5 - Max: 774.9 | Pub Delay Latency (us) avg: 88.4 - 50%: 35.0 - 99%: 939.0 - 99.9%: 8490.0 - Max: 11124.0
+00:06:16.546 [main] INFO WorkloadGenerator - Pub rate 74421.1 msg/s / 72.7 MB/s | Pub err     0.0 err/s | Cons rate 74521.5 msg/s / 72.8 MB/s | Backlog:  2.0 K | Pub Latency (ms) avg: 439.2 - 50%: 441.4 - 99%: 707.0 - 99.9%: 841.3 - Max: 898.3 | Pub Delay Latency (us) avg: 174417.8 - 50%: 180584.0 - 99%: 213319.0 - 99.9%: 216234.0 - Max: 218735.0
+00:06:26.614 [main] INFO WorkloadGenerator - Pub rate 74683.1 msg/s / 72.9 MB/s | Pub err     0.0 err/s | Cons rate 74783.6 msg/s / 73.0 MB/s | Backlog:  1.0 K | Pub Latency (ms) avg: 433.3 - 50%: 438.2 - 99%: 685.5 - 99.9%: 750.8 - Max: 786.6 | Pub Delay Latency (us) avg: 214595.5 - 50%: 214161.0 - 99%: 266333.0 - 99.9%: 271993.0 - Max: 274489.0
+00:06:36.696 [main] INFO WorkloadGenerator - Pub rate 72599.9 msg/s / 70.9 MB/s | Pub err     0.0 err/s | Cons rate 72399.0 msg/s / 70.7 MB/s | Backlog:  3.0 K | Pub Latency (ms) avg: 446.9 - 50%: 449.9 - 99%: 703.8 - 99.9%: 785.8 - Max: 831.2 | Pub Delay Latency (us) avg: 478505.7 - 50%: 415029.0 - 99%: 716519.0 - 99.9%: 723123.0 - Max: 727191.0
+00:06:39.910 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+00:06:46.795 [main] INFO WorkloadGenerator - Pub rate 79095.3 msg/s / 77.2 MB/s | Pub err     0.0 err/s | Cons rate 79020.1 msg/s / 77.2 MB/s | Backlog:  3.8 K | Pub Latency (ms) avg: 408.2 - 50%: 415.1 - 99%: 636.5 - 99.9%: 701.2 - Max: 750.4 | Pub Delay Latency (us) avg: 277180.5 - 50%: 262985.0 - 99%: 598127.0 - 99.9%: 615403.0 - Max: 620727.0
+00:06:56.881 [main] INFO WorkloadGenerator - Pub rate 78182.1 msg/s / 76.3 MB/s | Pub err     0.0 err/s | Cons rate 78533.1 msg/s / 76.7 MB/s | Backlog:  0.3 K | Pub Latency (ms) avg: 132.0 - 50%: 31.1 - 99%: 565.6 - 99.9%: 639.1 - Max: 681.5 | Pub Delay Latency (us) avg: 2096.5 - 50%: 45.0 - 99%: 26803.0 - 99.9%: 33158.0 - Max: 35930.0
+00:07:06.950 [main] INFO WorkloadGenerator - Pub rate 75047.4 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 74973.2 msg/s / 73.2 MB/s | Backlog:  1.0 K | Pub Latency (ms) avg: 23.7 - 50%: 21.7 - 99%: 61.2 - 99.9%: 87.2 - Max: 111.3 | Pub Delay Latency (us) avg: 58.0 - 50%: 42.0 - 99%: 343.0 - 99.9%: 1327.0 - Max: 3051.0
+00:07:16.988 [main] INFO WorkloadGenerator - Pub rate 75074.9 msg/s / 73.3 MB/s | Pub err     0.0 err/s | Cons rate 75099.0 msg/s / 73.3 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 20.2 - 50%: 18.8 - 99%: 47.5 - 99.9%: 69.9 - Max: 77.2 | Pub Delay Latency (us) avg: 61.4 - 50%: 36.0 - 99%: 655.0 - 99.9%: 1712.0 - Max: 3286.0
+00:07:27.051 [main] INFO WorkloadGenerator - Pub rate 73746.8 msg/s / 72.0 MB/s | Pub err     0.0 err/s | Cons rate 73646.2 msg/s / 71.9 MB/s | Backlog:  1.8 K | Pub Latency (ms) avg: 85.6 - 50%: 19.1 - 99%: 494.5 - 99.9%: 567.7 - Max: 583.0 | Pub Delay Latency (us) avg: 105.8 - 50%: 34.0 - 99%: 1327.0 - 99.9%: 10920.0 - Max: 14929.0
+00:07:37.113 [main] INFO WorkloadGenerator - Pub rate 76261.6 msg/s / 74.5 MB/s | Pub err     0.0 err/s | Cons rate 76400.6 msg/s / 74.6 MB/s | Backlog:  0.4 K | Pub Latency (ms) avg: 29.2 - 50%: 19.4 - 99%: 211.1 - 99.9%: 307.7 - Max: 345.3 | Pub Delay Latency (us) avg: 55.7 - 50%: 34.0 - 99%: 630.0 - 99.9%: 1700.0 - Max: 4235.0
+00:07:40.016 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+00:07:47.180 [main] INFO WorkloadGenerator - Pub rate 74782.8 msg/s / 73.0 MB/s | Pub err     0.0 err/s | Cons rate 74819.7 msg/s / 73.1 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg: 16.8 - 50%: 16.3 - 99%: 33.6 - 99.9%: 45.6 - Max: 52.7 | Pub Delay Latency (us) avg: 61.8 - 50%: 34.0 - 99%: 775.0 - 99.9%: 1862.0 - Max: 3808.0
+00:07:57.239 [main] INFO WorkloadGenerator - Pub rate 75123.4 msg/s / 73.4 MB/s | Pub err     0.0 err/s | Cons rate 75047.9 msg/s / 73.3 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 24.9 - 50%: 17.3 - 99%: 167.3 - 99.9%: 231.0 - Max: 254.5 | Pub Delay Latency (us) avg: 59.8 - 50%: 34.0 - 99%: 729.0 - 99.9%: 1870.0 - Max: 3640.0
+00:08:07.283 [main] INFO WorkloadGenerator - Pub rate 75158.1 msg/s / 73.4 MB/s | Pub err     0.0 err/s | Cons rate 75126.7 msg/s / 73.4 MB/s | Backlog:  1.1 K | Pub Latency (ms) avg: 17.6 - 50%: 17.1 - 99%: 33.2 - 99.9%: 40.4 - Max: 44.1 | Pub Delay Latency (us) avg: 57.5 - 50%: 34.0 - 99%: 676.0 - 99.9%: 1774.0 - Max: 4854.0
+00:08:17.323 [main] INFO WorkloadGenerator - Pub rate 74911.1 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 74942.5 msg/s / 73.2 MB/s | Backlog:  0.8 K | Pub Latency (ms) avg: 19.8 - 50%: 18.8 - 99%: 42.1 - 99.9%: 68.6 - Max: 76.0 | Pub Delay Latency (us) avg: 58.4 - 50%: 34.0 - 99%: 715.0 - 99.9%: 1698.0 - Max: 3148.0
+00:08:27.365 [main] INFO WorkloadGenerator - Pub rate 74895.2 msg/s / 73.1 MB/s | Pub err     0.0 err/s | Cons rate 74693.6 msg/s / 72.9 MB/s | Backlog:  2.8 K | Pub Latency (ms) avg: 23.5 - 50%: 17.9 - 99%: 161.5 - 99.9%: 320.6 - Max: 343.3 | Pub Delay Latency (us) avg: 55.6 - 50%: 34.0 - 99%: 631.0 - 99.9%: 1554.0 - Max: 2968.0
+00:08:37.407 [main] INFO WorkloadGenerator - Pub rate 75188.7 msg/s / 73.4 MB/s | Pub err     0.0 err/s | Cons rate 75314.6 msg/s / 73.5 MB/s | Backlog:  1.5 K | Pub Latency (ms) avg: 18.6 - 50%: 17.5 - 99%: 42.8 - 99.9%: 67.5 - Max: 71.0 | Pub Delay Latency (us) avg: 56.7 - 50%: 34.0 - 99%: 649.0 - 99.9%: 1639.0 - Max: 3876.0
+00:08:40.122 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+00:08:47.444 [main] INFO WorkloadGenerator - Pub rate 74977.6 msg/s / 73.2 MB/s | Pub err     0.0 err/s | Cons rate 75103.6 msg/s / 73.3 MB/s | Backlog:  0.3 K | Pub Latency (ms) avg: 17.4 - 50%: 17.0 - 99%: 32.5 - 99.9%: 39.3 - Max: 47.9 | Pub Delay Latency (us) avg: 58.3 - 50%: 34.0 - 99%: 696.0 - 99.9%: 1767.0 - Max: 3344.0
+00:08:47.518 [main] INFO WorkloadGenerator - ----- Aggregated Pub Latency (ms) avg: 153.7 - 50%: 58.7 - 95%: 525.1 - 99%: 628.1 - 99.9%: 745.7 - 99.99%: 845.1 - Max: 986.0 | Pub Delay (us)  avg: 252320.4 - 50%: 46.0 - 95%: 2111455.0 - 99%: 3018159.0 - 99.9%: 3260399.0 - 99.99%: 3272879.0 - Max: 3278575.0
+00:08:47.791 [main] INFO KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+00:08:47.798 [main] INFO Metrics - Metrics scheduler closed
+00:08:47.798 [main] INFO Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+00:08:47.799 [main] INFO Metrics - Metrics reporters closed
+00:08:47.799 [main] INFO AppInfoParser - App info kafka.producer for producer-1 unregistered
+00:08:47.885 [main] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Revoke previously assigned partitions test-topic-0000000-AXm1pz8-0, test-topic-0000000-AXm1pz8-1, test-topic-0000000-AXm1pz8-2, test-topic-0000000-AXm1pz8-3, test-topic-0000000-AXm1pz8-4, test-topic-0000000-AXm1pz8-5, test-topic-0000000-AXm1pz8-6, test-topic-0000000-AXm1pz8-7, test-topic-0000000-AXm1pz8-8, test-topic-0000000-AXm1pz8-9, test-topic-0000000-AXm1pz8-10, test-topic-0000000-AXm1pz8-11, test-topic-0000000-AXm1pz8-12, test-topic-0000000-AXm1pz8-13, test-topic-0000000-AXm1pz8-14, test-topic-0000000-AXm1pz8-15
+00:08:47.886 [main] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Member b8fef0fa-0827-4049-878d-e034698e3c49 sending LeaveGroup request to coordinator 10.84.0.247:9092 (id: 2147483646 rack: null) due to the consumer is being closed
+00:08:47.887 [main] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Resetting generation and member id due to: consumer pro-actively leaving the group
+00:08:47.887 [main] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Request joining group due to: consumer pro-actively leaving the group
+00:08:47.983 [main] INFO FetchSessionHandler - [Consumer clientId=consumer-sub-000-Ue4RR-g-1, groupId=sub-000-Ue4RR-g] Node 1 sent an invalid full fetch response with extraPartitions=(test-topic-0000000-AXm1pz8-11), response=(test-topic-0000000-AXm1pz8-11)
+00:08:48.484 [main] INFO Metrics - Metrics scheduler closed
+00:08:48.484 [main] INFO Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+00:08:48.485 [main] INFO Metrics - Metrics reporters closed
+00:08:48.487 [main] INFO AppInfoParser - App info kafka.consumer for consumer-sub-000-Ue4RR-g-1 unregistered
+00:08:48.487 [main] INFO KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+00:08:48.487 [main] INFO Metrics - Metrics scheduler closed
+00:08:48.487 [main] INFO Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+00:08:48.487 [main] INFO Metrics - Metrics reporters closed
+00:08:48.487 [main] INFO AppInfoParser - App info kafka.producer for producer-1 unregistered
+00:08:48.488 [kafka-admin-client-thread | adminclient-1] INFO AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+00:08:48.490 [kafka-admin-client-thread | adminclient-1] INFO Metrics - Metrics scheduler closed
+00:08:48.490 [kafka-admin-client-thread | adminclient-1] INFO Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+00:08:48.490 [kafka-admin-client-thread | adminclient-1] INFO Metrics - Metrics reporters closed
+00:08:48.490 [main] INFO Benchmark - Writing test result into /home/ubuntu/results/omb-client-017-commitbatch75k-1-broker/result.json

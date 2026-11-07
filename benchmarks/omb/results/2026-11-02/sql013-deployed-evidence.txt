@@ -1,0 +1,10 @@
+5d8ba33975afb6f2d1779dea11d6517a99524bf445ec3211a96cb0346156a632  sql013-src/database.rs
+b8c1e87b42e04a3353d530a8ec49abcaddada43e19bafeff9020c75cc01b0768  sql013-src/handlers.rs
+89995e5a6481781d201fc1e785b73585d9afcd3fb3f162e9dd34ae7ad9b7fe65  sql013-src/health.rs
+213e695dc849edce50345fc1161fc60d4620929ff46759790eff80d1b2a35744  sql013-src/main.rs
+1e2f79b89d79bd9b3ccd113748c6d2f7701bc185514fa388888fcabd4dda41ee  sql013-src/server.rs
+98f3054344aab390ccfdea4bad0df1840e8ed62760ad484b7d375f653ef4b9e2  extension-final-src/lib.rs
+fa459e1c9e1ba75af3d94c845b5bf2398103d60a180b6b7ccd63c999e1543827  pg_broker--0.1.2--0.1.3.sql
+8f22eec0e2f74db3c9a1c040abcc5a6446323e9f71a67dacbeb94430b01bb2aa  candidate-sql013/pg-broker-gateway
+a56000680ad41a91b74e58340bdc7c4d8814a4738cfca6fd0e5ff167a9f1cf2f  candidate-final/libpg_broker.so
+0.1.3|on|on|on|t

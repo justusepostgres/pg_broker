@@ -1,0 +1,16 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-tail-017-32k-1/tail.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32021.970638524086,
+    "consume_msg_s_mean": 32021.999859232226,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 186,
+    "backlog_last": 158,
+    "backlog_max": 191,
+    "publish_p99_ms": 9.242,
+    "publish_delay_p99_us": 144,
+    "end_to_end_p99_ms": 12.0
+  }
+]

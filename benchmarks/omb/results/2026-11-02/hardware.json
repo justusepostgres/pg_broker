@@ -1,0 +1,20 @@
+{
+  "shape": "VM.Standard.A1.Flex",
+  "shape_config": {
+    "baseline-ocpu-utilization": null,
+    "gpu-description": null,
+    "gpus": 0,
+    "local-disk-description": null,
+    "local-disks": 0,
+    "local-disks-total-size-in-gbs": null,
+    "max-vnic-attachments": 4,
+    "memory-in-gbs": 24.0,
+    "networking-bandwidth-in-gbps": 4.0,
+    "ocpus": 4.0,
+    "processor-description": "3.0 GHz Ampere\u00ae Altra\u2122",
+    "resource-management": null,
+    "vcpus": 4
+  },
+  "boot_volume_gib": 80,
+  "boot_volume_vpus_per_gb": 10
+}

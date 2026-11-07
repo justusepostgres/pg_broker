@@ -1,0 +1,3 @@
+PASS: normal response accepted; empty closing build makes the same pending response invalid; notifyClose alone accepts it.
+Scope: pinned client state only; does not prove observed gateway response correctness or absence of record loss.
+[main] INFO org.apache.kafka.clients.FetchSessionHandler - Node 1 sent an invalid full fetch response with extraPartitions=(test-topic-0), response=(test-topic-0)

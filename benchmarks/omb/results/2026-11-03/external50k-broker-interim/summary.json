@@ -1,0 +1,25 @@
+[
+  {
+    "file": ".dev/external50k017-broker/client/artifacts/result.json",
+    "workload": "50k-1-topic-16-partitions-1kb",
+    "samples": 90,
+    "publish_msg_s_mean": 50014.86085182629,
+    "consume_msg_s_mean": 50014.80153297775,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 0,
+    "backlog_last": 307,
+    "backlog_max": 499,
+    "publish_p99_ms": 19.107,
+    "publish_delay_p99_us": 345,
+    "end_to_end_p99_ms": 26.0,
+    "publish_p999_ms": 88.514,
+    "publish_p9999_ms": 201.567,
+    "publish_max_ms": 285.541,
+    "publish_delay_p999_us": 1023,
+    "publish_delay_p9999_us": 12484,
+    "publish_delay_max_us": 55948,
+    "end_to_end_p999_ms": 117.0,
+    "end_to_end_p9999_ms": 262.0,
+    "end_to_end_max_ms": 336.001
+  }
+]

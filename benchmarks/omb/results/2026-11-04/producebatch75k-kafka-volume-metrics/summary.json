@@ -1,0 +1,11 @@
+{
+  "scope": "Conservative interior minute points; missing samples are not zero; not causal stall attribution",
+  "expected_points": 13,
+  "observed_points": 11,
+  "missing_timestamps": [
+    "2026-11-04T01:36:00+00:00",
+    "2026-11-04T01:37:00+00:00"
+  ],
+  "observed_throttled_ios": 4.0,
+  "client_invocation": "4b4979524d984762b20d3177bc3ad733"
+}

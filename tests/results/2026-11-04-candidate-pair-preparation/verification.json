@@ -1,0 +1,6 @@
+{
+  "harness_tests": 99,
+  "shell_syntax": "passed",
+  "deployed": false,
+  "scope": "Explicit SQL18 matched pair; fixed-load evidence only, not capacity/RF3 acceptance"
+}

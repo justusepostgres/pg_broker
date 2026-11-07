@@ -1,0 +1,25 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-017-producebatch75k-4-kafka/result.json",
+    "workload": "75k-1-topic-16-partitions-1kb",
+    "samples": 90,
+    "publish_msg_s_mean": 75038.25342151141,
+    "consume_msg_s_mean": 75040.50722717805,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 256,
+    "backlog_last": 0,
+    "backlog_max": 2316,
+    "publish_p99_ms": 209.089,
+    "publish_delay_p99_us": 410,
+    "end_to_end_p99_ms": 220.0,
+    "publish_p999_ms": 478.543,
+    "publish_p9999_ms": 696.127,
+    "publish_max_ms": 803.231,
+    "publish_delay_p999_us": 46767,
+    "publish_delay_p9999_us": 224128,
+    "publish_delay_max_us": 267363,
+    "end_to_end_p999_ms": 489.001,
+    "end_to_end_p9999_ms": 699.003,
+    "end_to_end_max_ms": 807.003
+  }
+]

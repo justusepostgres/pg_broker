@@ -1,0 +1,1 @@
+-Xms1G -Xmx1G -Xlog:gc*=info,safepoint=info:file=/home/ubuntu/results/omb-gc-017-32k-1/client-%t-%p.log:time,uptime,level,tags:filecount=4,filesize=16M

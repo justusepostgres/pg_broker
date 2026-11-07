@@ -1,0 +1,31 @@
+2026-11-04 15:24:35.786 +04 [89959] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 15:24:35.787 +04 [89959] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 15:24:35.787 +04 [89959] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 15:24:35.790 +04 [89964] LOG:  database system was shut down at 2026-11-04 15:24:35 +04
+2026-11-04 15:24:35.792 +04 [89959] LOG:  database system is ready to accept connections
+2026-11-04 15:24:42.490 +04 [90054] ERROR:  Replica offset diverged
+2026-11-04 15:24:42.490 +04 [90054] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 75 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 15:24:42.490 +04 [90054] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 15:24:47.626 +04 [90073] ERROR:  Raft log writer fenced
+2026-11-04 15:24:47.626 +04 [90073] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 15:24:47.626 +04 [90073] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 15:24:47.626 +04 [90073] LOG:  could not receive data from client: Connection reset by peer
+2026-11-04 15:24:49.257 +04 [90081] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 15:24:51.475 +04 [89961] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:24:51.573 +04 [89961] LOG:  checkpoint complete: wrote 2570 buffers (15.7%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.074 s, sync=0.024 s, total=0.099 s; sync files=847, longest=0.001 s, average=0.001 s; distance=23348 kB, estimate=23348 kB; lsn=0/2BE7C28, redo lsn=0/2BE7BD0
+2026-11-04 15:24:51.590 +04 [89961] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:24:51.591 +04 [89961] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=2, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=21013 kB; lsn=0/2BE8218, redo lsn=0/2BE81C0
+2026-11-04 15:24:51.615 +04 [89961] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:24:51.616 +04 [89961] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=2, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=18912 kB; lsn=0/2BE87F0, redo lsn=0/2BE8798
+2026-11-04 15:24:52.698 +04 [90100] ERROR:  Committed reader fenced
+2026-11-04 15:24:52.698 +04 [90100] CONTEXT:  PL/pgSQL function public.broker_raft_committed_page(text,bigint,jsonb) line 13 at RAISE
+2026-11-04 15:24:52.698 +04 [90100] STATEMENT:  SELECT public.broker_raft_committed_page($1,$2,$3)
+2026-11-04 15:24:52.698 +04 [90100] LOG:  could not receive data from client: Connection reset by peer
+2026-11-04 15:24:52.735 +04 [89959] LOG:  received fast shutdown request
+2026-11-04 15:24:52.735 +04 [89959] LOG:  aborting any active transactions
+2026-11-04 15:24:52.736 +04 [89959] LOG:  background worker "logical replication launcher" (PID 89968) exited with exit code 1
+2026-11-04 15:24:52.736 +04 [89961] LOG:  shutting down
+2026-11-04 15:24:52.736 +04 [89961] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 15:24:52.743 +04 [89961] LOG:  checkpoint complete: wrote 935 buffers (5.7%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.003 s, sync=0.004 s, total=0.008 s; sync files=8, longest=0.003 s, average=0.001 s; distance=8701 kB, estimate=17891 kB; lsn=0/3467DA8, redo lsn=0/3467DA8
+2026-11-04 15:24:52.745 +04 [89959] LOG:  database system is shut down

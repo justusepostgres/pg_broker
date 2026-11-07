@@ -1,0 +1,64 @@
+{
+  "phase": "observing",
+  "label": "017-capacity100k-1",
+  "unit": "omb-cloud-controller-capacity100k-1.service",
+  "bundle_sha256": "b3cdf211417eef97b75c54f94d38f3d2058dbdb2180c559b07bd890b8a98dfa3",
+  "manifest": {
+    "label": "017-capacity100k-1",
+    "order": "kafka-first",
+    "rate": "100k",
+    "volume_size_gib": 1024,
+    "vpus_per_gb": 10,
+    "runner_sha256": "a7c12babebe2a91e0e3a9827ced955192f201c5fdd44d9fc1d6757a922f5b25f",
+    "controller_files": [
+      "cloud-controller.py",
+      "remote_client.py",
+      "handoff_client.py",
+      "compare.py",
+      "environment.py",
+      "placement.py",
+      "measurement.py",
+      "client_events.py",
+      "gateway_events.py",
+      "summarize.py"
+    ],
+    "runner_files": [
+      "oci-pair.sh",
+      "client-workload.sh",
+      "run.sh",
+      "100k.yaml"
+    ],
+    "hashes": {
+      "100k.yaml": "313db105ce7cef85577a9230d0f65692747bd28223af8cee7f374974270e5bc4",
+      "client-workload.sh": "f39e0ebf0805050cfba7f60e1a8ca86761c9c76d0a205b8934af14a1426076aa",
+      "client_events.py": "59ef9c0d0ccd6cda694ec88ddb2f976bcc0de9d56df8f7e0bec4ddb1d4a4f8fa",
+      "cloud-controller.py": "1625c95fadf82c46f7c032d01ab56564fcdcc2a1687ef8294e80b9dfe56a603b",
+      "compare.py": "ddaf3e557d8abb5390fb3f6b970d62d97f7ce44f149e4bb3a0242cb0cc7a9688",
+      "environment.py": "681ef5e7b6c3c0e380ec9d526e31ead3a356cfc809af635e321157a2e927fb7a",
+      "gateway_events.py": "0f9a9020adb1511f13cafc5f4e209e4aab519946d4904531ad5b5c8bf095134e",
+      "handoff_client.py": "b8ba749bb899333eeaddf29b42c225b631710371f9d439b88da0358d3d1e787a",
+      "measurement.py": "064a5822131674eb3bfcdc8d6fc75758fa512227fb497c025801190e4dbb57e8",
+      "oci-pair.sh": "a7c12babebe2a91e0e3a9827ced955192f201c5fdd44d9fc1d6757a922f5b25f",
+      "placement.py": "c631ff7890584c7d58b548b39e511f11d97897d5c2bc7e6f6071450ffc19e50e",
+      "remote_client.py": "bc5f4e72a4764b306c5b341a7305c4e3c8845577fef402bc3af5205e50b9f23a",
+      "run.sh": "e325ce250ff63818149c7f2bb795c91831596c436593abf07047cb38160babe3",
+      "summarize.py": "4fee63bab63ac363a27c271ed8922ddfd41cb292b555225a525dc4f2e2cde551"
+    },
+    "preconditions": [
+      "Original 75k pair and outer controller terminal success",
+      "Complete local comparison with both restart checks",
+      "1024 GiB resize confirmed in cloud and guest",
+      "Server and client idle locks held while installing",
+      "Verify all source hashes before and after upload"
+    ],
+    "scope": "Prepared only; not uploaded or launched"
+  },
+  "controller_invocation": "e21c24d93ca14891abadffc94bbb3086",
+  "observed": {
+    "MainPID": "158030",
+    "Result": "success",
+    "ExecMainStatus": "0",
+    "SubState": "running",
+    "InvocationID": "e21c24d93ca14891abadffc94bbb3086"
+  }
+}

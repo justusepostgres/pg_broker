@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-11-04T00:00:30.202334+00:00",
+  "tests": "7 passed in 1.35s",
+  "scope": "Local SQL journal primitives, PostgreSQL 17.11, opt-in SQL 0.1.10; no RaftLogStorage adapter, state machine, snapshot installation, or network replication. Default SQL0.1.7 and cloud artifacts unchanged.",
+  "sha256": {
+    "crates/extension/sql/pg_broker--0.1.9--0.1.10.sql": "7f9d214de9ee0fb78f236e0d983632bfaa67ac8994d1fe478ab9c910df8c7722",
+    "tests/test_raft_log.py": "6a22a7c842b4c8af27cd6078a23e83f9afc78c0a6ab3b989ee44b5ff4043c376",
+    "scripts/package-extension.sh": "4a4fa027eb1d93018633246ab470837bd2aebbec5ecacb490d0bc61dd01ae73d",
+    "target/extension/pg_broker/pg_broker--0.1.10.sql": "55f965c5a023d22c737711ae9ea2499577adce8089e2c3d92426802cf3876bb8"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "samples": 495,
+  "sample_errors": 0,
+  "pidstat_exit": -15,
+  "acceptance_run": false,
+  "scope": "Instrumented diagnosis; timing disabled values are not latency evidence."
+}

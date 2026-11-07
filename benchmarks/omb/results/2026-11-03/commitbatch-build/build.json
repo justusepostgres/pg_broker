@@ -1,0 +1,19 @@
+{
+  "phase": "complete",
+  "unit": "omb-build-commitbatch017.service",
+  "host": "170.9.24.220",
+  "source_sha256": "24b9878f7e3af547179769094da82e8e7f9cc715dd4aaaab42b8cb6a8fd600ed",
+  "source_manifest": ".dev/commitbatch017-source-hashes.json",
+  "output": "/home/ubuntu/candidate-commitbatch017",
+  "builder": "sha256:dccffb5d7a3ac4a4ae357dfcf851613e38a1d8b0ee25d7834f75185aee827c28",
+  "previous_pair_invocation": "52ef84798fc844f9bc5228be395b7759",
+  "invocation": "e61b3f2fd8214f5daa5079605b108deb",
+  "observed": {
+    "MainPID": "88148",
+    "Result": "success",
+    "ExecMainStatus": "0",
+    "SubState": "running",
+    "InvocationID": "e61b3f2fd8214f5daa5079605b108deb"
+  },
+  "binary_sha256": "09f7592c2abb6e98c50fc2d3dad3dded9732b243a216fe80e7b4d528e6ea6cda"
+}

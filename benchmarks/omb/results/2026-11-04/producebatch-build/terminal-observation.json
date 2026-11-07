@@ -1,0 +1,8 @@
+{
+  "MainPID": "0",
+  "Result": "success",
+  "ExecMainStatus": "0",
+  "SubState": "exited",
+  "InvocationID": "7fe262e183d44e88b4acb2ff09b1cdc1",
+  "source": "Exact systemctl observation returned by original controller4034 before benchmarklaunch"
+}

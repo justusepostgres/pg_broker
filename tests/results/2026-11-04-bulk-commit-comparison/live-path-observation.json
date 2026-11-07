@@ -1,0 +1,11 @@
+{
+  "observed_before_utc": "2026-11-04T08:06:58Z",
+  "pair_invocation": "470977121aa440c7932e1abae7c69bf0",
+  "query": "pg_stat_user_functions for broker_call, commit_many, expire_members",
+  "calls": {
+    "broker_call": 208,
+    "commit_many": 34458,
+    "expire_members": 34537
+  },
+  "scope": "Read-only live diagnostic; lifetime counters include startup and warmup; not final performance evidence"
+}

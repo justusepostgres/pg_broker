@@ -1,0 +1,2 @@
+/home/ubuntu/candidate-cached015/libpg_broker.so: OK
+/home/ubuntu/candidate-cached015/pg-broker-gateway: OK

@@ -1,0 +1,77 @@
+{
+  "results": [
+    {
+      "label": "trial-1-broker",
+      "source": "benchmarks/omb/results/2026-11-04/producebatch75k-1/broker.json.log",
+      "sha256": "ef3012abf16b6f701fcf3c3ddf7db9396f77faf8030f95913ffb835014b80060",
+      "events": {
+        "warning_events": 0,
+        "error_events": 0,
+        "offset_commit_failure_events": 0,
+        "invalid_fetch_response_events": 1,
+        "scope": "Entire retained client log, including warmup/shutdown; event counts are not lost-record counts or measurement-only rates."
+      },
+      "diagnostic_line_numbers": [
+        479
+      ]
+    },
+    {
+      "label": "trial-1-kafka",
+      "source": "benchmarks/omb/results/2026-11-04/producebatch75k-1/kafka.json.log",
+      "sha256": "4a318264acb244756557339d51725dd920be9260e4095cf3d1d9d088d70e1869",
+      "events": {
+        "warning_events": 0,
+        "error_events": 0,
+        "offset_commit_failure_events": 0,
+        "invalid_fetch_response_events": 0,
+        "scope": "Entire retained client log, including warmup/shutdown; event counts are not lost-record counts or measurement-only rates."
+      },
+      "diagnostic_line_numbers": []
+    },
+    {
+      "label": "trial-2-broker",
+      "source": "benchmarks/omb/results/2026-11-04/producebatch75k-2/broker.json.log",
+      "sha256": "78ee9d3df235c87a2680901b1da7deb8a7aeb56a8069d833f85ca7fa748a1cbc",
+      "events": {
+        "warning_events": 0,
+        "error_events": 0,
+        "offset_commit_failure_events": 0,
+        "invalid_fetch_response_events": 1,
+        "scope": "Entire retained client log, including warmup/shutdown; event counts are not lost-record counts or measurement-only rates."
+      },
+      "diagnostic_line_numbers": [
+        479
+      ]
+    },
+    {
+      "label": "trial-2-kafka",
+      "source": "benchmarks/omb/results/2026-11-04/producebatch75k-2/kafka.json.log",
+      "sha256": "09dd6c4fd65d29372e200baf8b8693453558cda74cb679a32b1dd4dfdff32249",
+      "events": {
+        "warning_events": 0,
+        "error_events": 0,
+        "offset_commit_failure_events": 0,
+        "invalid_fetch_response_events": 0,
+        "scope": "Entire retained client log, including warmup/shutdown; event counts are not lost-record counts or measurement-only rates."
+      },
+      "diagnostic_line_numbers": []
+    },
+    {
+      "label": "trial-3-broker-incomplete-pair",
+      "source": ".dev/producebatch75k017-3-broker/client/artifacts/result.json.log",
+      "sha256": "126d401dfe3c37383cc6118c66c7ca34a4be652d5fbfb493b0c0148eb61705ff",
+      "events": {
+        "warning_events": 0,
+        "error_events": 0,
+        "offset_commit_failure_events": 0,
+        "invalid_fetch_response_events": 1,
+        "scope": "Entire retained client log, including warmup/shutdown; event counts are not lost-record counts or measurement-only rates."
+      },
+      "diagnostic_line_numbers": [
+        479
+      ]
+    }
+  ],
+  "tests": "49 Python benchmark harness tests passed",
+  "conclusion": "All three broker logs have one shutdown diagnostic; root cause and impact unproven. Failed trial 3 is not a completed comparison."
+}

@@ -1,0 +1,118 @@
+....usage: python3.14 -m unittest [-h] [--order {broker-first,kafka-first}]
+                              [--rate {75k,100k}]
+                              [--runner-sha256 RUNNER_SHA256]
+                              [--volume-size-gib VOLUME_SIZE_GIB]
+                              [--diagnostic-broker-only] [--diagnostic-timing]
+                              [--diagnostic-commit-delay-us {0,500}]
+                              [--bulk-commit-binary BULK_COMMIT_BINARY]
+                              [--bulk-commit-sha256 BULK_COMMIT_SHA256]
+                              [--partition-guard-candidate]
+                              label
+python3.14 -m unittest: error: 100k requires the reviewed runner that supports 100k, with its explicit digest
+..usage: python3.14 -m unittest [-h] [--order {broker-first,kafka-first}]
+                              [--rate {75k,100k}]
+                              [--runner-sha256 RUNNER_SHA256]
+                              [--volume-size-gib VOLUME_SIZE_GIB]
+                              [--diagnostic-broker-only] [--diagnostic-timing]
+                              [--diagnostic-commit-delay-us {0,500}]
+                              [--bulk-commit-binary BULK_COMMIT_BINARY]
+                              [--bulk-commit-sha256 BULK_COMMIT_SHA256]
+                              [--partition-guard-candidate]
+                              label
+python3.14 -m unittest: error: bulk commit candidate requires timed diagnosis with default commit delay
+usage: python3.14 -m unittest [-h] [--order {broker-first,kafka-first}]
+                              [--rate {75k,100k}]
+                              [--runner-sha256 RUNNER_SHA256]
+                              [--volume-size-gib VOLUME_SIZE_GIB]
+                              [--diagnostic-broker-only] [--diagnostic-timing]
+                              [--diagnostic-commit-delay-us {0,500}]
+                              [--bulk-commit-binary BULK_COMMIT_BINARY]
+                              [--bulk-commit-sha256 BULK_COMMIT_SHA256]
+                              [--partition-guard-candidate]
+                              label
+python3.14 -m unittest: error: candidate requires explicit SHA-256
+usage: python3.14 -m unittest [-h] [--order {broker-first,kafka-first}]
+                              [--rate {75k,100k}]
+                              [--runner-sha256 RUNNER_SHA256]
+                              [--volume-size-gib VOLUME_SIZE_GIB]
+                              [--diagnostic-broker-only] [--diagnostic-timing]
+                              [--diagnostic-commit-delay-us {0,500}]
+                              [--bulk-commit-binary BULK_COMMIT_BINARY]
+                              [--bulk-commit-sha256 BULK_COMMIT_SHA256]
+                              [--partition-guard-candidate]
+                              label
+python3.14 -m unittest: error: invalid candidate binary path
+usage: python3.14 -m unittest [-h] [--order {broker-first,kafka-first}]
+                              [--rate {75k,100k}]
+                              [--runner-sha256 RUNNER_SHA256]
+                              [--volume-size-gib VOLUME_SIZE_GIB]
+                              [--diagnostic-broker-only] [--diagnostic-timing]
+                              [--diagnostic-commit-delay-us {0,500}]
+                              [--bulk-commit-binary BULK_COMMIT_BINARY]
+                              [--bulk-commit-sha256 BULK_COMMIT_SHA256]
+                              [--partition-guard-candidate]
+                              label
+python3.14 -m unittest: error: bulk commit candidate requires timed diagnosis with default commit delay
+usage: python3.14 -m unittest [-h] [--order {broker-first,kafka-first}]
+                              [--rate {75k,100k}]
+                              [--runner-sha256 RUNNER_SHA256]
+                              [--volume-size-gib VOLUME_SIZE_GIB]
+                              [--diagnostic-broker-only] [--diagnostic-timing]
+                              [--diagnostic-commit-delay-us {0,500}]
+                              [--bulk-commit-binary BULK_COMMIT_BINARY]
+                              [--bulk-commit-sha256 BULK_COMMIT_SHA256]
+                              [--partition-guard-candidate]
+                              label
+python3.14 -m unittest: error: invalid candidate binary path
+.usage: python3.14 -m unittest [-h] [--order {broker-first,kafka-first}]
+                              [--rate {75k,100k}]
+                              [--runner-sha256 RUNNER_SHA256]
+                              [--volume-size-gib VOLUME_SIZE_GIB]
+                              [--diagnostic-broker-only] [--diagnostic-timing]
+                              [--diagnostic-commit-delay-us {0,500}]
+                              [--bulk-commit-binary BULK_COMMIT_BINARY]
+                              [--bulk-commit-sha256 BULK_COMMIT_SHA256]
+                              [--partition-guard-candidate]
+                              label
+python3.14 -m unittest: error: commit-delay experiment requires diagnostic timing
+..usage: python3.14 -m unittest [-h] [--order {broker-first,kafka-first}]
+                              [--rate {75k,100k}]
+                              [--runner-sha256 RUNNER_SHA256]
+                              [--volume-size-gib VOLUME_SIZE_GIB]
+                              [--diagnostic-broker-only] [--diagnostic-timing]
+                              [--diagnostic-commit-delay-us {0,500}]
+                              [--bulk-commit-binary BULK_COMMIT_BINARY]
+                              [--bulk-commit-sha256 BULK_COMMIT_SHA256]
+                              [--partition-guard-candidate]
+                              label
+python3.14 -m unittest: error: broker-only diagnosis requires 100k and broker-first
+...usage: python3.14 -m unittest [-h] [--order {broker-first,kafka-first}]
+                              [--rate {75k,100k}]
+                              [--runner-sha256 RUNNER_SHA256]
+                              [--volume-size-gib VOLUME_SIZE_GIB]
+                              [--diagnostic-broker-only] [--diagnostic-timing]
+                              [--diagnostic-commit-delay-us {0,500}]
+                              [--bulk-commit-binary BULK_COMMIT_BINARY]
+                              [--bulk-commit-sha256 BULK_COMMIT_SHA256]
+                              [--partition-guard-candidate]
+                              label
+python3.14 -m unittest: error: partition guard candidate requires the explicit bulk candidate binary
+....usage: python3.14 -m unittest [-h] [--order {broker-first,kafka-first}]
+                              [--rate {75k,100k}]
+                              [--runner-sha256 RUNNER_SHA256]
+                              [--volume-size-gib VOLUME_SIZE_GIB]
+                              [--diagnostic-broker-only] [--diagnostic-timing]
+                              [--diagnostic-commit-delay-us {0,500}]
+                              [--bulk-commit-binary BULK_COMMIT_BINARY]
+                              [--bulk-commit-sha256 BULK_COMMIT_SHA256]
+                              [--partition-guard-candidate]
+                              label
+python3.14 -m unittest: error: timing requires broker-only diagnostic mode
+.Same-handle handoff retry: Command 'ssh' returned non-zero exit status 255.
+................................................................
+----------------------------------------------------------------------
+Ran 81 tests in 0.492s
+
+OK
+Completed client evidence atomically delivered to the waiting server runner.
+Completed client phase already delivered; no launch or transfer repeated.

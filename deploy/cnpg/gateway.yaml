@@ -32,7 +32,7 @@ spec:
         fsGroup: 10001
       containers:
         - name: gateway
-          image: pg-broker-gateway:0.1.1
+          image: pg-broker-gateway:0.1.7
           imagePullPolicy: IfNotPresent
           ports:
             - name: kafka

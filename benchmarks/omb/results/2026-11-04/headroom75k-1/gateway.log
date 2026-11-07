@@ -1,0 +1,19 @@
+pg-broker listening on 10.84.0.247:9092
+unix_ms=1793753395559 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793753395648 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793753395696 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793753455566 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793753515676 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793753575783 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793753635891 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793753696002 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793753756108 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793753816216 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793753876321 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793753936427 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793753996536 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793754056643 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793754116753 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793754176859 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793754236966 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793754297071 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed

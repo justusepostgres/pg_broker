@@ -1,0 +1,10 @@
+{
+  "tests": "51 Python benchmark harness tests passed",
+  "status": "Local preparation only; not deployed or measured",
+  "sources": {
+    "benchmarks/omb/cloud-controller.py": "1625c95fadf82c46f7c032d01ab56564fcdcc2a1687ef8294e80b9dfe56a603b",
+    "benchmarks/omb/tests/test_cloud_controller.py": "91071987e0256d809fefdaa6dbca0ac7544499b5da498c1dec7f53af96365a73",
+    "benchmarks/omb/oci-pair.sh": "a7c12babebe2a91e0e3a9827ced955192f201c5fdd44d9fc1d6757a922f5b25f",
+    "benchmarks/omb/100k.yaml": "313db105ce7cef85577a9230d0f65692747bd28223af8cee7f374974270e5bc4"
+  }
+}

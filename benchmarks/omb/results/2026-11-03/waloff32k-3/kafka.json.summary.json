@@ -1,0 +1,16 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-pair-017-waloff32k-3/kafka.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32023.848957433547,
+    "consume_msg_s_mean": 32023.8486536403,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 160,
+    "backlog_last": 0,
+    "backlog_max": 160,
+    "publish_p99_ms": 12.047,
+    "publish_delay_p99_us": 411,
+    "end_to_end_p99_ms": 13.0
+  }
+]

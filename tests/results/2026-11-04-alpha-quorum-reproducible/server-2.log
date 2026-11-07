@@ -1,0 +1,14 @@
+2026-11-04 15:40:36.531 +04 [97023] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 15:40:36.532 +04 [97023] LOG:  listening on IPv4 address "127.0.0.1", port 55435
+2026-11-04 15:40:36.532 +04 [97023] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55435"
+2026-11-04 15:40:36.535 +04 [97026] LOG:  database system was shut down at 2026-11-04 15:40:36 +04
+2026-11-04 15:40:36.537 +04 [97023] LOG:  database system is ready to accept connections
+2026-11-04 15:40:51.854 +04 [97024] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:40:51.862 +04 [97024] LOG:  checkpoint complete: wrote 154 buffers (7.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.004 s, total=0.008 s; sync files=131, longest=0.001 s, average=0.001 s; distance=5809 kB, estimate=5809 kB; lsn=0/1AC7108, redo lsn=0/1AC70B0
+2026-11-04 15:40:53.224 +04 [97023] LOG:  received fast shutdown request
+2026-11-04 15:40:53.224 +04 [97023] LOG:  aborting any active transactions
+2026-11-04 15:40:53.225 +04 [97023] LOG:  background worker "logical replication launcher" (PID 97029) exited with exit code 1
+2026-11-04 15:40:53.225 +04 [97024] LOG:  shutting down
+2026-11-04 15:40:53.225 +04 [97024] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 15:40:53.226 +04 [97024] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=5228 kB; lsn=0/1AC7210, redo lsn=0/1AC7210
+2026-11-04 15:40:53.227 +04 [97023] LOG:  database system is shut down

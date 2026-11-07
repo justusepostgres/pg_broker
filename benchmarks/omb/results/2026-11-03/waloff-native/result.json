@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "initial_settings": "off|on|on|on|0.1.7",
+  "final_settings": "off|on|on|on",
+  "postgres_version": "postgres (PostgreSQL) 17.11 (Homebrew)",
+  "gateway_sha256": "e1df18f5ad277bf3cad796eccd03fa264d70cabdfd245b6c323bb947acbea0d9",
+  "scope": "Native integration suite on fresh disposable PostgreSQL cluster; not cloud performance or host-loss acceptance."
+}

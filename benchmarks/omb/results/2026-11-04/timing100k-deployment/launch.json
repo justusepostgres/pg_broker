@@ -1,0 +1,23 @@
+{
+  "phase": "observing",
+  "label": "017-timing100k-1",
+  "unit": "omb-cloud-controller-timing100k-1.service",
+  "bundle_sha256": "0c079c4e2d4873e76c31532e5a7348dda97a27e4b9b00e4768e1ece7c6bb4c44",
+  "manifest": {
+    "label": "017-timing100k-1",
+    "hashes": {
+      "oci-pair.sh": "2d7a6e7c68e43297f7f29c3a88bda85656ee19a9780c24865acab13d829795ac",
+      "cloud-controller.py": "d06092d288c1befd27e3ef672e2eb2f7906b85a0f331b8f6ec982f0be9d6808a",
+      "sample-server.py": "520c8f88b41570bb77f84660f0ff89b41437a58510af7d03f56ae859234525c5"
+    },
+    "scope": "Instrumented broker-only diagnosis; never acceptance"
+  },
+  "controller_invocation": "5038ae8e573c4bdcb57dbfbf71d39250",
+  "observed": {
+    "MainPID": "187708",
+    "Result": "success",
+    "ExecMainStatus": "0",
+    "SubState": "running",
+    "InvocationID": "5038ae8e573c4bdcb57dbfbf71d39250"
+  }
+}

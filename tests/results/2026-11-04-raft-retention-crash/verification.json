@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-11-04T06:27:54.148475+00:00",
+  "postgres_tests_passed": 11,
+  "immediate_stop_cases": 2,
+  "scope": "Disposable local PostgreSQL process crash: committed retention survives and uncommitted deletion/marker roll back. Not host-power-loss or network consensus.",
+  "sources": {
+    "tests/test_raft_retention.py": "db2de40d289d746b1da3f103a50da6914e73956850d2583ca99d52ac329bce10",
+    "crates/extension/sql/pg_broker--0.1.15--0.1.16.sql": "cf2e7c05e4cc15415504541ea65895b4df51afce7881a4ba435768bb7664c175",
+    ".dev/run-raft-retention-crash-native.py": "ebdb02863dc90c9043076bcf211fbf07a3c7b64e622598e37bb825875c918fa2"
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "suite": "quorum-1",
+    "exit_code": 0,
+    "seconds": 4.327910749998409
+  },
+  {
+    "suite": "quorum-2",
+    "exit_code": 0,
+    "seconds": 4.337663834012346
+  },
+  {
+    "suite": "quorum-3",
+    "exit_code": 0,
+    "seconds": 4.33291291698697
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-11-04T06:25:27.189470+00:00",
+  "unit_tests": 12,
+  "postgres_integration_tests": 5,
+  "clippy": "passed all targets with warnings denied",
+  "scope": "Local committed retention primitive, not network consensus or performance acceptance",
+  "sources": {
+    "crates/extension/sql/pg_broker--0.1.15--0.1.16.sql": "cf2e7c05e4cc15415504541ea65895b4df51afce7881a4ba435768bb7664c175",
+    "crates/cluster/src/application.rs": "738a25117396d7ad5c59785f94a3f2d2d9fecdc8acc54a0e886a077628363187",
+    "crates/cluster/tests/application_postgres.rs": "f2cff5ef5281083d212ad642821b3773aa842107522748cb22d2251f56337382",
+    "tests/test_raft_retention.py": "5fd56416e8db795b3c28da996f6ba64dd122cd38043dbd7ddade5dbe0336bea7",
+    "scripts/package-extension.sh": "0b3725c524be9fc3372d51c4dd93b8f7b8ef3944af8c018c5b35ae8717cd8574"
+  }
+}

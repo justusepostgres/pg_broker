@@ -1,0 +1,12 @@
+{
+  "published_crate": "https://static.crates.io/crates/openraft/openraft-0.10.0-alpha.37.crate",
+  "sha256": "225e445aeba04deb36474dfc77d7b8f54364cfbee968851e31d50f4db4b7c53a",
+  "finding": "RaftStateMachine.apply accepts a Stream of EntryResponder results; worker obtains entries_stream(since..end).",
+  "status": "Source inspection only. Workspace remains pinned to 0.9.25; no API or serialized-format compatibility claim.",
+  "inspected_file_sha256": {
+    "raft_state_machine.rs": "941629c4ac498813e3ef95c4672fd6bbd2e61f6546fc733c0c4cbde8c58c0b24",
+    "raft_log_reader.rs": "91d3187543c66ae9e91cecc2d5676d9a38d09f3b17bbbd84393f6aa709a9afaa",
+    "worker.rs": "451d1f481c47b80cd06da0b68a087da233bffa0ebb97b00508e1b999b9220370",
+    "Cargo.toml": "1bb8ba1f927769eef9316486457dc13adb6493ed3682cefe0359cacc463628c9"
+  }
+}

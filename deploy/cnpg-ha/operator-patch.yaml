@@ -1,0 +1,13 @@
+# Apply separately to cnpg-system/cnpg-controller-manager on a dedicated cluster.
+# Kubernetes itself must also have a surviving control-plane quorum.
+spec:
+  replicas: 2
+  template:
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app.kubernetes.io/name: cloudnative-pg
+              topologyKey: kubernetes.io/hostname

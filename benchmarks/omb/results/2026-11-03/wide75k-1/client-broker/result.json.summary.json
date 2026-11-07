@@ -1,0 +1,25 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-017-wide75k-1-broker/result.json",
+    "workload": "75k-1-topic-16-partitions-1kb",
+    "samples": 90,
+    "publish_msg_s_mean": 75162.01226012889,
+    "consume_msg_s_mean": 75163.11143222863,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 2295,
+    "backlog_last": 0,
+    "backlog_max": 9867,
+    "publish_p99_ms": 675.939,
+    "publish_delay_p99_us": 4856415,
+    "end_to_end_p99_ms": 712.003,
+    "publish_p999_ms": 780.043,
+    "publish_p9999_ms": 905.447,
+    "publish_max_ms": 1035.015,
+    "publish_delay_p999_us": 4963103,
+    "publish_delay_p9999_us": 4989855,
+    "publish_delay_max_us": 4996447,
+    "end_to_end_p999_ms": 843.003,
+    "end_to_end_p9999_ms": 1052.007,
+    "end_to_end_max_ms": 1485.007
+  }
+]

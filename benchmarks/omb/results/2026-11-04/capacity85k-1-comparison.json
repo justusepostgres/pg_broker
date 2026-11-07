@@ -1,0 +1,277 @@
+{
+  "reference_system": "kafka",
+  "candidate_system": "broker",
+  "trials": [
+    {
+      "directory": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-04/capacity85k-1",
+      "offered_messages_per_second": 85000,
+      "instrumentation": {
+        "recorded": false
+      },
+      "wal": {
+        "recorded": true,
+        "settings": "off|on|16MB|fdatasync|on|on|on"
+      },
+      "placement": {
+        "recorded": true,
+        "settings": {
+          "kind": "separate-client",
+          "server_host": "10.84.0.247"
+        },
+        "client_contract": {
+          "host": "Linux pg-broker-omb-client-1 7.0.0-1013-oracle #13~24.04.1-Ubuntu SMP PREEMPT Fri Sep 25 09:43:58 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux",
+          "limits": {
+            "RuntimeMaxUSec": "26min 40s",
+            "AllowedCPUs": "0-1",
+            "MemoryMax": "2147483648"
+          },
+          "java": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment (build 17.0.20.1+1-1-24.04-Ubuntu)\nOpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-24.04-Ubuntu, mixed mode, sharing)",
+          "scripts": {
+            "runner.sh": "8f774a06b3b57bc7437f3384ad37528082c3fb2972d560e9e24b89ffe2deb789",
+            "run.sh": "347dcb73fd6271e08fede8f82c9363aaf8651277d15fbc776c0ad7c131f11745",
+            "execute.py": "0eabfd6281bd485b3b6f3c6eca958f44c6435e0343c72c90c844913f7c68dbcd",
+            "summarize.py": "4fee63bab63ac363a27c271ed8922ddfd41cb292b555225a525dc4f2e2cde551"
+          },
+          "payload_sha256": "cda43e4dbb40bd54370afdd28c063e85c25b57de0defd9be7493750fd7c14217"
+        },
+        "units": [
+          "omb-client-018-capacity85k-1-kafka.service",
+          "omb-client-018-capacity85k-1-broker.service"
+        ]
+      },
+      "kafka_flush_policy": {
+        "recorded": true,
+        "mode": "background",
+        "flush_messages": "9223372036854775807",
+        "scope": "Kafka default-flush reference; local acknowledgment durability differs from PostgreSQL."
+      },
+      "gateway_events": {
+        "recorded": true,
+        "connection_events": 18,
+        "frame_header_deadlines": 18,
+        "frame_payload_deadlines": 0,
+        "request_deadlines": 0,
+        "response_write_deadlines": 0,
+        "database_deadlines": 0,
+        "unclassified_deadlines": 0,
+        "other_connection_events": 0,
+        "other_diagnostic_lines": 0,
+        "scope": "Entire retained gateway log, including warmup/shutdown. Header deadlines may be idle or incomplete requests; their cause is unknown. Counts do not prove loss, durability, or absence of unlogged failures."
+      },
+      "results": {
+        "kafka": {
+          "file": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-04/capacity85k-1/kafka.json",
+          "workload": "85k-1-topic-16-partitions-1kb",
+          "samples": 90,
+          "publish_msg_s_mean": 85036.4130730899,
+          "consume_msg_s_mean": 85036.43565593458,
+          "publish_error_msg_s_max": 0.0,
+          "backlog_first": 50,
+          "backlog_last": 0,
+          "backlog_max": 1518,
+          "publish_p99_ms": 224.238,
+          "publish_delay_p99_us": 704,
+          "end_to_end_p99_ms": 234.0,
+          "publish_delay_avg_windows": {
+            "first_us": 77.9854413934782,
+            "last_us": 49.721587953873474,
+            "max_us": 20451.254875345643,
+            "change_us": -28.263853439604723,
+            "linear_trend_us_per_sample": -7.203533410573794
+          },
+          "publish_p999_ms": 545.591,
+          "publish_p9999_ms": 831.915,
+          "publish_max_ms": 954.087,
+          "publish_delay_p999_us": 159440,
+          "publish_delay_p9999_us": 382883,
+          "publish_delay_max_us": 429849,
+          "end_to_end_p999_ms": 556.003,
+          "end_to_end_p9999_ms": 836.003,
+          "end_to_end_max_ms": 954.003,
+          "producer_histogram_limit": {
+            "cap_us": 60000000,
+            "publish_at_cap": false,
+            "scheduling_delay_at_cap": false,
+            "scope": "Pinned upstream producer metrics clamp at 60s; values at the cap may be censored. This cap does not apply to the end-to-end histogram."
+          },
+          "measurement": {
+            "timing_verified": true,
+            "samples": 90,
+            "requested_seconds": 900,
+            "measured_seconds": 905.4270000000033,
+            "shortest_interval_seconds": 10.03399999999965,
+            "longest_interval_seconds": 10.125
+          },
+          "client_events": {
+            "warning_events": 0,
+            "error_events": 0,
+            "offset_commit_failure_events": 0,
+            "invalid_fetch_response_events": 0,
+            "scope": "Entire retained client log, including warmup/shutdown; event counts are not lost-record counts or measurement-only rates."
+          },
+          "client_warning_error_matches": 0,
+          "offered_rate_fraction_published": 1.0004283890951753,
+          "offered_rate_fraction_consumed": 1.0004286547757009,
+          "backlog_linear_trend_messages_per_second": -0.1528122813516072
+        },
+        "broker": {
+          "file": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-04/capacity85k-1/broker.json",
+          "workload": "85k-1-topic-16-partitions-1kb",
+          "samples": 90,
+          "publish_msg_s_mean": 85049.41490876954,
+          "consume_msg_s_mean": 85051.10015173869,
+          "publish_error_msg_s_max": 0.0,
+          "backlog_first": 506,
+          "backlog_last": 506,
+          "backlog_max": 7843,
+          "publish_p99_ms": 127.245,
+          "publish_delay_p99_us": 735,
+          "end_to_end_p99_ms": 184.0,
+          "publish_delay_avg_windows": {
+            "first_us": 180.93485753570803,
+            "last_us": 61.35992561217426,
+            "max_us": 340.55115555919247,
+            "change_us": -119.57493192353377,
+            "linear_trend_us_per_sample": 0.10718170761419178
+          },
+          "publish_p999_ms": 310.741,
+          "publish_p9999_ms": 463.093,
+          "publish_max_ms": 649.219,
+          "publish_delay_p999_us": 2189,
+          "publish_delay_p9999_us": 16021,
+          "publish_delay_max_us": 35099,
+          "end_to_end_p999_ms": 384.001,
+          "end_to_end_p9999_ms": 510.001,
+          "end_to_end_max_ms": 680.003,
+          "producer_histogram_limit": {
+            "cap_us": 60000000,
+            "publish_at_cap": false,
+            "scheduling_delay_at_cap": false,
+            "scope": "Pinned upstream producer metrics clamp at 60s; values at the cap may be censored. This cap does not apply to the end-to-end histogram."
+          },
+          "measurement": {
+            "timing_verified": true,
+            "samples": 90,
+            "requested_seconds": 900,
+            "measured_seconds": 904.0849999999991,
+            "shortest_interval_seconds": 10.029999999998836,
+            "longest_interval_seconds": 10.109000000004016
+          },
+          "client_events": {
+            "warning_events": 0,
+            "error_events": 0,
+            "offset_commit_failure_events": 0,
+            "invalid_fetch_response_events": 1,
+            "scope": "Entire retained client log, including warmup/shutdown; event counts are not lost-record counts or measurement-only rates."
+          },
+          "client_warning_error_matches": 0,
+          "offered_rate_fraction_published": 1.000581351867877,
+          "offered_rate_fraction_consumed": 1.0006011782557493,
+          "backlog_linear_trend_messages_per_second": -0.14644688644688642
+        }
+      },
+      "candidate_to_reference_end_to_end_p99_ratio": 0.7863247863247863,
+      "conclusion": "Observed fixed-load trial only; no capacity, repeatability, RF=3 or scaling acceptance.",
+      "environment": {
+        "order": "kafka-first",
+        "stores": [
+          "/home/ubuntu/omb-pair-018-capacity85k-1-kafka-data",
+          "/omb-pair-018-capacity85k-1-db",
+          "/omb-pair-018-capacity85k-1-gateway",
+          "omb-client-018-capacity85k-1-kafka.service",
+          "omb-client-018-capacity85k-1-broker.service"
+        ],
+        "contract": {
+          "instrumentation": {
+            "recorded": false
+          },
+          "wal": {
+            "recorded": true,
+            "settings": "off|on|16MB|fdatasync|on|on|on"
+          },
+          "placement": {
+            "recorded": true,
+            "settings": {
+              "kind": "separate-client",
+              "server_host": "10.84.0.247"
+            },
+            "client_contract": {
+              "host": "Linux pg-broker-omb-client-1 7.0.0-1013-oracle #13~24.04.1-Ubuntu SMP PREEMPT Fri Sep 25 09:43:58 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux",
+              "limits": {
+                "RuntimeMaxUSec": "26min 40s",
+                "AllowedCPUs": "0-1",
+                "MemoryMax": "2147483648"
+              },
+              "java": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment (build 17.0.20.1+1-1-24.04-Ubuntu)\nOpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-24.04-Ubuntu, mixed mode, sharing)",
+              "scripts": {
+                "runner.sh": "8f774a06b3b57bc7437f3384ad37528082c3fb2972d560e9e24b89ffe2deb789",
+                "run.sh": "347dcb73fd6271e08fede8f82c9363aaf8651277d15fbc776c0ad7c131f11745",
+                "execute.py": "0eabfd6281bd485b3b6f3c6eca958f44c6435e0343c72c90c844913f7c68dbcd",
+                "summarize.py": "4fee63bab63ac363a27c271ed8922ddfd41cb292b555225a525dc4f2e2cde551"
+              },
+              "payload_sha256": "cda43e4dbb40bd54370afdd28c063e85c25b57de0defd9be7493750fd7c14217"
+            }
+          },
+          "gateway_sha256": "9130352c6bdd0a78321ce4bbea5ea4badb9714f23222f2abfab86b433c6bf43e",
+          "kafka_flush_policy": {
+            "recorded": true,
+            "mode": "background",
+            "flush_messages": "9223372036854775807",
+            "scope": "Kafka default-flush reference; local acknowledgment durability differs from PostgreSQL."
+          },
+          "volume_size_gib": 1024,
+          "volume_vpus_per_gb": 10,
+          "kafka_config": {
+            "process.roles": "broker,controller",
+            "node.id": "1",
+            "controller.quorum.voters": "1@127.0.0.1:19093",
+            "listeners": "PLAINTEXT://10.84.0.247:19092,CONTROLLER://127.0.0.1:19093",
+            "advertised.listeners": "PLAINTEXT://10.84.0.247:19092",
+            "controller.listener.names": "CONTROLLER",
+            "listener.security.protocol.map": "CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT",
+            "inter.broker.listener.name": "PLAINTEXT",
+            "log.dirs": "<fresh-trial-store>",
+            "num.partitions": "16",
+            "default.replication.factor": "1",
+            "min.insync.replicas": "1",
+            "offsets.topic.replication.factor": "1",
+            "transaction.state.log.replication.factor": "1",
+            "transaction.state.log.min.isr": "1",
+            "group.initial.rebalance.delay.ms": "0",
+            "auto.create.topics.enable": "false",
+            "log.flush.interval.messages": "9223372036854775807",
+            "log.retention.hours": "24"
+          },
+          "sql": {
+            "pg_broker--0.1.10--0.1.11.sql": "ecc32af8a8dbe84d3315be4cc3d3289102027acfd8b2e19831dc23772524bc8d",
+            "pg_broker--0.1.11--0.1.12.sql": "7a97b9b559b916458880be1813146c193ea5a4a0404f90eca9ef476cdff2acd2",
+            "pg_broker--0.1.12--0.1.13.sql": "18ffa3f8d27cdc55ed5ad12dd07ff28311517c80664b4720ce4b69bdf4a66a17",
+            "pg_broker--0.1.13--0.1.14.sql": "699341742bd314db50f1d759f7cbf376c2d98b36c8ecd4e4b02aefc32fd4cc86",
+            "pg_broker--0.1.14--0.1.15.sql": "e16c34b2b3ce72ff573bb34a105e1fb7b7a697abc924849fc2b8efa432c97216",
+            "pg_broker--0.1.15--0.1.16.sql": "cf2e7c05e4cc15415504541ea65895b4df51afce7881a4ba435768bb7664c175",
+            "pg_broker--0.1.16--0.1.17.sql": "6bd69bb1214a08718432998f8bdca2682d2afbc9346da0d026aaae80527c4dcd",
+            "pg_broker--0.1.17--0.1.18.sql": "cbc78d3be2d4f296863f7d4f05320a66c2d66e886ec71ed2cd6e2c9c038c44d6",
+            "pg_broker--0.1.5--0.1.6.sql": "35b1c3e1b0e5efe69d2475ce3cb8046c861dca775df9d158fbdc09b340c3fbfa",
+            "pg_broker--0.1.6--0.1.7.sql": "fc267b0a212907461ee791a772f42284504518b7270805d7d40669748fc166a0",
+            "pg_broker--0.1.7--0.1.8.sql": "484fa1ee78c2f7474310d751c3462ad3ec6918693305df587645d669166f0481",
+            "pg_broker--0.1.8--0.1.9.sql": "f42d889fa1ba8058c2fe435a8fc6af6a8a3a8a12feae0713c9ffb75565b10465",
+            "pg_broker--0.1.9--0.1.10.sql": "7f9d214de9ee0fb78f236e0d983632bfaa67ac8994d1fe478ab9c910df8c7722",
+            "verify-storage.sql": "5546b201f71e81f2096608d41cde959c0e22abbe54b91efbe7000b472ce981a1"
+          },
+          "image": "sha256:6821d31236114005fd88bc092f63721b540538169b8f048e09771ed68e24da19",
+          "extension_binary": "5030a7e732ecd03e44aebb9216d7eaecaa647c3cdb636a94b83b163fc9afb52b  /opt/pgsql/lib/pg_broker.so",
+          "gateway_check": "/home/ubuntu/candidate-queryreset018/pg-broker-gateway: OK",
+          "runner_sha256": "01d3cc225a10f017813f283b2c1518d29a00ba9750de746a918c4ee3bf5ba29a",
+          "host": "Linux pg-broker-omb-verification-1 7.0.0-1013-oracle #13~24.04.1-Ubuntu SMP PREEMPT Fri Sep 25 09:43:58 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux",
+          "java": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment (build 17.0.20.1+1-1-24.04-Ubuntu)\nOpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-24.04-Ubuntu, mixed mode, sharing)"
+        },
+        "scope": "Captured RF=1 environment and restart evidence only; no live-host attestation or performance acceptance."
+      }
+    }
+  ],
+  "trial_count": 1,
+  "at_least_three_trials": false,
+  "end_to_end_p99_ratios": [
+    0.7863247863247863
+  ]
+}

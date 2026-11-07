@@ -1,0 +1,59 @@
+2026-11-04 15:18:39.359 +04 [87828] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 15:18:39.359 +04 [87828] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 15:18:39.360 +04 [87828] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 15:18:39.362 +04 [87831] LOG:  database system was shut down at 2026-11-04 15:18:39 +04
+2026-11-04 15:18:39.364 +04 [87828] LOG:  database system is ready to accept connections
+2026-11-04 15:18:40.029 +04 [87840] ERROR:  Invalid replication page request
+2026-11-04 15:18:40.029 +04 [87840] CONTEXT:  PL/pgSQL function public.broker_raft_replication_page(text,bigint,jsonb) line 6 at RAISE
+2026-11-04 15:18:40.029 +04 [87840] STATEMENT:  SELECT public.broker_raft_replication_page($1,$2,$3)
+2026-11-04 15:18:40.029 +04 [87840] ERROR:  Replication reader fenced
+2026-11-04 15:18:40.029 +04 [87840] CONTEXT:  PL/pgSQL function public.broker_raft_replication_page(text,bigint,jsonb) line 15 at RAISE
+2026-11-04 15:18:40.029 +04 [87840] STATEMENT:  SELECT public.broker_raft_replication_page($1,$2,$3)
+2026-11-04 15:18:40.033 +04 [87829] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:18:40.039 +04 [87829] LOG:  checkpoint complete: wrote 172 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.004 s, total=0.006 s; sync files=130, longest=0.001 s, average=0.001 s; distance=7058 kB, estimate=7058 kB; lsn=0/1BFF478, redo lsn=0/1BFF420
+2026-11-04 15:18:40.267 +04 [87844] ERROR:  Invalid replication page request
+2026-11-04 15:18:40.267 +04 [87844] CONTEXT:  PL/pgSQL function public.broker_raft_replication_page(text,bigint,jsonb) line 6 at RAISE
+2026-11-04 15:18:40.267 +04 [87844] STATEMENT:  SELECT public.broker_raft_replication_page($1,$2,$3)
+2026-11-04 15:18:40.268 +04 [87844] ERROR:  Replication reader fenced
+2026-11-04 15:18:40.268 +04 [87844] CONTEXT:  PL/pgSQL function public.broker_raft_replication_page(text,bigint,jsonb) line 15 at RAISE
+2026-11-04 15:18:40.268 +04 [87844] STATEMENT:  SELECT public.broker_raft_replication_page($1,$2,$3)
+2026-11-04 15:18:40.272 +04 [87829] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:18:40.273 +04 [87829] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=6104 kB, estimate=6963 kB; lsn=0/21F5868, redo lsn=0/21F5810
+2026-11-04 15:18:40.519 +04 [87848] ERROR:  canceling statement due to statement timeout
+2026-11-04 15:18:40.519 +04 [87848] CONTEXT:  while updating tuple (0,2) in relation "raft_votes"
+	SQL statement "UPDATE broker.raft_votes SET vote=v,revision=revision+1
+	 WHERE group_key=k AND writer_epoch=e AND revision=rev RETURNING *"
+	PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 4 at SQL statement
+2026-11-04 15:18:40.519 +04 [87848] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 15:18:40.522 +04 [87848] ERROR:  Replication endpoint unavailable or changed
+2026-11-04 15:18:40.522 +04 [87848] CONTEXT:  PL/pgSQL function public.broker_raft_replication_page(text,bigint,jsonb) line 22 at RAISE
+2026-11-04 15:18:40.522 +04 [87848] STATEMENT:  SELECT public.broker_raft_replication_page($1,$2,$3)
+2026-11-04 15:18:40.531 +04 [87829] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:18:40.533 +04 [87829] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4838 kB, estimate=6750 kB; lsn=0/26AF398, redo lsn=0/26AF340
+2026-11-04 15:18:40.832 +04 [87853] ERROR:  Replication page prefix unavailable
+2026-11-04 15:18:40.832 +04 [87853] CONTEXT:  PL/pgSQL function public.broker_raft_replication_page(text,bigint,jsonb) line 25 at RAISE
+2026-11-04 15:18:40.832 +04 [87853] STATEMENT:  SELECT public.broker_raft_replication_page($1,$2,$3)
+2026-11-04 15:18:40.832 +04 [87853] ERROR:  Invalid replication page interval
+2026-11-04 15:18:40.832 +04 [87853] CONTEXT:  PL/pgSQL function public.broker_raft_replication_page(text,bigint,jsonb) line 11 at RAISE
+2026-11-04 15:18:40.832 +04 [87853] STATEMENT:  SELECT public.broker_raft_replication_page($1,$2,$3)
+2026-11-04 15:18:40.836 +04 [87829] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:18:40.837 +04 [87829] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4973 kB, estimate=6573 kB; lsn=0/2B8A9A8, redo lsn=0/2B8A950
+2026-11-04 15:18:40.928 +04 [87829] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:18:40.930 +04 [87829] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=11, longest=0.001 s, average=0.001 s; distance=4848 kB, estimate=6400 kB; lsn=0/3046D08, redo lsn=0/3046CB0
+2026-11-04 15:18:41.015 +04 [87862] ERROR:  permission denied for function broker_raft_log_read
+2026-11-04 15:18:41.015 +04 [87862] STATEMENT:  SELECT public.broker_raft_log_read($1,$2,$3,$4)
+2026-11-04 15:18:41.016 +04 [87862] ERROR:  permission denied for function broker_raft_log
+2026-11-04 15:18:41.016 +04 [87862] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 15:18:41.016 +04 [87862] ERROR:  permission denied for schema broker at character 15
+2026-11-04 15:18:41.016 +04 [87862] STATEMENT:  SELECT * FROM broker.raft_log_entries
+2026-11-04 15:18:41.019 +04 [87829] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:18:41.021 +04 [87829] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=10, longest=0.001 s, average=0.001 s; distance=4684 kB, estimate=6229 kB; lsn=0/34DA068, redo lsn=0/34D9FF8
+2026-11-04 15:18:41.110 +04 [87829] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:18:41.111 +04 [87829] LOG:  checkpoint complete: wrote 6 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=6, longest=0.001 s, average=0.001 s; distance=4680 kB, estimate=6074 kB; lsn=0/396C188, redo lsn=0/396C130
+2026-11-04 15:18:41.222 +04 [87828] LOG:  received fast shutdown request
+2026-11-04 15:18:41.222 +04 [87828] LOG:  aborting any active transactions
+2026-11-04 15:18:41.223 +04 [87828] LOG:  background worker "logical replication launcher" (PID 87834) exited with exit code 1
+2026-11-04 15:18:41.223 +04 [87829] LOG:  shutting down
+2026-11-04 15:18:41.223 +04 [87829] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 15:18:41.223 +04 [87829] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=5466 kB; lsn=0/396C290, redo lsn=0/396C290
+2026-11-04 15:18:41.225 +04 [87828] LOG:  database system is shut down

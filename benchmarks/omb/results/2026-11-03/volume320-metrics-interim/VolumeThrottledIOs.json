@@ -1,0 +1,137 @@
+{
+  "data": [
+    {
+      "aggregated-datapoints": [
+        {
+          "timestamp": "2026-11-03T23:14:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:15:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:16:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:17:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:18:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:19:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:20:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:21:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:22:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:23:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:24:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:25:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:26:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:27:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:28:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:29:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:30:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:31:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:32:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:33:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-03T23:34:00+00:00",
+          "value": 332.0
+        },
+        {
+          "timestamp": "2026-11-03T23:35:00+00:00",
+          "value": 485.0
+        },
+        {
+          "timestamp": "2026-11-03T23:36:00+00:00",
+          "value": 458.0
+        },
+        {
+          "timestamp": "2026-11-03T23:37:00+00:00",
+          "value": 477.0
+        },
+        {
+          "timestamp": "2026-11-03T23:38:00+00:00",
+          "value": 350.0
+        },
+        {
+          "timestamp": "2026-11-03T23:39:00+00:00",
+          "value": 331.0
+        },
+        {
+          "timestamp": "2026-11-03T23:40:00+00:00",
+          "value": 501.0
+        },
+        {
+          "timestamp": "2026-11-03T23:41:00+00:00",
+          "value": 578.0
+        },
+        {
+          "timestamp": "2026-11-03T23:43:00+00:00",
+          "value": 461.0
+        }
+      ],
+      "compartment-id": "ocid1.tenancy.oc1..aaaaaaaafe6p7erknwb3ekqbeztffxdnirwuf6kel3nkt2ofrmi7iygx4apa",
+      "dimensions": {
+        "attachmentId": "ocid1.instance.oc1.us-sanjose-1.anzwuljrsjflizycskhftwpeg4nzak4sk2rb7pwrvv3fjxdn7u2qg3474bna",
+        "resourceId": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq"
+      },
+      "metadata": {
+        "displayName": "Throttled IOs",
+        "unit": "operations"
+      },
+      "name": "VolumeThrottledIOs",
+      "namespace": "oci_blockstore",
+      "resolution": null,
+      "resource-group": null
+    }
+  ]
+}

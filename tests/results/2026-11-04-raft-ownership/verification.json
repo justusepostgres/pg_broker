@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-11-04T05:57:42.203153+00:00",
+  "integration_tests_passed": 6,
+  "default_version": "0.1.7",
+  "scope": "Opt-in local application ownership only; no network replication or benchmark change",
+  "sources": {
+    "crates/extension/sql/pg_broker--0.1.14--0.1.15.sql": "e16c34b2b3ce72ff573bb34a105e1fb7b7a697abc924849fc2b8efa432c97216",
+    "tests/test_raft_ownership.py": "fe47f7d6b19e75cb2f588427250f32f69291683e53acedc988d56f59299d8997",
+    "scripts/package-extension.sh": "ced40eec06e189a954db786f56ead65cd12fc179565d96685d648d9218d44fae"
+  }
+}

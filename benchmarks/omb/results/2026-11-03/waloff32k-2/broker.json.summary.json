@@ -1,0 +1,16 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-pair-017-waloff32k-2/broker.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32021.023333808076,
+    "consume_msg_s_mean": 32021.0373676748,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 0,
+    "backlog_last": 0,
+    "backlog_max": 224,
+    "publish_p99_ms": 10.307,
+    "publish_delay_p99_us": 227,
+    "end_to_end_p99_ms": 13.0
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "timestamp_utc": "2026-11-04T05:59:59.123603+00:00",
+  "integration_tests_passed": 4,
+  "sql_version": "0.1.15",
+  "scope": "Existing Rust application and snapshot integration against ownership guards; not network Raft",
+  "sources": {
+    "crates/extension/sql/pg_broker--0.1.14--0.1.15.sql": "e16c34b2b3ce72ff573bb34a105e1fb7b7a697abc924849fc2b8efa432c97216",
+    ".dev/run-raft-ownership-rust-native.py": "6e7996cce1e8d4bef2542af7565346dee324bc6f24f2eb27a043f3dea087bacb"
+  }
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-017-commitbatch75k-1-broker/result.json",
+    "workload": "75k-1-topic-16-partitions-1kb",
+    "samples": 90,
+    "publish_msg_s_mean": 75053.57271202128,
+    "consume_msg_s_mean": 75055.23095937044,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 2277,
+    "backlog_last": 253,
+    "backlog_max": 15092,
+    "publish_p99_ms": 628.091,
+    "publish_delay_p99_us": 3018159,
+    "end_to_end_p99_ms": 677.003,
+    "publish_p999_ms": 745.671,
+    "publish_p9999_ms": 845.055,
+    "publish_max_ms": 985.983,
+    "publish_delay_p999_us": 3260399,
+    "publish_delay_p9999_us": 3272879,
+    "publish_delay_max_us": 3278575,
+    "end_to_end_p999_ms": 966.003,
+    "end_to_end_p9999_ms": 1271.007,
+    "end_to_end_max_ms": 1479.007
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "scope": "Interim conservative interior minute points only; not full-run or parity evidence",
+  "expected_timestamps": [
+    "2026-11-04T01:14:00+00:00",
+    "2026-11-04T01:15:00+00:00",
+    "2026-11-04T01:16:00+00:00",
+    "2026-11-04T01:17:00+00:00",
+    "2026-11-04T01:18:00+00:00"
+  ],
+  "missing_timestamps": [],
+  "observed_points": 5,
+  "observed_throttled_ios": 0.0,
+  "allocation_metrics": "No points returned in this query interval; not inferred as zero",
+  "server_invocation": "142e323f16bd471e9083a4c1712d5d95",
+  "client_invocation": "741a702a616c4387a1240cf169f69077",
+  "binary_sha256": "0e0b5024eb643859f18b23a111870a45f28a2e65e522505ddeac8592bddb41fc"
+}

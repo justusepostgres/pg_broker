@@ -1,0 +1,19 @@
+pg-broker listening on 10.84.0.247:9092
+unix_ms=1793791845928 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793791846018 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793791846079 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793791905939 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793791966045 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792026151 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792086256 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792146362 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792206472 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792266581 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792326687 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792386792 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792446899 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792507007 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792567111 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792627217 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792687325 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793792747430 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed

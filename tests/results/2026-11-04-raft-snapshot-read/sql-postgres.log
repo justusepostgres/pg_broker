@@ -1,0 +1,121 @@
+2026-11-04 04:59:09.401 +04 [64788] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 04:59:09.401 +04 [64788] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 04:59:09.401 +04 [64788] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 04:59:09.404 +04 [64791] LOG:  database system was shut down at 2026-11-04 04:59:09 +04
+2026-11-04 04:59:09.406 +04 [64788] LOG:  database system is ready to accept connections
+2026-11-04 04:59:09.855 +04 [64802] ERROR:  Completed snapshot required
+2026-11-04 04:59:09.855 +04 [64802] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 8 at RAISE
+2026-11-04 04:59:09.855 +04 [64802] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 04:59:09.857 +04 [64802] ERROR:  Snapshot cursor outside retained interval
+2026-11-04 04:59:09.857 +04 [64802] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 10 at RAISE
+2026-11-04 04:59:09.857 +04 [64802] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 04:59:09.857 +04 [64802] ERROR:  Snapshot cursor outside retained interval
+2026-11-04 04:59:09.857 +04 [64802] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 10 at RAISE
+2026-11-04 04:59:09.857 +04 [64802] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 04:59:09.858 +04 [64802] ERROR:  Snapshot reader fenced
+2026-11-04 04:59:09.858 +04 [64802] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 6 at RAISE
+2026-11-04 04:59:09.858 +04 [64802] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 04:59:09.859 +04 [64802] ERROR:  Completed snapshot required
+2026-11-04 04:59:09.859 +04 [64802] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 8 at RAISE
+2026-11-04 04:59:09.859 +04 [64802] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 04:59:09.862 +04 [64789] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:59:09.867 +04 [64789] LOG:  checkpoint complete: wrote 124 buffers (0.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.003 s, total=0.005 s; sync files=93, longest=0.001 s, average=0.001 s; distance=5368 kB, estimate=5368 kB; lsn=0/1A58C68, redo lsn=0/1A58C10
+2026-11-04 04:59:09.965 +04 [64806] ERROR:  Completed snapshot required
+2026-11-04 04:59:09.965 +04 [64806] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 8 at RAISE
+2026-11-04 04:59:09.965 +04 [64806] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 04:59:09.968 +04 [64806] ERROR:  Snapshot cursor outside retained interval
+2026-11-04 04:59:09.968 +04 [64806] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 10 at RAISE
+2026-11-04 04:59:09.968 +04 [64806] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 04:59:09.968 +04 [64806] ERROR:  Snapshot cursor outside retained interval
+2026-11-04 04:59:09.968 +04 [64806] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 10 at RAISE
+2026-11-04 04:59:09.968 +04 [64806] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 04:59:09.968 +04 [64806] ERROR:  Snapshot reader fenced
+2026-11-04 04:59:09.968 +04 [64806] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 6 at RAISE
+2026-11-04 04:59:09.968 +04 [64806] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 04:59:09.969 +04 [64806] ERROR:  Completed snapshot required
+2026-11-04 04:59:09.969 +04 [64806] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 8 at RAISE
+2026-11-04 04:59:09.969 +04 [64806] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 04:59:09.972 +04 [64789] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:59:09.973 +04 [64789] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4788 kB, estimate=5310 kB; lsn=0/1F06048, redo lsn=0/1F05FD8
+2026-11-04 04:59:10.121 +04 [64789] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:59:10.122 +04 [64789] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=5057 kB, estimate=5285 kB; lsn=0/23F6778, redo lsn=0/23F6720
+2026-11-04 04:59:11.615 +04 [64789] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:59:11.616 +04 [64789] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=5257 kB, estimate=5282 kB; lsn=0/2918BC0, redo lsn=0/2918B68
+2026-11-04 04:59:11.739 +04 [64818] ERROR:  Snapshot page missing or exceeds byte budget
+2026-11-04 04:59:11.739 +04 [64818] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 25 at RAISE
+2026-11-04 04:59:11.739 +04 [64818] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 04:59:11.740 +04 [64818] ERROR:  permission denied for function broker_raft_snapshot_read
+2026-11-04 04:59:11.740 +04 [64818] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 04:59:11.744 +04 [64789] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:59:11.745 +04 [64789] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=8, longest=0.001 s, average=0.001 s; distance=4795 kB, estimate=5233 kB; lsn=0/2DC78E0, redo lsn=0/2DC7888
+2026-11-04 04:59:11.852 +04 [64788] LOG:  received fast shutdown request
+2026-11-04 04:59:11.852 +04 [64788] LOG:  aborting any active transactions
+2026-11-04 04:59:11.853 +04 [64788] LOG:  background worker "logical replication launcher" (PID 64794) exited with exit code 1
+2026-11-04 04:59:11.853 +04 [64789] LOG:  shutting down
+2026-11-04 04:59:11.853 +04 [64789] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 04:59:11.854 +04 [64789] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=4710 kB; lsn=0/2DC79E8, redo lsn=0/2DC79E8
+2026-11-04 04:59:11.855 +04 [64788] LOG:  database system is shut down
+2026-11-04 05:00:28.628 +04 [65166] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 05:00:28.628 +04 [65166] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 05:00:28.629 +04 [65166] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 05:00:28.631 +04 [65169] LOG:  database system was shut down at 2026-11-04 05:00:28 +04
+2026-11-04 05:00:28.633 +04 [65166] LOG:  database system is ready to accept connections
+2026-11-04 05:00:29.073 +04 [65180] ERROR:  Completed snapshot required
+2026-11-04 05:00:29.073 +04 [65180] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 8 at RAISE
+2026-11-04 05:00:29.073 +04 [65180] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:29.076 +04 [65180] ERROR:  Snapshot cursor outside retained interval
+2026-11-04 05:00:29.076 +04 [65180] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 10 at RAISE
+2026-11-04 05:00:29.076 +04 [65180] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:29.076 +04 [65180] ERROR:  Snapshot cursor outside retained interval
+2026-11-04 05:00:29.076 +04 [65180] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 10 at RAISE
+2026-11-04 05:00:29.076 +04 [65180] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:29.077 +04 [65180] ERROR:  Snapshot reader fenced
+2026-11-04 05:00:29.077 +04 [65180] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 6 at RAISE
+2026-11-04 05:00:29.077 +04 [65180] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:29.077 +04 [65180] ERROR:  Completed snapshot required
+2026-11-04 05:00:29.077 +04 [65180] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 8 at RAISE
+2026-11-04 05:00:29.077 +04 [65180] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:29.081 +04 [65167] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:00:29.086 +04 [65167] LOG:  checkpoint complete: wrote 124 buffers (0.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.003 s, total=0.006 s; sync files=93, longest=0.001 s, average=0.001 s; distance=5368 kB, estimate=5368 kB; lsn=0/1A58C68, redo lsn=0/1A58C10
+2026-11-04 05:00:29.187 +04 [65184] ERROR:  Completed snapshot required
+2026-11-04 05:00:29.187 +04 [65184] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 8 at RAISE
+2026-11-04 05:00:29.187 +04 [65184] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:29.189 +04 [65184] ERROR:  Snapshot cursor outside retained interval
+2026-11-04 05:00:29.189 +04 [65184] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 10 at RAISE
+2026-11-04 05:00:29.189 +04 [65184] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:29.189 +04 [65184] ERROR:  Snapshot cursor outside retained interval
+2026-11-04 05:00:29.189 +04 [65184] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 10 at RAISE
+2026-11-04 05:00:29.189 +04 [65184] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:29.189 +04 [65184] ERROR:  Snapshot reader fenced
+2026-11-04 05:00:29.189 +04 [65184] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 6 at RAISE
+2026-11-04 05:00:29.189 +04 [65184] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:29.190 +04 [65184] ERROR:  Completed snapshot required
+2026-11-04 05:00:29.190 +04 [65184] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 8 at RAISE
+2026-11-04 05:00:29.190 +04 [65184] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:29.194 +04 [65167] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:00:29.195 +04 [65167] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4788 kB, estimate=5310 kB; lsn=0/1F06048, redo lsn=0/1F05FD8
+2026-11-04 05:00:29.350 +04 [65167] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:00:29.351 +04 [65167] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=5057 kB, estimate=5285 kB; lsn=0/23F6778, redo lsn=0/23F6720
+2026-11-04 05:00:30.876 +04 [65167] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:00:30.877 +04 [65167] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=5257 kB, estimate=5282 kB; lsn=0/2918BC0, redo lsn=0/2918B68
+2026-11-04 05:00:30.977 +04 [65197] ERROR:  Snapshot page missing or exceeds byte budget
+2026-11-04 05:00:30.977 +04 [65197] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 25 at RAISE
+2026-11-04 05:00:30.977 +04 [65197] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:30.978 +04 [65197] ERROR:  permission denied for function broker_raft_snapshot_read
+2026-11-04 05:00:30.978 +04 [65197] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:30.982 +04 [65167] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:00:30.983 +04 [65167] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=8, longest=0.001 s, average=0.001 s; distance=4795 kB, estimate=5233 kB; lsn=0/2DC78E0, redo lsn=0/2DC7888
+2026-11-04 05:00:31.084 +04 [65201] ERROR:  Snapshot cursor outside retained interval
+2026-11-04 05:00:31.084 +04 [65201] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 10 at RAISE
+2026-11-04 05:00:31.084 +04 [65201] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3,$4)
+2026-11-04 05:00:31.087 +04 [65167] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:00:31.088 +04 [65167] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4788 kB, estimate=5189 kB; lsn=0/32749A8, redo lsn=0/3274950
+2026-11-04 05:00:31.189 +04 [65167] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:00:31.190 +04 [65167] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4781 kB, estimate=5148 kB; lsn=0/3720148, redo lsn=0/37200F0
+2026-11-04 05:00:31.337 +04 [65166] LOG:  received fast shutdown request
+2026-11-04 05:00:31.338 +04 [65166] LOG:  aborting any active transactions
+2026-11-04 05:00:31.338 +04 [65166] LOG:  background worker "logical replication launcher" (PID 65172) exited with exit code 1
+2026-11-04 05:00:31.338 +04 [65167] LOG:  shutting down
+2026-11-04 05:00:31.338 +04 [65167] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 05:00:31.339 +04 [65167] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=4633 kB; lsn=0/3720250, redo lsn=0/3720250
+2026-11-04 05:00:31.341 +04 [65166] LOG:  database system is shut down

@@ -1,0 +1,1 @@
+fc267b0a212907461ee791a772f42284504518b7270805d7d40669748fc166a0  /home/ubuntu/pg-broker/crates/extension/sql/pg_broker--0.1.6--0.1.7.sql

@@ -1,0 +1,10 @@
+   Compiling broker-cluster v0.1.0 (/Users/salah/Documents/ChatGPT/pg_kafka/crates/cluster)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.66s
+     Running tests/application_postgres.rs (target/debug/deps/application_postgres-5603a8cac74267a3)
+
+running 2 tests
+test cancelled_application_discards_connection_and_does_not_advance ... ok
+test typed_application_commits_data_and_marker_and_fences_retries ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+

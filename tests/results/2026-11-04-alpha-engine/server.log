@@ -1,0 +1,19 @@
+2026-11-04 15:10:13.706 +04 [84608] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 15:10:13.706 +04 [84608] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 15:10:13.706 +04 [84608] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 15:10:13.709 +04 [84611] LOG:  database system was shut down at 2026-11-04 15:10:13 +04
+2026-11-04 15:10:13.711 +04 [84608] LOG:  database system is ready to accept connections
+2026-11-04 15:10:19.768 +04 [84676] ERROR:  Replica offset diverged
+2026-11-04 15:10:19.768 +04 [84676] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 75 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 15:10:19.768 +04 [84676] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 15:10:26.009 +04 [84740] ERROR:  Committed reader fenced
+2026-11-04 15:10:26.009 +04 [84740] CONTEXT:  PL/pgSQL function public.broker_raft_committed_page(text,bigint,jsonb) line 13 at RAISE
+2026-11-04 15:10:26.009 +04 [84740] STATEMENT:  SELECT public.broker_raft_committed_page($1,$2,$3)
+2026-11-04 15:10:26.062 +04 [84608] LOG:  received fast shutdown request
+2026-11-04 15:10:26.062 +04 [84608] LOG:  aborting any active transactions
+2026-11-04 15:10:26.062 +04 [84608] LOG:  background worker "logical replication launcher" (PID 84614) exited with exit code 1
+2026-11-04 15:10:26.062 +04 [84609] LOG:  shutting down
+2026-11-04 15:10:26.063 +04 [84609] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 15:10:26.080 +04 [84609] LOG:  checkpoint complete: wrote 1474 buffers (9.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.008 s, sync=0.010 s, total=0.018 s; sync files=129, longest=0.004 s, average=0.001 s; distance=17444 kB, estimate=17444 kB; lsn=0/2623968, redo lsn=0/2623968
+2026-11-04 15:10:26.081 +04 [84608] LOG:  database system is shut down

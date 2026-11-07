@@ -1,0 +1,34 @@
+{
+  "samples": 150,
+  "sample_errors": 0,
+  "valid_intervals": 149,
+  "covered_seconds": 298.0200679999999,
+  "requested_seconds": 300.0,
+  "mean_cpu_cores": {
+    "db:usage_usec": 0.7754564937553133,
+    "gateway:usage_usec": 0.3417379026972104
+  },
+  "cpu_counter_deltas": {
+    "db:usage_usec": 231101597,
+    "db:user_usec": 140094059,
+    "db:system_usec": 91007537,
+    "db:throttled_usec": 0,
+    "gateway:usage_usec": 101844753,
+    "gateway:user_usec": 35882309,
+    "gateway:system_usec": 65962443,
+    "gateway:throttled_usec": 0
+  },
+  "max_memory_bytes": {
+    "db": 1901019136,
+    "gateway": 58937344
+  },
+  "active_backend_observations": {
+    "no_reported_wait:": 102,
+    "IO:WalSync": 51,
+    "LWLock:WALWrite": 10,
+    "IO:DataFileExtend": 4,
+    "IO:WalWrite": 1,
+    "Client:ClientRead": 1
+  },
+  "scope": "Instrumented samples, not acceptance. Wait counts are observations, not elapsed wait time; no_reported_wait does not prove CPU execution. CPU cores are usage-seconds per covered wall-second."
+}

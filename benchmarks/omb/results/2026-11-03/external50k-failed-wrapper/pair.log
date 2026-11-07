@@ -1,0 +1,15 @@
+e3f08b1b1bda41854cd37458cf7a77a2a11d3bab5433a3dcad73ebc80344d872
+ALTER EXTENSION
+ALTER TABLE
+ALTER SYSTEM
+ pg_reload_conf 
+----------------
+ t
+(1 row)
+
+46a44e07522efc29c2f0b50323e756592a6ab67ec1c5e3ecb0e6ffc4d14bcabf
+Formatting /home/ubuntu/omb-pair-017-external50k-1-kafka-data with metadata.version 3.6-IV2.
+Running as unit: omb-pair-017-external50k-1-kafka.service; invocation ID: 4450085b001647718c4f8e6e4f6c91c7
+Traceback (most recent call last):
+  File "<stdin>", line 11, in <module>
+AssertionError

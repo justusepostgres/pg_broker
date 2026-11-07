@@ -1,0 +1,378 @@
+{
+  "summary": {
+    "file": "benchmarks/omb/results/2026-11-03/server32k-1/broker.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32022.07931217871,
+    "consume_msg_s_mean": 32022.105947025335,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 0,
+    "backlog_last": 0,
+    "backlog_max": 186,
+    "publish_p99_ms": 9.375,
+    "publish_delay_p99_us": 139,
+    "end_to_end_p99_ms": 12.0,
+    "publish_p999_ms": 56.086,
+    "publish_p9999_ms": 67.924,
+    "publish_max_ms": 74.035,
+    "publish_delay_p999_us": 555,
+    "publish_delay_p9999_us": 2148,
+    "publish_delay_max_us": 9465,
+    "end_to_end_p999_ms": 61.0,
+    "end_to_end_p9999_ms": 79.0,
+    "end_to_end_max_ms": 90.0
+  },
+  "slow_statements": [
+    {
+      "completed_at": "2026-11-03 20:30:15.590+00:00",
+      "duration_ms": 83.123,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:30:36.517+00:00",
+      "duration_ms": 51.258,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:30:57.393+00:00",
+      "duration_ms": 57.949,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:30:57.394+00:00",
+      "duration_ms": 58.386,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:31:18.570+00:00",
+      "duration_ms": 53.693,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:31:18.571+00:00",
+      "duration_ms": 52.195,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:31:18.572+00:00",
+      "duration_ms": 54.266,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:31:25.613+00:00",
+      "duration_ms": 10.169,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:31:25.623+00:00",
+      "duration_ms": 12.14,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:31:25.628+00:00",
+      "duration_ms": 10.057,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:31:25.640+00:00",
+      "duration_ms": 11.058,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:31:25.645+00:00",
+      "duration_ms": 18.25,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:31:25.667+00:00",
+      "duration_ms": 17.259,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:31:25.672+00:00",
+      "duration_ms": 10.073,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:31:39.703+00:00",
+      "duration_ms": 53.18,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:31:39.704+00:00",
+      "duration_ms": 53.55,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:32:00.603+00:00",
+      "duration_ms": 53.402,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:32:18.515+00:00",
+      "duration_ms": 10.427,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:32:18.536+00:00",
+      "duration_ms": 11.087,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:32:21.790+00:00",
+      "duration_ms": 56.03,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:32:42.885+00:00",
+      "duration_ms": 49.329,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:32:42.885+00:00",
+      "duration_ms": 49.5,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:33:03.601+00:00",
+      "duration_ms": 58.245,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:33:03.602+00:00",
+      "duration_ms": 52.021,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:33:19.969+00:00",
+      "duration_ms": 12.673,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:33:24.843+00:00",
+      "duration_ms": 58.27,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:33:24.844+00:00",
+      "duration_ms": 59.217,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:33:46.002+00:00",
+      "duration_ms": 54.707,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:34:06.663+00:00",
+      "duration_ms": 53.667,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:34:06.664+00:00",
+      "duration_ms": 53.426,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:34:27.878+00:00",
+      "duration_ms": 54.415,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:34:27.879+00:00",
+      "duration_ms": 52.691,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:34:49.135+00:00",
+      "duration_ms": 52.008,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:34:52.143+00:00",
+      "duration_ms": 10.807,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:34:52.146+00:00",
+      "duration_ms": 11.33,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:34:52.147+00:00",
+      "duration_ms": 14.347,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:35:09.159+00:00",
+      "duration_ms": 52.653,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:35:22.846+00:00",
+      "duration_ms": 12.855,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:35:29.943+00:00",
+      "duration_ms": 49.408,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:35:29.944+00:00",
+      "duration_ms": 49.634,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:35:51.146+00:00",
+      "duration_ms": 56.841,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:35:51.147+00:00",
+      "duration_ms": 57.359,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:35:53.574+00:00",
+      "duration_ms": 14.244,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:35:53.587+00:00",
+      "duration_ms": 16.045,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:35:53.589+00:00",
+      "duration_ms": 11.44,
+      "statement": "statement: COMMIT"
+    },
+    {
+      "completed_at": "2026-11-03 20:35:53.594+00:00",
+      "duration_ms": 16.987,
+      "statement": "statement: COMMIT"
+    }
+  ],
+  "commit_clusters_over_40ms": [
+    {
+      "first_completed_at": "2026-11-03 20:30:15.590+00:00",
+      "max_ms": 83.123,
+      "statements": 1
+    },
+    {
+      "first_completed_at": "2026-11-03 20:30:36.517+00:00",
+      "max_ms": 51.258,
+      "statements": 1
+    },
+    {
+      "first_completed_at": "2026-11-03 20:30:57.393+00:00",
+      "max_ms": 58.386,
+      "statements": 2
+    },
+    {
+      "first_completed_at": "2026-11-03 20:31:18.570+00:00",
+      "max_ms": 54.266,
+      "statements": 3
+    },
+    {
+      "first_completed_at": "2026-11-03 20:31:39.703+00:00",
+      "max_ms": 53.55,
+      "statements": 2
+    },
+    {
+      "first_completed_at": "2026-11-03 20:32:00.603+00:00",
+      "max_ms": 53.402,
+      "statements": 1
+    },
+    {
+      "first_completed_at": "2026-11-03 20:32:21.790+00:00",
+      "max_ms": 56.03,
+      "statements": 1
+    },
+    {
+      "first_completed_at": "2026-11-03 20:32:42.885+00:00",
+      "max_ms": 49.5,
+      "statements": 2
+    },
+    {
+      "first_completed_at": "2026-11-03 20:33:03.601+00:00",
+      "max_ms": 58.245,
+      "statements": 2
+    },
+    {
+      "first_completed_at": "2026-11-03 20:33:24.843+00:00",
+      "max_ms": 59.217,
+      "statements": 2
+    },
+    {
+      "first_completed_at": "2026-11-03 20:33:46.002+00:00",
+      "max_ms": 54.707,
+      "statements": 1
+    },
+    {
+      "first_completed_at": "2026-11-03 20:34:06.663+00:00",
+      "max_ms": 53.667,
+      "statements": 2
+    },
+    {
+      "first_completed_at": "2026-11-03 20:34:27.878+00:00",
+      "max_ms": 54.415,
+      "statements": 2
+    },
+    {
+      "first_completed_at": "2026-11-03 20:34:49.135+00:00",
+      "max_ms": 52.008,
+      "statements": 1
+    },
+    {
+      "first_completed_at": "2026-11-03 20:35:09.159+00:00",
+      "max_ms": 52.653,
+      "statements": 1
+    },
+    {
+      "first_completed_at": "2026-11-03 20:35:29.943+00:00",
+      "max_ms": 49.634,
+      "statements": 2
+    },
+    {
+      "first_completed_at": "2026-11-03 20:35:51.146+00:00",
+      "max_ms": 57.359,
+      "statements": 2
+    }
+  ],
+  "cluster_intervals_s": [
+    20.927,
+    20.876,
+    21.177,
+    21.133,
+    20.9,
+    21.187,
+    21.095,
+    20.716,
+    21.242,
+    21.159,
+    20.661,
+    21.215,
+    21.257,
+    20.024,
+    20.784,
+    21.203
+  ],
+  "median_cluster_interval_s": 21.113999999999997,
+  "wal_counter_delta": {
+    "wal_fpi": 190,
+    "wal_sync": 146827,
+    "wal_bytes": 286020575,
+    "wal_write": 146877,
+    "wal_records": 1042188,
+    "wal_sync_time": 101450.892,
+    "wal_write_time": 3928.291,
+    "wal_buffers_full": 0
+  },
+  "counter_interval_seconds": 387.417065,
+  "estimated_seconds_per_16mib_wal": 22.72486789312636,
+  "scope": "Counters include warmup and post-workload shutdown of gateway. Cluster threshold40ms and one-second grouping are descriptive only. No observed LSN at stall time; WAL segment initialization remains a hypothesis.",
+  "measurement_start_utc": "2026-11-03 20:31:01.230+00:00",
+  "measured_slow_statement_count": 42
+}

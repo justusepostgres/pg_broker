@@ -1,0 +1,16 @@
+{
+  "verified_at": "2026-11-04T00:06:10.700920+00:00",
+  "rust_tests": 6,
+  "sql_tests": 6,
+  "clippy": "all targets, warnings denied: passed",
+  "scope": "Typed local journal wrapper only; no RaftLogStorage trait, snapshot installation or network replication. Cloud binary/schema unchanged.",
+  "sha256": {
+    "Cargo.lock": "b8e538d46c7658694702c7e2c718715257e7a604f348a04486a7ff576c917bef",
+    "crates/cluster/src/journal.rs": "5b6337ff60abd7b0637c6bc2d3617ffd4154bdf9bd64ab2020d3aeed55bc45c2",
+    "crates/cluster/src/votes.rs": "eb49a30b3ba8b0ae06c7cd6e241504588fb77d2fc61a6ff140b50ca0800dbaf8",
+    "crates/cluster/src/lib.rs": "c3f8790972d5b623af9ead8a7df03db94e814279c6191d843825c47212c4af66",
+    "crates/cluster/tests/journal_postgres.rs": "8769a277814c78d3ec37950d01dbe615d2d4fa5399cde381611e8df87817b724",
+    "crates/cluster/tests/votes_postgres.rs": "3ca839596fdb1b186f7eb4487e34dcb88f7867b024b95f26921a7e8feb3fdc95",
+    "crates/extension/sql/pg_broker--0.1.9--0.1.10.sql": "7f9d214de9ee0fb78f236e0d983632bfaa67ac8994d1fe478ab9c910df8c7722"
+  }
+}

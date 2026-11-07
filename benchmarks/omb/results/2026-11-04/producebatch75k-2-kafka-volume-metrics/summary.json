@@ -1,0 +1,10 @@
+{
+  "scope": "13 conservative interior minute points; missing samples are not zero; minute aggregates are not individual-stall causal evidence",
+  "expected_points": 13,
+  "observed_points": 11,
+  "missing_timestamps": [
+    "2026-11-04T01:59:00+00:00",
+    "2026-11-04T02:00:00+00:00"
+  ],
+  "observed_throttled_ios": 238.0
+}

@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "2026-11-04T00:31:04.542775+00:00",
+  "postgres": "17.11",
+  "openraft": "0.9.25",
+  "extension": "0.1.11 opt-in; default remains0.1.7",
+  "rust_tests": 11,
+  "sql_tests": 6,
+  "scope": "Local log storage trait and actual blocking_append callback helper, not network consensus, snapshot or state-machine verification.",
+  "source_sha256": {
+    "Cargo.toml": "eaf478a78a3ab1f05d6e813a37dff26cff7fdb53a90de0d96fee6e1d98748d73",
+    "Cargo.lock": "b8e538d46c7658694702c7e2c718715257e7a604f348a04486a7ff576c917bef",
+    "crates/cluster/Cargo.toml": "53bd11e643822e78c101dfa1ad2e3e1461c44821248d7d4a6282f982c329acc5",
+    "crates/cluster/src/votes.rs": "c9d8cc05ec2e66a2925897cf00151828d4b66dcdbf8552e5061d79af4041a9b8",
+    "crates/cluster/src/journal.rs": "a660ee86eb072ad8e3ec93285b1d86649fdd45aaf8271c5c21d3f522aecaa9e0",
+    "crates/cluster/src/lib.rs": "aeadc0b08f70a4ceccf57e5927e3e464a8ad8227b5451f01dfe1f2f72fadbcb6",
+    "crates/cluster/src/storage.rs": "963f27c0d46f72a110dcad03ec9c1c9ebf2f8a1eacfbf638dad07e461045d66e",
+    "crates/cluster/src/reader.rs": "658ccca9601cbc6effb4b7bb521b05900ae0cb14601641b43c2595bc1d58f2a6",
+    "crates/cluster/tests/journal_postgres.rs": "8769a277814c78d3ec37950d01dbe615d2d4fa5399cde381611e8df87817b724",
+    "crates/cluster/tests/reader_postgres.rs": "7a8629f9d3adac8b63ee252124ec01a21552b2c6e7359f80e5d7fb7917179073",
+    "crates/cluster/tests/storage_postgres.rs": "3b002c21e8d52d3a60834babbf85256a0ea132594cb0dd21ec9a7a59d91b4f2e",
+    "crates/cluster/tests/votes_postgres.rs": "3ca839596fdb1b186f7eb4487e34dcb88f7867b024b95f26921a7e8feb3fdc95",
+    "crates/extension/sql/pg_broker--0.1.9--0.1.10.sql": "7f9d214de9ee0fb78f236e0d983632bfaa67ac8994d1fe478ab9c910df8c7722",
+    "crates/extension/sql/pg_broker--0.1.10--0.1.11.sql": "ecc32af8a8dbe84d3315be4cc3d3289102027acfd8b2e19831dc23772524bc8d",
+    ".dev/run-raft-storage-native.py": "ef5ca3ce9bdb421b777d6680ead93f5e64f7cfd909314f62926d51b709b0104e"
+  }
+}

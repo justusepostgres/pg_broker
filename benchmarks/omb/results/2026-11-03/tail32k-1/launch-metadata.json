@@ -1,0 +1,8 @@
+{
+  "unit": "omb-tail-017-32k-1.service",
+  "invocation": "e90ea882e7ce4830b0d871ce8730fcbe",
+  "main_pid": 2275,
+  "migration_sha256": "fc267b0a212907461ee791a772f42284504518b7270805d7d40669748fc166a0",
+  "native_tests": "46 passed in 76.64s",
+  "runtime_limit_minutes": 25
+}

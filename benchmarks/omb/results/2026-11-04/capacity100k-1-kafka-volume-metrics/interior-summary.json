@@ -1,0 +1,26 @@
+{
+  "measurement_start_utc": "2026-11-04T06:19:54.231Z",
+  "measurement_result_written_utc": "2026-11-04T06:35:00.967Z",
+  "conservative_interior_minutes": [
+    "2026-11-04T06:21:00+00:00",
+    "2026-11-04T06:22:00+00:00",
+    "2026-11-04T06:23:00+00:00",
+    "2026-11-04T06:24:00+00:00",
+    "2026-11-04T06:25:00+00:00",
+    "2026-11-04T06:26:00+00:00",
+    "2026-11-04T06:27:00+00:00",
+    "2026-11-04T06:28:00+00:00",
+    "2026-11-04T06:29:00+00:00",
+    "2026-11-04T06:30:00+00:00",
+    "2026-11-04T06:31:00+00:00",
+    "2026-11-04T06:32:00+00:00",
+    "2026-11-04T06:33:00+00:00",
+    "2026-11-04T06:34:00+00:00"
+  ],
+  "observed_minutes": 13,
+  "missing_minutes": [
+    "2026-11-04T06:27:00+00:00"
+  ],
+  "observed_throttled_io_sum": 0.0,
+  "scope": "Minute aggregates only. Missing points are not zero; observed sum is a full interior-window sum only if all expected minutes are present. New 1024 GiB profile; do not pool with 640 GiB trials."
+}

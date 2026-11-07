@@ -1,0 +1,143 @@
+2026-11-04 04:39:34.852 +04 [61059] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 04:39:34.852 +04 [61059] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 04:39:34.852 +04 [61059] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 04:39:34.855 +04 [61062] LOG:  database system was shut down at 2026-11-04 04:39:34 +04
+2026-11-04 04:39:34.857 +04 [61059] LOG:  database system is ready to accept connections
+2026-11-04 04:39:35.272 +04 [61073] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 04:39:35.272 +04 [61073] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 16 at RAISE
+2026-11-04 04:39:35.272 +04 [61073] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:39:35.272 +04 [61073] ERROR:  Application must advance consecutively
+2026-11-04 04:39:35.272 +04 [61073] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 13 at RAISE
+2026-11-04 04:39:35.272 +04 [61073] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:39:35.283 +04 [61074] ERROR:  Raft application owner fenced
+2026-11-04 04:39:35.283 +04 [61074] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at RAISE
+2026-11-04 04:39:35.283 +04 [61074] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:39:35.283 +04 [61074] ERROR:  Replica binding is immutable
+2026-11-04 04:39:35.283 +04 [61074] CONTEXT:  PL/pgSQL function public.broker_raft_partition_bind(text,bigint,text,uuid,integer) line 9 at RAISE
+2026-11-04 04:39:35.283 +04 [61074] STATEMENT:  SELECT public.broker_raft_partition_bind($1,$2,$3,$4,$5)
+2026-11-04 04:39:35.286 +04 [61060] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:39:35.291 +04 [61060] LOG:  checkpoint complete: wrote 124 buffers (0.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.003 s, total=0.005 s; sync files=93, longest=0.001 s, average=0.001 s; distance=5296 kB, estimate=5296 kB; lsn=0/1A469D0, redo lsn=0/1A46978
+2026-11-04 04:39:35.375 +04 [61078] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 04:39:35.375 +04 [61078] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 16 at RAISE
+2026-11-04 04:39:35.375 +04 [61078] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:39:35.376 +04 [61078] ERROR:  Application must advance consecutively
+2026-11-04 04:39:35.376 +04 [61078] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 13 at RAISE
+2026-11-04 04:39:35.376 +04 [61078] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:39:35.385 +04 [61079] ERROR:  Raft application owner fenced
+2026-11-04 04:39:35.385 +04 [61079] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at RAISE
+2026-11-04 04:39:35.385 +04 [61079] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:39:35.385 +04 [61079] ERROR:  Replica binding is immutable
+2026-11-04 04:39:35.385 +04 [61079] CONTEXT:  PL/pgSQL function public.broker_raft_partition_bind(text,bigint,text,uuid,integer) line 9 at RAISE
+2026-11-04 04:39:35.385 +04 [61079] STATEMENT:  SELECT public.broker_raft_partition_bind($1,$2,$3,$4,$5)
+2026-11-04 04:39:35.388 +04 [61060] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:39:35.389 +04 [61060] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4716 kB, estimate=5238 kB; lsn=0/1EE1AF8, redo lsn=0/1EE1AA0
+2026-11-04 04:39:35.478 +04 [61083] ERROR:  Replica offset diverged
+2026-11-04 04:39:35.478 +04 [61083] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 44 at RAISE
+2026-11-04 04:39:35.478 +04 [61083] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:39:35.482 +04 [61060] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:39:35.483 +04 [61060] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4711 kB, estimate=5185 kB; lsn=0/237B958, redo lsn=0/237B900
+2026-11-04 04:39:35.584 +04 [61087] ERROR:  Committed replica record set is invalid: {"error": 2}
+2026-11-04 04:39:35.584 +04 [61087] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 47 at RAISE
+2026-11-04 04:39:35.584 +04 [61087] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:39:35.587 +04 [61060] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:39:35.588 +04 [61060] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4711 kB, estimate=5138 kB; lsn=0/28158E0, redo lsn=0/2815888
+2026-11-04 04:39:35.678 +04 [61091] ERROR:  Replica topic identity mismatch
+2026-11-04 04:39:35.678 +04 [61091] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 42 at RAISE
+2026-11-04 04:39:35.678 +04 [61091] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:39:35.681 +04 [61060] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:39:35.682 +04 [61060] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4712 kB, estimate=5095 kB; lsn=0/2CAFBB0, redo lsn=0/2CAFB58
+2026-11-04 04:39:35.768 +04 [61095] ERROR:  duplicate key value violates unique constraint "raft_partition_state_topic_id_partition_key"
+2026-11-04 04:39:35.768 +04 [61095] DETAIL:  Key (topic_id, partition)=(40c1e504-bb7e-4b6b-9a38-a359125ed87e, 0) already exists.
+2026-11-04 04:39:35.768 +04 [61095] CONTEXT:  SQL statement "INSERT INTO broker.raft_partition_state(group_key,topic,topic_id,partition) VALUES(k,t,tid,p)
+	 RETURNING *"
+	PL/pgSQL function public.broker_raft_partition_bind(text,bigint,text,uuid,integer) line 17 at SQL statement
+2026-11-04 04:39:35.768 +04 [61095] STATEMENT:  SELECT public.broker_raft_partition_bind($1,$2,$3,$4,0)
+2026-11-04 04:39:35.769 +04 [61095] ERROR:  permission denied for function broker_raft_partition_apply
+2026-11-04 04:39:35.769 +04 [61095] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:39:35.769 +04 [61095] ERROR:  permission denied for function broker_raft_partition_bind
+2026-11-04 04:39:35.769 +04 [61095] STATEMENT:  SELECT public.broker_raft_partition_bind($1,$2,$3,$4,$5)
+2026-11-04 04:39:35.772 +04 [61060] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:39:35.773 +04 [61060] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=8, longest=0.001 s, average=0.001 s; distance=4723 kB, estimate=5058 kB; lsn=0/314C8E8, redo lsn=0/314C890
+2026-11-04 04:39:35.888 +04 [61059] LOG:  received fast shutdown request
+2026-11-04 04:39:35.888 +04 [61059] LOG:  aborting any active transactions
+2026-11-04 04:39:35.889 +04 [61059] LOG:  background worker "logical replication launcher" (PID 61065) exited with exit code 1
+2026-11-04 04:39:35.889 +04 [61060] LOG:  shutting down
+2026-11-04 04:39:35.889 +04 [61060] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 04:39:35.889 +04 [61060] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=4552 kB; lsn=0/314C9F0, redo lsn=0/314C9F0
+2026-11-04 04:39:35.891 +04 [61059] LOG:  database system is shut down
+2026-11-04 04:42:54.134 +04 [61915] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 04:42:54.134 +04 [61915] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 04:42:54.135 +04 [61915] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 04:42:54.137 +04 [61918] LOG:  database system was shut down at 2026-11-04 04:42:54 +04
+2026-11-04 04:42:54.139 +04 [61915] LOG:  database system is ready to accept connections
+2026-11-04 04:42:54.565 +04 [61929] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 04:42:54.565 +04 [61929] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 16 at RAISE
+2026-11-04 04:42:54.565 +04 [61929] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:42:54.565 +04 [61929] ERROR:  Application must advance consecutively
+2026-11-04 04:42:54.565 +04 [61929] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 13 at RAISE
+2026-11-04 04:42:54.565 +04 [61929] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:42:54.575 +04 [61930] ERROR:  Raft application owner fenced
+2026-11-04 04:42:54.575 +04 [61930] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at RAISE
+2026-11-04 04:42:54.575 +04 [61930] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:42:54.575 +04 [61930] ERROR:  Replica binding is immutable
+2026-11-04 04:42:54.575 +04 [61930] CONTEXT:  PL/pgSQL function public.broker_raft_partition_bind(text,bigint,text,uuid,integer) line 9 at RAISE
+2026-11-04 04:42:54.575 +04 [61930] STATEMENT:  SELECT public.broker_raft_partition_bind($1,$2,$3,$4,$5)
+2026-11-04 04:42:54.578 +04 [61916] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:42:54.582 +04 [61916] LOG:  checkpoint complete: wrote 124 buffers (0.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.003 s, total=0.005 s; sync files=93, longest=0.001 s, average=0.001 s; distance=5299 kB, estimate=5299 kB; lsn=0/1A475B0, redo lsn=0/1A47558
+2026-11-04 04:42:54.670 +04 [61934] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 04:42:54.670 +04 [61934] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 16 at RAISE
+2026-11-04 04:42:54.670 +04 [61934] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:42:54.671 +04 [61934] ERROR:  Application must advance consecutively
+2026-11-04 04:42:54.671 +04 [61934] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 13 at RAISE
+2026-11-04 04:42:54.671 +04 [61934] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:42:54.680 +04 [61935] ERROR:  Raft application owner fenced
+2026-11-04 04:42:54.680 +04 [61935] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at RAISE
+2026-11-04 04:42:54.680 +04 [61935] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:42:54.680 +04 [61935] ERROR:  Replica binding is immutable
+2026-11-04 04:42:54.680 +04 [61935] CONTEXT:  PL/pgSQL function public.broker_raft_partition_bind(text,bigint,text,uuid,integer) line 9 at RAISE
+2026-11-04 04:42:54.680 +04 [61935] STATEMENT:  SELECT public.broker_raft_partition_bind($1,$2,$3,$4,$5)
+2026-11-04 04:42:54.683 +04 [61916] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:42:54.684 +04 [61916] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4719 kB, estimate=5241 kB; lsn=0/1EE32D0, redo lsn=0/1EE3278
+2026-11-04 04:42:54.780 +04 [61939] ERROR:  Replica offset diverged
+2026-11-04 04:42:54.780 +04 [61939] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 44 at RAISE
+2026-11-04 04:42:54.780 +04 [61939] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:42:54.783 +04 [61916] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:42:54.784 +04 [61916] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4714 kB, estimate=5188 kB; lsn=0/237DD10, redo lsn=0/237DCB8
+2026-11-04 04:42:54.871 +04 [61943] ERROR:  Committed replica record set is invalid: {"error": 2}
+2026-11-04 04:42:54.871 +04 [61943] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 47 at RAISE
+2026-11-04 04:42:54.871 +04 [61943] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:42:54.875 +04 [61916] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:42:54.876 +04 [61916] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4714 kB, estimate=5141 kB; lsn=0/2818890, redo lsn=0/2818838
+2026-11-04 04:42:54.961 +04 [61947] ERROR:  Replica topic identity mismatch
+2026-11-04 04:42:54.961 +04 [61947] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 42 at RAISE
+2026-11-04 04:42:54.961 +04 [61947] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:42:54.965 +04 [61916] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:42:54.965 +04 [61916] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4715 kB, estimate=5098 kB; lsn=0/2CB3740, redo lsn=0/2CB36E8
+2026-11-04 04:42:55.056 +04 [61951] ERROR:  duplicate key value violates unique constraint "raft_partition_state_topic_id_partition_key"
+2026-11-04 04:42:55.056 +04 [61951] DETAIL:  Key (topic_id, partition)=(a2ba21af-6615-4103-b8f6-d967f4ef463d, 0) already exists.
+2026-11-04 04:42:55.056 +04 [61951] CONTEXT:  SQL statement "INSERT INTO broker.raft_partition_state(group_key,topic,topic_id,partition) VALUES(k,t,tid,p)
+	 RETURNING *"
+	PL/pgSQL function public.broker_raft_partition_bind(text,bigint,text,uuid,integer) line 17 at SQL statement
+2026-11-04 04:42:55.056 +04 [61951] STATEMENT:  SELECT public.broker_raft_partition_bind($1,$2,$3,$4,0)
+2026-11-04 04:42:55.056 +04 [61951] ERROR:  permission denied for function broker_raft_partition_apply
+2026-11-04 04:42:55.056 +04 [61951] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:42:55.056 +04 [61951] ERROR:  permission denied for function broker_raft_partition_bind
+2026-11-04 04:42:55.056 +04 [61951] STATEMENT:  SELECT public.broker_raft_partition_bind($1,$2,$3,$4,$5)
+2026-11-04 04:42:55.060 +04 [61916] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:42:55.061 +04 [61916] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=8, longest=0.001 s, average=0.001 s; distance=4726 kB, estimate=5061 kB; lsn=0/3151020, redo lsn=0/3150FC8
+2026-11-04 04:42:55.143 +04 [61916] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:42:55.144 +04 [61916] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4710 kB, estimate=5026 kB; lsn=0/35EAC00, redo lsn=0/35EABA8
+2026-11-04 04:42:55.229 +04 [61958] ERROR:  Cannot purge unapplied replica entries
+2026-11-04 04:42:55.229 +04 [61958] CONTEXT:  PL/pgSQL function raft_partition_guard_purge() line 7 at RAISE
+	SQL statement "UPDATE broker.raft_log_state SET purged=q WHERE group_key=k"
+	PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 59 at SQL statement
+2026-11-04 04:42:55.229 +04 [61958] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:42:55.235 +04 [61916] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:42:55.236 +04 [61916] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4717 kB, estimate=4995 kB; lsn=0/3A86300, redo lsn=0/3A862A8
+2026-11-04 04:42:55.343 +04 [61915] LOG:  received fast shutdown request
+2026-11-04 04:42:55.343 +04 [61915] LOG:  aborting any active transactions
+2026-11-04 04:42:55.344 +04 [61915] LOG:  background worker "logical replication launcher" (PID 61921) exited with exit code 1
+2026-11-04 04:42:55.344 +04 [61916] LOG:  shutting down
+2026-11-04 04:42:55.344 +04 [61916] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 04:42:55.345 +04 [61916] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=4495 kB; lsn=0/3A86408, redo lsn=0/3A86408
+2026-11-04 04:42:55.347 +04 [61915] LOG:  database system is shut down

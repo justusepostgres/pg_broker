@@ -1,0 +1,6 @@
+MainPID=0
+Result=success
+ExecMainStatus=0
+ActiveState=active
+SubState=exited
+InvocationID=4a02f67d59654e0a9c5a675b30ad3275

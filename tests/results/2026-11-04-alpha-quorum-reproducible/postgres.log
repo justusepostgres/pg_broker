@@ -1,0 +1,15 @@
+    Finished `test` profile [unoptimized] target(s) in 0.08s
+     Running unittests src/main.rs (target/openraft-format-probe/debug/deps/openraft_format_probe-ab8c9625b63d1c4f)
+
+running 8 tests
+test alpha_node_tests::failed_application_does_not_report_a_successful_client_write ... ok
+test alpha_node_tests::real_client_callback_waits_for_application_and_restart_recovers ... ok
+test alpha_node_tests::real_engine_recovers_a_large_committed_application_jump ... ok
+test alpha_node_tests::replaced_storage_owner_fences_a_running_engine ... ok
+test alpha_quorum_tests::tcp_quorum_replicates_elects_recovers_and_requires_majority ... ok
+test alpha_quorum_tests::tcp_quorum_survives_leader_postgres_crash ... ok
+test postgres_stream::postgres_stream_reads_large_committed_jump_with_real_payloads ... ok
+test postgres_stream::postgres_stream_terminates_on_owner_replacement_between_pages ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 11 filtered out; finished in 15.53s
+

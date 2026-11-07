@@ -1,0 +1,1 @@
+06:59:53.507 [main] INFO WorkloadGenerator - ----- Starting benchmark traffic (15m)------

@@ -1,0 +1,599 @@
+2026-11-04 09:52:51.971 +04 [1512] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 09:52:51.971 +04 [1512] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 09:52:51.971 +04 [1512] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 09:52:51.974 +04 [1515] LOG:  database system was shut down at 2026-11-04 09:52:51 +04
+2026-11-04 09:52:51.976 +04 [1512] LOG:  database system is ready to accept connections
+2026-11-04 09:52:52.832 +04 [1525] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:52:52.832 +04 [1525] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:52:52.832 +04 [1525] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:52:52.833 +04 [1525] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:52:52.833 +04 [1525] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+	PL/pgSQL function public.broker_append_identified(text,integer,uuid,bytea) line 9 at RETURN
+2026-11-04 09:52:52.833 +04 [1525] STATEMENT:  SELECT public.broker_append_identified($1,0,$2,$3)
+2026-11-04 09:52:52.834 +04 [1525] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:52:52.834 +04 [1525] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	     VALUES(t,p,off,n,decode(result->>'data','hex'),(result->>'timestamp')::bigint,result->'timestamps')"
+	PL/pgSQL function dispatch(jsonb) line 41 at SQL statement
+	SQL statement "SELECT broker.dispatch($1)"
+2026-11-04 09:52:52.834 +04 [1525] STATEMENT:  SELECT public.broker_call($1)
+2026-11-04 09:52:52.836 +04 [1525] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 09:52:52.836 +04 [1525] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 09:52:52.836 +04 [1525] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 09:52:52.840 +04 [1525] ERROR:  Cannot delete a bound partition
+2026-11-04 09:52:52.840 +04 [1525] CONTEXT:  PL/pgSQL function raft_guard_partition() line 5 at RAISE
+	SQL statement "DELETE FROM ONLY "broker"."partitions" WHERE $1 OPERATOR(pg_catalog.=) "topic""
+2026-11-04 09:52:52.840 +04 [1525] STATEMENT:  DELETE FROM broker.topics WHERE name='replica'
+2026-11-04 09:52:52.840 +04 [1525] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:52:52.840 +04 [1525] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_batches() line 3 at PERFORM
+2026-11-04 09:52:52.840 +04 [1525] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND partition=0
+2026-11-04 09:52:52.841 +04 [1525] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:52:52.841 +04 [1525] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_partition() line 10 at PERFORM
+2026-11-04 09:52:52.841 +04 [1525] STATEMENT:  UPDATE broker.partitions SET earliest=1 WHERE topic='replica' AND partition=0
+2026-11-04 09:52:52.845 +04 [1513] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:52:52.851 +04 [1513] LOG:  checkpoint complete: wrote 165 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.004 s, total=0.007 s; sync files=129, longest=0.001 s, average=0.001 s; distance=5753 kB, estimate=5753 kB; lsn=0/1AB8FF8, redo lsn=0/1AB8FA0
+2026-11-04 09:52:52.945 +04 [1529] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:52:52.945 +04 [1529] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:52:52.945 +04 [1529] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:52:52.946 +04 [1529] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:52:52.946 +04 [1529] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+	PL/pgSQL function public.broker_append_identified(text,integer,uuid,bytea) line 9 at RETURN
+2026-11-04 09:52:52.946 +04 [1529] STATEMENT:  SELECT public.broker_append_identified($1,0,$2,$3)
+2026-11-04 09:52:52.947 +04 [1529] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:52:52.947 +04 [1529] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	     VALUES(t,p,off,n,decode(result->>'data','hex'),(result->>'timestamp')::bigint,result->'timestamps')"
+	PL/pgSQL function dispatch(jsonb) line 41 at SQL statement
+	SQL statement "SELECT broker.dispatch($1)"
+2026-11-04 09:52:52.947 +04 [1529] STATEMENT:  SELECT public.broker_call($1)
+2026-11-04 09:52:52.949 +04 [1529] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 09:52:52.949 +04 [1529] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 09:52:52.949 +04 [1529] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 09:52:52.952 +04 [1529] ERROR:  Cannot delete a bound partition
+2026-11-04 09:52:52.952 +04 [1529] CONTEXT:  PL/pgSQL function raft_guard_partition() line 5 at RAISE
+	SQL statement "DELETE FROM ONLY "broker"."partitions" WHERE $1 OPERATOR(pg_catalog.=) "topic""
+2026-11-04 09:52:52.952 +04 [1529] STATEMENT:  DELETE FROM broker.topics WHERE name='replica'
+2026-11-04 09:52:52.952 +04 [1529] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:52:52.952 +04 [1529] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_batches() line 3 at PERFORM
+2026-11-04 09:52:52.952 +04 [1529] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND partition=0
+2026-11-04 09:52:52.952 +04 [1529] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:52:52.952 +04 [1529] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_partition() line 10 at PERFORM
+2026-11-04 09:52:52.952 +04 [1529] STATEMENT:  UPDATE broker.partitions SET earliest=1 WHERE topic='replica' AND partition=0
+2026-11-04 09:52:52.956 +04 [1513] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:52:52.972 +04 [1513] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.016 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4827 kB, estimate=5661 kB; lsn=0/1F6FFD0, redo lsn=0/1F6FF78
+2026-11-04 09:52:53.076 +04 [1534] ERROR:  could not serialize access due to concurrent update
+2026-11-04 09:52:53.076 +04 [1534] CONTEXT:  SQL statement "SELECT next_offset          FROM broker.partitions WHERE topic=t AND partition=p FOR UPDATE"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 4 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:52:53.076 +04 [1534] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:52:53.079 +04 [1513] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:52:53.081 +04 [1513] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4820 kB, estimate=5577 kB; lsn=0/2425150, redo lsn=0/24250F8
+2026-11-04 09:52:53.179 +04 [1513] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:52:53.180 +04 [1513] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4820 kB, estimate=5501 kB; lsn=0/28DA340, redo lsn=0/28DA2E8
+2026-11-04 09:52:53.289 +04 [1512] LOG:  received fast shutdown request
+2026-11-04 09:52:53.289 +04 [1512] LOG:  aborting any active transactions
+2026-11-04 09:52:53.290 +04 [1512] LOG:  background worker "logical replication launcher" (PID 1519) exited with exit code 1
+2026-11-04 09:52:53.290 +04 [1513] LOG:  shutting down
+2026-11-04 09:52:53.290 +04 [1513] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 09:52:53.291 +04 [1513] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=4951 kB; lsn=0/28DA448, redo lsn=0/28DA448
+2026-11-04 09:52:53.294 +04 [1512] LOG:  database system is shut down
+2026-11-04 09:53:34.678 +04 [1816] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 09:53:34.678 +04 [1816] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 09:53:34.679 +04 [1816] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 09:53:34.681 +04 [1819] LOG:  database system was shut down at 2026-11-04 09:53:34 +04
+2026-11-04 09:53:34.683 +04 [1816] LOG:  database system is ready to accept connections
+2026-11-04 09:53:35.090 +04 [1828] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:53:35.090 +04 [1828] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:53:35.090 +04 [1828] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:53:35.091 +04 [1828] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:53:35.091 +04 [1828] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+	PL/pgSQL function public.broker_append_identified(text,integer,uuid,bytea) line 9 at RETURN
+2026-11-04 09:53:35.091 +04 [1828] STATEMENT:  SELECT public.broker_append_identified($1,0,$2,$3)
+2026-11-04 09:53:35.092 +04 [1828] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:53:35.092 +04 [1828] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	     VALUES(t,p,off,n,decode(result->>'data','hex'),(result->>'timestamp')::bigint,result->'timestamps')"
+	PL/pgSQL function dispatch(jsonb) line 41 at SQL statement
+	SQL statement "SELECT broker.dispatch($1)"
+2026-11-04 09:53:35.092 +04 [1828] STATEMENT:  SELECT public.broker_call($1)
+2026-11-04 09:53:35.094 +04 [1828] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 09:53:35.094 +04 [1828] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 09:53:35.094 +04 [1828] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 09:53:35.097 +04 [1828] ERROR:  Cannot delete a bound partition
+2026-11-04 09:53:35.097 +04 [1828] CONTEXT:  PL/pgSQL function raft_guard_partition() line 5 at RAISE
+	SQL statement "DELETE FROM ONLY "broker"."partitions" WHERE $1 OPERATOR(pg_catalog.=) "topic""
+2026-11-04 09:53:35.097 +04 [1828] STATEMENT:  DELETE FROM broker.topics WHERE name='replica'
+2026-11-04 09:53:35.097 +04 [1828] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:53:35.097 +04 [1828] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_batches() line 3 at PERFORM
+2026-11-04 09:53:35.097 +04 [1828] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND partition=0
+2026-11-04 09:53:35.097 +04 [1828] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:53:35.097 +04 [1828] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_partition() line 10 at PERFORM
+2026-11-04 09:53:35.097 +04 [1828] STATEMENT:  UPDATE broker.partitions SET earliest=1 WHERE topic='replica' AND partition=0
+2026-11-04 09:53:35.101 +04 [1817] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:53:35.107 +04 [1817] LOG:  checkpoint complete: wrote 165 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.004 s, total=0.006 s; sync files=129, longest=0.001 s, average=0.001 s; distance=5753 kB, estimate=5753 kB; lsn=0/1AB8D58, redo lsn=0/1AB8D00
+2026-11-04 09:53:35.197 +04 [1832] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:53:35.197 +04 [1832] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:53:35.197 +04 [1832] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:53:35.197 +04 [1832] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:53:35.197 +04 [1832] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+	PL/pgSQL function public.broker_append_identified(text,integer,uuid,bytea) line 9 at RETURN
+2026-11-04 09:53:35.197 +04 [1832] STATEMENT:  SELECT public.broker_append_identified($1,0,$2,$3)
+2026-11-04 09:53:35.198 +04 [1832] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:53:35.198 +04 [1832] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	     VALUES(t,p,off,n,decode(result->>'data','hex'),(result->>'timestamp')::bigint,result->'timestamps')"
+	PL/pgSQL function dispatch(jsonb) line 41 at SQL statement
+	SQL statement "SELECT broker.dispatch($1)"
+2026-11-04 09:53:35.198 +04 [1832] STATEMENT:  SELECT public.broker_call($1)
+2026-11-04 09:53:35.200 +04 [1832] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 09:53:35.200 +04 [1832] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 09:53:35.200 +04 [1832] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 09:53:35.203 +04 [1832] ERROR:  Cannot delete a bound partition
+2026-11-04 09:53:35.203 +04 [1832] CONTEXT:  PL/pgSQL function raft_guard_partition() line 5 at RAISE
+	SQL statement "DELETE FROM ONLY "broker"."partitions" WHERE $1 OPERATOR(pg_catalog.=) "topic""
+2026-11-04 09:53:35.203 +04 [1832] STATEMENT:  DELETE FROM broker.topics WHERE name='replica'
+2026-11-04 09:53:35.204 +04 [1832] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:53:35.204 +04 [1832] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_batches() line 3 at PERFORM
+2026-11-04 09:53:35.204 +04 [1832] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND partition=0
+2026-11-04 09:53:35.204 +04 [1832] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:53:35.204 +04 [1832] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_partition() line 10 at PERFORM
+2026-11-04 09:53:35.204 +04 [1832] STATEMENT:  UPDATE broker.partitions SET earliest=1 WHERE topic='replica' AND partition=0
+2026-11-04 09:53:35.208 +04 [1817] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:53:35.220 +04 [1817] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.013 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4828 kB, estimate=5660 kB; lsn=0/1F6FE80, redo lsn=0/1F6FE28
+2026-11-04 09:53:35.323 +04 [1837] ERROR:  could not serialize access due to concurrent update
+2026-11-04 09:53:35.323 +04 [1837] CONTEXT:  SQL statement "SELECT next_offset          FROM broker.partitions WHERE topic=t AND partition=p FOR UPDATE"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 4 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:53:35.323 +04 [1837] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:53:35.326 +04 [1817] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:53:35.327 +04 [1817] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4820 kB, estimate=5576 kB; lsn=0/2425150, redo lsn=0/24250F8
+2026-11-04 09:53:35.423 +04 [1817] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:53:35.424 +04 [1817] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4820 kB, estimate=5500 kB; lsn=0/28DA490, redo lsn=0/28DA438
+2026-11-04 09:53:35.547 +04 [1816] LOG:  received fast shutdown request
+2026-11-04 09:53:35.547 +04 [1816] LOG:  aborting any active transactions
+2026-11-04 09:53:35.548 +04 [1816] LOG:  background worker "logical replication launcher" (PID 1822) exited with exit code 1
+2026-11-04 09:53:35.548 +04 [1817] LOG:  shutting down
+2026-11-04 09:53:35.548 +04 [1817] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 09:53:35.549 +04 [1817] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=4950 kB; lsn=0/28DA598, redo lsn=0/28DA598
+2026-11-04 09:53:35.551 +04 [1816] LOG:  database system is shut down
+2026-11-04 09:54:36.604 +04 [1993] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 09:54:36.604 +04 [1993] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 09:54:36.605 +04 [1993] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 09:54:36.607 +04 [1996] LOG:  database system was shut down at 2026-11-04 09:54:36 +04
+2026-11-04 09:54:36.609 +04 [1993] LOG:  database system is ready to accept connections
+2026-11-04 09:54:37.018 +04 [2006] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:54:37.018 +04 [2006] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:54:37.018 +04 [2006] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:54:37.018 +04 [2006] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:54:37.018 +04 [2006] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+	PL/pgSQL function public.broker_append_identified(text,integer,uuid,bytea) line 9 at RETURN
+2026-11-04 09:54:37.018 +04 [2006] STATEMENT:  SELECT public.broker_append_identified($1,0,$2,$3)
+2026-11-04 09:54:37.019 +04 [2006] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:54:37.019 +04 [2006] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	     VALUES(t,p,off,n,decode(result->>'data','hex'),(result->>'timestamp')::bigint,result->'timestamps')"
+	PL/pgSQL function dispatch(jsonb) line 41 at SQL statement
+	SQL statement "SELECT broker.dispatch($1)"
+2026-11-04 09:54:37.019 +04 [2006] STATEMENT:  SELECT public.broker_call($1)
+2026-11-04 09:54:37.021 +04 [2006] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 09:54:37.021 +04 [2006] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 09:54:37.021 +04 [2006] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 09:54:37.024 +04 [2006] ERROR:  Cannot delete a bound partition
+2026-11-04 09:54:37.024 +04 [2006] CONTEXT:  PL/pgSQL function raft_guard_partition() line 5 at RAISE
+	SQL statement "DELETE FROM ONLY "broker"."partitions" WHERE $1 OPERATOR(pg_catalog.=) "topic""
+2026-11-04 09:54:37.024 +04 [2006] STATEMENT:  DELETE FROM broker.topics WHERE name='replica'
+2026-11-04 09:54:37.024 +04 [2006] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:54:37.024 +04 [2006] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_batches() line 3 at PERFORM
+2026-11-04 09:54:37.024 +04 [2006] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND partition=0
+2026-11-04 09:54:37.025 +04 [2006] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:54:37.025 +04 [2006] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_partition() line 10 at PERFORM
+2026-11-04 09:54:37.025 +04 [2006] STATEMENT:  UPDATE broker.partitions SET earliest=1 WHERE topic='replica' AND partition=0
+2026-11-04 09:54:37.029 +04 [1994] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:54:37.035 +04 [1994] LOG:  checkpoint complete: wrote 165 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.004 s, total=0.007 s; sync files=129, longest=0.001 s, average=0.001 s; distance=5753 kB, estimate=5753 kB; lsn=0/1AB8D58, redo lsn=0/1AB8D00
+2026-11-04 09:54:37.124 +04 [2010] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:54:37.124 +04 [2010] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:54:37.124 +04 [2010] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:54:37.125 +04 [2010] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:54:37.125 +04 [2010] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+	PL/pgSQL function public.broker_append_identified(text,integer,uuid,bytea) line 9 at RETURN
+2026-11-04 09:54:37.125 +04 [2010] STATEMENT:  SELECT public.broker_append_identified($1,0,$2,$3)
+2026-11-04 09:54:37.126 +04 [2010] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:54:37.126 +04 [2010] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	     VALUES(t,p,off,n,decode(result->>'data','hex'),(result->>'timestamp')::bigint,result->'timestamps')"
+	PL/pgSQL function dispatch(jsonb) line 41 at SQL statement
+	SQL statement "SELECT broker.dispatch($1)"
+2026-11-04 09:54:37.126 +04 [2010] STATEMENT:  SELECT public.broker_call($1)
+2026-11-04 09:54:37.128 +04 [2010] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 09:54:37.128 +04 [2010] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 09:54:37.128 +04 [2010] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 09:54:37.131 +04 [2010] ERROR:  Cannot delete a bound partition
+2026-11-04 09:54:37.131 +04 [2010] CONTEXT:  PL/pgSQL function raft_guard_partition() line 5 at RAISE
+	SQL statement "DELETE FROM ONLY "broker"."partitions" WHERE $1 OPERATOR(pg_catalog.=) "topic""
+2026-11-04 09:54:37.131 +04 [2010] STATEMENT:  DELETE FROM broker.topics WHERE name='replica'
+2026-11-04 09:54:37.131 +04 [2010] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:54:37.131 +04 [2010] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_batches() line 3 at PERFORM
+2026-11-04 09:54:37.131 +04 [2010] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND partition=0
+2026-11-04 09:54:37.131 +04 [2010] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:54:37.131 +04 [2010] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_partition() line 10 at PERFORM
+2026-11-04 09:54:37.131 +04 [2010] STATEMENT:  UPDATE broker.partitions SET earliest=1 WHERE topic='replica' AND partition=0
+2026-11-04 09:54:37.135 +04 [1994] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:54:37.148 +04 [1994] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.013 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4828 kB, estimate=5660 kB; lsn=0/1F6FE80, redo lsn=0/1F6FE28
+2026-11-04 09:54:37.251 +04 [2015] ERROR:  could not serialize access due to concurrent update
+2026-11-04 09:54:37.251 +04 [2015] CONTEXT:  SQL statement "SELECT next_offset          FROM broker.partitions WHERE topic=t AND partition=p FOR UPDATE"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 4 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:54:37.251 +04 [2015] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:54:37.254 +04 [1994] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:54:37.255 +04 [1994] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4820 kB, estimate=5576 kB; lsn=0/2425150, redo lsn=0/24250F8
+2026-11-04 09:54:37.351 +04 [1994] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:54:37.352 +04 [1994] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4820 kB, estimate=5500 kB; lsn=0/28DA490, redo lsn=0/28DA438
+2026-11-04 09:54:37.457 +04 [1993] LOG:  received fast shutdown request
+2026-11-04 09:54:37.458 +04 [1993] LOG:  aborting any active transactions
+2026-11-04 09:54:37.458 +04 [1993] LOG:  background worker "logical replication launcher" (PID 1999) exited with exit code 1
+2026-11-04 09:54:37.458 +04 [1994] LOG:  shutting down
+2026-11-04 09:54:37.458 +04 [1994] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 09:54:37.459 +04 [1994] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=4950 kB; lsn=0/28DA598, redo lsn=0/28DA598
+2026-11-04 09:54:37.461 +04 [1993] LOG:  database system is shut down
+2026-11-04 09:57:08.288 +04 [2601] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 09:57:08.289 +04 [2601] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 09:57:08.289 +04 [2601] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 09:57:08.291 +04 [2604] LOG:  database system was shut down at 2026-11-04 09:57:08 +04
+2026-11-04 09:57:08.293 +04 [2601] LOG:  database system is ready to accept connections
+2026-11-04 09:57:08.716 +04 [2613] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:08.716 +04 [2613] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:57:08.716 +04 [2613] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:57:08.717 +04 [2613] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:08.717 +04 [2613] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+	PL/pgSQL function public.broker_append_identified(text,integer,uuid,bytea) line 9 at RETURN
+2026-11-04 09:57:08.717 +04 [2613] STATEMENT:  SELECT public.broker_append_identified($1,0,$2,$3)
+2026-11-04 09:57:08.718 +04 [2613] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:08.718 +04 [2613] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	     VALUES(t,p,off,n,decode(result->>'data','hex'),(result->>'timestamp')::bigint,result->'timestamps')"
+	PL/pgSQL function dispatch(jsonb) line 41 at SQL statement
+	SQL statement "SELECT broker.dispatch($1)"
+2026-11-04 09:57:08.718 +04 [2613] STATEMENT:  SELECT public.broker_call($1)
+2026-11-04 09:57:08.720 +04 [2613] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 09:57:08.720 +04 [2613] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 09:57:08.720 +04 [2613] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 09:57:08.723 +04 [2613] ERROR:  Cannot delete a bound partition
+2026-11-04 09:57:08.723 +04 [2613] CONTEXT:  PL/pgSQL function raft_guard_partition() line 5 at RAISE
+	SQL statement "DELETE FROM ONLY "broker"."partitions" WHERE $1 OPERATOR(pg_catalog.=) "topic""
+2026-11-04 09:57:08.723 +04 [2613] STATEMENT:  DELETE FROM broker.topics WHERE name='replica'
+2026-11-04 09:57:08.723 +04 [2613] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:08.723 +04 [2613] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_batches() line 3 at PERFORM
+2026-11-04 09:57:08.723 +04 [2613] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND partition=0
+2026-11-04 09:57:08.723 +04 [2613] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:08.723 +04 [2613] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_partition() line 10 at PERFORM
+2026-11-04 09:57:08.723 +04 [2613] STATEMENT:  UPDATE broker.partitions SET earliest=1 WHERE topic='replica' AND partition=0
+2026-11-04 09:57:08.728 +04 [2602] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:57:08.734 +04 [2602] LOG:  checkpoint complete: wrote 165 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.004 s, total=0.007 s; sync files=129, longest=0.001 s, average=0.001 s; distance=5753 kB, estimate=5753 kB; lsn=0/1AB8D58, redo lsn=0/1AB8D00
+2026-11-04 09:57:08.825 +04 [2617] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:08.825 +04 [2617] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:57:08.825 +04 [2617] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:57:08.825 +04 [2617] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:08.825 +04 [2617] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+	PL/pgSQL function public.broker_append_identified(text,integer,uuid,bytea) line 9 at RETURN
+2026-11-04 09:57:08.825 +04 [2617] STATEMENT:  SELECT public.broker_append_identified($1,0,$2,$3)
+2026-11-04 09:57:08.826 +04 [2617] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:08.826 +04 [2617] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	     VALUES(t,p,off,n,decode(result->>'data','hex'),(result->>'timestamp')::bigint,result->'timestamps')"
+	PL/pgSQL function dispatch(jsonb) line 41 at SQL statement
+	SQL statement "SELECT broker.dispatch($1)"
+2026-11-04 09:57:08.826 +04 [2617] STATEMENT:  SELECT public.broker_call($1)
+2026-11-04 09:57:08.828 +04 [2617] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 09:57:08.828 +04 [2617] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 09:57:08.828 +04 [2617] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 09:57:08.831 +04 [2617] ERROR:  Cannot delete a bound partition
+2026-11-04 09:57:08.831 +04 [2617] CONTEXT:  PL/pgSQL function raft_guard_partition() line 5 at RAISE
+	SQL statement "DELETE FROM ONLY "broker"."partitions" WHERE $1 OPERATOR(pg_catalog.=) "topic""
+2026-11-04 09:57:08.831 +04 [2617] STATEMENT:  DELETE FROM broker.topics WHERE name='replica'
+2026-11-04 09:57:08.831 +04 [2617] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:08.831 +04 [2617] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_batches() line 3 at PERFORM
+2026-11-04 09:57:08.831 +04 [2617] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND partition=0
+2026-11-04 09:57:08.831 +04 [2617] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:08.831 +04 [2617] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_partition() line 10 at PERFORM
+2026-11-04 09:57:08.831 +04 [2617] STATEMENT:  UPDATE broker.partitions SET earliest=1 WHERE topic='replica' AND partition=0
+2026-11-04 09:57:08.835 +04 [2602] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:57:08.846 +04 [2602] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.011 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4828 kB, estimate=5660 kB; lsn=0/1F6FE80, redo lsn=0/1F6FE28
+2026-11-04 09:57:08.950 +04 [2622] ERROR:  could not serialize access due to concurrent update
+2026-11-04 09:57:08.950 +04 [2622] CONTEXT:  SQL statement "SELECT next_offset          FROM broker.partitions WHERE topic=t AND partition=p FOR UPDATE"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 4 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:57:08.950 +04 [2622] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:57:08.954 +04 [2602] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:57:08.955 +04 [2602] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4820 kB, estimate=5576 kB; lsn=0/2425150, redo lsn=0/24250F8
+2026-11-04 09:57:09.052 +04 [2602] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:57:09.053 +04 [2602] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4820 kB, estimate=5500 kB; lsn=0/28DA490, redo lsn=0/28DA438
+2026-11-04 09:57:09.146 +04 [2630] ERROR:  permission denied for table raft_apply_context
+2026-11-04 09:57:09.146 +04 [2630] STATEMENT:  INSERT INTO broker.raft_apply_context VALUES('forged',pg_current_xact_id())
+2026-11-04 09:57:09.149 +04 [2602] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:57:09.151 +04 [2602] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=11, longest=0.001 s, average=0.001 s; distance=4840 kB, estimate=5434 kB; lsn=0/2D946F8, redo lsn=0/2D946A0
+2026-11-04 09:57:09.268 +04 [2601] LOG:  received fast shutdown request
+2026-11-04 09:57:09.268 +04 [2601] LOG:  aborting any active transactions
+2026-11-04 09:57:09.269 +04 [2601] LOG:  background worker "logical replication launcher" (PID 2607) exited with exit code 1
+2026-11-04 09:57:09.269 +04 [2602] LOG:  shutting down
+2026-11-04 09:57:09.269 +04 [2602] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 09:57:09.270 +04 [2602] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=4891 kB; lsn=0/2D94800, redo lsn=0/2D94800
+2026-11-04 09:57:09.272 +04 [2601] LOG:  database system is shut down
+2026-11-04 09:57:27.523 +04 [2724] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 09:57:27.523 +04 [2724] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 09:57:27.524 +04 [2724] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 09:57:27.526 +04 [2728] LOG:  database system was shut down at 2026-11-04 09:57:27 +04
+2026-11-04 09:57:27.528 +04 [2724] LOG:  database system is ready to accept connections
+2026-11-04 09:57:27.938 +04 [2737] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:27.938 +04 [2737] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:57:27.938 +04 [2737] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:57:27.939 +04 [2737] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:27.939 +04 [2737] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+	PL/pgSQL function public.broker_append_identified(text,integer,uuid,bytea) line 9 at RETURN
+2026-11-04 09:57:27.939 +04 [2737] STATEMENT:  SELECT public.broker_append_identified($1,0,$2,$3)
+2026-11-04 09:57:27.940 +04 [2737] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:27.940 +04 [2737] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	     VALUES(t,p,off,n,decode(result->>'data','hex'),(result->>'timestamp')::bigint,result->'timestamps')"
+	PL/pgSQL function dispatch(jsonb) line 41 at SQL statement
+	SQL statement "SELECT broker.dispatch($1)"
+2026-11-04 09:57:27.940 +04 [2737] STATEMENT:  SELECT public.broker_call($1)
+2026-11-04 09:57:27.942 +04 [2737] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 09:57:27.942 +04 [2737] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 09:57:27.942 +04 [2737] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 09:57:27.945 +04 [2737] ERROR:  Cannot delete a bound partition
+2026-11-04 09:57:27.945 +04 [2737] CONTEXT:  PL/pgSQL function raft_guard_partition() line 5 at RAISE
+	SQL statement "DELETE FROM ONLY "broker"."partitions" WHERE $1 OPERATOR(pg_catalog.=) "topic""
+2026-11-04 09:57:27.945 +04 [2737] STATEMENT:  DELETE FROM broker.topics WHERE name='replica'
+2026-11-04 09:57:27.945 +04 [2737] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:27.945 +04 [2737] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_batches() line 3 at PERFORM
+2026-11-04 09:57:27.945 +04 [2737] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND partition=0
+2026-11-04 09:57:27.945 +04 [2737] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:27.945 +04 [2737] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_partition() line 10 at PERFORM
+2026-11-04 09:57:27.945 +04 [2737] STATEMENT:  UPDATE broker.partitions SET earliest=1 WHERE topic='replica' AND partition=0
+2026-11-04 09:57:27.949 +04 [2725] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:57:27.955 +04 [2725] LOG:  checkpoint complete: wrote 165 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.004 s, total=0.006 s; sync files=129, longest=0.001 s, average=0.001 s; distance=5753 kB, estimate=5753 kB; lsn=0/1AB8D58, redo lsn=0/1AB8D00
+2026-11-04 09:57:28.044 +04 [2741] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:28.044 +04 [2741] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:57:28.044 +04 [2741] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:57:28.044 +04 [2741] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:28.044 +04 [2741] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+	PL/pgSQL function public.broker_append_identified(text,integer,uuid,bytea) line 9 at RETURN
+2026-11-04 09:57:28.044 +04 [2741] STATEMENT:  SELECT public.broker_append_identified($1,0,$2,$3)
+2026-11-04 09:57:28.045 +04 [2741] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:28.045 +04 [2741] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(NEW.topic,NEW.partition)"
+	PL/pgSQL function raft_guard_batches() line 4 at PERFORM
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	     VALUES(t,p,off,n,decode(result->>'data','hex'),(result->>'timestamp')::bigint,result->'timestamps')"
+	PL/pgSQL function dispatch(jsonb) line 41 at SQL statement
+	SQL statement "SELECT broker.dispatch($1)"
+2026-11-04 09:57:28.045 +04 [2741] STATEMENT:  SELECT public.broker_call($1)
+2026-11-04 09:57:28.047 +04 [2741] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 09:57:28.047 +04 [2741] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 09:57:28.047 +04 [2741] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 09:57:28.050 +04 [2741] ERROR:  Cannot delete a bound partition
+2026-11-04 09:57:28.050 +04 [2741] CONTEXT:  PL/pgSQL function raft_guard_partition() line 5 at RAISE
+	SQL statement "DELETE FROM ONLY "broker"."partitions" WHERE $1 OPERATOR(pg_catalog.=) "topic""
+2026-11-04 09:57:28.050 +04 [2741] STATEMENT:  DELETE FROM broker.topics WHERE name='replica'
+2026-11-04 09:57:28.050 +04 [2741] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:28.050 +04 [2741] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_batches() line 3 at PERFORM
+2026-11-04 09:57:28.050 +04 [2741] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND partition=0
+2026-11-04 09:57:28.050 +04 [2741] ERROR:  Bound partition requires committed Raft application
+2026-11-04 09:57:28.050 +04 [2741] CONTEXT:  PL/pgSQL function raft_require_application(text,integer) line 9 at RAISE
+	SQL statement "SELECT broker.raft_require_application(OLD.topic,OLD.partition)"
+	PL/pgSQL function raft_guard_partition() line 10 at PERFORM
+2026-11-04 09:57:28.050 +04 [2741] STATEMENT:  UPDATE broker.partitions SET earliest=1 WHERE topic='replica' AND partition=0
+2026-11-04 09:57:28.054 +04 [2725] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:57:28.062 +04 [2725] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.008 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4828 kB, estimate=5660 kB; lsn=0/1F6FE80, redo lsn=0/1F6FE28
+2026-11-04 09:57:28.156 +04 [2746] ERROR:  could not serialize access due to concurrent update
+2026-11-04 09:57:28.156 +04 [2746] CONTEXT:  SQL statement "SELECT next_offset          FROM broker.partitions WHERE topic=t AND partition=p FOR UPDATE"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 4 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 09:57:28.156 +04 [2746] STATEMENT:  SELECT public.broker_append_bytes($1,0,$2)
+2026-11-04 09:57:28.160 +04 [2725] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:57:28.161 +04 [2725] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4820 kB, estimate=5576 kB; lsn=0/2425150, redo lsn=0/24250F8
+2026-11-04 09:57:28.254 +04 [2725] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:57:28.255 +04 [2725] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4820 kB, estimate=5500 kB; lsn=0/28DA490, redo lsn=0/28DA438
+2026-11-04 09:57:28.348 +04 [2754] ERROR:  permission denied for table raft_apply_context
+2026-11-04 09:57:28.348 +04 [2754] STATEMENT:  INSERT INTO broker.raft_apply_context VALUES('forged',pg_current_xact_id())
+2026-11-04 09:57:28.352 +04 [2725] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:57:28.353 +04 [2725] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=11, longest=0.001 s, average=0.001 s; distance=4840 kB, estimate=5434 kB; lsn=0/2D946F8, redo lsn=0/2D946A0
+2026-11-04 09:57:28.467 +04 [2760] ERROR:  Replica requires an empty existing partition
+2026-11-04 09:57:28.467 +04 [2760] CONTEXT:  PL/pgSQL function raft_partition_bind_unfenced(text,bigint,text,uuid,integer) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_bind(text,bigint,text,uuid,integer) line 8 at RETURN
+2026-11-04 09:57:28.467 +04 [2760] STATEMENT:  SELECT public.broker_raft_partition_bind($1,$2,$3,$4,$5)
+2026-11-04 09:57:28.471 +04 [2725] LOG:  checkpoint starting: immediate force wait
+2026-11-04 09:57:28.472 +04 [2725] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4821 kB, estimate=5373 kB; lsn=0/3249DC8, redo lsn=0/3249D70
+2026-11-04 09:57:28.597 +04 [2724] LOG:  received fast shutdown request
+2026-11-04 09:57:28.597 +04 [2724] LOG:  aborting any active transactions
+2026-11-04 09:57:28.598 +04 [2724] LOG:  background worker "logical replication launcher" (PID 2731) exited with exit code 1
+2026-11-04 09:57:28.598 +04 [2725] LOG:  shutting down
+2026-11-04 09:57:28.598 +04 [2725] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 09:57:28.599 +04 [2725] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=4836 kB; lsn=0/3249ED0, redo lsn=0/3249ED0
+2026-11-04 09:57:28.600 +04 [2724] LOG:  database system is shut down

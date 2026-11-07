@@ -1,0 +1,2 @@
+exit_code=-15
+post_result_cleanup=True

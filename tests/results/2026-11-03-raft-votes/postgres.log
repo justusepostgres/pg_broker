@@ -1,0 +1,118 @@
+2026-11-04 03:22:28.703 +04 [45699] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 03:22:28.704 +04 [45699] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 03:22:28.704 +04 [45699] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 03:22:28.706 +04 [45702] LOG:  database system was shut down at 2026-11-04 03:22:28 +04
+2026-11-04 03:22:28.708 +04 [45699] LOG:  database system is ready to accept connections
+2026-11-04 03:22:29.872 +04 [45711] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 03:22:29.894 +04 [45714] ERROR:  Raft vote writer fenced
+2026-11-04 03:22:29.894 +04 [45714] CONTEXT:  PL/pgSQL function public.broker_raft_vote_read(text,bigint) line 5 at RAISE
+2026-11-04 03:22:29.894 +04 [45714] STATEMENT:  SELECT public.broker_raft_vote_read($1,$2)
+2026-11-04 03:22:29.898 +04 [45716] ERROR:  Raft vote writer fenced or revision changed
+2026-11-04 03:22:29.898 +04 [45716] CONTEXT:  PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 6 at RAISE
+2026-11-04 03:22:29.898 +04 [45716] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 03:22:29.902 +04 [45717] ERROR:  Raft vote writer fenced or revision changed
+2026-11-04 03:22:29.902 +04 [45717] CONTEXT:  PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 6 at RAISE
+2026-11-04 03:22:29.902 +04 [45717] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 03:22:30.459 +04 [45700] LOG:  checkpoint starting: immediate force wait
+2026-11-04 03:22:30.465 +04 [45700] LOG:  checkpoint complete: wrote 145 buffers (0.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.006 s; sync files=102, longest=0.001 s, average=0.001 s; distance=5338 kB, estimate=5338 kB; lsn=0/1A51538, redo lsn=0/1A514E0
+2026-11-04 03:22:30.561 +04 [45727] ERROR:  Raft vote writer fenced or revision changed
+2026-11-04 03:22:30.561 +04 [45727] CONTEXT:  PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 6 at RAISE
+2026-11-04 03:22:30.561 +04 [45727] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 03:22:30.561 +04 [45727] ERROR:  Raft vote writer fenced
+2026-11-04 03:22:30.561 +04 [45727] CONTEXT:  PL/pgSQL function public.broker_raft_vote_read(text,bigint) line 5 at RAISE
+2026-11-04 03:22:30.561 +04 [45727] STATEMENT:  SELECT public.broker_raft_vote_read($1,$2)
+2026-11-04 03:22:30.562 +04 [45700] LOG:  checkpoint starting: immediate force wait
+2026-11-04 03:22:30.574 +04 [45700] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.012 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4616 kB, estimate=5266 kB; lsn=0/1ED3578, redo lsn=0/1ED3520
+2026-11-04 03:22:30.664 +04 [45731] ERROR:  permission denied for function broker_raft_vote_claim
+2026-11-04 03:22:30.664 +04 [45731] STATEMENT:  SELECT public.broker_raft_vote_claim($1)
+2026-11-04 03:22:30.668 +04 [45731] ERROR:  permission denied for schema broker at character 15
+2026-11-04 03:22:30.668 +04 [45731] STATEMENT:  SELECT * FROM broker.raft_votes
+2026-11-04 03:22:30.668 +04 [45731] ERROR:  new row for relation "raft_votes" violates check constraint "raft_votes_vote_check"
+2026-11-04 03:22:30.668 +04 [45731] DETAIL:  Failing row contains (group, 1, 1, []).
+2026-11-04 03:22:30.668 +04 [45731] CONTEXT:  SQL statement "UPDATE broker.raft_votes SET vote=v,revision=revision+1
+	 WHERE group_key=k AND writer_epoch=e AND revision=rev RETURNING *"
+	PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 4 at SQL statement
+2026-11-04 03:22:30.668 +04 [45731] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 03:22:30.668 +04 [45731] ERROR:  new row for relation "raft_votes" violates check constraint "raft_votes_vote_check"
+2026-11-04 03:22:30.668 +04 [45731] DETAIL:  Failing row contains (group, 1, 1, {"oversized": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...).
+2026-11-04 03:22:30.668 +04 [45731] CONTEXT:  SQL statement "UPDATE broker.raft_votes SET vote=v,revision=revision+1
+	 WHERE group_key=k AND writer_epoch=e AND revision=rev RETURNING *"
+	PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 4 at SQL statement
+2026-11-04 03:22:30.668 +04 [45731] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 03:22:30.669 +04 [45731] ERROR:  new row for relation "raft_votes" violates check constraint "raft_votes_group_key_check"
+2026-11-04 03:22:30.669 +04 [45731] DETAIL:  Failing row contains (, 1, 0, null).
+2026-11-04 03:22:30.669 +04 [45731] CONTEXT:  SQL statement "INSERT INTO broker.raft_votes(group_key,writer_epoch) VALUES(k,1)
+	 ON CONFLICT(group_key) DO UPDATE SET writer_epoch=broker.raft_votes.writer_epoch+1
+	 RETURNING *"
+	PL/pgSQL function public.broker_raft_vote_claim(text) line 4 at SQL statement
+2026-11-04 03:22:30.669 +04 [45731] STATEMENT:  SELECT public.broker_raft_vote_claim($1)
+2026-11-04 03:22:30.669 +04 [45731] ERROR:  new row for relation "raft_votes" violates check constraint "raft_votes_group_key_check"
+2026-11-04 03:22:30.669 +04 [45731] DETAIL:  Failing row contains (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..., 1, 0, null).
+2026-11-04 03:22:30.669 +04 [45731] CONTEXT:  SQL statement "INSERT INTO broker.raft_votes(group_key,writer_epoch) VALUES(k,1)
+	 ON CONFLICT(group_key) DO UPDATE SET writer_epoch=broker.raft_votes.writer_epoch+1
+	 RETURNING *"
+	PL/pgSQL function public.broker_raft_vote_claim(text) line 4 at SQL statement
+2026-11-04 03:22:30.669 +04 [45731] STATEMENT:  SELECT public.broker_raft_vote_claim($1)
+2026-11-04 03:22:30.670 +04 [45700] LOG:  checkpoint starting: immediate force wait
+2026-11-04 03:22:30.672 +04 [45700] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=11, longest=0.001 s, average=0.001 s; distance=4633 kB, estimate=5203 kB; lsn=0/23599A8, redo lsn=0/2359950
+2026-11-04 03:22:30.761 +04 [45699] LOG:  received immediate shutdown request
+2026-11-04 03:22:30.762 +04 [45699] LOG:  database system is shut down
+2026-11-04 03:23:33.843 +04 [45884] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 03:23:33.844 +04 [45884] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 03:23:33.844 +04 [45884] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 03:23:33.846 +04 [45887] LOG:  database system was shut down at 2026-11-04 03:23:33 +04
+2026-11-04 03:23:33.848 +04 [45884] LOG:  database system is ready to accept connections
+2026-11-04 03:23:34.158 +04 [45898] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 03:23:34.175 +04 [45901] ERROR:  Raft vote writer fenced
+2026-11-04 03:23:34.175 +04 [45901] CONTEXT:  PL/pgSQL function public.broker_raft_vote_read(text,bigint) line 5 at RAISE
+2026-11-04 03:23:34.175 +04 [45901] STATEMENT:  SELECT public.broker_raft_vote_read($1,$2)
+2026-11-04 03:23:34.179 +04 [45903] ERROR:  Raft vote writer fenced or revision changed
+2026-11-04 03:23:34.179 +04 [45903] CONTEXT:  PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 6 at RAISE
+2026-11-04 03:23:34.179 +04 [45903] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 03:23:34.182 +04 [45904] ERROR:  Raft vote writer fenced or revision changed
+2026-11-04 03:23:34.182 +04 [45904] CONTEXT:  PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 6 at RAISE
+2026-11-04 03:23:34.182 +04 [45904] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 03:23:34.552 +04 [45885] LOG:  checkpoint starting: immediate force wait
+2026-11-04 03:23:34.558 +04 [45885] LOG:  checkpoint complete: wrote 145 buffers (0.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.006 s; sync files=102, longest=0.001 s, average=0.001 s; distance=5338 kB, estimate=5338 kB; lsn=0/1A51538, redo lsn=0/1A514E0
+2026-11-04 03:23:34.642 +04 [45915] ERROR:  Raft vote writer fenced or revision changed
+2026-11-04 03:23:34.642 +04 [45915] CONTEXT:  PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 6 at RAISE
+2026-11-04 03:23:34.642 +04 [45915] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 03:23:34.642 +04 [45915] ERROR:  Raft vote writer fenced
+2026-11-04 03:23:34.642 +04 [45915] CONTEXT:  PL/pgSQL function public.broker_raft_vote_read(text,bigint) line 5 at RAISE
+2026-11-04 03:23:34.642 +04 [45915] STATEMENT:  SELECT public.broker_raft_vote_read($1,$2)
+2026-11-04 03:23:34.645 +04 [45885] LOG:  checkpoint starting: immediate force wait
+2026-11-04 03:23:34.662 +04 [45885] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.017 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4616 kB, estimate=5266 kB; lsn=0/1ED3578, redo lsn=0/1ED3520
+2026-11-04 03:23:34.747 +04 [45920] ERROR:  permission denied for function broker_raft_vote_claim
+2026-11-04 03:23:34.747 +04 [45920] STATEMENT:  SELECT public.broker_raft_vote_claim($1)
+2026-11-04 03:23:34.750 +04 [45920] ERROR:  permission denied for schema broker at character 15
+2026-11-04 03:23:34.750 +04 [45920] STATEMENT:  SELECT * FROM broker.raft_votes
+2026-11-04 03:23:34.751 +04 [45920] ERROR:  new row for relation "raft_votes" violates check constraint "raft_votes_vote_check"
+2026-11-04 03:23:34.751 +04 [45920] DETAIL:  Failing row contains (group, 1, 1, []).
+2026-11-04 03:23:34.751 +04 [45920] CONTEXT:  SQL statement "UPDATE broker.raft_votes SET vote=v,revision=revision+1
+	 WHERE group_key=k AND writer_epoch=e AND revision=rev RETURNING *"
+	PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 4 at SQL statement
+2026-11-04 03:23:34.751 +04 [45920] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 03:23:34.751 +04 [45920] ERROR:  new row for relation "raft_votes" violates check constraint "raft_votes_vote_check"
+2026-11-04 03:23:34.751 +04 [45920] DETAIL:  Failing row contains (group, 1, 1, {"oversized": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...).
+2026-11-04 03:23:34.751 +04 [45920] CONTEXT:  SQL statement "UPDATE broker.raft_votes SET vote=v,revision=revision+1
+	 WHERE group_key=k AND writer_epoch=e AND revision=rev RETURNING *"
+	PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 4 at SQL statement
+2026-11-04 03:23:34.751 +04 [45920] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 03:23:34.751 +04 [45920] ERROR:  new row for relation "raft_votes" violates check constraint "raft_votes_group_key_check"
+2026-11-04 03:23:34.751 +04 [45920] DETAIL:  Failing row contains (, 1, 0, null).
+2026-11-04 03:23:34.751 +04 [45920] CONTEXT:  SQL statement "INSERT INTO broker.raft_votes(group_key,writer_epoch) VALUES(k,1)
+	 ON CONFLICT(group_key) DO UPDATE SET writer_epoch=broker.raft_votes.writer_epoch+1
+	 RETURNING *"
+	PL/pgSQL function public.broker_raft_vote_claim(text) line 4 at SQL statement
+2026-11-04 03:23:34.751 +04 [45920] STATEMENT:  SELECT public.broker_raft_vote_claim($1)
+2026-11-04 03:23:34.751 +04 [45920] ERROR:  new row for relation "raft_votes" violates check constraint "raft_votes_group_key_check"
+2026-11-04 03:23:34.751 +04 [45920] DETAIL:  Failing row contains (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx..., 1, 0, null).
+2026-11-04 03:23:34.751 +04 [45920] CONTEXT:  SQL statement "INSERT INTO broker.raft_votes(group_key,writer_epoch) VALUES(k,1)
+	 ON CONFLICT(group_key) DO UPDATE SET writer_epoch=broker.raft_votes.writer_epoch+1
+	 RETURNING *"
+	PL/pgSQL function public.broker_raft_vote_claim(text) line 4 at SQL statement
+2026-11-04 03:23:34.751 +04 [45920] STATEMENT:  SELECT public.broker_raft_vote_claim($1)
+2026-11-04 03:23:34.755 +04 [45885] LOG:  checkpoint starting: immediate force wait
+2026-11-04 03:23:34.757 +04 [45885] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=11, longest=0.001 s, average=0.001 s; distance=4633 kB, estimate=5203 kB; lsn=0/23599A8, redo lsn=0/2359950
+2026-11-04 03:23:34.853 +04 [45884] LOG:  received immediate shutdown request
+2026-11-04 03:23:34.855 +04 [45884] LOG:  database system is shut down

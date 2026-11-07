@@ -1,0 +1,27 @@
+{
+  "phase": "observing",
+  "controller_unit": "omb-cloud-controller-producebatch75k-4.service",
+  "label": "017-producebatch75k-4",
+  "remote_directory": "/home/ubuntu/omb-cloud-controller",
+  "source_sha256": {
+    "cloud-controller.py": "567c8983db726c2057fa90328c0cbc13a457f6e875fbc14ec07b675f7536b3cf",
+    "remote_client.py": "bc5f4e72a4764b306c5b341a7305c4e3c8845577fef402bc3af5205e50b9f23a",
+    "handoff_client.py": "b8ba749bb899333eeaddf29b42c225b631710371f9d439b88da0358d3d1e787a",
+    "compare.py": "ddaf3e557d8abb5390fb3f6b970d62d97f7ce44f149e4bb3a0242cb0cc7a9688",
+    "environment.py": "681ef5e7b6c3c0e380ec9d526e31ead3a356cfc809af635e321157a2e927fb7a",
+    "placement.py": "c631ff7890584c7d58b548b39e511f11d97897d5c2bc7e6f6071450ffc19e50e",
+    "measurement.py": "064a5822131674eb3bfcdc8d6fc75758fa512227fb497c025801190e4dbb57e8",
+    "client_events.py": "e2e432afdfdfe25bf807a191bddc916137cb7e64fcf0382eafaaa716c8a9d0fc",
+    "gateway_events.py": "0f9a9020adb1511f13cafc5f4e209e4aab519946d4904531ad5b5c8bf095134e",
+    "summarize.py": "4fee63bab63ac363a27c271ed8922ddfd41cb292b555225a525dc4f2e2cde551"
+  },
+  "scope": "Fresh fourth attempt after retained failed third pair; cloud-local handoff on CPUs2-3; measurement artifacts unchanged",
+  "controller_invocation": "54393513a0964edc85974a824bf7b857",
+  "observed": {
+    "MainPID": "145642",
+    "Result": "success",
+    "ExecMainStatus": "0",
+    "SubState": "running",
+    "InvocationID": "54393513a0964edc85974a824bf7b857"
+  }
+}

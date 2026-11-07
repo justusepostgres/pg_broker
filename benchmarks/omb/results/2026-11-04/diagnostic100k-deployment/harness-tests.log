@@ -1,0 +1,21 @@
+usage: python3.14 -m unittest [-h] [--order {broker-first,kafka-first}]
+                              [--rate {75k,100k}]
+                              [--runner-sha256 RUNNER_SHA256]
+                              [--volume-size-gib VOLUME_SIZE_GIB]
+                              [--diagnostic-broker-only]
+                              label
+python3.14 -m unittest: error: 100k requires the reviewed runner that supports 100k, with its explicit digest
+usage: python3.14 -m unittest [-h] [--order {broker-first,kafka-first}]
+                              [--rate {75k,100k}]
+                              [--runner-sha256 RUNNER_SHA256]
+                              [--volume-size-gib VOLUME_SIZE_GIB]
+                              [--diagnostic-broker-only]
+                              label
+python3.14 -m unittest: error: broker-only diagnosis requires 100k and broker-first
+Same-handle handoff retry: Command 'ssh' returned non-zero exit status 255.
+----------------------------------------------------------------------
+Ran 55 tests in 0.371s
+
+OK
+Completed client evidence atomically delivered to the waiting server runner.
+Completed client phase already delivered; no launch or transfer repeated.

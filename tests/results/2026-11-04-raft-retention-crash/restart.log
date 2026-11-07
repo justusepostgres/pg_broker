@@ -1,0 +1,49 @@
+2026-11-04 10:27:32.710 +04 [14745] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 10:27:32.711 +04 [14745] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 10:27:32.711 +04 [14745] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 10:27:32.714 +04 [14748] LOG:  database system was interrupted; last known up at 2026-11-04 10:27:32 +04
+2026-11-04 10:27:32.764 +04 [14748] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-04 10:27:32.766 +04 [14748] LOG:  redo starts at 0/48B9980
+2026-11-04 10:27:32.766 +04 [14748] WARNING:  could not open directory "base/18490": No such file or directory
+2026-11-04 10:27:32.766 +04 [14748] CONTEXT:  WAL redo at 0/48B9A50 for Database/DROP: dir 1663/18490
+2026-11-04 10:27:32.766 +04 [14748] WARNING:  some useless files may be left behind in old database directory "base/18490"
+2026-11-04 10:27:32.766 +04 [14748] CONTEXT:  WAL redo at 0/48B9A50 for Database/DROP: dir 1663/18490
+2026-11-04 10:27:32.778 +04 [14748] LOG:  invalid record length at 0/4D71EF0: expected at least 24, got 0
+2026-11-04 10:27:32.778 +04 [14748] LOG:  redo done at 0/4D71EC8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-04 10:27:32.780 +04 [14746] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-04 10:27:32.831 +04 [14746] LOG:  checkpoint complete: wrote 1030 buffers (6.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.042 s, sync=0.009 s, total=0.052 s; sync files=358, longest=0.001 s, average=0.001 s; distance=4833 kB, estimate=4833 kB; lsn=0/4D71EF0, redo lsn=0/4D71EF0
+2026-11-04 10:27:32.833 +04 [14745] LOG:  database system is ready to accept connections
+2026-11-04 10:27:32.920 +04 [14752] ERROR:  Raft application owner fenced
+2026-11-04 10:27:32.920 +04 [14752] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 5 at RAISE
+2026-11-04 10:27:32.920 +04 [14752] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:27:32.927 +04 [14746] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:27:32.928 +04 [14746] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=5, longest=0.001 s, average=0.001 s; distance=44 kB, estimate=4354 kB; lsn=0/4D7D230, redo lsn=0/4D7D1D8
+2026-11-04 10:27:33.032 +04 [14745] LOG:  received immediate shutdown request
+2026-11-04 10:27:33.033 +04 [14745] LOG:  database system is shut down
+2026-11-04 10:27:33.182 +04 [14762] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 10:27:33.182 +04 [14762] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 10:27:33.183 +04 [14762] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 10:27:33.186 +04 [14766] LOG:  database system was interrupted; last known up at 2026-11-04 10:27:32 +04
+2026-11-04 10:27:33.233 +04 [14766] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-04 10:27:33.235 +04 [14766] LOG:  redo starts at 0/4D7D1D8
+2026-11-04 10:27:33.235 +04 [14766] WARNING:  could not open directory "base/18725": No such file or directory
+2026-11-04 10:27:33.235 +04 [14766] CONTEXT:  WAL redo at 0/4D7D2A8 for Database/DROP: dir 1663/18725
+2026-11-04 10:27:33.235 +04 [14766] WARNING:  some useless files may be left behind in old database directory "base/18725"
+2026-11-04 10:27:33.235 +04 [14766] CONTEXT:  WAL redo at 0/4D7D2A8 for Database/DROP: dir 1663/18725
+2026-11-04 10:27:33.247 +04 [14766] LOG:  invalid record length at 0/5235B88: expected at least 24, got 0
+2026-11-04 10:27:33.247 +04 [14766] LOG:  redo done at 0/5235B60 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-04 10:27:33.249 +04 [14763] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-04 10:27:33.300 +04 [14763] LOG:  checkpoint complete: wrote 1030 buffers (6.3%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.042 s, sync=0.009 s, total=0.052 s; sync files=358, longest=0.001 s, average=0.001 s; distance=4834 kB, estimate=4834 kB; lsn=0/5235B88, redo lsn=0/5235B88
+2026-11-04 10:27:33.303 +04 [14762] LOG:  database system is ready to accept connections
+2026-11-04 10:27:33.387 +04 [14772] ERROR:  Raft application owner fenced
+2026-11-04 10:27:33.387 +04 [14772] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 5 at RAISE
+2026-11-04 10:27:33.387 +04 [14772] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:27:33.394 +04 [14763] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:27:33.395 +04 [14763] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=2, longest=0.001 s, average=0.001 s; distance=4 kB, estimate=4351 kB; lsn=0/5236E68, redo lsn=0/5236E10
+2026-11-04 10:27:33.491 +04 [14762] LOG:  received fast shutdown request
+2026-11-04 10:27:33.491 +04 [14762] LOG:  aborting any active transactions
+2026-11-04 10:27:33.491 +04 [14762] LOG:  background worker "logical replication launcher" (PID 14770) exited with exit code 1
+2026-11-04 10:27:33.491 +04 [14763] LOG:  shutting down
+2026-11-04 10:27:33.491 +04 [14763] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 10:27:33.492 +04 [14763] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=3916 kB; lsn=0/5236F70, redo lsn=0/5236F70
+2026-11-04 10:27:33.494 +04 [14762] LOG:  database system is shut down

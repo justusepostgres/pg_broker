@@ -1,0 +1,44 @@
+BEGIN
+SET
+SET
+ broker_call  
+--------------
+ {"error": 0}
+(1 row)
+
+                                                                        QUERY PLAN                                                                        
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nested Loop  (cost=1.79..4.31 rows=100 width=32) (actual time=6.564..338.231 rows=100 loops=1)
+   Buffers: shared hit=3102 read=15 dirtied=72 written=60
+   WAL: records=905 fpi=7 bytes=517018
+   CTE payload
+     ->  Nested Loop  (cost=0.57..1.79 rows=1 width=32) (actual time=0.345..0.408 rows=1 loops=1)
+           Buffers: shared hit=28 read=4
+           ->  Limit  (cost=0.15..0.21 rows=1 width=32) (actual time=0.020..0.021 rows=1 loops=1)
+                 Buffers: shared hit=2
+                 ->  Index Only Scan using topics_pkey on topics  (cost=0.15..67.93 rows=1129 width=32) (actual time=0.019..0.019 rows=1 loops=1)
+                       Filter: (name <> 'profile_725350ba2a3747248b2d44e133b3d772'::text)
+                       Rows Removed by Filter: 1
+                       Heap Fetches: 2
+                       Buffers: shared hit=2
+           ->  Limit  (cost=0.41..1.55 rows=1 width=69) (actual time=0.027..0.028 rows=1 loops=1)
+                 Buffers: shared hit=4
+                 ->  Index Scan Backward using batches_pkey on batches  (cost=0.41..2371.30 rows=2088 width=69) (actual time=0.026..0.026 rows=1 loops=1)
+                       Index Cond: ((topic = topics.name) AND (partition = 0))
+                       Buffers: shared hit=4
+   ->  CTE Scan on payload  (cost=0.00..0.02 rows=1 width=32) (actual time=0.506..0.568 rows=1 loops=1)
+         Buffers: shared hit=28 read=4
+   ->  Function Scan on generate_series  (cost=0.00..1.00 rows=100 width=0) (actual time=0.012..0.064 rows=100 loops=1)
+ Planning:
+   Buffers: shared hit=91
+ Planning Time: 0.261 ms
+ Execution Time: 338.398 ms
+(25 rows)
+
+ schemaname |  funcname   | calls | total_time | self_time  
+------------+-------------+-------+------------+------------
+ public     | broker_call |   101 | 337.404976 | 204.858732
+ broker     | dispatch    |   101 | 132.546244 | 132.546244
+(2 rows)
+
+ROLLBACK

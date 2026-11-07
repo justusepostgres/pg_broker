@@ -163,36 +163,37 @@ def make_batch(value=b'held', timestamp=1700000000000):
 def test_uncommitted_append_cannot_be_skipped(gateway):
     t = create()
     conn = psycopg.connect(DSN)
+    p = producer()
+    c = consumer(name())
+    tp = TopicPartition(t, 0)
+    c.assign([tp])
     try:
+        # Establish client connections before entering the two-second lock window.
+        assert p.partitions_for(t) == {0}
+        assert c.end_offsets([tp])[tp] == 0
         assert db(dict(op='append', topic=t, partition=0, data=make_batch().hex()), conn)['offset'] == 0
-        p = producer()
         future = p.send(t, partition=0, value=b'next')
         deadline = time.monotonic() + 1
         with psycopg.connect(DSN, autocommit=True) as observer:
             while time.monotonic() < deadline:
-                if observer.execute("SELECT count(*) FROM pg_stat_activity WHERE wait_event_type='Lock' AND query LIKE 'SELECT public.broker_call%'").fetchone()[0]:
+                if observer.execute("SELECT count(*) FROM pg_stat_activity WHERE %s=ANY(pg_blocking_pids(pid)) AND (query LIKE 'SELECT public.broker_call%%' OR query LIKE '%%public.broker_append_bytes%%')", (conn.info.backend_pid,)).fetchone()[0]:
                     break
                 time.sleep(.01)
             else:
                 raise AssertionError('second append never reached the partition lock')
         assert not future.is_done
-        c = consumer(name())
-        tp = TopicPartition(t, 0)
-        c.assign([tp])
         assert c.end_offsets([tp])[tp] == 0
         assert not c.poll(timeout_ms=100)
         conn.commit()
         assert future.get(10).offset == 1
         assert [(r.offset, r.value) for r in records(c, 2)] == [(0, b'held'), (1, b'next')]
-        c.close(); p.close()
         # Rollback also rolls back the counter, leaving no gap.
         assert db(dict(op='append', topic=t, partition=0, data=make_batch().hex()), conn)['offset'] == 2
         conn.rollback()
-        p = producer()
         assert p.send(t, partition=0, value=b'after-rollback').get(10).offset == 2
-        p.close()
     finally:
         conn.close()
+        c.close(); p.close()
 
 def test_batch_timestamp_lookup_and_corruption(gateway):
     t = create()
@@ -243,6 +244,29 @@ def test_extension_upgrade_preserves_data(gateway):
                 assert db(dict(op='offset_fetch', group='upgrade-group', topic='upgrade', partition=0), conn)['offset'] == 1
                 assert conn.execute("SELECT extversion FROM pg_extension WHERE extname='pg_broker'").fetchone()[0] == '0.1.1'
                 assert db(dict(op='lookup', topic='upgrade', partition=0, timestamp=-1), conn)['offset'] == 1
+                conn.execute("ALTER EXTENSION pg_broker UPDATE TO '0.1.2'")
+                assert conn.execute("SELECT extversion FROM pg_extension WHERE extname='pg_broker'").fetchone()[0] == '0.1.2'
+                conn.execute("ALTER EXTENSION pg_broker UPDATE TO '0.1.3'")
+                conn.execute("ALTER EXTENSION pg_broker UPDATE TO '0.1.4'")
+                rows = conn.execute("SELECT * FROM public.broker_fetch_binary(%s)", (Jsonb(dict(requests=[dict(topic='upgrade', partition=0, offset=0, max=1048576)], max=1048576)),)).fetchall()
+                assert rows[0][:4] == (0, 0, 1, 0)
+                assert rows[1][4] == 0
+                assert bytes(rows[1][5]) == make_batch()
+                conn.execute("ALTER EXTENSION pg_broker UPDATE TO '0.1.5'")
+                assert conn.execute("SELECT extversion FROM pg_extension WHERE extname='pg_broker'").fetchone()[0] == '0.1.5'
+                assert conn.execute("SELECT public.broker_append_bytes('upgrade',0,%s)", (b'bad',)).fetchone()[0]['error'] == 2
+
+                conn.execute("ALTER EXTENSION pg_broker UPDATE TO '0.1.6'")
+                assert conn.execute("SELECT extversion FROM pg_extension WHERE extname='pg_broker'").fetchone()[0] == '0.1.6'
+                assert db(dict(op='retain', topic='upgrade', partition=0, retention_ms=604800000), conn)['earliest'] == 0
+                conn.execute("ALTER EXTENSION pg_broker UPDATE TO '0.1.7'")
+                assert conn.execute("SELECT extversion FROM pg_extension WHERE extname='pg_broker'").fetchone()[0] == '0.1.7'
+                tail = dict(requests=[dict(topic='upgrade', partition=0, offset=1)])
+                assert conn.execute('SELECT * FROM public.broker_fetch_binary(%s)', (Jsonb(tail),)).fetchall() == [(0, 0, 1, 0, None, None)]
+                assert db(dict(op='metadata'), conn)['fetch_many'] is True
+                assert db(dict(op='fetch_many', requests=[dict(topic='upgrade', partition=0, offset=0, max=1048576)], max=1048576), conn)[0]['high'] == 1
+                assert db(dict(op='fetch', topic='upgrade', partition=0, offset=0, max=1048576), conn)['batches'][0]['offset'] == 0
+                assert db(dict(op='offset_fetch', group='upgrade-group', topic='upgrade', partition=0), conn)['offset'] == 1
         finally:
             admin.execute(sql.SQL('DROP DATABASE {}').format(sql.Identifier(database)))
 
@@ -309,3 +333,80 @@ def test_missing_sync_standby_never_acknowledged(gateway):
     p = producer()
     assert p.send(t, partition=0, value=b'healthy').get(10).offset >= 0
     p.close()
+
+
+def test_fetch_seek_preserves_batch_and_retention_boundaries(gateway):
+    from kafka.record.default_records import DefaultRecordBatchBuilder
+    t = create()
+    query = dict(op='fetch', topic=t, partition=0, offset=0, max=1048576)
+    assert db(query)['batches'] == []
+    for base in (0, 3, 6):
+        builder = DefaultRecordBatchBuilder(2, 0, False, -1, -1, -1, 1048576)
+        for i in range(3):
+            builder.append(i, 1700000000000 + base + i, None, str(base+i).encode(), [])
+        assert db(dict(op='append', topic=t, partition=0,
+                       data=bytes(builder.build()).hex()))['offset'] == base
+    for offset in range(9):
+        value = db(dict(query, offset=offset))
+        assert value['high'] == 9
+        assert value['batches'][0]['offset'] == (offset // 3) * 3
+    assert db(dict(query, offset=9))['batches'] == []
+    assert db(dict(query, offset=10))['error'] == 1
+    c = consumer(name()); c.assign([TopicPartition(t, 0)]); c.seek(TopicPartition(t, 0), 4)
+    assert [r.value for r in records(c, 5)] == [str(i).encode() for i in range(4, 9)]
+    c.close()
+    with psycopg.connect(DSN) as conn:
+        conn.execute("UPDATE broker.batches SET appended_at=clock_timestamp()-interval '2 hours' WHERE topic=%s AND base_offset<6", (t,))
+    assert db(dict(op='retain', topic=t, partition=0, retention_ms=3600000))['earliest'] == 6
+    assert db(dict(query, offset=5))['error'] == 1
+    assert db(dict(query, offset=7))['batches'][0]['offset'] == 6
+    assert db(dict(query, offset=9))['batches'] == []
+    assert db(dict(op='append', topic=t, partition=0, data=make_batch().hex()))['offset'] == 9
+    assert db(dict(query, offset=9))['batches'][0]['offset'] == 9
+
+
+def test_commit_notifications_and_listener_reconnect(gateway):
+    t = create()
+    with psycopg.connect(DSN, autocommit=True) as listener:
+        listener.execute('LISTEN pg_broker_records')
+        with psycopg.connect(DSN) as writer:
+            assert db(dict(op='append', topic=t, partition=0, data=make_batch().hex()), writer)['offset'] == 0
+            assert list(listener.notifies(timeout=.1, stop_after=1)) == []
+            writer.rollback()
+        assert list(listener.notifies(timeout=.1, stop_after=1)) == []
+        assert db(dict(op='append', topic=t, partition=0, data=make_batch().hex()))['offset'] == 0
+        notices = list(listener.notifies(timeout=2, stop_after=1))
+        assert len(notices) == 1 and notices[0].payload == t + ':0'
+
+    with psycopg.connect(DSN, autocommit=True) as admin:
+        def listener_pids():
+            return {r[0] for r in admin.execute("SELECT pid FROM pg_stat_activity WHERE application_name='pg-broker-notifications' AND datname=current_database()")}
+        deadline = time.monotonic() + 5
+        old = listener_pids()
+        while not old and time.monotonic() < deadline:
+            time.sleep(.05); old = listener_pids()
+        assert old
+        for pid in old:
+            admin.execute('SELECT pg_terminate_backend(%s)', (pid,))
+        # Notifications are hints: reads must work during loss/reconnection too.
+        c = consumer(name()); c.assign([TopicPartition(t, 0)])
+        assert [r.value for r in records(c, 1)] == [b'held']
+        c.close()
+        deadline = time.monotonic() + 5
+        while time.monotonic() < deadline:
+            current = listener_pids()
+            if current and not current.intersection(old): break
+            time.sleep(.05)
+        else: raise AssertionError('notification listener did not reconnect')
+
+
+def test_bulk_fetch_cannot_dispatch_writes_and_bounds_input(gateway):
+    t = create()
+    request = dict(op='append', topic=t, partition=0, offset=0, max=1048576,
+                   data=make_batch().hex())
+    rows = db(dict(op='fetch_many', requests=[request], max=1048576))
+    assert rows[0]['high'] == 0 and rows[0]['batches'] == []
+    assert db(dict(op='lookup', topic=t, partition=0, timestamp=-1))['offset'] == 0
+    assert db(dict(op='fetch_many', requests=['not an object']))['error'] == 42
+    assert db(dict(op='fetch_many', requests=[request] * 4097))['error'] == 42
+    assert db(dict(op='fetch_many', requests=[])) == []

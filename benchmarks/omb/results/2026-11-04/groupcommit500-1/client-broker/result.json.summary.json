@@ -1,0 +1,25 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-017-groupcommit500-1-broker/result.json",
+    "workload": "100k-1-topic-16-partitions-1kb",
+    "samples": 89,
+    "publish_msg_s_mean": 91290.59613163228,
+    "consume_msg_s_mean": 91288.6242505711,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 3795,
+    "backlog_last": 2783,
+    "backlog_max": 9614,
+    "publish_p99_ms": 582.279,
+    "publish_delay_p99_us": 60000255,
+    "end_to_end_p99_ms": 612.003,
+    "publish_p999_ms": 703.731,
+    "publish_p9999_ms": 1026.339,
+    "publish_max_ms": 1207.767,
+    "publish_delay_p999_us": 60000255,
+    "publish_delay_p9999_us": 60000255,
+    "publish_delay_max_us": 60000255,
+    "end_to_end_p999_ms": 734.003,
+    "end_to_end_p9999_ms": 1051.007,
+    "end_to_end_max_ms": 1215.007
+  }
+]

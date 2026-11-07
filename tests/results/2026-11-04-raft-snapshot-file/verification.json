@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-11-04T01:32:13.845560+00:00",
+  "scope": "Verified filesystem staging only, not PostgreSQL installation or host power-loss durability",
+  "unit_tests": 11,
+  "postgres_integration_cases": 4,
+  "clippy": "all targets warnings denied",
+  "source_sha256": {
+    "crates/cluster/src/snapshot_file.rs": "710f2385db0e1ecc8b9dfbb7797f521ad2458ac3093c943ab87698944f7a4aa0",
+    "crates/cluster/src/snapshot_stream.rs": "5a4762c577f61c2934ccefea03dc3e66cf61e43fa7b4c40fb4a577b6a3a563d6",
+    "crates/cluster/tests/snapshot_read_postgres.rs": "0ca377263bdf8bb43aa3a94673f1bc8668259708747d3dcc64ada4a8b74f3f55",
+    ".dev/run-raft-snapshot-file-native.py": "c5af5e4c266ef48d9e642f55c8e3e867d279b39cd0d9a59990b38337978b28c9"
+  }
+}

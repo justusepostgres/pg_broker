@@ -1,0 +1,9 @@
+{
+  "scope": "Conservative complete interior minutes of completed broker measurement; minute metrics cannot establish individual-stall causality",
+  "expected_points": 13,
+  "observed_points": 13,
+  "missing_timestamps": [],
+  "observed_throttled_ios": 0.0,
+  "allocation_metrics": "No samples returned; missing is not zero",
+  "client_invocation": "741a702a616c4387a1240cf169f69077"
+}

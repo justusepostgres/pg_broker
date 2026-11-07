@@ -1,0 +1,19 @@
+{
+  "Cargo.lock": "b8e538d46c7658694702c7e2c718715257e7a604f348a04486a7ff576c917bef",
+  "Cargo.toml": "eaf478a78a3ab1f05d6e813a37dff26cff7fdb53a90de0d96fee6e1d98748d73",
+  "crates/extension/pg_broker.control": "e95231fda5dcc4ffa8db9a1a3bbb6c91d3208c6dd3e41a6dfea20d1e9d0ee10e",
+  "crates/extension/sql/pg_broker--0.1.0--0.1.1.sql": "beabe16e0e274254798721ec8174f85ce120b22202b679bb173c8f3286bb87ec",
+  "crates/extension/sql/pg_broker--0.1.0.sql": "9a84c7e97c1a7750371c8a2c889ea8a1cfd7c9b7b9774a419cc38b536e97193b",
+  "crates/extension/sql/pg_broker--0.1.1--0.1.2.sql": "f693f548155b2e8183514df68a3a772b718df4d7b2d5f320c4758a847b0df40c",
+  "crates/extension/sql/pg_broker--0.1.2--0.1.3.sql": "fa459e1c9e1ba75af3d94c845b5bf2398103d60a180b6b7ccd63c999e1543827",
+  "crates/extension/sql/pg_broker--0.1.3--0.1.4.sql": "81ca2b90dfc9cf65a56176e40cb8798271615bd991791e6f86efe8c1ef585c07",
+  "crates/extension/sql/pg_broker--0.1.4--0.1.5.sql": "21fceeef163deb2376a39039fb12f10e69bd5179841a2a5b3af098dcec177366",
+  "crates/extension/src/lib.rs": "c5b939c1f4b3892afaa259d3927fa2cd8392f0a2b30d05c35a005ea9ff324915",
+  "crates/gateway/src/database.rs": "5d8ba33975afb6f2d1779dea11d6517a99524bf445ec3211a96cb0346156a632",
+  "crates/gateway/src/fetch.rs": "4b3efdb0cb899164bdf4406a6d97c8f3b342aa64c2ec2cc767558edd27c48403",
+  "crates/gateway/src/handlers.rs": "a0ca6d41f77cdb792aa7bde0d9be55a8934fc24469171a28faba3caf5ed8398a",
+  "crates/gateway/src/health.rs": "89995e5a6481781d201fc1e785b73585d9afcd3fb3f162e9dd34ae7ad9b7fe65",
+  "crates/gateway/src/main.rs": "d2c33a88cc84aa998fd411ec0e967593ffb454e681e04cc60134933d079983a0",
+  "crates/gateway/src/produce.rs": "d2fd4526298946b1c607e07a6aa24c8fb5e4e07bc124fee4457ad6e8fd247f2d",
+  "crates/gateway/src/server.rs": "c15756846d12e1837ccf45bebff1d35ef27d80a13df98717e860eb84e217b006"
+}

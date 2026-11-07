@@ -1,0 +1,39 @@
+2026-11-04 10:24:43.807 +04 [13318] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 10:24:43.808 +04 [13318] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 10:24:43.808 +04 [13318] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 10:24:43.810 +04 [13321] LOG:  database system was shut down at 2026-11-04 10:24:43 +04
+2026-11-04 10:24:43.812 +04 [13318] LOG:  database system is ready to accept connections
+2026-11-04 10:24:47.479 +04 [13409] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 10:24:47.501 +04 [13412] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 10:24:47.501 +04 [13412] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:24:47.501 +04 [13412] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:47.517 +04 [13413] ERROR:  Raft application owner fenced
+2026-11-04 10:24:47.517 +04 [13413] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 5 at RAISE
+2026-11-04 10:24:47.517 +04 [13413] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:47.536 +04 [13415] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 10:24:47.536 +04 [13415] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:24:47.536 +04 [13415] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:47.546 +04 [13416] ERROR:  Raft application owner fenced
+2026-11-04 10:24:47.546 +04 [13416] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 5 at RAISE
+2026-11-04 10:24:47.546 +04 [13416] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:48.201 +04 [13419] ERROR:  Snapshot owner fenced
+2026-11-04 10:24:48.201 +04 [13419] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_copy(text,bigint,uuid) line 5 at RAISE
+2026-11-04 10:24:48.201 +04 [13419] STATEMENT:  SELECT public.broker_raft_snapshot_copy($1,$2,$3::text::uuid)
+2026-11-04 10:24:48.787 +04 [13422] ERROR:  Completed snapshot required
+2026-11-04 10:24:48.787 +04 [13422] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 8 at RAISE
+2026-11-04 10:24:48.787 +04 [13422] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3::text::uuid,$4)
+2026-11-04 10:24:48.795 +04 [13423] ERROR:  Snapshot cursor outside retained interval
+2026-11-04 10:24:48.795 +04 [13423] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 10 at RAISE
+2026-11-04 10:24:48.795 +04 [13423] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3::text::uuid,$4)
+2026-11-04 10:24:48.849 +04 [13424] ERROR:  Snapshot reader fenced
+2026-11-04 10:24:48.849 +04 [13424] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 6 at RAISE
+2026-11-04 10:24:48.849 +04 [13424] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3::text::uuid,$4)
+2026-11-04 10:24:48.916 +04 [13318] LOG:  received fast shutdown request
+2026-11-04 10:24:48.916 +04 [13318] LOG:  aborting any active transactions
+2026-11-04 10:24:48.917 +04 [13318] LOG:  background worker "logical replication launcher" (PID 13324) exited with exit code 1
+2026-11-04 10:24:48.917 +04 [13319] LOG:  shutting down
+2026-11-04 10:24:48.917 +04 [13319] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 10:24:48.926 +04 [13319] LOG:  checkpoint complete: wrote 203 buffers (1.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.005 s, total=0.009 s; sync files=126, longest=0.001 s, average=0.001 s; distance=996 kB, estimate=996 kB; lsn=0/1613AC0, redo lsn=0/1613AC0
+2026-11-04 10:24:48.928 +04 [13318] LOG:  database system is shut down

@@ -1,0 +1,138 @@
+2026-11-04 10:23:30.910 +04 [12810] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 10:23:30.911 +04 [12810] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 10:23:30.911 +04 [12810] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 10:23:30.914 +04 [12813] LOG:  database system was shut down at 2026-11-04 10:23:30 +04
+2026-11-04 10:23:30.915 +04 [12810] LOG:  database system is ready to accept connections
+2026-11-04 10:23:31.567 +04 [12824] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 10:23:31.567 +04 [12824] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:23:31.567 +04 [12824] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:23:31.575 +04 [12825] ERROR:  Raft application owner fenced
+2026-11-04 10:23:31.575 +04 [12825] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 5 at RAISE
+2026-11-04 10:23:31.575 +04 [12825] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:23:31.582 +04 [12811] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:23:31.588 +04 [12811] LOG:  checkpoint complete: wrote 166 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.004 s, total=0.007 s; sync files=129, longest=0.001 s, average=0.001 s; distance=5775 kB, estimate=5775 kB; lsn=0/1ABE6D0, redo lsn=0/1ABE678
+2026-11-04 10:23:31.686 +04 [12829] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 10:23:31.686 +04 [12829] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:23:31.686 +04 [12829] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:23:31.693 +04 [12830] ERROR:  Raft application owner fenced
+2026-11-04 10:23:31.693 +04 [12830] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 5 at RAISE
+2026-11-04 10:23:31.693 +04 [12830] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:23:31.699 +04 [12811] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:23:31.706 +04 [12811] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.007 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4836 kB, estimate=5681 kB; lsn=0/1F77750, redo lsn=0/1F776F8
+2026-11-04 10:23:31.801 +04 [12834] ERROR:  Replica retention boundary diverged
+2026-11-04 10:23:31.801 +04 [12834] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 47 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:23:31.801 +04 [12834] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:23:31.805 +04 [12811] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:23:31.806 +04 [12811] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4832 kB, estimate=5596 kB; lsn=0/242F8F0, redo lsn=0/242F898
+2026-11-04 10:23:31.903 +04 [12838] ERROR:  Replica retention boundary diverged
+2026-11-04 10:23:31.903 +04 [12838] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 47 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:23:31.903 +04 [12838] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:23:31.906 +04 [12811] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:23:31.907 +04 [12811] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4832 kB, estimate=5520 kB; lsn=0/28E7B70, redo lsn=0/28E7B18
+2026-11-04 10:23:32.003 +04 [12842] ERROR:  Invalid replica retention command
+2026-11-04 10:23:32.003 +04 [12842] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 38 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:23:32.003 +04 [12842] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:23:32.007 +04 [12811] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:23:32.008 +04 [12811] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4832 kB, estimate=5451 kB; lsn=0/2D9FE58, redo lsn=0/2D9FE00
+2026-11-04 10:23:32.105 +04 [12846] ERROR:  Snapshot source range is pinned
+2026-11-04 10:23:32.105 +04 [12846] CONTEXT:  PL/pgSQL function raft_snapshot_preserve_source() line 7 at RAISE
+	SQL statement "DELETE FROM broker.batches WHERE topic=s.topic AND partition=s.partition AND base_offset<retained_from"
+	PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 56 at SQL statement
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:23:32.105 +04 [12846] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:23:32.110 +04 [12811] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:23:32.111 +04 [12811] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4836 kB, estimate=5389 kB; lsn=0/3259218, redo lsn=0/32591C0
+2026-11-04 10:23:33.826 +04 [12850] ERROR:  Retention requires a batch boundary
+2026-11-04 10:23:33.826 +04 [12850] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 51 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:23:33.826 +04 [12850] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:23:33.831 +04 [12811] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:23:33.832 +04 [12811] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=8804 kB, estimate=8804 kB; lsn=0/3AF25A8, redo lsn=0/3AF2550
+2026-11-04 10:23:35.614 +04 [12963] ERROR:  Replica retention batch limit
+2026-11-04 10:23:35.614 +04 [12963] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 55 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:23:35.614 +04 [12963] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:23:35.618 +04 [12811] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:23:35.619 +04 [12811] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=8817 kB, estimate=8817 kB; lsn=0/438EB30, redo lsn=0/438EAD8
+2026-11-04 10:23:35.715 +04 [12810] LOG:  received fast shutdown request
+2026-11-04 10:23:35.715 +04 [12810] LOG:  aborting any active transactions
+2026-11-04 10:23:35.716 +04 [12810] LOG:  background worker "logical replication launcher" (PID 12816) exited with exit code 1
+2026-11-04 10:23:35.716 +04 [12811] LOG:  shutting down
+2026-11-04 10:23:35.716 +04 [12811] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 10:23:35.717 +04 [12811] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=7935 kB; lsn=0/438EC38, redo lsn=0/438EC38
+2026-11-04 10:23:35.718 +04 [12810] LOG:  database system is shut down
+2026-11-04 10:24:09.152 +04 [13123] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 10:24:09.153 +04 [13123] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 10:24:09.153 +04 [13123] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 10:24:09.156 +04 [13126] LOG:  database system was shut down at 2026-11-04 10:24:09 +04
+2026-11-04 10:24:09.158 +04 [13123] LOG:  database system is ready to accept connections
+2026-11-04 10:24:09.639 +04 [13136] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 10:24:09.639 +04 [13136] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:24:09.639 +04 [13136] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:09.646 +04 [13137] ERROR:  Raft application owner fenced
+2026-11-04 10:24:09.646 +04 [13137] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 5 at RAISE
+2026-11-04 10:24:09.646 +04 [13137] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:09.653 +04 [13124] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:24:09.659 +04 [13124] LOG:  checkpoint complete: wrote 166 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.004 s, total=0.007 s; sync files=129, longest=0.001 s, average=0.001 s; distance=5775 kB, estimate=5775 kB; lsn=0/1ABE6D0, redo lsn=0/1ABE678
+2026-11-04 10:24:09.762 +04 [13141] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 10:24:09.762 +04 [13141] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 16 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:24:09.762 +04 [13141] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:09.769 +04 [13142] ERROR:  Raft application owner fenced
+2026-11-04 10:24:09.769 +04 [13142] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 5 at RAISE
+2026-11-04 10:24:09.769 +04 [13142] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:09.775 +04 [13124] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:24:09.782 +04 [13124] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.007 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4836 kB, estimate=5681 kB; lsn=0/1F77750, redo lsn=0/1F776F8
+2026-11-04 10:24:09.878 +04 [13146] ERROR:  Replica retention boundary diverged
+2026-11-04 10:24:09.878 +04 [13146] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 47 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:24:09.878 +04 [13146] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:09.882 +04 [13124] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:24:09.883 +04 [13124] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4832 kB, estimate=5596 kB; lsn=0/242F8F0, redo lsn=0/242F898
+2026-11-04 10:24:09.987 +04 [13150] ERROR:  Replica retention boundary diverged
+2026-11-04 10:24:09.987 +04 [13150] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 47 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:24:09.987 +04 [13150] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:09.991 +04 [13124] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:24:09.992 +04 [13124] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4832 kB, estimate=5520 kB; lsn=0/28E7B70, redo lsn=0/28E7B18
+2026-11-04 10:24:10.087 +04 [13154] ERROR:  Invalid replica retention command
+2026-11-04 10:24:10.087 +04 [13154] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 38 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:24:10.087 +04 [13154] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:10.090 +04 [13124] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:24:10.091 +04 [13124] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4832 kB, estimate=5451 kB; lsn=0/2D9FE58, redo lsn=0/2D9FE00
+2026-11-04 10:24:10.188 +04 [13158] ERROR:  Snapshot source range is pinned
+2026-11-04 10:24:10.188 +04 [13158] CONTEXT:  PL/pgSQL function raft_snapshot_preserve_source() line 7 at RAISE
+	SQL statement "DELETE FROM broker.batches WHERE topic=s.topic AND partition=s.partition AND base_offset<retained_from"
+	PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 56 at SQL statement
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:24:10.188 +04 [13158] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:10.193 +04 [13124] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:24:10.194 +04 [13124] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4836 kB, estimate=5389 kB; lsn=0/3259218, redo lsn=0/32591C0
+2026-11-04 10:24:10.289 +04 [13162] ERROR:  Retention requires a batch boundary
+2026-11-04 10:24:10.289 +04 [13162] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 51 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:24:10.289 +04 [13162] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:10.293 +04 [13124] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:24:10.294 +04 [13124] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4829 kB, estimate=5333 kB; lsn=0/3710728, redo lsn=0/37106D0
+2026-11-04 10:24:12.057 +04 [13124] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:24:12.058 +04 [13124] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=9267 kB, estimate=9267 kB; lsn=0/401D388, redo lsn=0/401D330
+2026-11-04 10:24:13.740 +04 [13171] ERROR:  Replica retention batch limit
+2026-11-04 10:24:13.740 +04 [13171] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 55 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 10:24:13.740 +04 [13171] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 10:24:13.744 +04 [13124] LOG:  checkpoint starting: immediate force wait
+2026-11-04 10:24:13.745 +04 [13124] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=8817 kB, estimate=9222 kB; lsn=0/48B99D8, redo lsn=0/48B9980
+2026-11-04 10:24:13.818 +04 [13123] LOG:  received fast shutdown request
+2026-11-04 10:24:13.818 +04 [13123] LOG:  aborting any active transactions
+2026-11-04 10:24:13.819 +04 [13123] LOG:  background worker "logical replication launcher" (PID 13129) exited with exit code 1
+2026-11-04 10:24:13.819 +04 [13124] LOG:  shutting down
+2026-11-04 10:24:13.819 +04 [13124] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 10:24:13.820 +04 [13124] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=8299 kB; lsn=0/48B9AE0, redo lsn=0/48B9AE0
+2026-11-04 10:24:13.821 +04 [13123] LOG:  database system is shut down

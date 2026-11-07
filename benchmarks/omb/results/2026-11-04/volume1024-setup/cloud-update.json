@@ -1,0 +1,35 @@
+{
+  "data": {
+    "auto-tuned-vpus-per-gb": null,
+    "autotune-policies": [],
+    "availability-domain": "lJPQ:US-SANJOSE-1-AD-1",
+    "boot-volume-replicas": null,
+    "cluster-placement-group-id": null,
+    "compartment-id": "ocid1.tenancy.oc1..aaaaaaaafe6p7erknwb3ekqbeztffxdnirwuf6kel3nkt2ofrmi7iygx4apa",
+    "defined-tags": {
+      "Oracle-Tags": {
+        "CreatedBy": "default/nh.salah@gmail.com",
+        "CreatedOn": "2026-11-02T07:45:28.257Z"
+      }
+    },
+    "display-name": "pg-broker-omb-verification-1 (Boot Volume)",
+    "freeform-tags": {
+      "cleanup": "after-verification",
+      "purpose": "pg-broker-omb-verification"
+    },
+    "id": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq",
+    "image-id": "ocid1.image.oc1.us-sanjose-1.aaaaaaaahvyjgcnzioecv3gguwui7mq5a4fcjol7b2q54cwvwatmhx2ducoq",
+    "is-auto-tune-enabled": false,
+    "is-hydrated": false,
+    "kms-key-id": null,
+    "lifecycle-state": "PROVISIONING",
+    "size-in-gbs": 1024,
+    "size-in-mbs": 1048576,
+    "source-details": null,
+    "system-tags": {},
+    "time-created": "2026-11-02T07:45:32.616000+00:00",
+    "volume-group-id": null,
+    "vpus-per-gb": 10
+  },
+  "etag": "0fbaa4a1c6f8313de574966afddd83f6"
+}

@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-11-04T01:18:38.207613+00:00",
+  "scope": "local experimental snapshot framing; no atomic install or deployed Raft transport",
+  "unit_tests": 7,
+  "postgres_tests": 4,
+  "clippy": "all targets warnings denied",
+  "source_sha256": {
+    "crates/cluster/src/snapshot_stream.rs": "9849fd2a8be80f5c2b40f7a2b466c5c12dae3523c955dc7601ca4ae783f94e7e",
+    "crates/cluster/src/snapshot.rs": "df177bb2606a7ff827f914fb18f39630c1277231b9b99c2cf3cac431ea223470",
+    "crates/cluster/tests/snapshot_read_postgres.rs": "52cedfa4d1b5fcc5326fcfdd60591dd14212b9082b35723406e1b4f5f301f921",
+    "crates/cluster/Cargo.toml": "6ea0c6a8ee511eb900946825aa38a37c5d7323bb3591f9137bb7141fc4e2757f",
+    "Cargo.lock": "eea48641c046df91e0d6126eb222ec301cddb834ed5d0191e805607f5468faa6",
+    ".dev/run-raft-snapshot-stream-native.py": "d11884b40e846a567df1b969c1fdfe9a689f7003b8d9b35c204da44a4bfbf9be"
+  }
+}

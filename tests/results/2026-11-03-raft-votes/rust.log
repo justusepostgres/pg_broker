@@ -1,0 +1,10 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.11s
+     Running tests/votes_postgres.rs (target/debug/deps/votes_postgres-884a3427559e813c)
+
+running 3 tests
+test cancelling_blocked_vote_discards_connection_and_never_commits_it_later ... ok
+test persisted_vote_survives_new_owner_and_fences_old_cached_operations ... ok
+test session_async_commit_is_overridden_and_invalid_inputs_are_bounded ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+

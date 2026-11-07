@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "aggregated-datapoints": [
+        {
+          "timestamp": "2026-11-04T00:49:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:50:00+00:00",
+          "value": 3469.0
+        },
+        {
+          "timestamp": "2026-11-04T00:51:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:52:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:53:00+00:00",
+          "value": 17.0
+        },
+        {
+          "timestamp": "2026-11-04T00:54:00+00:00",
+          "value": 2.0
+        },
+        {
+          "timestamp": "2026-11-04T00:55:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:56:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:57:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:58:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T00:59:00+00:00",
+          "value": 44.0
+        },
+        {
+          "timestamp": "2026-11-04T01:00:00+00:00",
+          "value": 62.0
+        },
+        {
+          "timestamp": "2026-11-04T01:01:00+00:00",
+          "value": 5.0
+        },
+        {
+          "timestamp": "2026-11-04T01:02:00+00:00",
+          "value": 35.0
+        },
+        {
+          "timestamp": "2026-11-04T01:03:00+00:00",
+          "value": 46.0
+        },
+        {
+          "timestamp": "2026-11-04T01:04:00+00:00",
+          "value": 40.0
+        },
+        {
+          "timestamp": "2026-11-04T01:05:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T01:06:00+00:00",
+          "value": 0.0
+        }
+      ],
+      "compartment-id": "ocid1.tenancy.oc1..aaaaaaaafe6p7erknwb3ekqbeztffxdnirwuf6kel3nkt2ofrmi7iygx4apa",
+      "dimensions": {
+        "attachmentId": "ocid1.instance.oc1.us-sanjose-1.anzwuljrsjflizycskhftwpeg4nzak4sk2rb7pwrvv3fjxdn7u2qg3474bna",
+        "resourceId": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq"
+      },
+      "metadata": {
+        "displayName": "Read Ops",
+        "unit": "operations"
+      },
+      "name": "VolumeReadOps",
+      "namespace": "oci_blockstore",
+      "resolution": null,
+      "resource-group": null
+    }
+  ]
+}

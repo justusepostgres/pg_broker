@@ -1,0 +1,12 @@
+{
+  "tests/experiments/openraft-compatibility/src/alpha_node_tests.rs": "2fadc8405589e38be2604ebe1fcea11db4766b90e1445af7ffd817c17e1aa8f3",
+  "tests/experiments/openraft-compatibility/src/alpha_log.rs": "65f6d6c6faf352b929f7a306e39c93a251ad4597564a280681234658da717c0f",
+  "tests/experiments/openraft-compatibility/src/postgres_stream.rs": "8b91423dc715c9ce50b3335ee5700785e7e0c1ee4f6e6dcd7a34e6f3828b33d6",
+  "tests/experiments/openraft-compatibility/src/paged_stream.rs": "c1bb1485ec41e41c86d8a3674830eb81da2ab77e7a2e67d0b93012465d510d5b",
+  "tests/experiments/openraft-compatibility/src/stream_tests.rs": "e7a37f63840f7aeae9e161ca30d11f0cc3c5918788d93211a531ef507846ac09",
+  "tests/experiments/openraft-compatibility/src/main.rs": "badcfe19ddfef99fecd811d572c35def46a152e05c3b56719ff50c4e4befecae",
+  "tests/experiments/openraft-compatibility/src/alpha_machine.rs": "91e7572120fdf41fe69622e3841a78fcff99fe6ee87457c2866e5a34a15ffc37",
+  "tests/experiments/openraft-compatibility/src/alpha_network.rs": "f740c816dd22eb01e38d6ce2fc61fbd6375277405c8a242d0b63a07e25832320",
+  "tests/experiments/openraft-compatibility/Cargo.toml": "e44aabc71a1b3653210edde74b595e61ddb15b0d904e17ad8c14d2c5b579b427",
+  "tests/experiments/openraft-compatibility/Cargo.lock": "3355066f5774bb30aa087e49ce7fcf72b2300df39db06fa5d74b7cb6a37ec052"
+}

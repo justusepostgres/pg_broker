@@ -1,0 +1,85 @@
+{
+  "seconds": 185.293514,
+  "wal": {
+    "wal_records": 942569,
+    "wal_fpi": 36,
+    "wal_bytes": 322049933,
+    "wal_buffers_full": 0,
+    "wal_write": 50563,
+    "wal_sync": 50507,
+    "wal_write_time": 1475.025,
+    "wal_sync_time": 58912.304
+  },
+  "database": {
+    "xact_commit": 148891,
+    "xact_rollback": 0,
+    "blks_read": 1197,
+    "blks_hit": 4160992,
+    "tup_inserted": 237361,
+    "tup_updated": 142873,
+    "tup_deleted": 0
+  },
+  "wal_timing_enabled": true,
+  "functions": [
+    {
+      "function": "public.broker_append_bytes",
+      "funcid": "16484",
+      "calls": 59332,
+      "total_ms": 30906.75,
+      "self_ms": 12332.761,
+      "mean_total_ms": 0.5209119867862199
+    },
+    {
+      "function": "public.broker_call",
+      "funcid": "16476",
+      "calls": 83663,
+      "total_ms": 22597.268,
+      "self_ms": 4300.633,
+      "mean_total_ms": 0.2700987055209591
+    },
+    {
+      "function": "broker.append_bytes",
+      "funcid": "16483",
+      "calls": 59332,
+      "total_ms": 18573.641,
+      "self_ms": 18573.641,
+      "mean_total_ms": 0.313045927998382
+    },
+    {
+      "function": "broker.dispatch",
+      "funcid": "16473",
+      "calls": 83663,
+      "total_ms": 18296.277,
+      "self_ms": 13366.872,
+      "mean_total_ms": 0.21869018562566486
+    },
+    {
+      "function": "public.broker_fetch_binary",
+      "funcid": "16482",
+      "calls": 16725,
+      "total_ms": 7473.147,
+      "self_ms": 7473.147,
+      "mean_total_ms": 0.446824932735426
+    },
+    {
+      "function": "broker.expire_members",
+      "funcid": "16472",
+      "calls": 83536,
+      "total_ms": 4928.693,
+      "self_ms": 4928.693,
+      "mean_total_ms": 0.05900082599118943
+    },
+    {
+      "function": "broker.rebalance",
+      "funcid": "16471",
+      "calls": 1,
+      "total_ms": 0.372,
+      "self_ms": 0.372,
+      "mean_total_ms": 0.372
+    }
+  ],
+  "wal_sync_mean_ms": 1.166418595442216,
+  "wal_write_mean_ms": 0.02917202302078595,
+  "wal_bytes_per_second": 1738052.9196504958,
+  "scope": "Whole diagnostic lifetime, including warmup and sampler transactions. Database commits include read-only work; they are not Kafka Produce request counts. Function totals include nested calls and must not be added together; statistics can lag activity. Disabled WAL timing is missing latency evidence, not zero latency."
+}

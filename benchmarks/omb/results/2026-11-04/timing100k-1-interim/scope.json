@@ -1,0 +1,6 @@
+{
+  "scope": "Interim diagnostic lifetime including startup/warmup; not a completed benchmark",
+  "pair_invocation": "147112804c714f5eaa800b0b46ce4074",
+  "extra_read": "One read-only cumulative-statistics query, plus a settings query",
+  "limitations": "Function totals are nested; WAL time is aggregate across sync operations, not a wall-clock stall fraction"
+}

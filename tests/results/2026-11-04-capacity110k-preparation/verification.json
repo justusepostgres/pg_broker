@@ -1,0 +1,17 @@
+{
+  "harness_tests": 105,
+  "shell_syntax": "passed",
+  "deployed": false,
+  "scope": "Prepared fixed 110k offered-load trial; no measured result or capacity claim",
+  "sha256": {
+    "benchmarks/omb/110k.yaml": "5c08b3387f99d2127da709c9bf7396fcf0c4d920f0cdfc4ca41dd08ec311e307",
+    "benchmarks/omb/cloud-controller.py": "6e3648f6e8b72c7a285089ad5e52f8200d0de737a3b66f83f75e451927cc32ab",
+    "benchmarks/omb/oci-pair.sh": "5b48052f88ad38a30c9c4d839fe4d8a1ca79045adb0f89a5966357403bc45428",
+    "benchmarks/omb/client-workload.sh": "e1d1029b322b8c41108c51dde78581e4b2458e00fada431f5dbcbbe66ec2a4e3",
+    "benchmarks/omb/run.sh": "1d191655bf6bc13abecfa5474564eff647a0d23c492e9ec8cce48e9d08cc1648",
+    "benchmarks/omb/remote_client.py": "aaca8f669776b7612ab092b8ffb5e85b746c7460c8827f7266adb62dccfa018e",
+    "benchmarks/omb/handoff_client.py": "5e8ae6d55f8cdc98f5833717b7aa4f4b5f9c9ce0c92b126d2476bebc99b5de72",
+    "benchmarks/omb/compare.py": "161e18e55a53101a5b7b6e70a76d00aa74deb2d9b9ac8eb10fd441f21fae1038",
+    "benchmarks/omb/measurement.py": "c2b7e3778bea655823db14904c9b1608568be760e1fada5f5aa463ee504ab5f4"
+  }
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-pair-017-capacity50k-1/kafka.json",
+    "workload": "50k-1-topic-16-partitions-1kb",
+    "samples": 90,
+    "publish_msg_s_mean": 50014.57142649124,
+    "consume_msg_s_mean": 50014.57172692902,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 0,
+    "backlog_last": 0,
+    "backlog_max": 506,
+    "publish_p99_ms": 39.961,
+    "publish_delay_p99_us": 715,
+    "end_to_end_p99_ms": 41.0
+  }
+]

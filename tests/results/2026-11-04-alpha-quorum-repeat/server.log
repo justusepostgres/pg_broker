@@ -1,0 +1,34 @@
+2026-11-04 15:25:59.047 +04 [90999] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 15:25:59.048 +04 [90999] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 15:25:59.048 +04 [90999] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 15:25:59.051 +04 [91002] LOG:  database system was shut down at 2026-11-04 15:25:58 +04
+2026-11-04 15:25:59.053 +04 [90999] LOG:  database system is ready to accept connections
+2026-11-04 15:26:01.072 +04 [91025] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 15:26:03.285 +04 [91000] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:26:03.374 +04 [91000] LOG:  checkpoint complete: wrote 2189 buffers (13.4%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.061 s, sync=0.028 s, total=0.089 s; sync files=845, longest=0.001 s, average=0.001 s; distance=15516 kB, estimate=15516 kB; lsn=0/2441B60, redo lsn=0/2441B08
+2026-11-04 15:26:03.399 +04 [91000] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:26:03.400 +04 [91000] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=2, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=13965 kB; lsn=0/2442150, redo lsn=0/24420F8
+2026-11-04 15:26:03.432 +04 [91000] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:26:03.435 +04 [91000] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.003 s; sync files=2, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=12568 kB; lsn=0/2442728, redo lsn=0/24426D0
+2026-11-04 15:26:05.346 +04 [91034] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 15:26:07.654 +04 [91000] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:26:07.759 +04 [91000] LOG:  checkpoint complete: wrote 2022 buffers (12.3%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.083 s, sync=0.022 s, total=0.105 s; sync files=720, longest=0.001 s, average=0.001 s; distance=14563 kB, estimate=14563 kB; lsn=0/327B3F0, redo lsn=0/327B398
+2026-11-04 15:26:07.779 +04 [91000] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:26:07.780 +04 [91000] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=2, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=13107 kB; lsn=0/327BB88, redo lsn=0/327BB30
+2026-11-04 15:26:07.811 +04 [91000] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:26:07.813 +04 [91000] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=2, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=11796 kB; lsn=0/327C338, redo lsn=0/327C2E0
+2026-11-04 15:26:09.652 +04 [91055] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 15:26:11.850 +04 [91000] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:26:11.954 +04 [91000] LOG:  checkpoint complete: wrote 2022 buffers (12.3%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.079 s, sync=0.024 s, total=0.104 s; sync files=720, longest=0.001 s, average=0.001 s; distance=14563 kB, estimate=14563 kB; lsn=0/40B52B0, redo lsn=0/40B5258
+2026-11-04 15:26:11.991 +04 [91000] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:26:11.992 +04 [91000] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=2, longest=0.001 s, average=0.001 s; distance=2 kB, estimate=13107 kB; lsn=0/40B5C00, redo lsn=0/40B5BA8
+2026-11-04 15:26:12.021 +04 [91053] FATAL:  terminating connection due to administrator command
+2026-11-04 15:26:12.122 +04 [91000] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:26:12.124 +04 [91000] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=2, longest=0.001 s, average=0.001 s; distance=2 kB, estimate=11797 kB; lsn=0/40B6568, redo lsn=0/40B6510
+2026-11-04 15:26:12.199 +04 [90999] LOG:  received fast shutdown request
+2026-11-04 15:26:12.199 +04 [90999] LOG:  aborting any active transactions
+2026-11-04 15:26:12.200 +04 [90999] LOG:  background worker "logical replication launcher" (PID 91008) exited with exit code 1
+2026-11-04 15:26:12.200 +04 [91000] LOG:  shutting down
+2026-11-04 15:26:12.200 +04 [91000] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 15:26:12.201 +04 [91000] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=10617 kB; lsn=0/40B6670, redo lsn=0/40B6670
+2026-11-04 15:26:12.203 +04 [90999] LOG:  database system is shut down

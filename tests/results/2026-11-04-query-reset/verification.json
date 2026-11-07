@@ -1,0 +1,10 @@
+{
+  "native_regression_tests": 51,
+  "fault_and_settings_tests": 3,
+  "distinct_native_cases": 52,
+  "default_sql_tests": 10,
+  "build": "passed --locked",
+  "clippy": "passed --locked -D warnings",
+  "deployed": false,
+  "scope": "Prepared query precedes timeout reset; both confirmed before COMMIT. No measured performance claim."
+}

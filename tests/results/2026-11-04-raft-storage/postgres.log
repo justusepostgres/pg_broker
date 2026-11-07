@@ -1,0 +1,169 @@
+2026-11-04 04:28:47.114 +04 [59015] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 04:28:47.114 +04 [59015] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 04:28:47.115 +04 [59015] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 04:28:47.117 +04 [59018] LOG:  database system was shut down at 2026-11-04 04:28:47 +04
+2026-11-04 04:28:47.119 +04 [59015] LOG:  database system is ready to accept connections
+2026-11-04 04:28:50.151 +04 [59118] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 04:28:50.345 +04 [59122] ERROR:  Cannot truncate purged or committed Raft prefix
+2026-11-04 04:28:50.345 +04 [59122] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 40 at RAISE
+2026-11-04 04:28:50.345 +04 [59122] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:50.356 +04 [59123] ERROR:  Raft log writer fenced
+2026-11-04 04:28:50.356 +04 [59123] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:50.356 +04 [59123] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:50.359 +04 [59124] ERROR:  Raft log writer fenced
+2026-11-04 04:28:50.359 +04 [59124] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:50.359 +04 [59124] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:50.362 +04 [59125] ERROR:  Raft vote writer fenced or revision changed
+2026-11-04 04:28:50.362 +04 [59125] CONTEXT:  PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 6 at RAISE
+2026-11-04 04:28:50.362 +04 [59125] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 04:28:56.001 +04 [59129] ERROR:  Complete Raft read exceeds bounded response
+2026-11-04 04:28:56.001 +04 [59129] CONTEXT:  PL/pgSQL function public.broker_raft_log_read(text,bigint,jsonb,boolean) line 20 at RAISE
+2026-11-04 04:28:56.001 +04 [59129] STATEMENT:  SELECT public.broker_raft_log_read($1,$2,$3,$4)
+2026-11-04 04:28:56.025 +04 [59148] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 04:28:56.238 +04 [59151] ERROR:  Complete Raft read exceeds bounded response
+2026-11-04 04:28:56.238 +04 [59151] CONTEXT:  PL/pgSQL function public.broker_raft_log_read(text,bigint,jsonb,boolean) line 20 at RAISE
+2026-11-04 04:28:56.238 +04 [59151] STATEMENT:  SELECT public.broker_raft_log_read($1,$2,$3,$4)
+2026-11-04 04:28:56.254 +04 [59152] ERROR:  Raft reader fenced
+2026-11-04 04:28:56.254 +04 [59152] CONTEXT:  PL/pgSQL function public.broker_raft_log_read(text,bigint,jsonb,boolean) line 10 at RAISE
+2026-11-04 04:28:56.254 +04 [59152] STATEMENT:  SELECT public.broker_raft_log_read($1,$2,$3,$4)
+2026-11-04 04:28:56.258 +04 [59153] ERROR:  Raft reader fenced
+2026-11-04 04:28:56.258 +04 [59153] CONTEXT:  PL/pgSQL function public.broker_raft_log_read(text,bigint,jsonb,boolean) line 10 at RAISE
+2026-11-04 04:28:56.258 +04 [59153] STATEMENT:  SELECT public.broker_raft_log_read($1,$2,$3,$4)
+2026-11-04 04:28:56.873 +04 [59155] ERROR:  Raft append crosses purged prefix or is not consecutive
+2026-11-04 04:28:56.873 +04 [59155] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 25 at RAISE
+2026-11-04 04:28:56.873 +04 [59155] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:56.896 +04 [59158] ERROR:  Cannot truncate purged or committed Raft prefix
+2026-11-04 04:28:56.896 +04 [59158] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 40 at RAISE
+2026-11-04 04:28:56.896 +04 [59158] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:56.909 +04 [59159] ERROR:  Raft log writer fenced
+2026-11-04 04:28:56.909 +04 [59159] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:56.909 +04 [59159] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:56.913 +04 [59160] ERROR:  Raft reader fenced
+2026-11-04 04:28:56.913 +04 [59160] CONTEXT:  PL/pgSQL function public.broker_raft_log_read(text,bigint,jsonb,boolean) line 10 at RAISE
+2026-11-04 04:28:56.913 +04 [59160] STATEMENT:  SELECT public.broker_raft_log_read($1,$2,$3,$4)
+2026-11-04 04:28:56.917 +04 [59161] ERROR:  Raft log writer fenced
+2026-11-04 04:28:56.917 +04 [59161] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:56.917 +04 [59161] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:56.921 +04 [59162] ERROR:  Raft append crosses purged prefix or is not consecutive
+2026-11-04 04:28:56.921 +04 [59162] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 25 at RAISE
+2026-11-04 04:28:56.921 +04 [59162] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:57.506 +04 [59166] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 04:28:57.530 +04 [59169] ERROR:  Raft vote writer fenced
+2026-11-04 04:28:57.530 +04 [59169] CONTEXT:  PL/pgSQL function public.broker_raft_vote_read(text,bigint) line 5 at RAISE
+2026-11-04 04:28:57.530 +04 [59169] STATEMENT:  SELECT public.broker_raft_vote_read($1,$2)
+2026-11-04 04:28:57.534 +04 [59171] ERROR:  Raft vote writer fenced or revision changed
+2026-11-04 04:28:57.534 +04 [59171] CONTEXT:  PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 6 at RAISE
+2026-11-04 04:28:57.534 +04 [59171] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 04:28:57.538 +04 [59172] ERROR:  Raft vote writer fenced or revision changed
+2026-11-04 04:28:57.538 +04 [59172] CONTEXT:  PL/pgSQL function public.broker_raft_vote_cas(text,bigint,bigint,jsonb) line 6 at RAISE
+2026-11-04 04:28:57.538 +04 [59172] STATEMENT:  SELECT public.broker_raft_vote_cas($1,$2,$3,$4)
+2026-11-04 04:28:57.886 +04 [59178] ERROR:  Raft log writer fenced
+2026-11-04 04:28:57.886 +04 [59178] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:57.886 +04 [59178] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:57.886 +04 [59178] ERROR:  Raft log writer fenced
+2026-11-04 04:28:57.886 +04 [59178] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:57.886 +04 [59178] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:57.886 +04 [59178] ERROR:  Raft log writer fenced
+2026-11-04 04:28:57.886 +04 [59178] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:57.886 +04 [59178] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:57.886 +04 [59178] ERROR:  Raft log writer fenced
+2026-11-04 04:28:57.886 +04 [59178] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:57.886 +04 [59178] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:57.886 +04 [59178] ERROR:  Raft log writer fenced
+2026-11-04 04:28:57.886 +04 [59178] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:57.886 +04 [59178] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:57.889 +04 [59016] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:28:57.903 +04 [59016] LOG:  checkpoint complete: wrote 419 buffers (2.6%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.004 s, total=0.014 s; sync files=112, longest=0.001 s, average=0.001 s; distance=7701 kB, estimate=7701 kB; lsn=0/1CA0060, redo lsn=0/1C9FFF0
+2026-11-04 04:28:57.991 +04 [59183] ERROR:  Raft log writer fenced
+2026-11-04 04:28:57.991 +04 [59183] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:57.991 +04 [59183] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:57.991 +04 [59183] ERROR:  Raft log writer fenced
+2026-11-04 04:28:57.991 +04 [59183] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:57.991 +04 [59183] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:57.991 +04 [59183] ERROR:  Raft log writer fenced
+2026-11-04 04:28:57.991 +04 [59183] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:57.991 +04 [59183] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:57.991 +04 [59183] ERROR:  Raft log writer fenced
+2026-11-04 04:28:57.991 +04 [59183] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:57.991 +04 [59183] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:57.992 +04 [59183] ERROR:  Raft log writer fenced
+2026-11-04 04:28:57.992 +04 [59183] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:57.992 +04 [59183] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:57.994 +04 [59016] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:28:57.996 +04 [59016] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4677 kB, estimate=7399 kB; lsn=0/2131688, redo lsn=0/2131630
+2026-11-04 04:28:58.077 +04 [59187] ERROR:  Raft append would leave a hole
+2026-11-04 04:28:58.077 +04 [59187] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 31 at RAISE
+2026-11-04 04:28:58.077 +04 [59187] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.078 +04 [59187] ERROR:  Raft append crosses purged prefix or is not consecutive
+2026-11-04 04:28:58.078 +04 [59187] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 25 at RAISE
+2026-11-04 04:28:58.078 +04 [59187] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.078 +04 [59187] ERROR:  Raft append crosses purged prefix or is not consecutive
+2026-11-04 04:28:58.078 +04 [59187] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 25 at RAISE
+2026-11-04 04:28:58.078 +04 [59187] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.079 +04 [59187] ERROR:  Truncate conflicting Raft suffix before append
+2026-11-04 04:28:58.079 +04 [59187] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 29 at RAISE
+2026-11-04 04:28:58.079 +04 [59187] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.080 +04 [59187] ERROR:  Raft committed index must not regress
+2026-11-04 04:28:58.080 +04 [59187] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 50 at RAISE
+2026-11-04 04:28:58.080 +04 [59187] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.080 +04 [59187] ERROR:  Cannot truncate purged or committed Raft prefix
+2026-11-04 04:28:58.080 +04 [59187] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 40 at RAISE
+2026-11-04 04:28:58.080 +04 [59187] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.080 +04 [59187] ERROR:  Raft boundary does not match durable log
+2026-11-04 04:28:58.080 +04 [59187] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 47 at RAISE
+2026-11-04 04:28:58.080 +04 [59187] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.080 +04 [59187] ERROR:  Cannot purge beyond committed Raft prefix
+2026-11-04 04:28:58.080 +04 [59187] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 55 at RAISE
+2026-11-04 04:28:58.080 +04 [59187] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.086 +04 [59016] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:28:58.087 +04 [59016] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4682 kB, estimate=7127 kB; lsn=0/25C4230, redo lsn=0/25C41D8
+2026-11-04 04:28:58.181 +04 [59195] ERROR:  Raft log writer fenced
+2026-11-04 04:28:58.181 +04 [59195] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 04:28:58.181 +04 [59195] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.184 +04 [59016] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:28:58.187 +04 [59016] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.003 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4677 kB, estimate=6882 kB; lsn=0/2A556F0, redo lsn=0/2A55698
+2026-11-04 04:28:58.274 +04 [59199] ERROR:  Invalid Raft log ID
+2026-11-04 04:28:58.274 +04 [59199] CONTEXT:  PL/pgSQL function broker.raft_log_index(jsonb) line 6 at RAISE
+2026-11-04 04:28:58.274 +04 [59199] STATEMENT:  SELECT broker.raft_log_index($1)
+2026-11-04 04:28:58.274 +04 [59199] ERROR:  Invalid Raft log ID
+2026-11-04 04:28:58.274 +04 [59199] CONTEXT:  PL/pgSQL function broker.raft_log_index(jsonb) line 6 at RAISE
+2026-11-04 04:28:58.274 +04 [59199] STATEMENT:  SELECT broker.raft_log_index($1)
+2026-11-04 04:28:58.274 +04 [59199] ERROR:  Raft index overflow
+2026-11-04 04:28:58.274 +04 [59199] CONTEXT:  PL/pgSQL function broker.raft_log_index(jsonb) line 9 at RAISE
+2026-11-04 04:28:58.274 +04 [59199] STATEMENT:  SELECT broker.raft_log_index($1)
+2026-11-04 04:28:58.274 +04 [59199] ERROR:  Invalid Raft log ID
+2026-11-04 04:28:58.274 +04 [59199] CONTEXT:  PL/pgSQL function broker.raft_log_index(jsonb) line 6 at RAISE
+2026-11-04 04:28:58.274 +04 [59199] STATEMENT:  SELECT broker.raft_log_index($1)
+2026-11-04 04:28:58.274 +04 [59199] ERROR:  Invalid Raft log ID
+2026-11-04 04:28:58.274 +04 [59199] CONTEXT:  PL/pgSQL function broker.raft_log_index(jsonb) line 6 at RAISE
+2026-11-04 04:28:58.274 +04 [59199] STATEMENT:  SELECT broker.raft_log_index($1)
+2026-11-04 04:28:58.277 +04 [59199] ERROR:  Invalid Raft append batch
+2026-11-04 04:28:58.277 +04 [59199] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 17 at RAISE
+2026-11-04 04:28:58.277 +04 [59199] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.285 +04 [59199] ERROR:  Invalid Raft entry
+2026-11-04 04:28:58.285 +04 [59199] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 22 at RAISE
+2026-11-04 04:28:58.285 +04 [59199] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.286 +04 [59199] ERROR:  permission denied for function broker_raft_log
+2026-11-04 04:28:58.286 +04 [59199] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.286 +04 [59199] ERROR:  permission denied for schema broker at character 15
+2026-11-04 04:28:58.286 +04 [59199] STATEMENT:  SELECT * FROM broker.raft_log_entries
+2026-11-04 04:28:58.289 +04 [59016] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:28:58.290 +04 [59016] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=8, longest=0.001 s, average=0.001 s; distance=4688 kB, estimate=6663 kB; lsn=0/2EE9910, redo lsn=0/2EE98B8
+2026-11-04 04:28:58.559 +04 [59203] ERROR:  Invalid Raft read bounds
+2026-11-04 04:28:58.559 +04 [59203] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 66 at RAISE
+2026-11-04 04:28:58.559 +04 [59203] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.560 +04 [59203] ERROR:  Invalid Raft read bounds
+2026-11-04 04:28:58.560 +04 [59203] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 66 at RAISE
+2026-11-04 04:28:58.560 +04 [59203] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.560 +04 [59203] ERROR:  Invalid Raft read bounds
+2026-11-04 04:28:58.560 +04 [59203] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 66 at RAISE
+2026-11-04 04:28:58.560 +04 [59203] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 04:28:58.564 +04 [59016] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:28:58.565 +04 [59016] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4794 kB, estimate=6476 kB; lsn=0/3398270, redo lsn=0/3398218
+2026-11-04 04:28:58.680 +04 [59015] LOG:  received fast shutdown request
+2026-11-04 04:28:58.680 +04 [59015] LOG:  aborting any active transactions
+2026-11-04 04:28:58.681 +04 [59015] LOG:  background worker "logical replication launcher" (PID 59021) exited with exit code 1
+2026-11-04 04:28:58.681 +04 [59016] LOG:  shutting down
+2026-11-04 04:28:58.681 +04 [59016] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 04:28:58.682 +04 [59016] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=5828 kB; lsn=0/3398378, redo lsn=0/3398378
+2026-11-04 04:28:58.685 +04 [59015] LOG:  database system is shut down

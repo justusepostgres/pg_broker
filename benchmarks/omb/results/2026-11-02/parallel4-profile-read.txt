@@ -1,0 +1,48 @@
+BEGIN
+SET
+SET
+                                                                                 QUERY PLAN                                                                                 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Nested Loop  (cost=30.84..33.56 rows=10 width=32) (actual time=83.430..525.239 rows=10 loops=1)
+   Buffers: shared hit=2706 read=41, temp read=19650 written=29470
+   CTE requests
+     ->  Aggregate  (cost=30.82..30.84 rows=1 width=32) (actual time=0.622..0.627 rows=1 loops=1)
+           Buffers: shared hit=50 read=22
+           InitPlan 1
+             ->  Limit  (cost=0.15..0.21 rows=1 width=32) (actual time=0.014..0.015 rows=1 loops=1)
+                   Buffers: shared hit=2
+                   ->  Index Only Scan using topics_pkey on topics  (cost=0.15..65.10 rows=1130 width=32) (actual time=0.013..0.013 rows=1 loops=1)
+                         Heap Fetches: 2
+                         Buffers: shared hit=2
+           ->  Sort  (cost=30.37..30.45 rows=32 width=39) (actual time=0.528..0.531 rows=16 loops=1)
+                 Sort Key: p.partition
+                 Sort Method: quicksort  Memory: 25kB
+                 Buffers: shared hit=50 read=22
+                 ->  Nested Loop  (cost=0.41..29.57 rows=32 width=39) (actual time=0.223..0.504 rows=16 loops=1)
+                       Buffers: shared hit=47 read=22
+                       ->  Seq Scan on partitions p  (cost=0.00..2.40 rows=32 width=31) (actual time=0.065..0.075 rows=16 loops=1)
+                             Filter: (topic = (InitPlan 1).col1)
+                             Buffers: shared hit=4
+                       ->  Limit  (cost=0.41..0.84 rows=1 width=8) (actual time=0.026..0.026 rows=1 loops=16)
+                             Buffers: shared hit=43 read=22
+                             ->  Index Only Scan Backward using batches_pkey on batches b  (cost=0.41..905.87 rows=2135 width=8) (actual time=0.026..0.026 rows=1 loops=16)
+                                   Index Cond: ((topic = p.topic) AND (partition = p.partition))
+                                   Heap Fetches: 16
+                                   Buffers: shared hit=43 read=22
+   ->  CTE Scan on requests  (cost=0.00..0.02 rows=1 width=32) (actual time=0.626..0.628 rows=1 loops=1)
+         Buffers: shared hit=50 read=22
+   ->  Function Scan on generate_series  (cost=0.00..0.10 rows=10 width=0) (actual time=0.005..0.018 rows=10 loops=1)
+ Planning:
+   Buffers: shared hit=191
+ Planning Time: 0.562 ms
+ Execution Time: 527.429 ms
+(33 rows)
+
+ schemaname |     funcname      | calls | total_time | self_time  
+------------+-------------------+-------+------------+------------
+ public     | broker_fetch_many |    10 | 524.488809 | 111.634702
+ broker     | fetch_many        |    10 | 412.854107 | 303.070567
+ broker     | dispatch          |   160 |  109.78354 |  109.78354
+(3 rows)
+
+COMMIT

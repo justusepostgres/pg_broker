@@ -1,0 +1,33 @@
+pg-broker listening on 127.0.0.1:9092
+unix_ms=1793738887351 retention_start
+unix_ms=1793738887416 retention_end elapsed_us=64493 completed_partitions=16 success=true
+unix_ms=1793738917416 retention_start
+unix_ms=1793738917474 retention_end elapsed_us=58226 completed_partitions=16 success=true
+unix_ms=1793738919182 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793738919264 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793738919310 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793738947475 retention_start
+unix_ms=1793738947524 retention_end elapsed_us=48733 completed_partitions=16 success=true
+unix_ms=1793738977525 retention_start
+unix_ms=1793738977578 retention_end elapsed_us=53061 completed_partitions=16 success=true
+unix_ms=1793738979188 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793739007578 retention_start
+unix_ms=1793739007638 retention_end elapsed_us=59352 completed_partitions=16 success=true
+unix_ms=1793739037638 retention_start
+unix_ms=1793739037681 retention_end elapsed_us=42592 completed_partitions=16 success=true
+unix_ms=1793739039296 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793739067681 retention_start
+unix_ms=1793739067722 retention_end elapsed_us=40511 completed_partitions=16 success=true
+unix_ms=1793739097723 retention_start
+unix_ms=1793739097770 retention_end elapsed_us=47440 completed_partitions=16 success=true
+unix_ms=1793739099401 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793739127770 retention_start
+unix_ms=1793739127811 retention_end elapsed_us=40568 completed_partitions=16 success=true
+unix_ms=1793739157811 retention_start
+unix_ms=1793739157854 retention_end elapsed_us=42746 completed_partitions=16 success=true
+unix_ms=1793739159507 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793739187855 retention_start
+unix_ms=1793739187898 retention_end elapsed_us=43643 completed_partitions=16 success=true
+unix_ms=1793739217899 retention_start
+unix_ms=1793739217951 retention_end elapsed_us=51820 completed_partitions=16 success=true
+unix_ms=1793739219611 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed

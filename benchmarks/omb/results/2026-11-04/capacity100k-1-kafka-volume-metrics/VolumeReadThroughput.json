@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "aggregated-datapoints": [
+        {
+          "timestamp": "2026-11-04T06:19:00+00:00",
+          "value": 4763648.0
+        },
+        {
+          "timestamp": "2026-11-04T06:21:00+00:00",
+          "value": 446464.0
+        },
+        {
+          "timestamp": "2026-11-04T06:22:00+00:00",
+          "value": 2756608.0
+        },
+        {
+          "timestamp": "2026-11-04T06:23:00+00:00",
+          "value": 28504064.0
+        },
+        {
+          "timestamp": "2026-11-04T06:24:00+00:00",
+          "value": 1736704.0
+        },
+        {
+          "timestamp": "2026-11-04T06:25:00+00:00",
+          "value": 4096.0
+        },
+        {
+          "timestamp": "2026-11-04T06:26:00+00:00",
+          "value": 69632.0
+        },
+        {
+          "timestamp": "2026-11-04T06:28:00+00:00",
+          "value": 4096.0
+        },
+        {
+          "timestamp": "2026-11-04T06:29:00+00:00",
+          "value": 4096.0
+        },
+        {
+          "timestamp": "2026-11-04T06:30:00+00:00",
+          "value": 12288.0
+        },
+        {
+          "timestamp": "2026-11-04T06:31:00+00:00",
+          "value": 209371136.0
+        },
+        {
+          "timestamp": "2026-11-04T06:32:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T06:33:00+00:00",
+          "value": 360448.0
+        },
+        {
+          "timestamp": "2026-11-04T06:34:00+00:00",
+          "value": 73728.0
+        },
+        {
+          "timestamp": "2026-11-04T06:36:00+00:00",
+          "value": 223629312.0
+        }
+      ],
+      "compartment-id": "ocid1.tenancy.oc1..aaaaaaaafe6p7erknwb3ekqbeztffxdnirwuf6kel3nkt2ofrmi7iygx4apa",
+      "dimensions": {
+        "attachmentId": "ocid1.instance.oc1.us-sanjose-1.anzwuljrsjflizycskhftwpeg4nzak4sk2rb7pwrvv3fjxdn7u2qg3474bna",
+        "resourceId": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq"
+      },
+      "metadata": {
+        "displayName": "Read Throughput",
+        "unit": "bytes"
+      },
+      "name": "VolumeReadThroughput",
+      "namespace": "oci_blockstore",
+      "resolution": null,
+      "resource-group": null
+    }
+  ]
+}

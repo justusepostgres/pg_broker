@@ -1,0 +1,16 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-pair-gc-017-32k-1/kafka.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32024.045889000663,
+    "consume_msg_s_mean": 32024.04565382502,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 172,
+    "backlog_last": 0,
+    "backlog_max": 198,
+    "publish_p99_ms": 12.37,
+    "publish_delay_p99_us": 406,
+    "end_to_end_p99_ms": 13.0
+  }
+]

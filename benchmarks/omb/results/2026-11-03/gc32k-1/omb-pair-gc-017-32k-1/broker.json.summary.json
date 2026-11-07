@@ -1,0 +1,16 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-pair-gc-017-32k-1/broker.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32022.625469716808,
+    "consume_msg_s_mean": 32022.449900559743,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 0,
+    "backlog_last": 197,
+    "backlog_max": 197,
+    "publish_p99_ms": 9.63,
+    "publish_delay_p99_us": 156,
+    "end_to_end_p99_ms": 13.0
+  }
+]

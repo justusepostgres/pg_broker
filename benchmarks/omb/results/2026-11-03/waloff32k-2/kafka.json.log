@@ -1,0 +1,461 @@
+21:32:42.079 [main] INFO Benchmark - Starting benchmark with config: {
+  "drivers" : [ "/home/ubuntu/results/omb-pair-017-waloff32k-2/kafka.json.driver.yaml" ],
+  "workers" : null,
+  "workersFile" : null,
+  "workloads" : [ "/home/ubuntu/results/omb-pair-017-waloff32k-2/kafka.json.workload.yaml" ],
+  "output" : "/home/ubuntu/results/omb-pair-017-waloff32k-2/kafka.json"
+}
+21:32:42.116 [main] INFO Benchmark - Workloads: {
+  "kafka.json.workload" : {
+    "name" : "32k-1-topic-16-partitions-1kb",
+    "topics" : 1,
+    "partitionsPerTopic" : 16,
+    "keyDistributor" : "NO_KEY",
+    "messageSize" : 1024,
+    "messageSizeDistribution" : null,
+    "useRandomizedPayloads" : false,
+    "randomBytesRatio" : 0.0,
+    "randomizedPayloadPoolSize" : 0,
+    "payloadFile" : "payload/payload-1Kb.data",
+    "subscriptionsPerTopic" : 1,
+    "producersPerTopic" : 1,
+    "consumerPerSubscription" : 1,
+    "producerRate" : 32000,
+    "consumerBacklogSizeGB" : 0,
+    "backlogDrainRatio" : 1.0,
+    "testDurationMinutes" : 5,
+    "warmupDurationMinutes" : 1
+  }
+}
+21:32:42.162 [main] INFO Benchmark - --------------- WORKLOAD : 32k-1-topic-16-partitions-1kb --- DRIVER : Kafka-compatible-RF1---------------
+21:32:42.523 [main] INFO LocalWorker - Driver: {
+  "name" : "Kafka-compatible-RF1",
+  "driverClass" : "io.openmessaging.benchmark.driver.kafka.KafkaBenchmarkDriver"
+}
+21:32:42.544 [main] INFO AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:19092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+21:32:42.605 [main] INFO AppInfoParser - Kafka version: 3.6.1
+21:32:42.605 [main] INFO AppInfoParser - Kafka commitId: 5e3c2b738d253ff5
+21:32:42.605 [main] INFO AppInfoParser - Kafka startTimeMs: 1793741562603
+21:32:43.009 [main] INFO LocalWorker - Created 1 topics in 400.684985 ms
+21:32:43.009 [main] INFO WorkloadGenerator - Created 1 topics in 401.239028 ms
+21:32:43.020 [main] INFO ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:19092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-sub-000-2Ibk6ko-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 4194304
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = sub-000-2Ibk6ko
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+21:32:43.057 [main] INFO AppInfoParser - Kafka version: 3.6.1
+21:32:43.057 [main] INFO AppInfoParser - Kafka commitId: 5e3c2b738d253ff5
+21:32:43.057 [main] INFO AppInfoParser - Kafka startTimeMs: 1793741563057
+21:32:43.059 [main] INFO KafkaConsumer - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Subscribed to topic(s): test-topic-0000000-QSLoD2I
+21:32:43.065 [main] INFO LocalWorker - Created 1 consumers in 54.456121 ms
+21:32:43.065 [main] INFO WorkloadGenerator - Created 1 consumers in 54.895603 ms
+21:32:43.075 [main] INFO ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 262144
+	bootstrap.servers = [localhost:19092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+21:32:43.097 [pool-3-thread-1] INFO Metadata - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Cluster ID: s-FnBnpqQ0y4wT2RdiUb9A
+21:32:43.103 [main] INFO ProducerConfig - These configurations '[default.api.timeout.ms]' were supplied but are not used yet.
+21:32:43.104 [main] INFO AppInfoParser - Kafka version: 3.6.1
+21:32:43.104 [main] INFO AppInfoParser - Kafka commitId: 5e3c2b738d253ff5
+21:32:43.105 [main] INFO AppInfoParser - Kafka startTimeMs: 1793741563104
+21:32:43.107 [main] INFO LocalWorker - Created 1 producers in 42.366618 ms
+21:32:43.108 [main] INFO WorkloadGenerator - Created 1 producers in 42.596699 ms
+21:32:43.108 [main] INFO WorkloadGenerator - Waiting for consumers to be ready
+21:32:43.122 [kafka-producer-network-thread | producer-1] INFO Metadata - [Producer clientId=producer-1] Cluster ID: s-FnBnpqQ0y4wT2RdiUb9A
+21:32:43.138 [main] INFO WorkloadGenerator - Waiting for topics to be ready -- Sent: 0, Received: 0
+21:32:43.307 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Discovered group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.309 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] (Re-)joining group
+21:32:43.331 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+21:32:43.332 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Requesting disconnect from last known coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.332 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+21:32:43.332 [pool-3-thread-1] INFO NetworkClient - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Client requested disconnect from node 2147483646
+21:32:43.344 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Discovered group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.344 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+21:32:43.344 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Requesting disconnect from last known coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.373 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Discovered group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.373 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+21:32:43.373 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Requesting disconnect from last known coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.479 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Discovered group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.480 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+21:32:43.480 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] (Re-)joining group
+21:32:43.485 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+21:32:43.485 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Requesting disconnect from last known coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.485 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+21:32:43.485 [pool-3-thread-1] INFO NetworkClient - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Client requested disconnect from node 2147483646
+21:32:43.489 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Discovered group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.489 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+21:32:43.489 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Requesting disconnect from last known coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.577 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Discovered group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.578 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+21:32:43.578 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] (Re-)joining group
+21:32:43.583 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+21:32:43.583 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Requesting disconnect from last known coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.583 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+21:32:43.583 [pool-3-thread-1] INFO NetworkClient - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Client requested disconnect from node 2147483646
+21:32:43.588 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Discovered group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.588 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+21:32:43.588 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Requesting disconnect from last known coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.676 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Discovered group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.677 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+21:32:43.678 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] (Re-)joining group
+21:32:43.682 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+21:32:43.683 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Requesting disconnect from last known coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.683 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+21:32:43.683 [pool-3-thread-1] INFO NetworkClient - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Client requested disconnect from node 2147483646
+21:32:43.687 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Discovered group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.687 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+21:32:43.687 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Requesting disconnect from last known coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.779 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Discovered group coordinator 127.0.0.1:19092 (id: 2147483646 rack: null)
+21:32:43.780 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+21:32:43.780 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] (Re-)joining group
+21:32:43.799 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Request joining group due to: need to re-join with the given member-id: consumer-sub-000-2Ibk6ko-1-27932cc4-7046-4132-ae6b-12fe7d917f98
+21:32:43.800 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+21:32:43.800 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] (Re-)joining group
+21:32:43.820 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Successfully joined group with generation Generation{generationId=1, memberId='consumer-sub-000-2Ibk6ko-1-27932cc4-7046-4132-ae6b-12fe7d917f98', protocol='range'}
+21:32:43.830 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Finished assignment for group at generation 1: {consumer-sub-000-2Ibk6ko-1-27932cc4-7046-4132-ae6b-12fe7d917f98=Assignment(partitions=[test-topic-0000000-QSLoD2I-0, test-topic-0000000-QSLoD2I-1, test-topic-0000000-QSLoD2I-2, test-topic-0000000-QSLoD2I-3, test-topic-0000000-QSLoD2I-4, test-topic-0000000-QSLoD2I-5, test-topic-0000000-QSLoD2I-6, test-topic-0000000-QSLoD2I-7, test-topic-0000000-QSLoD2I-8, test-topic-0000000-QSLoD2I-9, test-topic-0000000-QSLoD2I-10, test-topic-0000000-QSLoD2I-11, test-topic-0000000-QSLoD2I-12, test-topic-0000000-QSLoD2I-13, test-topic-0000000-QSLoD2I-14, test-topic-0000000-QSLoD2I-15])}
+21:32:43.855 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Successfully synced group in generation Generation{generationId=1, memberId='consumer-sub-000-2Ibk6ko-1-27932cc4-7046-4132-ae6b-12fe7d917f98', protocol='range'}
+21:32:43.856 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Notifying assignor about the new Assignment(partitions=[test-topic-0000000-QSLoD2I-0, test-topic-0000000-QSLoD2I-1, test-topic-0000000-QSLoD2I-2, test-topic-0000000-QSLoD2I-3, test-topic-0000000-QSLoD2I-4, test-topic-0000000-QSLoD2I-5, test-topic-0000000-QSLoD2I-6, test-topic-0000000-QSLoD2I-7, test-topic-0000000-QSLoD2I-8, test-topic-0000000-QSLoD2I-9, test-topic-0000000-QSLoD2I-10, test-topic-0000000-QSLoD2I-11, test-topic-0000000-QSLoD2I-12, test-topic-0000000-QSLoD2I-13, test-topic-0000000-QSLoD2I-14, test-topic-0000000-QSLoD2I-15])
+21:32:43.858 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Adding newly assigned partitions: test-topic-0000000-QSLoD2I-0, test-topic-0000000-QSLoD2I-1, test-topic-0000000-QSLoD2I-2, test-topic-0000000-QSLoD2I-3, test-topic-0000000-QSLoD2I-4, test-topic-0000000-QSLoD2I-5, test-topic-0000000-QSLoD2I-6, test-topic-0000000-QSLoD2I-7, test-topic-0000000-QSLoD2I-8, test-topic-0000000-QSLoD2I-9, test-topic-0000000-QSLoD2I-10, test-topic-0000000-QSLoD2I-11, test-topic-0000000-QSLoD2I-12, test-topic-0000000-QSLoD2I-13, test-topic-0000000-QSLoD2I-14, test-topic-0000000-QSLoD2I-15
+21:32:43.876 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-1
+21:32:43.876 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-0
+21:32:43.876 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-3
+21:32:43.876 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-2
+21:32:43.877 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-5
+21:32:43.877 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-4
+21:32:43.877 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-7
+21:32:43.877 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-6
+21:32:43.878 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-9
+21:32:43.878 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-8
+21:32:43.878 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-11
+21:32:43.878 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-10
+21:32:43.878 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-13
+21:32:43.878 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-12
+21:32:43.878 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-15
+21:32:43.878 [pool-3-thread-1] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Found no committed offset for partition test-topic-0000000-QSLoD2I-14
+21:32:43.895 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.896 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.896 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-3 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.896 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.896 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-5 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.896 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-4 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.896 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-7 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.896 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-6 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.896 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-9 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.896 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-8 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.897 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-11 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.897 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-10 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.897 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-13 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.897 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-12 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.897 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-15 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:43.897 [pool-3-thread-1] INFO SubscriptionState - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting offset for partition test-topic-0000000-QSLoD2I-14 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:19092 (id: 1 rack: null)], epoch=0}}.
+21:32:45.138 [main] INFO WorkloadGenerator - Waiting for topics to be ready -- Sent: 1, Received: 1
+21:32:45.138 [main] INFO WorkloadGenerator - All consumers are ready
+21:32:45.158 [main] INFO WorkloadGenerator - ----- Starting warm-up traffic (1m) ------
+21:32:55.263 [main] INFO WorkloadGenerator - Pub rate 31848.7 msg/s / 31.1 MB/s | Pub err     0.0 err/s | Cons rate 31827.3 msg/s / 31.1 MB/s | Backlog:  0.2 K | Pub Latency (ms) avg: 46.9 - 50%: 13.7 - 99%: 350.3 - 99.9%: 514.3 - Max: 550.9 | Pub Delay Latency (us) avg: 186.3 - 50%: 55.0 - 99%: 2493.0 - 99.9%: 8206.0 - Max: 14930.0
+21:33:05.323 [main] INFO WorkloadGenerator - Pub rate 31983.1 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 32004.5 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  8.7 - 50%:  8.1 - 99%: 22.6 - 99.9%: 38.1 - Max: 45.2 | Pub Delay Latency (us) avg: 67.7 - 50%: 55.0 - 99%: 597.0 - 99.9%: 1961.0 - Max: 4851.0
+21:33:15.354 [main] INFO WorkloadGenerator - Pub rate 32062.7 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32062.7 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.8 - 50%:  7.6 - 99%: 15.6 - 99.9%: 20.2 - Max: 24.0 | Pub Delay Latency (us) avg: 61.8 - 50%: 54.0 - 99%: 520.0 - 99.9%: 1813.0 - Max: 3639.0
+21:33:25.383 [main] INFO WorkloadGenerator - Pub rate 32005.2 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32005.2 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.5 - 50%:  7.4 - 99%: 14.4 - 99.9%: 28.8 - Max: 36.5 | Pub Delay Latency (us) avg: 61.9 - 50%: 55.0 - 99%: 478.0 - 99.9%: 2040.0 - Max: 4469.0
+21:33:35.413 [main] INFO WorkloadGenerator - Pub rate 31993.8 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31993.8 msg/s / 31.2 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.3 - 50%:  7.2 - 99%: 12.7 - 99.9%: 22.4 - Max: 27.6 | Pub Delay Latency (us) avg: 55.6 - 50%: 45.0 - 99%: 425.0 - 99.9%: 1289.0 - Max: 4152.0
+21:33:45.444 [main] INFO WorkloadGenerator - Pub rate 31998.7 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31982.4 msg/s / 31.2 MB/s | Backlog:  0.2 K | Pub Latency (ms) avg:  7.4 - 50%:  7.3 - 99%: 12.7 - 99.9%: 26.0 - Max: 35.2 | Pub Delay Latency (us) avg: 54.1 - 50%: 47.0 - 99%: 412.0 - 99.9%: 571.0 - Max: 3244.0
+21:33:45.499 [main] INFO WorkloadGenerator - ----- Aggregated Pub Latency (ms) avg: 14.2 - 50%:  7.9 - 95%: 21.8 - 99%: 218.9 - 99.9%: 402.1 - 99.99%: 545.0 - Max: 550.9 | Pub Delay (us)  avg: 81.2 - 50%: 55.0 - 95%: 257.0 - 99%: 966.0 - 99.9%: 3193.0 - 99.99%: 9825.0 - Max: 14930.0
+21:33:45.687 [main] INFO WorkloadGenerator - ----- Starting benchmark traffic (5m)------
+21:33:55.719 [main] INFO WorkloadGenerator - Pub rate 32760.9 msg/s / 32.0 MB/s | Pub err     0.0 err/s | Cons rate 32777.2 msg/s / 32.0 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.3 - 50%:  7.2 - 99%: 13.0 - 99.9%: 25.5 - Max: 31.4 | Pub Delay Latency (us) avg: 53.7 - 50%: 47.0 - 99%: 407.0 - 99.9%: 524.0 - Max: 3210.0
+21:34:05.752 [main] INFO WorkloadGenerator - Pub rate 32004.2 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32004.2 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.2 - 50%:  7.2 - 99%: 12.1 - 99.9%: 27.4 - Max: 34.0 | Pub Delay Latency (us) avg: 56.2 - 50%: 47.0 - 99%: 425.0 - 99.9%: 1434.0 - Max: 4100.0
+21:34:15.781 [main] INFO WorkloadGenerator - Pub rate 32024.6 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32008.9 msg/s / 31.3 MB/s | Backlog:  0.2 K | Pub Latency (ms) avg:  7.2 - 50%:  7.1 - 99%: 12.9 - 99.9%: 21.5 - Max: 28.3 | Pub Delay Latency (us) avg: 56.5 - 50%: 51.0 - 99%: 431.0 - 99.9%: 591.0 - Max: 4351.0
+21:34:25.809 [main] INFO WorkloadGenerator - Pub rate 31990.2 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 32005.9 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.2 - 50%:  7.1 - 99%: 11.4 - 99.9%: 24.4 - Max: 31.2 | Pub Delay Latency (us) avg: 53.8 - 50%: 47.0 - 99%: 413.0 - 99.9%: 520.0 - Max: 2779.0
+21:34:35.839 [main] INFO WorkloadGenerator - Pub rate 32004.5 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 31985.3 msg/s / 31.2 MB/s | Backlog:  0.2 K | Pub Latency (ms) avg:  7.1 - 50%:  7.1 - 99%: 11.2 - 99.9%: 23.2 - Max: 29.4 | Pub Delay Latency (us) avg: 53.0 - 50%: 45.0 - 99%: 404.0 - 99.9%: 518.0 - Max: 2166.0
+21:34:45.869 [main] INFO WorkloadGenerator - Pub rate 31998.5 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 32017.7 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.2 - 50%:  7.1 - 99%: 12.3 - 99.9%: 35.1 - Max: 40.8 | Pub Delay Latency (us) avg: 54.3 - 50%: 45.0 - 99%: 420.0 - 99.9%: 559.0 - Max: 3414.0
+21:34:55.898 [main] INFO WorkloadGenerator - Pub rate 32001.3 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32001.3 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.2 - 50%:  7.1 - 99%: 12.2 - 99.9%: 35.2 - Max: 42.8 | Pub Delay Latency (us) avg: 54.0 - 50%: 45.0 - 99%: 413.0 - 99.9%: 514.0 - Max: 3092.0
+21:35:05.927 [main] INFO WorkloadGenerator - Pub rate 31989.5 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31989.5 msg/s / 31.2 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.1 - 50%:  7.1 - 99%: 10.9 - 99.9%: 12.6 - Max: 15.9 | Pub Delay Latency (us) avg: 52.9 - 50%: 44.0 - 99%: 403.0 - 99.9%: 506.0 - Max: 2479.0
+21:35:15.960 [main] INFO WorkloadGenerator - Pub rate 31989.4 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31989.4 msg/s / 31.2 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.4 - 50%:  7.2 - 99%: 14.4 - 99.9%: 33.0 - Max: 39.1 | Pub Delay Latency (us) avg: 53.5 - 50%: 43.0 - 99%: 411.0 - 99.9%: 544.0 - Max: 2818.0
+21:35:25.989 [main] INFO WorkloadGenerator - Pub rate 32011.6 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32011.6 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.1 - 50%:  7.0 - 99%: 10.6 - 99.9%: 25.9 - Max: 30.9 | Pub Delay Latency (us) avg: 52.3 - 50%: 43.0 - 99%: 399.0 - 99.9%: 492.0 - Max: 1253.0
+21:35:36.018 [main] INFO WorkloadGenerator - Pub rate 32003.3 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32003.3 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.2 - 50%:  7.1 - 99%: 11.5 - 99.9%: 24.5 - Max: 30.8 | Pub Delay Latency (us) avg: 52.4 - 50%: 43.0 - 99%: 402.0 - 99.9%: 503.0 - Max: 1964.0
+21:35:46.046 [main] INFO WorkloadGenerator - Pub rate 32006.7 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32006.7 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.1 - 50%:  7.0 - 99%: 11.7 - 99.9%: 31.6 - Max: 38.4 | Pub Delay Latency (us) avg: 53.0 - 50%: 44.0 - 99%: 405.0 - 99.9%: 515.0 - Max: 2550.0
+21:35:56.075 [main] INFO WorkloadGenerator - Pub rate 31909.2 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31909.2 msg/s / 31.2 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.1 - 50%:  7.0 - 99%: 11.4 - 99.9%: 28.0 - Max: 34.7 | Pub Delay Latency (us) avg: 53.3 - 50%: 46.0 - 99%: 405.0 - 99.9%: 510.0 - Max: 2638.0
+21:36:06.106 [main] INFO WorkloadGenerator - Pub rate 32068.4 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32068.4 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.1 - 50%:  7.1 - 99%: 11.8 - 99.9%: 22.3 - Max: 40.3 | Pub Delay Latency (us) avg: 52.9 - 50%: 45.0 - 99%: 407.0 - 99.9%: 506.0 - Max: 1557.0
+21:36:16.135 [main] INFO WorkloadGenerator - Pub rate 32024.2 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32024.2 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.6 - 50%:  7.4 - 99%: 14.8 - 99.9%: 33.3 - Max: 39.6 | Pub Delay Latency (us) avg: 54.6 - 50%: 51.0 - 99%: 415.0 - 99.9%: 564.0 - Max: 2674.0
+21:36:26.164 [main] INFO WorkloadGenerator - Pub rate 31982.6 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31998.9 msg/s / 31.2 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.5 - 50%:  7.3 - 99%: 13.2 - 99.9%: 33.7 - Max: 39.8 | Pub Delay Latency (us) avg: 54.8 - 50%: 46.0 - 99%: 420.0 - 99.9%: 553.0 - Max: 4129.0
+21:36:36.194 [main] INFO WorkloadGenerator - Pub rate 32016.4 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 31985.5 msg/s / 31.2 MB/s | Backlog:  0.1 K | Pub Latency (ms) avg:  7.4 - 50%:  7.2 - 99%: 13.2 - 99.9%: 37.2 - Max: 44.7 | Pub Delay Latency (us) avg: 55.3 - 50%: 47.0 - 99%: 434.0 - 99.9%: 569.0 - Max: 2817.0
+21:36:46.223 [main] INFO WorkloadGenerator - Pub rate 31994.7 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 32009.2 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.5 - 50%:  7.3 - 99%: 14.9 - 99.9%: 32.0 - Max: 39.4 | Pub Delay Latency (us) avg: 54.0 - 50%: 48.0 - 99%: 415.0 - 99.9%: 540.0 - Max: 1448.0
+21:36:56.252 [main] INFO WorkloadGenerator - Pub rate 31983.2 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31983.2 msg/s / 31.2 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.2 - 50%:  7.1 - 99%: 11.3 - 99.9%: 13.7 - Max: 15.8 | Pub Delay Latency (us) avg: 54.0 - 50%: 47.0 - 99%: 414.0 - 99.9%: 516.0 - Max: 2486.0
+21:37:06.280 [main] INFO WorkloadGenerator - Pub rate 32009.1 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32009.1 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.1 - 50%:  7.0 - 99%: 11.9 - 99.9%: 33.9 - Max: 40.7 | Pub Delay Latency (us) avg: 52.5 - 50%: 45.0 - 99%: 400.0 - 99.9%: 499.0 - Max: 1213.0
+21:37:16.309 [main] INFO WorkloadGenerator - Pub rate 32016.8 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32016.8 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.4 - 50%:  7.3 - 99%: 13.3 - 99.9%: 31.6 - Max: 38.1 | Pub Delay Latency (us) avg: 52.7 - 50%: 45.0 - 99%: 405.0 - 99.9%: 503.0 - Max: 1615.0
+21:37:26.338 [main] INFO WorkloadGenerator - Pub rate 31982.5 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31982.5 msg/s / 31.2 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.5 - 50%:  7.4 - 99%: 13.2 - 99.9%: 32.4 - Max: 37.1 | Pub Delay Latency (us) avg: 54.0 - 50%: 47.0 - 99%: 417.0 - 99.9%: 541.0 - Max: 2393.0
+21:37:36.367 [main] INFO WorkloadGenerator - Pub rate 32014.0 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32014.0 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.2 - 50%:  7.1 - 99%: 11.5 - 99.9%: 30.6 - Max: 37.5 | Pub Delay Latency (us) avg: 52.7 - 50%: 45.0 - 99%: 405.0 - 99.9%: 507.0 - Max: 1194.0
+21:37:43.031 [kafka-admin-client-thread | adminclient-1] INFO NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+21:37:46.410 [main] INFO WorkloadGenerator - Pub rate 31958.3 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31941.0 msg/s / 31.2 MB/s | Backlog:  0.2 K | Pub Latency (ms) avg:  7.7 - 50%:  7.4 - 99%: 16.2 - 99.9%: 33.2 - Max: 40.6 | Pub Delay Latency (us) avg: 59.3 - 50%: 49.0 - 99%: 463.0 - 99.9%: 1583.0 - Max: 3327.0
+21:37:56.439 [main] INFO WorkloadGenerator - Pub rate 32041.4 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 32058.6 msg/s / 31.3 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.2 - 50%:  7.2 - 99%: 11.3 - 99.9%: 13.7 - Max: 15.6 | Pub Delay Latency (us) avg: 55.9 - 50%: 46.0 - 99%: 432.0 - 99.9%: 661.0 - Max: 3109.0
+21:38:06.470 [main] INFO WorkloadGenerator - Pub rate 31994.1 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31994.1 msg/s / 31.2 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.3 - 50%:  7.1 - 99%: 12.9 - 99.9%: 38.3 - Max: 46.8 | Pub Delay Latency (us) avg: 54.0 - 50%: 44.0 - 99%: 417.0 - 99.9%: 531.0 - Max: 2575.0
+21:38:16.499 [main] INFO WorkloadGenerator - Pub rate 31993.3 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31993.3 msg/s / 31.2 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.3 - 50%:  7.1 - 99%: 16.0 - 99.9%: 41.1 - Max: 47.0 | Pub Delay Latency (us) avg: 54.3 - 50%: 45.0 - 99%: 425.0 - 99.9%: 552.0 - Max: 1681.0
+21:38:26.531 [main] INFO WorkloadGenerator - Pub rate 31997.7 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31997.7 msg/s / 31.2 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.1 - 50%:  7.1 - 99%: 11.6 - 99.9%: 21.3 - Max: 26.6 | Pub Delay Latency (us) avg: 53.7 - 50%: 47.0 - 99%: 420.0 - 99.9%: 530.0 - Max: 1352.0
+21:38:36.561 [main] INFO WorkloadGenerator - Pub rate 32012.9 msg/s / 31.3 MB/s | Pub err     0.0 err/s | Cons rate 31994.7 msg/s / 31.2 MB/s | Backlog:  0.2 K | Pub Latency (ms) avg:  7.1 - 50%:  7.1 - 99%: 11.6 - 99.9%: 22.7 - Max: 26.9 | Pub Delay Latency (us) avg: 52.8 - 50%: 44.0 - 99%: 408.0 - 99.9%: 504.0 - Max: 1218.0
+21:38:46.606 [main] INFO WorkloadGenerator - Pub rate 31940.0 msg/s / 31.2 MB/s | Pub err     0.0 err/s | Cons rate 31958.3 msg/s / 31.2 MB/s | Backlog:  0.0 K | Pub Latency (ms) avg:  7.0 - 50%:  6.9 - 99%: 11.2 - 99.9%: 13.9 - Max: 17.5 | Pub Delay Latency (us) avg: 55.3 - 50%: 46.0 - 99%: 430.0 - 99.9%: 888.0 - Max: 2889.0
+21:38:46.648 [main] INFO WorkloadGenerator - ----- Aggregated Pub Latency (ms) avg:  7.2 - 50%:  7.2 - 95%: 10.0 - 99%: 12.4 - 99.9%: 30.1 - 99.99%: 40.0 - Max: 47.0 | Pub Delay (us)  avg: 54.1 - 50%: 46.0 - 95%: 101.0 - 99%: 416.0 - 99.9%: 548.0 - 99.99%: 2214.0 - Max: 5117.0
+21:38:46.861 [main] INFO KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+21:38:46.870 [main] INFO Metrics - Metrics scheduler closed
+21:38:46.870 [main] INFO Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+21:38:46.870 [main] INFO Metrics - Metrics reporters closed
+21:38:46.871 [main] INFO AppInfoParser - App info kafka.producer for producer-1 unregistered
+21:38:46.970 [main] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Revoke previously assigned partitions test-topic-0000000-QSLoD2I-0, test-topic-0000000-QSLoD2I-1, test-topic-0000000-QSLoD2I-2, test-topic-0000000-QSLoD2I-3, test-topic-0000000-QSLoD2I-4, test-topic-0000000-QSLoD2I-5, test-topic-0000000-QSLoD2I-6, test-topic-0000000-QSLoD2I-7, test-topic-0000000-QSLoD2I-8, test-topic-0000000-QSLoD2I-9, test-topic-0000000-QSLoD2I-10, test-topic-0000000-QSLoD2I-11, test-topic-0000000-QSLoD2I-12, test-topic-0000000-QSLoD2I-13, test-topic-0000000-QSLoD2I-14, test-topic-0000000-QSLoD2I-15
+21:38:46.970 [main] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Member consumer-sub-000-2Ibk6ko-1-27932cc4-7046-4132-ae6b-12fe7d917f98 sending LeaveGroup request to coordinator 127.0.0.1:19092 (id: 2147483646 rack: null) due to the consumer is being closed
+21:38:46.971 [main] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Resetting generation and member id due to: consumer pro-actively leaving the group
+21:38:46.971 [main] INFO ConsumerCoordinator - [Consumer clientId=consumer-sub-000-2Ibk6ko-1, groupId=sub-000-2Ibk6ko] Request joining group due to: consumer pro-actively leaving the group
+21:38:47.170 [main] INFO Metrics - Metrics scheduler closed
+21:38:47.170 [main] INFO Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+21:38:47.170 [main] INFO Metrics - Metrics reporters closed
+21:38:47.173 [main] INFO AppInfoParser - App info kafka.consumer for consumer-sub-000-2Ibk6ko-1 unregistered
+21:38:47.173 [main] INFO KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+21:38:47.173 [main] INFO Metrics - Metrics scheduler closed
+21:38:47.173 [main] INFO Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+21:38:47.173 [main] INFO Metrics - Metrics reporters closed
+21:38:47.173 [main] INFO AppInfoParser - App info kafka.producer for producer-1 unregistered
+21:38:47.178 [kafka-admin-client-thread | adminclient-1] INFO AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+21:38:47.179 [kafka-admin-client-thread | adminclient-1] INFO Metrics - Metrics scheduler closed
+21:38:47.179 [kafka-admin-client-thread | adminclient-1] INFO Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+21:38:47.179 [kafka-admin-client-thread | adminclient-1] INFO Metrics - Metrics reporters closed
+21:38:47.179 [main] INFO Benchmark - Writing test result into /home/ubuntu/results/omb-pair-017-waloff32k-2/kafka.json

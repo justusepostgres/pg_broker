@@ -1,0 +1,5 @@
+{
+  "observed_utc": "2026-11-04T01:33:48.445264+00:00",
+  "server_invocation": "142e323f16bd471e9083a4c1712d5d95",
+  "scope": "Broker post-clean-restart SQL verification only; partition contiguity and stored end offsets. Does not certify all acknowledged records, power loss, quorum failover, or full paired environment. Kafka phase remains active."
+}

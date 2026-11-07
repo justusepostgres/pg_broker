@@ -1,0 +1,8 @@
+{
+  "unit_cases": 9,
+  "postgres_cases": 2,
+  "clippy": "passed --locked --all-targets -D warnings",
+  "sql": "0.1.19",
+  "production_openraft": "0.9.25",
+  "scope": "Real SQL committed pages through isolated alpha entries_stream; not a running state machine or replication adapter"
+}

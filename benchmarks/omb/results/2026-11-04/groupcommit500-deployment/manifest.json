@@ -1,0 +1,9 @@
+{
+  "label": "017-groupcommit500-1",
+  "hashes": {
+    "oci-pair.sh": "7f1ff0eb85e40d96fc70e3ff59b9899493e1dc820bcda6c98634a70402b65b51",
+    "cloud-controller.py": "7f2b81b68429491774031114443e8c6ed26de3ba273fa4de181c5450aad6e984",
+    "sample-server.py": "02d82439e10b94711d055b773f738c8ed0d20fd3db2926f4c2ac6c43f1a7a3a0"
+  },
+  "scope": "Instrumented broker-only diagnosis; never acceptance"
+}

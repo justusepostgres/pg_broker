@@ -1,0 +1,10 @@
+{
+  "phase": "preflight-failed",
+  "unit": "omb-commitbatch017-75k-1.service",
+  "invocation": "6cf0e07ee5d144ec937762a36bea2288",
+  "volume_id": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq",
+  "requested_gib": 640,
+  "vpus_per_gb": 10,
+  "scope": "Only after original pair succeeds and is collected; remote idle flock held across cloud and filesystem resize. No benchmark launch.",
+  "cause": "pgrep -f matched its own python -c command before READY; no cloud request, no guest changes. Read-only verification confirmed disk320GiB, profile320/10, no Docker/Java, no remote evidence directory."
+}

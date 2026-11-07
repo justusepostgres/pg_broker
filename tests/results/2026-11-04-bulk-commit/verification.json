@@ -1,0 +1,11 @@
+{
+  "scope": "Local opt-in SQL 0.1.17; no cloud throughput claim",
+  "integration_tests": 53,
+  "bulk_capability_tests": 7,
+  "overlapping_bulk_cases": 5,
+  "unique_tests": 55,
+  "gateway_build": "passed --locked",
+  "gateway_clippy": "passed --locked -- -D warnings",
+  "durability": "fsync/full_page_writes/synchronous_commit on",
+  "default_sql": "0.1.7"
+}

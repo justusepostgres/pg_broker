@@ -1,0 +1,53 @@
+{
+  "data": [
+    {
+      "aggregated-datapoints": [
+        {
+          "timestamp": "2026-11-04T01:12:00+00:00",
+          "value": 1463.0
+        },
+        {
+          "timestamp": "2026-11-04T01:13:00+00:00",
+          "value": 26048.0
+        },
+        {
+          "timestamp": "2026-11-04T01:14:00+00:00",
+          "value": 42852.0
+        },
+        {
+          "timestamp": "2026-11-04T01:15:00+00:00",
+          "value": 43584.0
+        },
+        {
+          "timestamp": "2026-11-04T01:16:00+00:00",
+          "value": 43824.0
+        },
+        {
+          "timestamp": "2026-11-04T01:17:00+00:00",
+          "value": 42815.0
+        },
+        {
+          "timestamp": "2026-11-04T01:18:00+00:00",
+          "value": 41506.0
+        },
+        {
+          "timestamp": "2026-11-04T01:19:00+00:00",
+          "value": 42803.0
+        }
+      ],
+      "compartment-id": "ocid1.tenancy.oc1..aaaaaaaafe6p7erknwb3ekqbeztffxdnirwuf6kel3nkt2ofrmi7iygx4apa",
+      "dimensions": {
+        "attachmentId": "ocid1.instance.oc1.us-sanjose-1.anzwuljrsjflizycskhftwpeg4nzak4sk2rb7pwrvv3fjxdn7u2qg3474bna",
+        "resourceId": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq"
+      },
+      "metadata": {
+        "displayName": "Write Ops",
+        "unit": "operations"
+      },
+      "name": "VolumeWriteOps",
+      "namespace": "oci_blockstore",
+      "resolution": null,
+      "resource-group": null
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+ '--prefix=/opt/pgsql' '--without-icu' '--without-readline' '--without-zlib' '--with-lz4'

@@ -1,0 +1,45 @@
+{
+  "capacity100k-1": {
+    "kafka": {
+      "scope": "Estimates weighted by millisecond-resolution log intervals; not exact message counters.",
+      "publish_msg_s": 100062.0039842231,
+      "consume_msg_s": 100061.54901329779,
+      "publish_error_msg_s": 0.0,
+      "backlog_trend_messages_per_second": -0.1810929046162422
+    },
+    "broker": {
+      "scope": "Estimates weighted by millisecond-resolution log intervals; not exact message counters.",
+      "publish_msg_s": 91380.76864301642,
+      "consume_msg_s": 91380.24025971172,
+      "publish_error_msg_s": 0.0,
+      "backlog_trend_messages_per_second": 0.5757305852061791
+    }
+  },
+  "queryreset-1": {
+    "broker": {
+      "scope": "Estimates weighted by millisecond-resolution log intervals; not exact message counters.",
+      "publish_msg_s": 92685.38617056367,
+      "consume_msg_s": 92687.64120774806,
+      "publish_error_msg_s": 0.0,
+      "backlog_trend_messages_per_second": -0.8977807591765581
+    }
+  },
+  "primarypipeline-1": {
+    "broker": {
+      "scope": "Estimates weighted by millisecond-resolution log intervals; not exact message counters.",
+      "publish_msg_s": 91785.06006802608,
+      "consume_msg_s": 91784.21762087694,
+      "publish_error_msg_s": 0.0,
+      "backlog_trend_messages_per_second": 0.20405543249763317
+    }
+  },
+  "responseframe-1": {
+    "broker": {
+      "scope": "Estimates weighted by millisecond-resolution log intervals; not exact message counters.",
+      "publish_msg_s": 89126.09043793664,
+      "consume_msg_s": 89124.96699046649,
+      "publish_error_msg_s": 0.0,
+      "backlog_trend_messages_per_second": 0.6447813557468149
+    }
+  }
+}

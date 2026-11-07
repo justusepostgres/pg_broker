@@ -1,0 +1,97 @@
+...........................s.....................FFF..........           [100%]
+=================================== FAILURES ===================================
+__________ test_invalid_offset_commit_has_no_committed_prefix[limit] ___________
+
+gateway = <conftest.Gateway object at 0x109b31510>, fault = 'limit'
+
+    @pytest.mark.parametrize('fault', ['limit', 'truncated', 'trailing'])
+    def test_invalid_offset_commit_has_no_committed_prefix(gateway, fault):
+        import psycopg
+        t, g = create(), name()
+        parts = [(0, 4, '')] * (4097 if fault == 'limit' else 2)
+        request = OffsetCommitRequest[2](g, -1, '', -1, [(t, parts)])
+>       payload = RequestHeader(request, correlation_id=19).encode() + request.encode()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_wire.py:112: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.11/site-packages/kafka/util.py:50: in __call__
+    return self.method()(self.target(), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = None
+
+    def _encode_self(self):
+>       return self.SCHEMA.encode(
+               ^^^^^^^^^^^
+            [self.__dict__[name] for name in self.SCHEMA.names]
+        )
+E       AttributeError: 'NoneType' object has no attribute 'SCHEMA'
+
+.venv/lib/python3.11/site-packages/kafka/protocol/struct.py:42: AttributeError
+________ test_invalid_offset_commit_has_no_committed_prefix[truncated] _________
+
+gateway = <conftest.Gateway object at 0x109b31510>, fault = 'truncated'
+
+    @pytest.mark.parametrize('fault', ['limit', 'truncated', 'trailing'])
+    def test_invalid_offset_commit_has_no_committed_prefix(gateway, fault):
+        import psycopg
+        t, g = create(), name()
+        parts = [(0, 4, '')] * (4097 if fault == 'limit' else 2)
+        request = OffsetCommitRequest[2](g, -1, '', -1, [(t, parts)])
+>       payload = RequestHeader(request, correlation_id=19).encode() + request.encode()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_wire.py:112: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.11/site-packages/kafka/util.py:50: in __call__
+    return self.method()(self.target(), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = None
+
+    def _encode_self(self):
+>       return self.SCHEMA.encode(
+               ^^^^^^^^^^^
+            [self.__dict__[name] for name in self.SCHEMA.names]
+        )
+E       AttributeError: 'NoneType' object has no attribute 'SCHEMA'
+
+.venv/lib/python3.11/site-packages/kafka/protocol/struct.py:42: AttributeError
+_________ test_invalid_offset_commit_has_no_committed_prefix[trailing] _________
+
+gateway = <conftest.Gateway object at 0x109b31510>, fault = 'trailing'
+
+    @pytest.mark.parametrize('fault', ['limit', 'truncated', 'trailing'])
+    def test_invalid_offset_commit_has_no_committed_prefix(gateway, fault):
+        import psycopg
+        t, g = create(), name()
+        parts = [(0, 4, '')] * (4097 if fault == 'limit' else 2)
+        request = OffsetCommitRequest[2](g, -1, '', -1, [(t, parts)])
+>       payload = RequestHeader(request, correlation_id=19).encode() + request.encode()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_wire.py:112: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.11/site-packages/kafka/util.py:50: in __call__
+    return self.method()(self.target(), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = None
+
+    def _encode_self(self):
+>       return self.SCHEMA.encode(
+               ^^^^^^^^^^^
+            [self.__dict__[name] for name in self.SCHEMA.names]
+        )
+E       AttributeError: 'NoneType' object has no attribute 'SCHEMA'
+
+.venv/lib/python3.11/site-packages/kafka/protocol/struct.py:42: AttributeError
+=========================== short test summary info ============================
+FAILED tests/test_wire.py::test_invalid_offset_commit_has_no_committed_prefix[limit]
+FAILED tests/test_wire.py::test_invalid_offset_commit_has_no_committed_prefix[truncated]
+FAILED tests/test_wire.py::test_invalid_offset_commit_has_no_committed_prefix[trailing]
+3 failed, 58 passed, 1 skipped in 81.07s (0:01:21)

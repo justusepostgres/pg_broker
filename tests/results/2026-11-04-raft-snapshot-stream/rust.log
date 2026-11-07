@@ -1,0 +1,24 @@
+   Compiling broker-cluster v0.1.0 (/Users/salah/Documents/ChatGPT/pg_kafka/crates/cluster)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.76s
+     Running tests/application_postgres.rs (target/debug/deps/application_postgres-2d5c29b0c6a755e3)
+
+running 2 tests
+test cancelled_application_discards_connection_and_does_not_advance ... ok
+test typed_application_commits_data_and_marker_and_fences_retries ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running tests/snapshot_postgres.rs (target/debug/deps/snapshot_postgres-5f8a82b80c8f62a9)
+
+running 1 test
+test typed_snapshot_capture_and_release_follow_the_same_owner ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/snapshot_read_postgres.rs (target/debug/deps/snapshot_read_postgres-35bd074af46d445b)
+
+running 1 test
+test typed_snapshot_pages_validate_bytes_metadata_and_fence_old_owner ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+

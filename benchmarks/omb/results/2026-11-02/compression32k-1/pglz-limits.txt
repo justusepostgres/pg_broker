@@ -1,0 +1,2 @@
+/omb-compression-lz4015-32k-1-pglz 0,1 8589934592
+/omb-compression-lz4015-32k-1-pglz-gateway 0,1 1073741824

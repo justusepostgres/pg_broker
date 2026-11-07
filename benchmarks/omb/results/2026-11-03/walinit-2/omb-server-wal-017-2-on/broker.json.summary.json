@@ -1,0 +1,16 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-server-wal-017-2-on/broker.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32024.11714184899,
+    "consume_msg_s_mean": 32023.492738873938,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 170,
+    "backlog_last": 188,
+    "backlog_max": 188,
+    "publish_p99_ms": 9.717,
+    "publish_delay_p99_us": 180,
+    "end_to_end_p99_ms": 13.0
+  }
+]

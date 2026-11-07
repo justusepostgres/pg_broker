@@ -1,0 +1,22 @@
+   Compiling broker-cluster v0.1.0 (/Users/salah/Documents/ChatGPT/pg_kafka/crates/cluster)
+error[E0412]: cannot find type `Cursor` in this scope
+  --> crates/cluster/tests/journal_postgres.rs:11:1
+   |
+11 | openraft::declare_raft_types!(pub TestConfig: D = Vec<u8>, R = ());
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+   |
+   = note: this error originates in the macro `openraft::declare_raft_types` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider importing one of these structs
+   |
+ 2 + use std::collections::btree_map::Cursor;
+   |
+ 2 + use std::collections::btree_set::Cursor;
+   |
+ 2 + use std::collections::linked_list::Cursor;
+   |
+ 2 + use std::io::Cursor;
+   |
+
+For more information about this error, try `rustc --explain E0412`.
+error: could not compile `broker-cluster` (test "journal_postgres") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

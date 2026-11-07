@@ -1,0 +1,552 @@
+The files belonging to this database system will be owned by user "broker".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default database encoding has accordingly been set to "SQL_ASCII".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /data -l logfile start
+
+waiting for server to start....2026-11-03 20:29:54.583 UTC [30] LOG:  starting PostgreSQL 17.5 on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-03 20:29:54.583 UTC [30] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-11-03 20:29:54.586 UTC [30] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2026-11-03 20:29:54.591 UTC [33] LOG:  database system was shut down at 2026-11-03 20:29:54 UTC
+2026-11-03 20:29:54.594 UTC [30] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE EXTENSION
+waiting for server to shut down....2026-11-03 20:29:54.705 UTC [30] LOG:  received fast shutdown request
+2026-11-03 20:29:54.707 UTC [30] LOG:  aborting any active transactions
+2026-11-03 20:29:54.708 UTC [30] LOG:  background worker "logical replication launcher" (PID 36) exited with exit code 1
+2026-11-03 20:29:54.708 UTC [31] LOG:  shutting down
+2026-11-03 20:29:54.710 UTC [31] LOG:  checkpoint starting: shutdown immediate
+2026-11-03 20:29:54.739 UTC [31] LOG:  checkpoint complete: wrote 120 buffers (0.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.020 s, total=0.031 s; sync files=90, longest=0.002 s, average=0.001 s; distance=483 kB, estimate=483 kB; lsn=0/14F4020, redo lsn=0/14F4020
+2026-11-03 20:29:54.743 UTC [30] LOG:  database system is shut down
+ done
+server stopped
+2026-11-03 20:29:54.819 UTC [1] LOG:  starting PostgreSQL 17.5 on aarch64-unknown-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit
+2026-11-03 20:29:54.819 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2026-11-03 20:29:54.822 UTC [1] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2026-11-03 20:29:54.826 UTC [43] LOG:  database system was shut down at 2026-11-03 20:29:54 UTC
+2026-11-03 20:29:54.829 UTC [1] LOG:  database system is ready to accept connections
+2026-11-03 20:29:55.370 UTC [1] LOG:  received SIGHUP, reloading configuration files
+2026-11-03 20:29:55.371 UTC [1] LOG:  parameter "log_min_duration_statement" changed to "10ms"
+2026-11-03 20:29:55.371 UTC [1] LOG:  parameter "log_parameter_max_length" changed to "0"
+2026-11-03 20:29:55.371 UTC [1]  LOG:  parameter "log_line_prefix" changed to "%m [%p] %a "
+2026-11-03 20:29:55.371 UTC [1]  LOG:  parameter "log_timezone" changed to "UTC"
+2026-11-03 20:29:55.371 UTC [1]  LOG:  parameter "log_autovacuum_min_duration" changed to "0"
+2026-11-03 20:29:55.371 UTC [1]  LOG:  parameter "track_io_timing" changed to "on"
+2026-11-03 20:29:55.371 UTC [1]  LOG:  parameter "track_wal_io_timing" changed to "on"
+2026-11-03 20:30:15.590 UTC [92] [unknown] LOG:  duration: 83.123 ms  statement: COMMIT
+2026-11-03 20:30:25.422 UTC [95]  LOG:  automatic analyze of table "template1.pg_catalog.pg_type"
+	I/O timings: read: 0.604 ms, write: 0.034 ms
+	avg read rate: 31.808 MB/s, avg write rate: 5.022 MB/s
+	buffer usage: 1021 hits, 57 misses, 9 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-03 20:30:25.436 UTC [95]  LOG:  automatic analyze of table "template1.pg_catalog.pg_attribute"
+	I/O timings: read: 0.221 ms, write: 0.023 ms
+	avg read rate: 16.276 MB/s, avg write rate: 3.906 MB/s
+	buffer usage: 483 hits, 25 misses, 6 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-03 20:30:25.437 UTC [95]  LOG:  automatic aggressive vacuum of table "template1.pg_catalog.pg_class": index scans: 0
+	pages: 0 removed, 14 remain, 14 scanned (100.00% of total)
+	tuples: 0 removed, 415 remain, 0 are dead but not yet removable
+	removable cutoff: 10538, which was 0 XIDs old when operation ended
+	new relfrozenxid: 10538, which is 9807 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.053 ms, write: 0.000 ms
+	avg read rate: 239.158 MB/s, avg write rate: 39.860 MB/s
+	buffer usage: 51 hits, 6 misses, 1 dirtied
+	WAL usage: 1 records, 1 full page images, 2641 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:25.444 UTC [95]  LOG:  automatic analyze of table "template1.pg_catalog.pg_class"
+	I/O timings: read: 0.734 ms, write: 0.023 ms
+	avg read rate: 6.696 MB/s, avg write rate: 5.580 MB/s
+	buffer usage: 524 hits, 6 misses, 5 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:25.451 UTC [95]  LOG:  automatic analyze of table "template1.pg_catalog.pg_constraint"
+	I/O timings: read: 0.074 ms, write: 0.041 ms
+	avg read rate: 9.115 MB/s, avg write rate: 6.510 MB/s
+	buffer usage: 526 hits, 7 misses, 5 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:25.453 UTC [95]  LOG:  automatic analyze of table "template1.pg_catalog.pg_rewrite"
+	I/O timings: read: 0.122 ms, write: 0.000 ms
+	avg read rate: 132.812 MB/s, avg write rate: 15.625 MB/s
+	buffer usage: 122 hits, 17 misses, 2 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:25.460 UTC [95]  LOG:  automatic analyze of table "template1.pg_catalog.pg_description"
+	I/O timings: read: 0.251 ms, write: 0.968 ms
+	avg read rate: 54.688 MB/s, avg write rate: 9.115 MB/s
+	buffer usage: 97 hits, 42 misses, 7 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:25.462 UTC [95]  LOG:  automatic aggressive vacuum of table "template1.pg_catalog.pg_depend": index scans: 0
+	pages: 0 removed, 13 remain, 13 scanned (100.00% of total)
+	tuples: 0 removed, 1709 remain, 0 are dead but not yet removable
+	removable cutoff: 10553, which was 1 XIDs old when operation ended
+	new relfrozenxid: 10553, which is 9822 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.125 ms, write: 0.000 ms
+	avg read rate: 383.559 MB/s, avg write rate: 20.187 MB/s
+	buffer usage: 54 hits, 19 misses, 1 dirtied
+	WAL usage: 1 records, 1 full page images, 7869 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:25.464 UTC [95]  LOG:  automatic analyze of table "template1.pg_catalog.pg_depend"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 2.604 MB/s
+	buffer usage: 107 hits, 0 misses, 1 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:25.466 UTC [95]  LOG:  automatic analyze of table "template1.pg_catalog.pg_ts_config_map"
+	I/O timings: read: 0.043 ms, write: 0.022 ms
+	avg read rate: 39.062 MB/s, avg write rate: 15.625 MB/s
+	buffer usage: 65 hits, 5 misses, 2 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:25.467 UTC [95]  LOG:  automatic analyze of table "template1.pg_catalog.pg_init_privs"
+	I/O timings: read: 0.043 ms, write: 0.000 ms
+	avg read rate: 39.062 MB/s, avg write rate: 7.812 MB/s
+	buffer usage: 84 hits, 5 misses, 1 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:25.470 UTC [95]  LOG:  automatic analyze of table "template1.information_schema.sql_features"
+	I/O timings: read: 0.058 ms, write: 0.000 ms
+	avg read rate: 26.042 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 183 hits, 10 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:36.517 UTC [92] [unknown] LOG:  duration: 51.258 ms  statement: COMMIT
+2026-11-03 20:30:55.408 UTC [96]  LOG:  automatic vacuum of table "postgres.broker.partitions": index scans: 0
+	pages: 0 removed, 1 remain, 1 scanned (100.00% of total)
+	tuples: 40 removed, 16 remain, 0 are dead but not yet removable
+	removable cutoff: 22621, which was 0 XIDs old when operation ended
+	new relfrozenxid: 22390, which is 21651 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.037 ms
+	avg read rate: 0.000 MB/s, avg write rate: 105.574 MB/s
+	buffer usage: 42 hits, 0 misses, 4 dirtied
+	WAL usage: 3 records, 2 full page images, 14769 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:55.413 UTC [96]  LOG:  automatic analyze of table "postgres.broker.partitions"
+	I/O timings: read: 0.057 ms, write: 0.000 ms
+	avg read rate: 9.375 MB/s, avg write rate: 7.812 MB/s
+	buffer usage: 252 hits, 6 misses, 5 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:55.423 UTC [96]  LOG:  automatic vacuum of table "postgres.broker.batches": index scans: 0
+	pages: 0 removed, 355 remain, 355 scanned (100.00% of total)
+	tuples: 0 removed, 10899 remain, 0 are dead but not yet removable
+	removable cutoff: 22622, which was 6 XIDs old when operation ended
+	new relfrozenxid: 757, which is 18 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.019 ms
+	avg read rate: 0.000 MB/s, avg write rate: 2.429 MB/s
+	buffer usage: 761 hits, 0 misses, 3 dirtied
+	WAL usage: 354 records, 1 full page images, 29249 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:55.459 UTC [96]  LOG:  automatic analyze of table "postgres.broker.batches"
+	I/O timings: read: 0.120 ms, write: 0.050 ms
+	avg read rate: 1.116 MB/s, avg write rate: 0.670 MB/s
+	buffer usage: 612 hits, 5 misses, 3 dirtied
+	system usage: CPU: user: 0.01 s, system: 0.00 s, elapsed: 0.03 s
+2026-11-03 20:30:55.461 UTC [96]  LOG:  automatic vacuum of table "postgres.broker.offsets": index scans: 0
+	pages: 0 removed, 1 remain, 1 scanned (100.00% of total)
+	tuples: 7 removed, 16 remain, 0 are dead but not yet removable
+	removable cutoff: 22637, which was 3 XIDs old when operation ended
+	new relfrozenxid: 22392, which is 21653 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.047 ms
+	avg read rate: 0.000 MB/s, avg write rate: 81.380 MB/s
+	buffer usage: 28 hits, 0 misses, 3 dirtied
+	WAL usage: 2 records, 0 full page images, 307 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:55.462 UTC [96]  LOG:  automatic analyze of table "postgres.broker.offsets"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 54 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:30:55.563 UTC [96]  LOG:  automatic vacuum of table "postgres.pg_toast.pg_toast_16412": index scans: 0
+	pages: 0 removed, 4032 remain, 4032 scanned (100.00% of total)
+	tuples: 0 removed, 21076 remain, 0 are dead but not yet removable
+	removable cutoff: 22640, which was 44 XIDs old when operation ended
+	new relfrozenxid: 785, which is 46 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.019 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.236 MB/s
+	buffer usage: 8089 hits, 0 misses, 3 dirtied
+	WAL usage: 4029 records, 1 full page images, 246037 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.09 s
+2026-11-03 20:30:57.393 UTC [91] [unknown] LOG:  duration: 57.949 ms  statement: COMMIT
+2026-11-03 20:30:57.394 UTC [90] [unknown] LOG:  duration: 58.386 ms  statement: COMMIT
+2026-11-03 20:31:18.570 UTC [92] [unknown] LOG:  duration: 53.693 ms  statement: COMMIT
+2026-11-03 20:31:18.571 UTC [94] [unknown] LOG:  duration: 52.195 ms  statement: COMMIT
+2026-11-03 20:31:18.572 UTC [91] [unknown] LOG:  duration: 54.266 ms  statement: COMMIT
+2026-11-03 20:31:25.436 UTC [97]  LOG:  automatic aggressive vacuum of table "template1.pg_catalog.pg_statistic": index scans: 1
+	pages: 0 removed, 25 remain, 25 scanned (100.00% of total)
+	tuples: 134 removed, 410 remain, 0 are dead but not yet removable
+	removable cutoff: 34839, which was 2 XIDs old when operation ended
+	new relfrozenxid: 34839, which is 34108 XIDs ahead of previous value
+	frozen: 12 pages from table (48.00% of total) had 152 tuples frozen
+	index scan needed: 14 pages from table (56.00% of total) had 144 dead item identifiers removed
+	index "pg_statistic_relid_att_inh_index": pages: 5 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	I/O timings: read: 0.032 ms, write: 0.000 ms
+	avg read rate: 19.446 MB/s, avg write rate: 9.723 MB/s
+	buffer usage: 92 hits, 4 misses, 2 dirtied
+	WAL usage: 61 records, 3 full page images, 21868 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:31:25.613 UTC [88] [unknown] LOG:  duration: 10.169 ms  statement: COMMIT
+2026-11-03 20:31:25.623 UTC [92] [unknown] LOG:  duration: 12.140 ms  statement: COMMIT
+2026-11-03 20:31:25.628 UTC [90] [unknown] LOG:  duration: 10.057 ms  statement: COMMIT
+2026-11-03 20:31:25.640 UTC [92] [unknown] LOG:  duration: 11.058 ms  statement: COMMIT
+2026-11-03 20:31:25.645 UTC [91] [unknown] LOG:  duration: 18.250 ms  statement: COMMIT
+2026-11-03 20:31:25.667 UTC [93] [unknown] LOG:  duration: 17.259 ms  statement: COMMIT
+2026-11-03 20:31:25.672 UTC [90] [unknown] LOG:  duration: 10.073 ms  statement: COMMIT
+2026-11-03 20:31:39.703 UTC [94] [unknown] LOG:  duration: 53.180 ms  statement: COMMIT
+2026-11-03 20:31:39.704 UTC [90] [unknown] LOG:  duration: 53.550 ms  statement: COMMIT
+2026-11-03 20:31:55.434 UTC [98]  LOG:  automatic vacuum of table "postgres.broker.partitions": index scans: 0
+	pages: 0 removed, 1 remain, 1 scanned (100.00% of total)
+	tuples: 10 removed, 16 remain, 0 are dead but not yet removable
+	removable cutoff: 47089, which was 0 XIDs old when operation ended
+	new relfrozenxid: 46920, which is 24530 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 45 hits, 0 misses, 0 dirtied
+	WAL usage: 3 records, 0 full page images, 376 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:31:55.438 UTC [98]  LOG:  automatic analyze of table "postgres.broker.partitions"
+	I/O timings: read: 0.000 ms, write: 0.025 ms
+	avg read rate: 0.000 MB/s, avg write rate: 1.953 MB/s
+	buffer usage: 266 hits, 0 misses, 1 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:31:55.450 UTC [98]  LOG:  automatic vacuum of table "postgres.broker.batches": index scans: 0
+	pages: 0 removed, 758 remain, 409 scanned (53.96% of total)
+	tuples: 0 removed, 22993 remain, 0 are dead but not yet removable
+	removable cutoff: 47090, which was 6 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 870 hits, 0 misses, 0 dirtied
+	WAL usage: 408 records, 0 full page images, 24238 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-03 20:31:55.504 UTC [98]  LOG:  automatic analyze of table "postgres.broker.batches"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 1015 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.03 s, system: 0.00 s, elapsed: 0.05 s
+2026-11-03 20:31:55.506 UTC [98]  LOG:  automatic vacuum of table "postgres.broker.offsets": index scans: 0
+	pages: 0 removed, 1 remain, 1 scanned (100.00% of total)
+	tuples: 55 removed, 16 remain, 0 are dead but not yet removable
+	removable cutoff: 47115, which was 2 XIDs old when operation ended
+	new relfrozenxid: 46921, which is 24529 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 31 hits, 0 misses, 0 dirtied
+	WAL usage: 2 records, 0 full page images, 451 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:31:55.506 UTC [98]  LOG:  automatic analyze of table "postgres.broker.offsets"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 69 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:31:55.615 UTC [98]  LOG:  automatic vacuum of table "postgres.pg_toast.pg_toast_16412": index scans: 0
+	pages: 0 removed, 8435 remain, 4441 scanned (52.65% of total)
+	tuples: 0 removed, 44328 remain, 0 are dead but not yet removable
+	removable cutoff: 47118, which was 47 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 8910 hits, 0 misses, 0 dirtied
+	WAL usage: 4416 records, 0 full page images, 260673 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.10 s
+2026-11-03 20:32:00.603 UTC [88] [unknown] LOG:  duration: 53.402 ms  statement: COMMIT
+2026-11-03 20:32:18.515 UTC [91] [unknown] LOG:  duration: 10.427 ms  statement: COMMIT
+2026-11-03 20:32:18.536 UTC [93] [unknown] LOG:  duration: 11.087 ms  statement: COMMIT
+2026-11-03 20:32:21.790 UTC [90] [unknown] LOG:  duration: 56.030 ms  statement: COMMIT
+2026-11-03 20:32:42.885 UTC [90] [unknown] LOG:  duration: 49.329 ms  statement: COMMIT
+2026-11-03 20:32:42.885 UTC [88] [unknown] LOG:  duration: 49.500 ms  statement: COMMIT
+2026-11-03 20:32:55.462 UTC [100]  LOG:  automatic vacuum of table "postgres.broker.partitions": index scans: 0
+	pages: 0 removed, 1 remain, 1 scanned (100.00% of total)
+	tuples: 14 removed, 16 remain, 0 are dead but not yet removable
+	removable cutoff: 71578, which was 0 XIDs old when operation ended
+	new relfrozenxid: 71367, which is 24447 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 50 hits, 0 misses, 0 dirtied
+	WAL usage: 3 records, 0 full page images, 392 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:32:55.467 UTC [100]  LOG:  automatic analyze of table "postgres.broker.partitions"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 247 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:32:55.479 UTC [100]  LOG:  automatic vacuum of table "postgres.broker.batches": index scans: 0
+	pages: 0 removed, 1161 remain, 411 scanned (35.40% of total)
+	tuples: 0 removed, 35278 remain, 0 are dead but not yet removable
+	removable cutoff: 71578, which was 7 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 874 hits, 0 misses, 0 dirtied
+	WAL usage: 407 records, 0 full page images, 24179 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-03 20:32:55.560 UTC [100]  LOG:  automatic analyze of table "postgres.broker.batches"
+	I/O timings: read: 0.000 ms, write: 0.032 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.096 MB/s
+	buffer usage: 1414 hits, 0 misses, 1 dirtied
+	system usage: CPU: user: 0.05 s, system: 0.00 s, elapsed: 0.08 s
+2026-11-03 20:32:55.562 UTC [100]  LOG:  automatic analyze of table "postgres.broker.members"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 100 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:32:55.564 UTC [100]  LOG:  automatic vacuum of table "postgres.broker.offsets": index scans: 0
+	pages: 0 removed, 1 remain, 1 scanned (100.00% of total)
+	tuples: 17 removed, 16 remain, 0 are dead but not yet removable
+	removable cutoff: 71621, which was 0 XIDs old when operation ended
+	new relfrozenxid: 71452, which is 24531 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 75.850 MB/s
+	buffer usage: 31 hits, 0 misses, 1 dirtied
+	WAL usage: 3 records, 1 full page images, 8595 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:32:55.564 UTC [100]  LOG:  automatic analyze of table "postgres.broker.offsets"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 59 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:32:55.678 UTC [100]  LOG:  automatic vacuum of table "postgres.pg_toast.pg_toast_16412": index scans: 0
+	pages: 0 removed, 12868 remain, 4648 scanned (36.12% of total)
+	tuples: 0 removed, 67627 remain, 0 are dead but not yet removable
+	removable cutoff: 71621, which was 50 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 9325 hits, 0 misses, 0 dirtied
+	WAL usage: 4507 records, 0 full page images, 266042 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.11 s
+2026-11-03 20:33:03.601 UTC [93] [unknown] LOG:  duration: 58.245 ms  statement: COMMIT
+2026-11-03 20:33:03.602 UTC [91] [unknown] LOG:  duration: 52.021 ms  statement: COMMIT
+2026-11-03 20:33:19.969 UTC [92] [unknown] LOG:  duration: 12.673 ms  statement: COMMIT
+2026-11-03 20:33:24.843 UTC [93] [unknown] LOG:  duration: 58.270 ms  statement: COMMIT
+2026-11-03 20:33:24.844 UTC [90] [unknown] LOG:  duration: 59.217 ms  statement: COMMIT
+2026-11-03 20:33:46.002 UTC [94] [unknown] LOG:  duration: 54.707 ms  statement: COMMIT
+2026-11-03 20:33:55.493 UTC [102]  LOG:  automatic vacuum of table "postgres.broker.partitions": index scans: 0
+	pages: 0 removed, 1 remain, 1 scanned (100.00% of total)
+	tuples: 26 removed, 16 remain, 0 are dead but not yet removable
+	removable cutoff: 96064, which was 0 XIDs old when operation ended
+	new relfrozenxid: 95901, which is 24534 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.045 ms, write: 0.000 ms
+	avg read rate: 159.439 MB/s, avg write rate: 159.439 MB/s
+	buffer usage: 45 hits, 5 misses, 5 dirtied
+	WAL usage: 3 records, 0 full page images, 428 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:33:55.499 UTC [102]  LOG:  automatic analyze of table "postgres.broker.partitions"
+	I/O timings: read: 0.248 ms, write: 0.000 ms
+	avg read rate: 40.365 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 216 hits, 31 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:33:55.513 UTC [102]  LOG:  automatic vacuum of table "postgres.broker.batches": index scans: 0
+	pages: 0 removed, 1563 remain, 409 scanned (26.17% of total)
+	tuples: 0 removed, 47465 remain, 0 are dead but not yet removable
+	removable cutoff: 96064, which was 7 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.071 ms, write: 0.000 ms
+	avg read rate: 2.998 MB/s, avg write rate: 0.600 MB/s
+	buffer usage: 865 hits, 5 misses, 1 dirtied
+	WAL usage: 406 records, 0 full page images, 24120 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-03 20:33:55.615 UTC [102]  LOG:  automatic analyze of table "postgres.broker.batches"
+	I/O timings: read: 1.452 ms, write: 0.000 ms
+	avg read rate: 23.210 MB/s, avg write rate: 0.228 MB/s
+	buffer usage: 1504 hits, 306 misses, 3 dirtied
+	system usage: CPU: user: 0.05 s, system: 0.00 s, elapsed: 0.10 s
+2026-11-03 20:33:55.618 UTC [102]  LOG:  automatic vacuum of table "postgres.broker.offsets": index scans: 0
+	pages: 0 removed, 1 remain, 1 scanned (100.00% of total)
+	tuples: 57 removed, 17 remain, 1 are dead but not yet removable
+	removable cutoff: 96109, which was 2 XIDs old when operation ended
+	new relfrozenxid: 95903, which is 24451 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.020 ms, write: 0.000 ms
+	avg read rate: 165.053 MB/s, avg write rate: 165.053 MB/s
+	buffer usage: 28 hits, 3 misses, 3 dirtied
+	WAL usage: 2 records, 0 full page images, 443 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:33:55.618 UTC [102]  LOG:  automatic analyze of table "postgres.broker.offsets"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 49 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:33:55.737 UTC [102]  LOG:  automatic vacuum of table "postgres.pg_toast.pg_toast_16412": index scans: 0
+	pages: 0 removed, 17293 remain, 4793 scanned (27.72% of total)
+	tuples: 0 removed, 90938 remain, 0 are dead but not yet removable
+	removable cutoff: 96109, which was 57 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.077 ms, write: 0.000 ms
+	avg read rate: 0.265 MB/s, avg write rate: 0.132 MB/s
+	buffer usage: 9612 hits, 4 misses, 2 dirtied
+	WAL usage: 4531 records, 0 full page images, 267458 bytes
+	system usage: CPU: user: 0.01 s, system: 0.00 s, elapsed: 0.11 s
+2026-11-03 20:34:06.663 UTC [93] [unknown] LOG:  duration: 53.667 ms  statement: COMMIT
+2026-11-03 20:34:06.664 UTC [91] [unknown] LOG:  duration: 53.426 ms  statement: COMMIT
+2026-11-03 20:34:27.878 UTC [92] [unknown] LOG:  duration: 54.415 ms  statement: COMMIT
+2026-11-03 20:34:27.879 UTC [91] [unknown] LOG:  duration: 52.691 ms  statement: COMMIT
+2026-11-03 20:34:49.135 UTC [94] [unknown] LOG:  duration: 52.008 ms  statement: COMMIT
+2026-11-03 20:34:52.143 UTC [90] [unknown] LOG:  duration: 10.807 ms  statement: COMMIT
+2026-11-03 20:34:52.146 UTC [93] [unknown] LOG:  duration: 11.330 ms  statement: COMMIT
+2026-11-03 20:34:52.147 UTC [88] [unknown] LOG:  duration: 14.347 ms  statement: COMMIT
+2026-11-03 20:34:54.902 UTC [41]  LOG:  checkpoint starting: time
+2026-11-03 20:34:55.521 UTC [104]  LOG:  automatic vacuum of table "postgres.broker.partitions": index scans: 0
+	pages: 0 removed, 1 remain, 1 scanned (100.00% of total)
+	tuples: 52 removed, 16 remain, 0 are dead but not yet removable
+	removable cutoff: 120456, which was 0 XIDs old when operation ended
+	new relfrozenxid: 120215, which is 24314 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 220.692 MB/s
+	buffer usage: 50 hits, 0 misses, 5 dirtied
+	WAL usage: 3 records, 2 full page images, 14785 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:34:55.527 UTC [104]  LOG:  automatic analyze of table "postgres.broker.partitions"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 2.604 MB/s
+	buffer usage: 247 hits, 0 misses, 2 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:34:55.541 UTC [104]  LOG:  automatic vacuum of table "postgres.broker.batches": index scans: 0
+	pages: 0 removed, 1958 remain, 402 scanned (20.53% of total)
+	tuples: 0 removed, 59630 remain, 0 are dead but not yet removable
+	removable cutoff: 120456, which was 8 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 856 hits, 0 misses, 0 dirtied
+	WAL usage: 400 records, 1 full page images, 31963 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-03 20:34:55.644 UTC [104]  LOG:  automatic analyze of table "postgres.broker.batches"
+	I/O timings: read: 0.153 ms, write: 0.000 ms
+	avg read rate: 3.262 MB/s, avg write rate: 0.228 MB/s
+	buffer usage: 2160 hits, 43 misses, 3 dirtied
+	system usage: CPU: user: 0.06 s, system: 0.00 s, elapsed: 0.10 s
+2026-11-03 20:34:55.647 UTC [104]  LOG:  automatic vacuum of table "postgres.broker.offsets": index scans: 0
+	pages: 0 removed, 1 remain, 1 scanned (100.00% of total)
+	tuples: 19 removed, 16 remain, 0 are dead but not yet removable
+	removable cutoff: 120501, which was 2 XIDs old when operation ended
+	new relfrozenxid: 120221, which is 24318 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 68.531 MB/s
+	buffer usage: 31 hits, 0 misses, 1 dirtied
+	WAL usage: 3 records, 1 full page images, 8603 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:34:55.647 UTC [104]  LOG:  automatic analyze of table "postgres.broker.offsets"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 49 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:34:55.764 UTC [104]  LOG:  automatic vacuum of table "postgres.pg_toast.pg_toast_16412": index scans: 0
+	pages: 0 removed, 21706 remain, 4769 scanned (21.97% of total)
+	tuples: 0 removed, 114206 remain, 0 are dead but not yet removable
+	removable cutoff: 120501, which was 49 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 9569 hits, 0 misses, 0 dirtied
+	WAL usage: 4507 records, 1 full page images, 274239 bytes
+	system usage: CPU: user: 0.01 s, system: 0.00 s, elapsed: 0.11 s
+2026-11-03 20:35:09.159 UTC [90] [unknown] LOG:  duration: 52.653 ms  statement: COMMIT
+2026-11-03 20:35:22.846 UTC [94] [unknown] LOG:  duration: 12.855 ms  statement: COMMIT
+2026-11-03 20:35:29.943 UTC [93] [unknown] LOG:  duration: 49.408 ms  statement: COMMIT
+2026-11-03 20:35:29.944 UTC [92] [unknown] LOG:  duration: 49.634 ms  statement: COMMIT
+2026-11-03 20:35:51.146 UTC [88] [unknown] LOG:  duration: 56.841 ms  statement: COMMIT
+2026-11-03 20:35:51.147 UTC [93] [unknown] LOG:  duration: 57.359 ms  statement: COMMIT
+2026-11-03 20:35:53.574 UTC [93] [unknown] LOG:  duration: 14.244 ms  statement: COMMIT
+2026-11-03 20:35:53.587 UTC [90] [unknown] LOG:  duration: 16.045 ms  statement: COMMIT
+2026-11-03 20:35:53.589 UTC [91] [unknown] LOG:  duration: 11.440 ms  statement: COMMIT
+2026-11-03 20:35:53.594 UTC [94] [unknown] LOG:  duration: 16.987 ms  statement: COMMIT
+2026-11-03 20:35:55.549 UTC [106]  LOG:  automatic vacuum of table "postgres.broker.partitions": index scans: 0
+	pages: 0 removed, 1 remain, 1 scanned (100.00% of total)
+	tuples: 29 removed, 16 remain, 0 are dead but not yet removable
+	removable cutoff: 144956, which was 1 XIDs old when operation ended
+	new relfrozenxid: 144658, which is 24443 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 50 hits, 0 misses, 0 dirtied
+	WAL usage: 2 records, 0 full page images, 379 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:35:55.554 UTC [106]  LOG:  automatic analyze of table "postgres.broker.partitions"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 247 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:35:55.676 UTC [106]  LOG:  automatic analyze of table "postgres.broker.batches"
+	I/O timings: read: 2.527 ms, write: 0.000 ms
+	avg read rate: 27.441 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 2219 hits, 425 misses, 0 dirtied
+	system usage: CPU: user: 0.06 s, system: 0.01 s, elapsed: 0.12 s
+2026-11-03 20:35:55.679 UTC [106]  LOG:  automatic analyze of table "postgres.broker.members"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 91 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:35:55.680 UTC [106]  LOG:  automatic vacuum of table "postgres.broker.offsets": index scans: 0
+	pages: 0 removed, 1 remain, 1 scanned (100.00% of total)
+	tuples: 24 removed, 16 remain, 0 are dead but not yet removable
+	removable cutoff: 145008, which was 2 XIDs old when operation ended
+	new relfrozenxid: 144765, which is 24544 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 31 hits, 0 misses, 0 dirtied
+	WAL usage: 2 records, 0 full page images, 361 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:35:55.681 UTC [106]  LOG:  automatic analyze of table "postgres.broker.offsets"
+	I/O timings: read: 0.000 ms, write: 0.000 ms
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 49 hits, 0 misses, 0 dirtied
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-11-03 20:36:24.154 UTC [1]  LOG:  received fast shutdown request
+2026-11-03 20:36:24.156 UTC [1]  LOG:  aborting any active transactions
+2026-11-03 20:36:24.158 UTC [1]  LOG:  background worker "logical replication launcher" (PID 46) exited with exit code 1
+2026-11-03 20:36:24.299 UTC [41]  LOG:  checkpoint complete: wrote 10743 buffers (65.6%); 0 WAL file(s) added, 0 removed, 14 recycled; write=89.357 s, sync=0.015 s, total=89.398 s; sync files=60, longest=0.014 s, average=0.001 s; distance=228781 kB, estimate=228781 kB; lsn=0/12857120, redo lsn=0/F45F5E0
+2026-11-03 20:36:24.299 UTC [41]  LOG:  shutting down
+2026-11-03 20:36:24.301 UTC [41]  LOG:  checkpoint starting: shutdown immediate
+2026-11-03 20:36:24.405 UTC [41]  LOG:  checkpoint complete: wrote 5679 buffers (34.7%); 0 WAL file(s) added, 0 removed, 3 recycled; write=0.073 s, sync=0.022 s, total=0.106 s; sync files=14, longest=0.020 s, average=0.002 s; distance=53214 kB, estimate=211224 kB; lsn=0/12857198, redo lsn=0/12857198
+2026-11-03 20:36:24.433 UTC [1]  LOG:  database system is shut down

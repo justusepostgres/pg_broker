@@ -1,0 +1,32 @@
+2026-11-03T16:58:28Z
+procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu
+ 1  0      0 20967428  50272 1862592    0    0  2763  6708 17198   85 19 10 65  4  2  0
+ 3  0      0 20966476  50272 1863348    0    0     0  3928 23096 45285 24 13 57  3  2  0
+ 3  0      0 20949004  50288 1880848    0    0     0 20420 22747 44764 25 12 57  5  2  0
+ 3  0      0 20947164  50288 1881532    0    0     0  3896 22925 45015 25 12 57  3  2  0
+ 2  0      0 20947440  50288 1882096    0    0     0  3936 22782 44571 26 13 56  4  2  0
+    PID COMMAND         %CPU %MEM
+   2842 java            33.4  4.8
+   2800 pg-broker-gatew 29.3  0.1
+   2874 postgres        15.8  0.6
+   2871 postgres        15.7  0.6
+   2872 postgres        15.7  0.6
+   2869 postgres        15.5  0.6
+   2873 postgres        15.3  0.6
+   2832 postgres        15.1  0.6
+   3844 systemd          1.9  0.0
+   2837 postgres         1.3  0.0
+      1 systemd          0.6  0.0
+     58 pr/ttyAMA-1      0.5  0.0
+   1573 unifiedmonitori  0.3  0.0
+   1303 oci-wlp          0.3  0.1
+   1286 gomon            0.3  0.0
+   1381 runcommand       0.2  0.0
+    941 updater          0.2  0.0
+some avg10=27.10 avg60=26.77 avg300=16.26 total=77204519
+full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+some avg10=8.32 avg60=8.99 avg300=6.53 total=36077008
+full avg10=5.16 avg60=5.52 avg300=4.27 total=25343258
+some avg10=0.00 avg60=0.00 avg300=0.00 total=0
+full avg10=0.00 avg60=0.00 avg300=0.00 total=0

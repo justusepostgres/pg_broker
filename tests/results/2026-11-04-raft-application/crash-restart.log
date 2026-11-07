@@ -1,0 +1,23 @@
+2026-11-04 04:41:46.261 +04 [61741] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 04:41:46.261 +04 [61741] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 04:41:46.262 +04 [61741] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 04:41:46.264 +04 [61745] LOG:  database system was interrupted; last known up at 2026-11-04 04:41:45 +04
+2026-11-04 04:41:46.309 +04 [61745] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-04 04:41:46.310 +04 [61745] LOG:  redo starts at 0/151A970
+2026-11-04 04:41:46.324 +04 [61745] LOG:  invalid record length at 0/1A45970: expected at least 24, got 0
+2026-11-04 04:41:46.324 +04 [61745] LOG:  redo done at 0/1A45948 system usage: CPU: user: 0.00 s, system: 0.01 s, elapsed: 0.01 s
+2026-11-04 04:41:46.325 +04 [61743] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-04 04:41:46.384 +04 [61743] LOG:  checkpoint complete: wrote 1131 buffers (6.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.048 s, sync=0.012 s, total=0.060 s; sync files=432, longest=0.001 s, average=0.001 s; distance=5292 kB, estimate=5292 kB; lsn=0/1A45970, redo lsn=0/1A45970
+2026-11-04 04:41:46.387 +04 [61741] LOG:  database system is ready to accept connections
+2026-11-04 04:41:46.475 +04 [61749] ERROR:  Raft application owner fenced
+2026-11-04 04:41:46.475 +04 [61749] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at RAISE
+2026-11-04 04:41:46.475 +04 [61749] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:41:46.481 +04 [61743] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:41:46.482 +04 [61743] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=5, longest=0.001 s, average=0.001 s; distance=13 kB, estimate=4764 kB; lsn=0/1A48F00, redo lsn=0/1A48EA8
+2026-11-04 04:41:46.578 +04 [61741] LOG:  received fast shutdown request
+2026-11-04 04:41:46.578 +04 [61741] LOG:  aborting any active transactions
+2026-11-04 04:41:46.578 +04 [61741] LOG:  background worker "logical replication launcher" (PID 61748) exited with exit code 1
+2026-11-04 04:41:46.578 +04 [61743] LOG:  shutting down
+2026-11-04 04:41:46.579 +04 [61743] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 04:41:46.579 +04 [61743] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=4287 kB; lsn=0/1A49008, redo lsn=0/1A49008
+2026-11-04 04:41:46.581 +04 [61741] LOG:  database system is shut down

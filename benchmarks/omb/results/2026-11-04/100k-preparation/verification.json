@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-04T01:48:33.876192+00:00",
+  "scope": "Local preparation only; not uploaded, launched or performance-verified",
+  "workload": "100k records/s, 1KiB, 16 partitions, 1 min warmup, 15 min measurement",
+  "checks": [
+    "bash syntax passed",
+    "45 benchmark analysis/handoff tests passed",
+    "75k/100k workload fields differ only name and offered rate"
+  ],
+  "disk_preflight_gib": 125,
+  "sha256": {
+    "100k.yaml": "313db105ce7cef85577a9230d0f65692747bd28223af8cee7f374974270e5bc4",
+    "run.sh": "e325ce250ff63818149c7f2bb795c91831596c436593abf07047cb38160babe3",
+    "client-workload.sh": "f39e0ebf0805050cfba7f60e1a8ca86761c9c76d0a205b8934af14a1426076aa",
+    "oci-pair.sh": "a7c12babebe2a91e0e3a9827ced955192f201c5fdd44d9fc1d6757a922f5b25f",
+    "remote_client.py": "bc5f4e72a4764b306c5b341a7305c4e3c8845577fef402bc3af5205e50b9f23a",
+    "handoff_client.py": "b8ba749bb899333eeaddf29b42c225b631710371f9d439b88da0358d3d1e787a"
+  }
+}

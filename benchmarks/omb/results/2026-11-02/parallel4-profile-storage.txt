@@ -1,0 +1,24 @@
+BEGIN
+SET
+ default_toast_compression 
+---------------------------
+ pglz
+(1 row)
+
+  attname   | attstorage | attcompression 
+------------+------------+----------------
+ data       | x          | 
+ timestamps | x          | 
+(2 rows)
+
+ compression | batches | records | first_offset | last_offset | average_record_bytes | average_stored_bytes | average_stored_timestamp_bytes 
+-------------+---------+---------+--------------+-------------+----------------------+----------------------+--------------------------------
+ pglz        |     100 |   21836 |       430735 |      452484 |               225782 |                 4168 |                            212
+(1 row)
+
+ total_batch_storage 
+---------------------
+ 169 MB
+(1 row)
+
+COMMIT

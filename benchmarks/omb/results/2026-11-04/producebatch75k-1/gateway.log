@@ -1,0 +1,19 @@
+pg-broker listening on 10.84.0.247:9092
+unix_ms=1793754748284 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793754748370 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793754748412 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793754808292 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793754868403 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793754928509 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793754988613 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793755048718 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793755108824 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793755168928 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793755229034 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793755289140 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793755349247 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793755409353 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793755469459 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793755529566 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793755589672 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed
+unix_ms=1793755649777 connection: frame-length read exceeded 60s (idle or incomplete header): deadline has elapsed

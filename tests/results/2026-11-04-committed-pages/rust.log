@@ -1,0 +1,20 @@
+   Compiling broker-protocol v0.1.0 (/Users/salah/Documents/ChatGPT/pg_kafka/crates/protocol)
+   Compiling broker-cluster v0.1.0 (/Users/salah/Documents/ChatGPT/pg_kafka/crates/cluster)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.15s
+     Running tests/committed_pages_postgres.rs (target/debug/deps/committed_pages_postgres-51213aa768b352a2)
+
+running 2 tests
+test committed_pages_are_bounded_release_pool_and_fence_owners ... ok
+test committed_pages_reject_purge_and_cancellation_is_terminal ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.67s
+
+     Running tests/reader_postgres.rs (target/debug/deps/reader_postgres-13427a94c1bbfaf2)
+
+running 3 tests
+test byte_bounds_never_silently_shorten_complete_reads ... ok
+test cancelled_reader_discards_connection_without_fencing_the_writer ... ok
+test complete_and_limited_ranges_have_distinct_contracts_and_fencing ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.19s
+

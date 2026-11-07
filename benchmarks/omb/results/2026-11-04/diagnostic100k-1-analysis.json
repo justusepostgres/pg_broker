@@ -1,0 +1,61 @@
+{
+  "samples": 450,
+  "sample_errors": 0,
+  "valid_intervals": 449,
+  "covered_seconds": 898.065053,
+  "requested_seconds": 901.014,
+  "mean_cpu_cores": {
+    "db:usage_usec": 0.8030141754107427,
+    "gateway:usage_usec": 0.34710713545603245
+  },
+  "cpu_counter_deltas": {
+    "db:usage_usec": 721158968,
+    "db:user_usec": 435688417,
+    "db:system_usec": 285470550,
+    "db:throttled_usec": 0,
+    "gateway:usage_usec": 311724788,
+    "gateway:user_usec": 110853253,
+    "gateway:system_usec": 200871534,
+    "gateway:throttled_usec": 0
+  },
+  "max_memory_bytes": {
+    "db": 3342266368,
+    "gateway": 68206592
+  },
+  "active_backend_observations": {
+    "IO:WalSync": 132,
+    "no_reported_wait:": 334,
+    "LWLock:WALWrite": 36,
+    "IO:DataFileExtend": 12,
+    "IO:WalWrite": 1,
+    "Client:ClientRead": 4
+  },
+  "scope": "Instrumented samples, not acceptance. Wait counts are observations, not elapsed wait time; no_reported_wait does not prove CPU execution. CPU cores are usage-seconds per covered wall-second.",
+  "database_lifetime": {
+    "seconds": 994.963172,
+    "wal": {
+      "wal_records": 5404601,
+      "wal_fpi": 301,
+      "wal_bytes": 1839490250,
+      "wal_buffers_full": 0,
+      "wal_write": 287874,
+      "wal_sync": 287547,
+      "wal_write_time": 0,
+      "wal_sync_time": 0
+    },
+    "database": {
+      "xact_commit": 847858,
+      "xact_rollback": 0,
+      "blks_read": 126843,
+      "blks_hit": 24069344,
+      "tup_inserted": 1354434,
+      "tup_updated": 815659,
+      "tup_deleted": 1
+    },
+    "wal_timing_enabled": false,
+    "wal_sync_mean_ms": null,
+    "wal_write_mean_ms": null,
+    "wal_bytes_per_second": 1848802.3494401257,
+    "scope": "Whole diagnostic lifetime, including warmup and sampler transactions. Database commits include read-only work; they are not Kafka Produce request counts. Disabled WAL timing is missing latency evidence, not zero latency."
+  }
+}

@@ -1,0 +1,22 @@
+2026-11-04 15:38:47.869 +04 [96453] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 15:38:47.869 +04 [96453] LOG:  listening on IPv4 address "127.0.0.1", port 55433
+2026-11-04 15:38:47.870 +04 [96453] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55433"
+2026-11-04 15:38:47.872 +04 [96456] LOG:  database system was shut down at 2026-11-04 15:38:47 +04
+2026-11-04 15:38:47.874 +04 [96453] LOG:  database system is ready to accept connections
+2026-11-04 15:38:56.852 +04 [96540] ERROR:  Replica offset diverged
+2026-11-04 15:38:56.852 +04 [96540] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 75 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 15:38:56.852 +04 [96540] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 15:39:02.052 +04 [96564] ERROR:  Raft log writer fenced
+2026-11-04 15:39:02.052 +04 [96564] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 15:39:02.052 +04 [96564] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 15:39:02.052 +04 [96564] LOG:  could not receive data from client: Connection reset by peer
+2026-11-04 15:39:03.901 +04 [96578] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 15:39:06.213 +04 [96454] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:39:06.290 +04 [96454] LOG:  checkpoint complete: wrote 956 buffers (46.7%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.050 s, sync=0.025 s, total=0.078 s; sync files=847, longest=0.001 s, average=0.001 s; distance=23348 kB, estimate=23348 kB; lsn=0/2BE7CD8, redo lsn=0/2BE7C80
+2026-11-04 15:39:06.336 +04 [96454] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:39:06.337 +04 [96454] LOG:  checkpoint complete: wrote 2 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=2, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=21014 kB; lsn=0/2BE82C8, redo lsn=0/2BE8270
+2026-11-04 15:39:06.384 +04 [96454] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:39:06.385 +04 [96454] LOG:  checkpoint complete: wrote 2 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=2, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=18912 kB; lsn=0/2BE88A0, redo lsn=0/2BE8848
+2026-11-04 15:39:06.752 +04 [96453] LOG:  received immediate shutdown request
+2026-11-04 15:39:06.754 +04 [96453] LOG:  database system is shut down

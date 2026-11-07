@@ -1,0 +1,61 @@
+2026-11-04 15:52:19.336 +04 [976] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 15:52:19.336 +04 [976] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 15:52:19.337 +04 [976] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 15:52:19.339 +04 [981] LOG:  database system was shut down at 2026-11-04 15:52:19 +04
+2026-11-04 15:52:19.341 +04 [976] LOG:  database system is ready to accept connections
+2026-11-04 15:52:20.317 +04 [1009] ERROR:  division by zero
+2026-11-04 15:52:20.317 +04 [1009] STATEMENT:  SET LOCAL synchronous_commit=on; SET LOCAL statement_timeout='3s'; SET LOCAL lock_timeout='2s'; SELECT 1 / (false)::int
+2026-11-04 15:52:20.317 +04 [1009] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2026-11-04 15:52:20.317 +04 [1009] STATEMENT:  
+	WITH RECURSIVE appended(ord, response) AS (
+	    VALUES (0, NULL::jsonb)
+	    UNION ALL
+	    SELECT a.ord + 1, public.broker_append_bytes(
+	        ($1::text[])[a.ord+1], ($2::integer[])[a.ord+1], ($3::bytea[])[a.ord+1])
+	    FROM appended a WHERE a.ord < cardinality($1::text[])
+	)
+	SELECT coalesce(jsonb_agg(response ORDER BY ord), '[]'::jsonb)
+	FROM appended WHERE ord > 0
+	
+2026-11-04 15:52:20.317 +04 [1009] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2026-11-04 15:52:20.317 +04 [1009] STATEMENT:  SET LOCAL statement_timeout=0
+2026-11-04 15:52:21.269 +04 [1015] ERROR:  division by zero
+2026-11-04 15:52:21.269 +04 [1015] STATEMENT:  SELECT 1/0
+2026-11-04 15:52:41.182 +04 [1005] ERROR:  injected commit failure
+2026-11-04 15:52:41.182 +04 [1005] CONTEXT:  PL/pgSQL function test_commit_test_ef706b563e094096ad936e5675d48a8b() line 1 at RAISE
+	SQL statement "INSERT INTO broker.offsets VALUES(g,t,p,off,coalesce(item.value->>'metadata',''))
+	    ON CONFLICT(group_id,topic,partition) DO UPDATE SET committed=excluded.committed,metadata=excluded.metadata"
+	PL/pgSQL function commit_many(jsonb) line 41 at SQL statement
+	SQL function "broker_commit_many" statement 1
+2026-11-04 15:52:41.182 +04 [1005] STATEMENT:  SELECT public.broker_commit_many($1)
+2026-11-04 15:52:41.182 +04 [1005] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2026-11-04 15:52:41.182 +04 [1005] STATEMENT:  SET LOCAL statement_timeout=0
+2026-11-04 15:52:41.183 +04 [1005] LOG:  could not receive data from client: Connection reset by peer
+2026-11-04 15:52:45.447 +04 [1304] ERROR:  permission denied for function broker_fetch_many
+2026-11-04 15:52:45.447 +04 [1304] STATEMENT:  SELECT public.broker_fetch_many($1)
+2026-11-04 15:52:45.452 +04 [1305] ERROR:  permission denied for function broker_fetch_binary
+2026-11-04 15:52:45.452 +04 [1305] STATEMENT:  SELECT * FROM public.broker_fetch_binary($1)
+2026-11-04 15:52:46.018 +04 [1266] ERROR:  injected append failure
+2026-11-04 15:52:46.018 +04 [1266] CONTEXT:  PL/pgSQL function test_produce_test_149f47c9f66e4917a9be4b14044d33aa() line 1 at RAISE
+	SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 15:52:46.018 +04 [1266] STATEMENT:  
+	WITH RECURSIVE appended(ord, response) AS (
+	    VALUES (0, NULL::jsonb)
+	    UNION ALL
+	    SELECT a.ord + 1, public.broker_append_bytes(
+	        ($1::text[])[a.ord+1], ($2::integer[])[a.ord+1], ($3::bytea[])[a.ord+1])
+	    FROM appended a WHERE a.ord < cardinality($1::text[])
+	)
+	SELECT coalesce(jsonb_agg(response ORDER BY ord), '[]'::jsonb)
+	FROM appended WHERE ord > 0
+	
+2026-11-04 15:52:46.018 +04 [1266] ERROR:  current transaction is aborted, commands ignored until end of transaction block
+2026-11-04 15:52:46.018 +04 [1266] STATEMENT:  SET LOCAL statement_timeout=0
+2026-11-04 15:52:46.018 +04 [1266] LOG:  could not receive data from client: Connection reset by peer
+2026-11-04 15:53:09.410 +04 [978] LOG:  checkpoint starting: immediate force wait
+2026-11-04 15:53:09.431 +04 [978] LOG:  checkpoint complete: wrote 229 buffers (1.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.016 s, sync=0.005 s, total=0.021 s; sync files=144, longest=0.001 s, average=0.001 s; distance=5815 kB, estimate=5815 kB; lsn=0/1AC85F0, redo lsn=0/1AC8598
+2026-11-04 15:53:10.870 +04 [976] LOG:  received immediate shutdown request
+2026-11-04 15:53:10.872 +04 [976] LOG:  database system is shut down

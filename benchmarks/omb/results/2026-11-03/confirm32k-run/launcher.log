@@ -1,0 +1,27 @@
+Formatting /home/ubuntu/omb-pair-017-confirm32k-1-kafka-data with metadata.version 3.6-IV2.
+Running as unit: omb-pair-017-confirm32k-1-kafka.service; invocation ID: d525a61453684a18b2ba163509b26361
+Running as unit: omb-pair-017-confirm32k-1-kafka-recovery.service; invocation ID: 0160be25834148958d7e86e891c208f4
+62565e54945eb237bc868d3f8ecaf8dc018ada840db939347e035cf1661c5c51
+ALTER EXTENSION
+ALTER TABLE
+b16afc99e902faee03ba6a002097e3093bd7c8b2dd27c5f0bb2fa28ffdb1a044
+kafka max publish errors/s 0.0 client warnings/errors 0
+broker max publish errors/s 0.0 client warnings/errors 0
+1b7077c5ce3e276b73cb6f984a36dfca88077adcbbf485806950231af16efa81
+ALTER EXTENSION
+ALTER TABLE
+2c4d5db2b7198c78a4c7f762b5870861a822f46b699c7dfbea0a55716b4961b5
+Formatting /home/ubuntu/omb-pair-017-confirm32k-2-kafka-data with metadata.version 3.6-IV2.
+Running as unit: omb-pair-017-confirm32k-2-kafka.service; invocation ID: 4d415848c309491983b93b4d68b52392
+Running as unit: omb-pair-017-confirm32k-2-kafka-recovery.service; invocation ID: df2977e9da8040c1bb1046af4a78f51b
+kafka max publish errors/s 0.0 client warnings/errors 2
+broker max publish errors/s 0.0 client warnings/errors 0
+Formatting /home/ubuntu/omb-pair-017-confirm32k-3-kafka-data with metadata.version 3.6-IV2.
+Running as unit: omb-pair-017-confirm32k-3-kafka.service; invocation ID: 32656fb459d5463fb75cfc2d137ed96a
+Running as unit: omb-pair-017-confirm32k-3-kafka-recovery.service; invocation ID: 64b117df9183463c9513e82d69150754
+b2ff90003ef21ae7aaa9b3f48b0cc6d72da7ff76f3bc94ddac612aeaac5417e5
+ALTER EXTENSION
+ALTER TABLE
+931ee8aef9d2a0b58cea6f3e0e5579de73364f6f0d61333c3c0afb20f30cc9a6
+kafka max publish errors/s 0.0 client warnings/errors 2
+broker max publish errors/s 0.0 client warnings/errors 0

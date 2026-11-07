@@ -1,0 +1,8 @@
+{
+  "tests": 9,
+  "clippy": "passed -D warnings",
+  "production_pin_changed": false,
+  "postgres_tested": false,
+  "network_tested": false,
+  "scope": "Isolated alpha entries_stream override with synthetic bounded backend; not production catch-up"
+}

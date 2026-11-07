@@ -1,0 +1,7 @@
+{
+  "size_in_gbs": 1024,
+  "vpus_per_gb": 10,
+  "storage_domain": "same boot volume for both Kafka and PostgreSQL",
+  "previous_size_in_gbs": 640,
+  "reference_policy": "fresh references required; do not pool with historical160/320/640GiB trials"
+}

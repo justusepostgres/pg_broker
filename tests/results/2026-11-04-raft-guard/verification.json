@@ -1,0 +1,9 @@
+{
+  "ownership_cases": 15,
+  "wire_and_broker_and_bulk_cases": 55,
+  "sql_version_for_wire": "0.1.18",
+  "default_sql": "0.1.7",
+  "durability": "fsync/full_page_writes/synchronous_commit on",
+  "cloud_deployed": false,
+  "performance_claim": false
+}

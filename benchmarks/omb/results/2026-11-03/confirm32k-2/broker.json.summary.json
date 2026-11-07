@@ -1,0 +1,16 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-pair-017-confirm32k-2/broker.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32020.840197143436,
+    "consume_msg_s_mean": 32020.37802045938,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 0,
+    "backlog_last": 139,
+    "backlog_max": 190,
+    "publish_p99_ms": 9.397,
+    "publish_delay_p99_us": 152,
+    "end_to_end_p99_ms": 12.0
+  }
+]

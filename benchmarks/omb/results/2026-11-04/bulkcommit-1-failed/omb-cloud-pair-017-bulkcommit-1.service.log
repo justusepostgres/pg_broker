@@ -1,0 +1,83 @@
+Nov 04 08:01:10 pg-broker-omb-verification-1 systemd[1]: Started omb-cloud-pair-017-bulkcommit-1.service - /bin/bash /home/ubuntu/pg-broker/benchmarks/omb/oci-pair.sh 017-bulkcommit-1 100k broker-first off.
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228235]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker ps -q
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228235]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228235]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228250]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker volume inspect omb-pair-017-bulkcommit-1-data
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228250]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228250]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228260]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker image inspect sha256:6821d31236114005fd88bc092f63721b540538169b8f048e09771ed68e24da19 --format {{.Id}}
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228260]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228260]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228269]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker run --rm sha256:6821d31236114005fd88bc092f63721b540538169b8f048e09771ed68e24da19 sha256sum /opt/pgsql/lib/pg_broker.so
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228269]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:10 pg-broker-omb-verification-1 sudo[228269]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:11 pg-broker-omb-verification-1 sudo[228411]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker run -d --name omb-pair-017-bulkcommit-1-db --cpuset-cpus=0,1 --memory=8g --network host --env-file broker-omb.env -v omb-pair-017-bulkcommit-1-data:/data sha256:6821d31236114005fd88bc092f63721b540538169b8f048e09771ed68e24da19 container-db.sh
+Nov 04 08:01:11 pg-broker-omb-verification-1 sudo[228411]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:11 pg-broker-omb-verification-1 bash[228412]: e3149f0389de7b4fd3ce9dc15082e8ccf5ef2e20b0e510e082842266c7e3240b
+Nov 04 08:01:11 pg-broker-omb-verification-1 sudo[228411]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:11 pg-broker-omb-verification-1 sudo[228472]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker exec omb-pair-017-bulkcommit-1-db test -f /data/.broker-ready
+Nov 04 08:01:11 pg-broker-omb-verification-1 sudo[228472]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:11 pg-broker-omb-verification-1 sudo[228472]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228531]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker exec omb-pair-017-bulkcommit-1-db test -f /data/.broker-ready
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228531]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228531]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228557]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker exec omb-pair-017-bulkcommit-1-db psql -U postgres -Atc 'SELECT extversion FROM pg_extension WHERE extname=\'pg_broker\''
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228557]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228557]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228588]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-bulkcommit-1/pg_broker--0.1.5--0.1.6.sql omb-pair-017-bulkcommit-1-db:/opt/pgsql/share/extension/
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228588]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228588]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228598]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-bulkcommit-1/pg_broker--0.1.6--0.1.7.sql omb-pair-017-bulkcommit-1-db:/opt/pgsql/share/extension/
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228598]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228598]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228607]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-bulkcommit-1/pg_broker--0.1.7--0.1.8.sql omb-pair-017-bulkcommit-1-db:/opt/pgsql/share/extension/
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228607]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228607]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228619]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-bulkcommit-1/pg_broker--0.1.8--0.1.9.sql omb-pair-017-bulkcommit-1-db:/opt/pgsql/share/extension/
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228619]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228619]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228630]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-bulkcommit-1/pg_broker--0.1.9--0.1.10.sql omb-pair-017-bulkcommit-1-db:/opt/pgsql/share/extension/
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228630]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228630]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228642]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-bulkcommit-1/pg_broker--0.1.10--0.1.11.sql omb-pair-017-bulkcommit-1-db:/opt/pgsql/share/extension/
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228642]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228642]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228654]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-bulkcommit-1/pg_broker--0.1.11--0.1.12.sql omb-pair-017-bulkcommit-1-db:/opt/pgsql/share/extension/
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228654]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228654]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228666]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-bulkcommit-1/pg_broker--0.1.12--0.1.13.sql omb-pair-017-bulkcommit-1-db:/opt/pgsql/share/extension/
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228666]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228666]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228678]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-bulkcommit-1/pg_broker--0.1.13--0.1.14.sql omb-pair-017-bulkcommit-1-db:/opt/pgsql/share/extension/
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228678]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228678]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228690]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-bulkcommit-1/pg_broker--0.1.14--0.1.15.sql omb-pair-017-bulkcommit-1-db:/opt/pgsql/share/extension/
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228690]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228690]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228701]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-bulkcommit-1/pg_broker--0.1.15--0.1.16.sql omb-pair-017-bulkcommit-1-db:/opt/pgsql/share/extension/
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228701]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228701]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228712]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-bulkcommit-1/pg_broker--0.1.16--0.1.17.sql omb-pair-017-bulkcommit-1-db:/opt/pgsql/share/extension/
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228712]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228712]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228723]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker exec omb-pair-017-bulkcommit-1-db psql -U postgres -v ON_ERROR_STOP=1 -c 'ALTER EXTENSION pg_broker UPDATE TO \'0.1.17\'' -c 'ALTER TABLE broker.batches ALTER data SET COMPRESSION lz4'
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228723]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 bash[228724]: ERROR:  could not open file "/opt/pgsql/share/extension/pg_broker--0.1.7--0.1.8.sql" for reading: Permission denied
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228723]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228753]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/systemctl stop omb-pair-017-bulkcommit-1-kafka omb-pair-017-bulkcommit-1-kafka-recovery
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228753]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228753]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228755]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker stop omb-pair-017-bulkcommit-1-gateway
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228755]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228755]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228766]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker inspect --format {{.State.Running}} omb-pair-017-bulkcommit-1-db
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228766]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228766]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228776]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker kill --signal=SIGINT omb-pair-017-bulkcommit-1-db
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228776]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228776]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228793]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker wait omb-pair-017-bulkcommit-1-db
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228793]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 08:01:12 pg-broker-omb-verification-1 sudo[228793]: pam_unix(sudo:session): session closed for user root
+Nov 04 08:01:13 pg-broker-omb-verification-1 systemd[1]: omb-cloud-pair-017-bulkcommit-1.service: Main process exited, code=exited, status=1/FAILURE
+Nov 04 08:01:13 pg-broker-omb-verification-1 systemd[1]: omb-cloud-pair-017-bulkcommit-1.service: Failed with result 'exit-code'.

@@ -1,0 +1,113 @@
+{
+  "scope": "Measurement-time pidstat CPU rows for persistent processes (>400 samples); short-lived processes excluded. Scheduler wait is not PostgreSQL I/O wait.",
+  "processes": [
+    {
+      "pid": "170201",
+      "command": "pg-broker-gatew",
+      "samples": 451,
+      "mean_cpu_percent": 34.70170731707317,
+      "mean_user_percent": 12.338824833702883,
+      "mean_system_percent": 22.362926829268293,
+      "mean_scheduler_wait_percent": 0.0
+    },
+    {
+      "pid": "170428",
+      "command": "postgres",
+      "samples": 451,
+      "mean_cpu_percent": 19.65124168514412,
+      "mean_user_percent": 11.771219512195122,
+      "mean_system_percent": 7.880022172949002,
+      "mean_scheduler_wait_percent": 7.761374722838138
+    },
+    {
+      "pid": "170235",
+      "command": "postgres",
+      "samples": 451,
+      "mean_cpu_percent": 19.641241685144127,
+      "mean_user_percent": 11.811152993348115,
+      "mean_system_percent": 7.830110864745011,
+      "mean_scheduler_wait_percent": 7.760266075388027
+    },
+    {
+      "pid": "170465",
+      "command": "postgres",
+      "samples": 451,
+      "mean_cpu_percent": 19.252150776053213,
+      "mean_user_percent": 11.846651884700666,
+      "mean_system_percent": 7.405521064301552,
+      "mean_scheduler_wait_percent": 7.748070953436807
+    },
+    {
+      "pid": "170734",
+      "command": "postgres",
+      "samples": 451,
+      "mean_cpu_percent": 19.07363636363636,
+      "mean_user_percent": 11.737960088691795,
+      "mean_system_percent": 7.335676274944567,
+      "mean_scheduler_wait_percent": 7.756940133037694
+    },
+    {
+      "pid": "170274",
+      "command": "postgres",
+      "samples": 451,
+      "mean_cpu_percent": 0.8082039911308204,
+      "mean_user_percent": 0.20953436807095344,
+      "mean_system_percent": 0.5986696230598669,
+      "mean_scheduler_wait_percent": 1.001108647450111
+    },
+    {
+      "pid": "303",
+      "command": "jbd2/sda1-8",
+      "samples": 451,
+      "mean_cpu_percent": 0.8048558758314857,
+      "mean_user_percent": 0.0,
+      "mean_system_percent": 0.8048558758314857,
+      "mean_scheduler_wait_percent": 0.02328159645232816
+    },
+    {
+      "pid": "170276",
+      "command": "pidstat",
+      "samples": 451,
+      "mean_cpu_percent": 0.6308203991130821,
+      "mean_user_percent": 0.18403547671840353,
+      "mean_system_percent": 0.4467849223946785,
+      "mean_scheduler_wait_percent": 0.02993348115299335
+    },
+    {
+      "pid": "1435",
+      "command": "dockerd",
+      "samples": 451,
+      "mean_cpu_percent": 0.4212860310421286,
+      "mean_user_percent": 0.26274944567627495,
+      "mean_system_percent": 0.15853658536585366,
+      "mean_scheduler_wait_percent": 0.0
+    },
+    {
+      "pid": "1181",
+      "command": "containerd",
+      "samples": 451,
+      "mean_cpu_percent": 0.36585365853658536,
+      "mean_user_percent": 0.2106430155210643,
+      "mean_system_percent": 0.15521064301552107,
+      "mean_scheduler_wait_percent": 0.0
+    },
+    {
+      "pid": "169838",
+      "command": "containerd-shim",
+      "samples": 451,
+      "mean_cpu_percent": 0.2549889135254989,
+      "mean_user_percent": 0.13747228381374724,
+      "mean_system_percent": 0.11751662971175167,
+      "mean_scheduler_wait_percent": 0.0022172949002217295
+    },
+    {
+      "pid": "15",
+      "command": "rcu_sched",
+      "samples": 451,
+      "mean_cpu_percent": 0.19955654101995565,
+      "mean_user_percent": 0.0,
+      "mean_system_percent": 0.19955654101995565,
+      "mean_scheduler_wait_percent": 0.11197339246119734
+    }
+  ]
+}

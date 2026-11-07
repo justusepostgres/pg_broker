@@ -1,0 +1,26 @@
+[
+  {
+    "system_identifier": "7704279841597921992",
+    "port": "55433",
+    "data_directory": "/Users/salah/Documents/ChatGPT/pg_kafka/.dev/alpha-quorum-crash-native-pg/node0",
+    "fsync": "on",
+    "full_page_writes": "on",
+    "synchronous_commit": "on"
+  },
+  {
+    "system_identifier": "7704279844782594783",
+    "port": "55434",
+    "data_directory": "/Users/salah/Documents/ChatGPT/pg_kafka/.dev/alpha-quorum-crash-native-pg/node1",
+    "fsync": "on",
+    "full_page_writes": "on",
+    "synchronous_commit": "on"
+  },
+  {
+    "system_identifier": "7704279848012610294",
+    "port": "55435",
+    "data_directory": "/Users/salah/Documents/ChatGPT/pg_kafka/.dev/alpha-quorum-crash-native-pg/node2",
+    "fsync": "on",
+    "full_page_writes": "on",
+    "synchronous_commit": "on"
+  }
+]

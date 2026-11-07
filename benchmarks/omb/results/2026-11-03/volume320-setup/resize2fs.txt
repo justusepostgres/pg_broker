@@ -1,0 +1,5 @@
+resize2fs 1.47.0 (5-Feb-2023)
+Filesystem at /dev/sda1 is mounted on /; on-line resizing required
+old_desc_blocks = 20, new_desc_blocks = 40
+The filesystem on /dev/sda1 is now 83623675 (4k) blocks long.
+

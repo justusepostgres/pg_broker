@@ -1,0 +1,23 @@
+2026-11-04 15:11:00.674 +04 [84924] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 15:11:00.675 +04 [84924] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 15:11:00.675 +04 [84924] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 15:11:00.677 +04 [84927] LOG:  database system was shut down at 2026-11-04 15:11:00 +04
+2026-11-04 15:11:00.679 +04 [84924] LOG:  database system is ready to accept connections
+2026-11-04 15:11:05.768 +04 [85081] ERROR:  Replica offset diverged
+2026-11-04 15:11:05.768 +04 [85081] CONTEXT:  PL/pgSQL function raft_partition_apply_inner(text,bigint,jsonb) line 75 at RAISE
+	PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at assignment
+2026-11-04 15:11:05.768 +04 [85081] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 15:11:11.009 +04 [85103] ERROR:  Raft log writer fenced
+2026-11-04 15:11:11.009 +04 [85103] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 15:11:11.009 +04 [85103] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 15:11:11.009 +04 [85103] LOG:  could not receive data from client: Connection reset by peer
+2026-11-04 15:11:12.066 +04 [85107] ERROR:  Committed reader fenced
+2026-11-04 15:11:12.066 +04 [85107] CONTEXT:  PL/pgSQL function public.broker_raft_committed_page(text,bigint,jsonb) line 13 at RAISE
+2026-11-04 15:11:12.066 +04 [85107] STATEMENT:  SELECT public.broker_raft_committed_page($1,$2,$3)
+2026-11-04 15:11:12.103 +04 [84924] LOG:  received fast shutdown request
+2026-11-04 15:11:12.103 +04 [84924] LOG:  aborting any active transactions
+2026-11-04 15:11:12.104 +04 [84924] LOG:  background worker "logical replication launcher" (PID 84930) exited with exit code 1
+2026-11-04 15:11:12.104 +04 [84925] LOG:  shutting down
+2026-11-04 15:11:12.104 +04 [84925] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 15:11:12.120 +04 [84925] LOG:  checkpoint complete: wrote 1474 buffers (9.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.008 s, sync=0.008 s, total=0.017 s; sync files=129, longest=0.003 s, average=0.001 s; distance=17458 kB, estimate=17458 kB; lsn=0/2627440, redo lsn=0/2627440
+2026-11-04 15:11:12.122 +04 [84924] LOG:  database system is shut down

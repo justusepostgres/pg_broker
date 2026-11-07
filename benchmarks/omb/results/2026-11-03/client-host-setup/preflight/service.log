@@ -1,0 +1,1 @@
+Nov 03 21:31:40 pg-broker-omb-client-1 systemd[1]: Started omb-client-preflight-3.service - /bin/bash /home/ubuntu/pg-broker/benchmarks/omb/client-workload.sh preflight-3 smoke 10.84.0.247:9092 --preflight.

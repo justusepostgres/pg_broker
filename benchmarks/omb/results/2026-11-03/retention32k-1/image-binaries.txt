@@ -1,0 +1,2 @@
+75c75f21582591fa9e650df052a73c1b8a8da4903041e09817a0b6cbe16e2e56  /usr/local/bin/pg-broker-gateway
+5030a7e732ecd03e44aebb9216d7eaecaa647c3cdb636a94b83b163fc9afb52b  /opt/pgsql/lib/pg_broker.so

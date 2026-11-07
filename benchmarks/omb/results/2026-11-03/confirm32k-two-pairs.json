@@ -1,0 +1,190 @@
+{
+  "reference_system": "kafka",
+  "candidate_system": "broker",
+  "trials": [
+    {
+      "directory": "benchmarks/omb/results/2026-11-03/confirm32k-1",
+      "offered_messages_per_second": 32000,
+      "results": {
+        "kafka": {
+          "file": "benchmarks/omb/results/2026-11-03/confirm32k-1/kafka.json",
+          "workload": "32k-1-topic-16-partitions-1kb",
+          "samples": 30,
+          "publish_msg_s_mean": 32027.083308812526,
+          "consume_msg_s_mean": 32027.083303381773,
+          "publish_error_msg_s_max": 0.0,
+          "backlog_first": 0,
+          "backlog_last": 0,
+          "backlog_max": 20,
+          "publish_p99_ms": 13.335,
+          "publish_delay_p99_us": 389,
+          "end_to_end_p99_ms": 14.0,
+          "client_warning_error_matches": 0,
+          "offered_rate_fraction_published": 1.0008463534003915,
+          "offered_rate_fraction_consumed": 1.0008463532306804,
+          "backlog_linear_trend_messages_per_second": 0.005784204671857619
+        },
+        "broker": {
+          "file": "benchmarks/omb/results/2026-11-03/confirm32k-1/broker.json",
+          "workload": "32k-1-topic-16-partitions-1kb",
+          "samples": 30,
+          "publish_msg_s_mean": 32022.574649218244,
+          "consume_msg_s_mean": 32022.57820805993,
+          "publish_error_msg_s_max": 0.0,
+          "backlog_first": 0,
+          "backlog_last": 154,
+          "backlog_max": 182,
+          "publish_p99_ms": 9.557,
+          "publish_delay_p99_us": 163,
+          "end_to_end_p99_ms": 13.0,
+          "client_warning_error_matches": 0,
+          "offered_rate_fraction_published": 1.00070545778807,
+          "offered_rate_fraction_consumed": 1.000705569001873,
+          "backlog_linear_trend_messages_per_second": -0.008676307007786429
+        }
+      },
+      "candidate_to_reference_end_to_end_p99_ratio": 0.9285714285714286,
+      "conclusion": "Observed fixed-load trial only; no capacity, repeatability, RF=3 or scaling acceptance.",
+      "environment": {
+        "order": "kafka-first",
+        "stores": [
+          "/home/ubuntu/omb-pair-017-confirm32k-1-kafka-data",
+          "/omb-pair-017-confirm32k-1-db",
+          "/omb-pair-017-confirm32k-1-gateway"
+        ],
+        "contract": {
+          "volume_size_gib": 160,
+          "volume_vpus_per_gb": 10,
+          "kafka_config": {
+            "process.roles": "broker,controller",
+            "node.id": "1",
+            "controller.quorum.voters": "1@127.0.0.1:19093",
+            "listeners": "PLAINTEXT://127.0.0.1:19092,CONTROLLER://127.0.0.1:19093",
+            "advertised.listeners": "PLAINTEXT://127.0.0.1:19092",
+            "controller.listener.names": "CONTROLLER",
+            "listener.security.protocol.map": "CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT",
+            "inter.broker.listener.name": "PLAINTEXT",
+            "log.dirs": "<fresh-trial-store>",
+            "num.partitions": "16",
+            "default.replication.factor": "1",
+            "min.insync.replicas": "1",
+            "offsets.topic.replication.factor": "1",
+            "transaction.state.log.replication.factor": "1",
+            "transaction.state.log.min.isr": "1",
+            "group.initial.rebalance.delay.ms": "0",
+            "auto.create.topics.enable": "false",
+            "log.flush.interval.messages": "1",
+            "log.retention.hours": "24"
+          },
+          "sql": {
+            "pg_broker--0.1.5--0.1.6.sql": "35b1c3e1b0e5efe69d2475ce3cb8046c861dca775df9d158fbdc09b340c3fbfa",
+            "pg_broker--0.1.6--0.1.7.sql": "fc267b0a212907461ee791a772f42284504518b7270805d7d40669748fc166a0",
+            "verify-storage.sql": "5546b201f71e81f2096608d41cde959c0e22abbe54b91efbe7000b472ce981a1"
+          },
+          "image": "sha256:6821d31236114005fd88bc092f63721b540538169b8f048e09771ed68e24da19",
+          "extension_binary": "5030a7e732ecd03e44aebb9216d7eaecaa647c3cdb636a94b83b163fc9afb52b  /opt/pgsql/lib/pg_broker.so",
+          "gateway_check": "/home/ubuntu/candidate-pipeline015/pg-broker-gateway: OK",
+          "runner_sha256": "8bf3e24b3340f26be4973f3caa77fb7c6cba01379885ae56ff4b84dd023ca881",
+          "host": "Linux pg-broker-omb-verification-1 7.0.0-1013-oracle #13~24.04.1-Ubuntu SMP PREEMPT Fri Sep 25 09:43:58 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux",
+          "java": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment (build 17.0.20.1+1-1-24.04-Ubuntu)\nOpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-24.04-Ubuntu, mixed mode, sharing)"
+        },
+        "scope": "Captured RF=1 environment and restart evidence only; no live-host attestation or performance acceptance."
+      }
+    },
+    {
+      "directory": "benchmarks/omb/results/2026-11-03/confirm32k-2",
+      "offered_messages_per_second": 32000,
+      "results": {
+        "kafka": {
+          "file": "benchmarks/omb/results/2026-11-03/confirm32k-2/kafka.json",
+          "workload": "32k-1-topic-16-partitions-1kb",
+          "samples": 30,
+          "publish_msg_s_mean": 32023.89000130544,
+          "consume_msg_s_mean": 32024.823863584625,
+          "publish_error_msg_s_max": 0.0,
+          "backlog_first": 0,
+          "backlog_last": 0,
+          "backlog_max": 183,
+          "publish_p99_ms": 12.868,
+          "publish_delay_p99_us": 407,
+          "end_to_end_p99_ms": 13.0,
+          "client_warning_error_matches": 2,
+          "offered_rate_fraction_published": 1.000746562540795,
+          "offered_rate_fraction_consumed": 1.0007757457370194,
+          "backlog_linear_trend_messages_per_second": -0.2368186874304783
+        },
+        "broker": {
+          "file": "benchmarks/omb/results/2026-11-03/confirm32k-2/broker.json",
+          "workload": "32k-1-topic-16-partitions-1kb",
+          "samples": 30,
+          "publish_msg_s_mean": 32020.840197143436,
+          "consume_msg_s_mean": 32020.37802045938,
+          "publish_error_msg_s_max": 0.0,
+          "backlog_first": 0,
+          "backlog_last": 139,
+          "backlog_max": 190,
+          "publish_p99_ms": 9.397,
+          "publish_delay_p99_us": 152,
+          "end_to_end_p99_ms": 12.0,
+          "client_warning_error_matches": 0,
+          "offered_rate_fraction_published": 1.0006512561607324,
+          "offered_rate_fraction_consumed": 1.0006368131393555,
+          "backlog_linear_trend_messages_per_second": 0.13839822024471635
+        }
+      },
+      "candidate_to_reference_end_to_end_p99_ratio": 0.9230769230769231,
+      "conclusion": "Observed fixed-load trial only; no capacity, repeatability, RF=3 or scaling acceptance.",
+      "environment": {
+        "order": "broker-first",
+        "stores": [
+          "/home/ubuntu/omb-pair-017-confirm32k-2-kafka-data",
+          "/omb-pair-017-confirm32k-2-db",
+          "/omb-pair-017-confirm32k-2-gateway"
+        ],
+        "contract": {
+          "volume_size_gib": 160,
+          "volume_vpus_per_gb": 10,
+          "kafka_config": {
+            "process.roles": "broker,controller",
+            "node.id": "1",
+            "controller.quorum.voters": "1@127.0.0.1:19093",
+            "listeners": "PLAINTEXT://127.0.0.1:19092,CONTROLLER://127.0.0.1:19093",
+            "advertised.listeners": "PLAINTEXT://127.0.0.1:19092",
+            "controller.listener.names": "CONTROLLER",
+            "listener.security.protocol.map": "CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT",
+            "inter.broker.listener.name": "PLAINTEXT",
+            "log.dirs": "<fresh-trial-store>",
+            "num.partitions": "16",
+            "default.replication.factor": "1",
+            "min.insync.replicas": "1",
+            "offsets.topic.replication.factor": "1",
+            "transaction.state.log.replication.factor": "1",
+            "transaction.state.log.min.isr": "1",
+            "group.initial.rebalance.delay.ms": "0",
+            "auto.create.topics.enable": "false",
+            "log.flush.interval.messages": "1",
+            "log.retention.hours": "24"
+          },
+          "sql": {
+            "pg_broker--0.1.5--0.1.6.sql": "35b1c3e1b0e5efe69d2475ce3cb8046c861dca775df9d158fbdc09b340c3fbfa",
+            "pg_broker--0.1.6--0.1.7.sql": "fc267b0a212907461ee791a772f42284504518b7270805d7d40669748fc166a0",
+            "verify-storage.sql": "5546b201f71e81f2096608d41cde959c0e22abbe54b91efbe7000b472ce981a1"
+          },
+          "image": "sha256:6821d31236114005fd88bc092f63721b540538169b8f048e09771ed68e24da19",
+          "extension_binary": "5030a7e732ecd03e44aebb9216d7eaecaa647c3cdb636a94b83b163fc9afb52b  /opt/pgsql/lib/pg_broker.so",
+          "gateway_check": "/home/ubuntu/candidate-pipeline015/pg-broker-gateway: OK",
+          "runner_sha256": "8bf3e24b3340f26be4973f3caa77fb7c6cba01379885ae56ff4b84dd023ca881",
+          "host": "Linux pg-broker-omb-verification-1 7.0.0-1013-oracle #13~24.04.1-Ubuntu SMP PREEMPT Fri Sep 25 09:43:58 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux",
+          "java": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment (build 17.0.20.1+1-1-24.04-Ubuntu)\nOpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-24.04-Ubuntu, mixed mode, sharing)"
+        },
+        "scope": "Captured RF=1 environment and restart evidence only; no live-host attestation or performance acceptance."
+      }
+    }
+  ],
+  "trial_count": 2,
+  "at_least_three_trials": false,
+  "end_to_end_p99_ratios": [
+    0.9285714285714286,
+    0.9230769230769231
+  ]
+}

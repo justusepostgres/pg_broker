@@ -1,0 +1,16 @@
+test-topic-0000000-5JgkfsE|0|0|710250
+test-topic-0000000-5JgkfsE|1|0|740436
+test-topic-0000000-5JgkfsE|2|0|728544
+test-topic-0000000-5JgkfsE|3|0|738978
+test-topic-0000000-5JgkfsE|4|0|732522
+test-topic-0000000-5JgkfsE|5|0|723996
+test-topic-0000000-5JgkfsE|6|0|725842
+test-topic-0000000-5JgkfsE|7|0|677483
+test-topic-0000000-5JgkfsE|8|0|736888
+test-topic-0000000-5JgkfsE|9|0|722761
+test-topic-0000000-5JgkfsE|10|0|709439
+test-topic-0000000-5JgkfsE|11|0|724040
+test-topic-0000000-5JgkfsE|12|0|706861
+test-topic-0000000-5JgkfsE|13|0|721670
+test-topic-0000000-5JgkfsE|14|0|719472
+test-topic-0000000-5JgkfsE|15|0|749120

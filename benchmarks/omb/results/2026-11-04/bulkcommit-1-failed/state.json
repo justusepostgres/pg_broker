@@ -1,0 +1,20 @@
+{
+  "binary": "/home/ubuntu/candidate-bulkcommit017/pg-broker-gateway",
+  "binary_sha256": "81ceb16a9475cc5e35cd7f34e67c9132e8efe7418a4e3e9e3489f4abf4802103",
+  "sql_version": "0.1.17",
+  "phase": "failed",
+  "unit": "omb-cloud-pair-017-bulkcommit-1.service",
+  "label": "017-bulkcommit-1",
+  "order": "broker-first",
+  "rate": "100k",
+  "runner_sha256": "df772a20cce7a4ccb8cc0d93db0f2efa4bd7d0a62aa7ff6b8b776077943732ba",
+  "volume_size_gib": 1024,
+  "vpus_per_gb": 10,
+  "diagnostic_broker_only": true,
+  "diagnostic_timing": true,
+  "diagnostic_commit_delay_us": 0,
+  "scope": "Instrumented broker-only diagnosis; not acceptance",
+  "invocation": "d03625d99c39414e98e0bed3f08639b6",
+  "error": "{'MainPID': '0', 'Result': 'exit-code', 'ExecMainStatus': '1', 'SubState': 'failed', 'InvocationID': 'd03625d99c39414e98e0bed3f08639b6'}",
+  "note": "Inspect recorded service invocation; never blindly replay launch"
+}

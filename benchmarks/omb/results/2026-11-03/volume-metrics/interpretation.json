@@ -1,0 +1,12 @@
+{
+  "scope": "OCI metric timestamps within interior measurement minutes; not exact per-stall attribution. Raw observations retained.",
+  "interior_throttled_io_sums": {
+    "broker50k_2216_to_2230": 0,
+    "kafka50k_2233_to_2247": 0,
+    "kafka_background32k_2255_to_2258": 1085
+  },
+  "reported_guaranteed_iops": 9600,
+  "reported_guaranteed_throughput_metric": 75,
+  "source": "https://docs.oracle.com/en-us/iaas/Content/Block/References/volumemetrics-reference.htm",
+  "next": "Finish current immutable pair; retain disk-constrained reference. Before higher offered loads, expand dedicated benchmark storage headroom and rerun BOTH systems on the same new captured profile. No profile change during running work."
+}

@@ -1,0 +1,31 @@
+{
+  "phase": "waiting",
+  "handles": {
+    "omb-cloud-pair-017-timing100k-1.service": "147112804c714f5eaa800b0b46ce4074",
+    "omb-cloud-controller-timing100k-1.service": "5038ae8e573c4bdcb57dbfbf71d39250"
+  },
+  "candidate_hashes": {
+    "/Users/salah/Documents/ChatGPT/pg_kafka/tests/results/2026-11-04-group-commit-preparation/oci-pair.sh": "7f1ff0eb85e40d96fc70e3ff59b9899493e1dc820bcda6c98634a70402b65b51",
+    "/Users/salah/Documents/ChatGPT/pg_kafka/tests/results/2026-11-04-group-commit-preparation/cloud-controller.py": "7f2b81b68429491774031114443e8c6ed26de3ba273fa4de181c5450aad6e984",
+    "/Users/salah/Documents/ChatGPT/pg_kafka/tests/results/2026-11-04-group-commit-preparation/sample-server.py": "02d82439e10b94711d055b773f738c8ed0d20fd3db2926f4c2ac6c43f1a7a3a0",
+    "/Users/salah/Documents/ChatGPT/pg_kafka/.dev/deploy-groupcommit5001.py": "ad8f60d86de5251ebc55ae2610a81e4dbc0ef58178c6dc8fbd8657c9762cc04e"
+  },
+  "scope": "One-shot fresh group-commit diagnostic only after baseline completion and validation",
+  "observed_at": "2026-11-04T07:31:31.661141+00:00",
+  "statuses": {
+    "omb-cloud-pair-017-timing100k-1.service": {
+      "MainPID": "187727",
+      "Result": "success",
+      "ExecMainStatus": "0",
+      "SubState": "running",
+      "InvocationID": "147112804c714f5eaa800b0b46ce4074"
+    },
+    "omb-cloud-controller-timing100k-1.service": {
+      "MainPID": "187708",
+      "Result": "success",
+      "ExecMainStatus": "0",
+      "SubState": "running",
+      "InvocationID": "5038ae8e573c4bdcb57dbfbf71d39250"
+    }
+  }
+}

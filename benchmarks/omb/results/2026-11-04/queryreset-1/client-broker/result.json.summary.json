@@ -1,0 +1,25 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-018-queryreset-1-broker/result.json",
+    "workload": "100k-1-topic-16-partitions-1kb",
+    "samples": 89,
+    "publish_msg_s_mean": 92682.93122464964,
+    "consume_msg_s_mean": 92685.2073674438,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 3307,
+    "backlog_last": 1771,
+    "backlog_max": 3795,
+    "publish_p99_ms": 572.299,
+    "publish_delay_p99_us": 60000255,
+    "end_to_end_p99_ms": 601.003,
+    "publish_p999_ms": 692.455,
+    "publish_p9999_ms": 1019.167,
+    "publish_max_ms": 1135.527,
+    "publish_delay_p999_us": 60000255,
+    "publish_delay_p9999_us": 60000255,
+    "publish_delay_max_us": 60000255,
+    "end_to_end_p999_ms": 722.003,
+    "end_to_end_p9999_ms": 1047.003,
+    "end_to_end_max_ms": 1165.007
+  }
+]

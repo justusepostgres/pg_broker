@@ -1,0 +1,33 @@
+{
+  "phase": "observing",
+  "label": "017-bulkcommit-1",
+  "unit": "omb-cloud-controller-bulkcommit-1.service",
+  "bundle_sha256": "b3dbf0ab96115b7bc74befc4e85d0e9b40b28b641eae0b4d8c66c743a6c7234c",
+  "manifest": {
+    "label": "017-bulkcommit-1",
+    "hashes": {
+      "oci-pair.sh": "df772a20cce7a4ccb8cc0d93db0f2efa4bd7d0a62aa7ff6b8b776077943732ba",
+      "cloud-controller.py": "7fc17a12ff08e12861c4d758ec889f5bb3692ec25793a2fc6c23b47b563907fd",
+      "sample-server.py": "02d82439e10b94711d055b773f738c8ed0d20fd3db2926f4c2ac6c43f1a7a3a0",
+      "pg_broker--0.1.7--0.1.8.sql": "484fa1ee78c2f7474310d751c3462ad3ec6918693305df587645d669166f0481",
+      "pg_broker--0.1.8--0.1.9.sql": "f42d889fa1ba8058c2fe435a8fc6af6a8a3a8a12feae0713c9ffb75565b10465",
+      "pg_broker--0.1.9--0.1.10.sql": "7f9d214de9ee0fb78f236e0d983632bfaa67ac8994d1fe478ab9c910df8c7722",
+      "pg_broker--0.1.10--0.1.11.sql": "ecc32af8a8dbe84d3315be4cc3d3289102027acfd8b2e19831dc23772524bc8d",
+      "pg_broker--0.1.11--0.1.12.sql": "7a97b9b559b916458880be1813146c193ea5a4a0404f90eca9ef476cdff2acd2",
+      "pg_broker--0.1.12--0.1.13.sql": "18ffa3f8d27cdc55ed5ad12dd07ff28311517c80664b4720ce4b69bdf4a66a17",
+      "pg_broker--0.1.13--0.1.14.sql": "699341742bd314db50f1d759f7cbf376c2d98b36c8ecd4e4b02aefc32fd4cc86",
+      "pg_broker--0.1.14--0.1.15.sql": "e16c34b2b3ce72ff573bb34a105e1fb7b7a697abc924849fc2b8efa432c97216",
+      "pg_broker--0.1.15--0.1.16.sql": "cf2e7c05e4cc15415504541ea65895b4df51afce7881a4ba435768bb7664c175",
+      "pg_broker--0.1.16--0.1.17.sql": "6bd69bb1214a08718432998f8bdca2682d2afbc9346da0d026aaae80527c4dcd"
+    },
+    "scope": "Instrumented broker-only diagnosis; never acceptance"
+  },
+  "controller_invocation": "0194d20942e1428ab44582bb3c2efd3d",
+  "observed": {
+    "MainPID": "228208",
+    "Result": "success",
+    "ExecMainStatus": "0",
+    "SubState": "running",
+    "InvocationID": "0194d20942e1428ab44582bb3c2efd3d"
+  }
+}

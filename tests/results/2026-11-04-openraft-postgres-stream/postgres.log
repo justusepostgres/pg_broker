@@ -1,0 +1,18 @@
+    Finished `test` profile [unoptimized] target(s) in 0.20s
+     Running unittests src/main.rs (target/openraft-format-probe/debug/deps/openraft_format_probe-ab8c9625b63d1c4f)
+
+running 2 tests
+test postgres_stream::postgres_stream_reads_large_committed_jump_with_real_payloads ... ok
+test postgres_stream::postgres_stream_terminates_on_owner_replacement_between_pages ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.99s
+
+911] CONTEXT:  PL/pgSQL function public.broker_raft_committed_page(text,bigint,jsonb) line 13 at RAISE
+2026-11-04 14:48:55.681 +04 [78911] STATEMENT:  SELECT public.broker_raft_committed_page($1,$2,$3)
+2026-11-04 14:48:55.720 +04 [78503] LOG:  received fast shutdown request
+2026-11-04 14:48:55.720 +04 [78503] LOG:  aborting any active transactions
+2026-11-04 14:48:55.721 +04 [78503] LOG:  background worker "logical replication launcher" (PID 78509) exited with exit code 1
+2026-11-04 14:48:55.721 +04 [78504] LOG:  shutting down
+2026-11-04 14:48:55.721 +04 [78504] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 14:48:55.743 +04 [78504] LOG:  checkpoint complete: wrote 972 buffers (5.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.016 s, sync=0.006 s, total=0.023 s; sync files=128, longest=0.002 s, average=0.001 s; distance=8655 kB, estimate=8655 kB; lsn=0/1D8E838, redo lsn=0/1D8E838
+2026-11-04 14:48:55.746 +04 [78503] LOG:  database system is shut down

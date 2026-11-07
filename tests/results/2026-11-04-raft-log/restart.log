@@ -1,0 +1,54 @@
+2026-11-04 03:59:31.934 +04 [53351] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 03:59:31.934 +04 [53351] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 03:59:31.935 +04 [53351] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 03:59:31.937 +04 [53354] LOG:  database system was interrupted; last known up at 2026-11-04 03:59:31 +04
+2026-11-04 03:59:31.985 +04 [53354] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-04 03:59:31.986 +04 [53354] LOG:  redo starts at 0/2C86738
+2026-11-04 03:59:31.986 +04 [53354] WARNING:  could not open directory "base/17126": No such file or directory
+2026-11-04 03:59:31.986 +04 [53354] CONTEXT:  WAL redo at 0/2C86808 for Database/DROP: dir 1663/17126
+2026-11-04 03:59:31.986 +04 [53354] WARNING:  some useless files may be left behind in old database directory "base/17126"
+2026-11-04 03:59:31.986 +04 [53354] CONTEXT:  WAL redo at 0/2C86808 for Database/DROP: dir 1663/17126
+2026-11-04 03:59:31.997 +04 [53354] LOG:  invalid record length at 0/31181C0: expected at least 24, got 0
+2026-11-04 03:59:31.997 +04 [53354] LOG:  redo done at 0/3118198 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-04 03:59:31.998 +04 [53352] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-04 03:59:32.081 +04 [53352] LOG:  checkpoint complete: wrote 995 buffers (6.1%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.072 s, sync=0.011 s, total=0.083 s; sync files=339, longest=0.001 s, average=0.001 s; distance=4678 kB, estimate=4678 kB; lsn=0/31181C0, redo lsn=0/31181C0
+2026-11-04 03:59:32.083 +04 [53351] LOG:  database system is ready to accept connections
+2026-11-04 03:59:32.145 +04 [53358] ERROR:  Raft log writer fenced
+2026-11-04 03:59:32.145 +04 [53358] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 03:59:32.145 +04 [53358] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 03:59:32.150 +04 [53352] LOG:  checkpoint starting: immediate force wait
+2026-11-04 03:59:32.151 +04 [53352] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=6, longest=0.001 s, average=0.001 s; distance=17 kB, estimate=4212 kB; lsn=0/311C758, redo lsn=0/311C700
+2026-11-04 03:59:32.311 +04 [53351] LOG:  received fast shutdown request
+2026-11-04 03:59:32.311 +04 [53351] LOG:  aborting any active transactions
+2026-11-04 03:59:32.311 +04 [53351] LOG:  background worker "logical replication launcher" (PID 53357) exited with exit code 1
+2026-11-04 03:59:32.311 +04 [53352] LOG:  shutting down
+2026-11-04 03:59:32.312 +04 [53352] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 03:59:32.312 +04 [53352] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=3791 kB; lsn=0/311C860, redo lsn=0/311C860
+2026-11-04 03:59:32.314 +04 [53351] LOG:  database system is shut down
+2026-11-04 03:59:57.339 +04 [53463] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 03:59:57.339 +04 [53463] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 03:59:57.340 +04 [53463] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 03:59:57.342 +04 [53466] LOG:  database system was interrupted; last known up at 2026-11-04 03:59:57 +04
+2026-11-04 03:59:57.385 +04 [53466] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-11-04 03:59:57.386 +04 [53466] LOG:  redo starts at 0/3135080
+2026-11-04 03:59:57.386 +04 [53466] WARNING:  could not open directory "base/17287": No such file or directory
+2026-11-04 03:59:57.386 +04 [53466] CONTEXT:  WAL redo at 0/3135150 for Database/DROP: dir 1663/17287
+2026-11-04 03:59:57.386 +04 [53466] WARNING:  some useless files may be left behind in old database directory "base/17287"
+2026-11-04 03:59:57.386 +04 [53466] CONTEXT:  WAL redo at 0/3135150 for Database/DROP: dir 1663/17287
+2026-11-04 03:59:57.397 +04 [53466] LOG:  invalid record length at 0/35C6BD0: expected at least 24, got 0
+2026-11-04 03:59:57.397 +04 [53466] LOG:  redo done at 0/35C6BA8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+2026-11-04 03:59:57.398 +04 [53464] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-11-04 03:59:57.437 +04 [53464] LOG:  checkpoint complete: wrote 995 buffers (6.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.031 s, sync=0.009 s, total=0.040 s; sync files=339, longest=0.001 s, average=0.001 s; distance=4678 kB, estimate=4678 kB; lsn=0/35C6BD0, redo lsn=0/35C6BD0
+2026-11-04 03:59:57.439 +04 [53463] LOG:  database system is ready to accept connections
+2026-11-04 03:59:57.553 +04 [53470] ERROR:  Raft log writer fenced
+2026-11-04 03:59:57.553 +04 [53470] CONTEXT:  PL/pgSQL function public.broker_raft_log(text,bigint,text,jsonb) line 9 at RAISE
+2026-11-04 03:59:57.553 +04 [53470] STATEMENT:  SELECT public.broker_raft_log($1,$2,$3,$4)
+2026-11-04 03:59:57.559 +04 [53464] LOG:  checkpoint starting: immediate force wait
+2026-11-04 03:59:57.561 +04 [53464] LOG:  checkpoint complete: wrote 10 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=6, longest=0.001 s, average=0.001 s; distance=17 kB, estimate=4212 kB; lsn=0/35CB1F8, redo lsn=0/35CB1A0
+2026-11-04 03:59:57.665 +04 [53463] LOG:  received fast shutdown request
+2026-11-04 03:59:57.665 +04 [53463] LOG:  aborting any active transactions
+2026-11-04 03:59:57.666 +04 [53463] LOG:  background worker "logical replication launcher" (PID 53469) exited with exit code 1
+2026-11-04 03:59:57.666 +04 [53464] LOG:  shutting down
+2026-11-04 03:59:57.666 +04 [53464] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 03:59:57.667 +04 [53464] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=3791 kB; lsn=0/35CB300, redo lsn=0/35CB300
+2026-11-04 03:59:57.668 +04 [53463] LOG:  database system is shut down

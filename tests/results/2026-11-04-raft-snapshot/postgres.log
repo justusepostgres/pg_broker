@@ -1,0 +1,22 @@
+2026-11-04 04:55:03.959 +04 [64039] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 04:55:03.959 +04 [64039] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 04:55:03.959 +04 [64039] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 04:55:03.962 +04 [64042] LOG:  database system was shut down at 2026-11-04 04:55:03 +04
+2026-11-04 04:55:03.963 +04 [64039] LOG:  database system is ready to accept connections
+2026-11-04 04:55:06.592 +04 [64098] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 04:55:06.616 +04 [64101] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 04:55:06.616 +04 [64101] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 16 at RAISE
+2026-11-04 04:55:06.616 +04 [64101] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:55:06.632 +04 [64102] ERROR:  Raft application owner fenced
+2026-11-04 04:55:06.632 +04 [64102] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at RAISE
+2026-11-04 04:55:06.632 +04 [64102] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 04:55:07.240 +04 [64106] ERROR:  Snapshot owner fenced
+2026-11-04 04:55:07.240 +04 [64106] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_copy(text,bigint,uuid) line 5 at RAISE
+2026-11-04 04:55:07.240 +04 [64106] STATEMENT:  SELECT public.broker_raft_snapshot_copy($1,$2,$3::text::uuid)
+2026-11-04 04:55:07.273 +04 [64039] LOG:  received fast shutdown request
+2026-11-04 04:55:07.273 +04 [64039] LOG:  aborting any active transactions
+2026-11-04 04:55:07.274 +04 [64039] LOG:  background worker "logical replication launcher" (PID 64045) exited with exit code 1
+2026-11-04 04:55:07.274 +04 [64040] LOG:  shutting down
+2026-11-04 04:55:07.274 +04 [64040] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 04:55:07.292 +04 [64040] LOG:  checkpoint complete: wrote 191 buffers (1.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.013 s, total=0.018 s; sync files=121, longest=0.008 s, average=0.001 s; distance=907 kB, estimate=907 kB; lsn=0/15FD640, redo lsn=0/15FD640
+2026-11-04 04:55:07.294 +04 [64039] LOG:  database system is shut down

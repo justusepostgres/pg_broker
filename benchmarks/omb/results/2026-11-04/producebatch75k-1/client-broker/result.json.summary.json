@@ -1,0 +1,25 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-017-producebatch75k-1-broker/result.json",
+    "workload": "75k-1-topic-16-partitions-1kb",
+    "samples": 90,
+    "publish_msg_s_mean": 75029.29454652756,
+    "consume_msg_s_mean": 75029.7208224582,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 560,
+    "backlog_last": 0,
+    "backlog_max": 3795,
+    "publish_p99_ms": 66.799,
+    "publish_delay_p99_us": 537,
+    "end_to_end_p99_ms": 148.0,
+    "publish_p999_ms": 209.085,
+    "publish_p9999_ms": 324.825,
+    "publish_max_ms": 457.183,
+    "publish_delay_p999_us": 1423,
+    "publish_delay_p9999_us": 2925,
+    "publish_delay_max_us": 22815,
+    "end_to_end_p999_ms": 438.001,
+    "end_to_end_p9999_ms": 661.003,
+    "end_to_end_max_ms": 985.003
+  }
+]

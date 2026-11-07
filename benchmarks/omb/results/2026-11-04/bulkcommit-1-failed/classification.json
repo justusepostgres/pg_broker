@@ -1,0 +1,6 @@
+{
+  "status": "failed-before-measurement",
+  "reason": "SQL migration copied with mode 0600; PostgreSQL could not read it",
+  "measurement": false,
+  "replayed": false
+}

@@ -1,0 +1,26 @@
+{
+  "state_at_recording": "waiting-first-pair",
+  "controller_session": 40533,
+  "first_pair_controller_session": 4034,
+  "first_invocation": "142e323f16bd471e9083a4c1712d5d95",
+  "trials": [
+    {
+      "trial": 1,
+      "order": "broker-first",
+      "status": "already running"
+    },
+    {
+      "trial": 2,
+      "order": "kafka-first",
+      "status": "gated"
+    },
+    {
+      "trial": 3,
+      "order": "broker-first",
+      "status": "gated"
+    }
+  ],
+  "gate": "First pair terminal success, full captured-environment verification, p99 ratio <=1.25, no publish or offset-commit errors, each system publishes/consumes >=99% offered rate. Repeats preserve all outcomes, including regressions.",
+  "preflight": "Same binary/runner hashes, 640GiB 10VPU profile, no active Docker/Java workloads, >95GiB free, unique output paths. No cleanup or provisioning.",
+  "scope": "Repeatability at 75k RF1 only, not maximum capacity or RF3/scaling acceptance"
+}

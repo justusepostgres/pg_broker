@@ -1,0 +1,1 @@
+{"kind":"server-maintenance-slow-sql-client-gc","acceptance_run":false,"slow_statement_ms":10,"parameter_logging":false,"io_timing":true,"wal_io_timing":true,"maintenance_trace":true,"host_vmstat_seconds":1,"postgres_log_rotation":{"size":"16m","files":4}}

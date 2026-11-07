@@ -1,0 +1,1 @@
+5030a7e732ecd03e44aebb9216d7eaecaa647c3cdb636a94b83b163fc9afb52b  /opt/pgsql/lib/pg_broker.so

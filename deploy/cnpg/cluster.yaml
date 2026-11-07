@@ -3,7 +3,7 @@ kind: Cluster
 metadata:
   name: broker-db
 spec:
-  imageName: pg-broker-postgres:17.5-0.1.1
+  imageName: pg-broker-postgres:17.5-0.1.7
   imagePullPolicy: IfNotPresent
   instances: 3
   enableSuperuserAccess: false
@@ -13,8 +13,11 @@ spec:
       owner: broker_app
       dataChecksums: true
       postInitApplicationSQL:
-        - CREATE EXTENSION pg_broker VERSION '0.1.1'
+        - CREATE EXTENSION pg_broker VERSION '0.1.7'
         - GRANT EXECUTE ON FUNCTION public.broker_call(jsonb) TO broker_app
+        - GRANT EXECUTE ON FUNCTION public.broker_fetch_many(jsonb) TO broker_app
+        - GRANT EXECUTE ON FUNCTION public.broker_fetch_binary(jsonb) TO broker_app
+        - GRANT EXECUTE ON FUNCTION public.broker_append_bytes(text,integer,bytea) TO broker_app
   postgresql:
     synchronous:
       method: any

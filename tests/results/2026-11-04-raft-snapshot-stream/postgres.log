@@ -1,0 +1,62 @@
+2026-11-04 05:17:16.986 +04 [68775] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 05:17:16.987 +04 [68775] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 05:17:16.987 +04 [68775] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 05:17:16.989 +04 [68778] LOG:  database system was shut down at 2026-11-04 05:17:16 +04
+2026-11-04 05:17:16.991 +04 [68775] LOG:  database system is ready to accept connections
+2026-11-04 05:17:20.254 +04 [68859] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 05:17:20.273 +04 [68862] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 05:17:20.273 +04 [68862] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 16 at RAISE
+2026-11-04 05:17:20.273 +04 [68862] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 05:17:20.288 +04 [68863] ERROR:  Raft application owner fenced
+2026-11-04 05:17:20.288 +04 [68863] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at RAISE
+2026-11-04 05:17:20.288 +04 [68863] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 05:17:20.878 +04 [68867] ERROR:  Snapshot owner fenced
+2026-11-04 05:17:20.878 +04 [68867] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_copy(text,bigint,uuid) line 5 at RAISE
+2026-11-04 05:17:20.878 +04 [68867] STATEMENT:  SELECT public.broker_raft_snapshot_copy($1,$2,$3::text::uuid)
+2026-11-04 05:17:21.473 +04 [68870] ERROR:  Completed snapshot required
+2026-11-04 05:17:21.473 +04 [68870] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 8 at RAISE
+2026-11-04 05:17:21.473 +04 [68870] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3::text::uuid,$4)
+2026-11-04 05:17:21.484 +04 [68871] ERROR:  Snapshot cursor outside retained interval
+2026-11-04 05:17:21.484 +04 [68871] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 10 at RAISE
+2026-11-04 05:17:21.484 +04 [68871] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3::text::uuid,$4)
+2026-11-04 05:17:21.496 +04 [68872] ERROR:  Snapshot reader fenced
+2026-11-04 05:17:21.496 +04 [68872] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 6 at RAISE
+2026-11-04 05:17:21.496 +04 [68872] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3::text::uuid,$4)
+2026-11-04 05:17:21.542 +04 [68775] LOG:  received fast shutdown request
+2026-11-04 05:17:21.543 +04 [68775] LOG:  aborting any active transactions
+2026-11-04 05:17:21.543 +04 [68775] LOG:  background worker "logical replication launcher" (PID 68781) exited with exit code 1
+2026-11-04 05:17:21.543 +04 [68776] LOG:  shutting down
+2026-11-04 05:17:21.544 +04 [68776] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 05:17:21.553 +04 [68776] LOG:  checkpoint complete: wrote 192 buffers (1.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.005 s, total=0.010 s; sync files=121, longest=0.001 s, average=0.001 s; distance=917 kB, estimate=917 kB; lsn=0/15FFDD0, redo lsn=0/15FFDD0
+2026-11-04 05:17:21.556 +04 [68775] LOG:  database system is shut down
+2026-11-04 05:18:27.460 +04 [69106] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 05:18:27.460 +04 [69106] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 05:18:27.461 +04 [69106] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 05:18:27.463 +04 [69109] LOG:  database system was shut down at 2026-11-04 05:18:27 +04
+2026-11-04 05:18:27.464 +04 [69106] LOG:  database system is ready to accept connections
+2026-11-04 05:18:28.439 +04 [69146] LOG:  unexpected EOF on client connection with an open transaction
+2026-11-04 05:18:28.456 +04 [69149] ERROR:  Cannot apply an uncommitted entry
+2026-11-04 05:18:28.456 +04 [69149] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 16 at RAISE
+2026-11-04 05:18:28.456 +04 [69149] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 05:18:28.469 +04 [69150] ERROR:  Raft application owner fenced
+2026-11-04 05:18:28.469 +04 [69150] CONTEXT:  PL/pgSQL function public.broker_raft_partition_apply(text,bigint,jsonb) line 7 at RAISE
+2026-11-04 05:18:28.469 +04 [69150] STATEMENT:  SELECT public.broker_raft_partition_apply($1,$2,$3)
+2026-11-04 05:18:28.492 +04 [69153] ERROR:  Snapshot owner fenced
+2026-11-04 05:18:28.492 +04 [69153] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_copy(text,bigint,uuid) line 5 at RAISE
+2026-11-04 05:18:28.492 +04 [69153] STATEMENT:  SELECT public.broker_raft_snapshot_copy($1,$2,$3::text::uuid)
+2026-11-04 05:18:29.341 +04 [69156] ERROR:  Completed snapshot required
+2026-11-04 05:18:29.341 +04 [69156] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 8 at RAISE
+2026-11-04 05:18:29.341 +04 [69156] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3::text::uuid,$4)
+2026-11-04 05:18:29.351 +04 [69157] ERROR:  Snapshot cursor outside retained interval
+2026-11-04 05:18:29.351 +04 [69157] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 10 at RAISE
+2026-11-04 05:18:29.351 +04 [69157] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3::text::uuid,$4)
+2026-11-04 05:18:29.362 +04 [69158] ERROR:  Snapshot reader fenced
+2026-11-04 05:18:29.362 +04 [69158] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_read(text,bigint,uuid,bigint) line 6 at RAISE
+2026-11-04 05:18:29.362 +04 [69158] STATEMENT:  SELECT public.broker_raft_snapshot_read($1,$2,$3::text::uuid,$4)
+2026-11-04 05:18:29.409 +04 [69106] LOG:  received fast shutdown request
+2026-11-04 05:18:29.409 +04 [69106] LOG:  aborting any active transactions
+2026-11-04 05:18:29.409 +04 [69106] LOG:  background worker "logical replication launcher" (PID 69112) exited with exit code 1
+2026-11-04 05:18:29.410 +04 [69107] LOG:  shutting down
+2026-11-04 05:18:29.410 +04 [69107] LOG:  checkpoint starting: shutdown immediate
+2026-11-04 05:18:29.419 +04 [69107] LOG:  checkpoint complete: wrote 192 buffers (1.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.005 s, total=0.009 s; sync files=121, longest=0.001 s, average=0.001 s; distance=917 kB, estimate=917 kB; lsn=0/15FFDD0, redo lsn=0/15FFDD0
+2026-11-04 05:18:29.421 +04 [69106] LOG:  database system is shut down

@@ -1,0 +1,1 @@
+/home/ubuntu/candidate-queryreset018/pg-broker-gateway: OK

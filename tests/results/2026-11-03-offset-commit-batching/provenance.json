@@ -1,0 +1,17 @@
+{
+  "sha256": {
+    "Cargo.lock": "b8e538d46c7658694702c7e2c718715257e7a604f348a04486a7ff576c917bef",
+    "crates/gateway/src/offsets.rs": "3ecec709d73b7c5575cd8ca61a87a1fcf2fffb5745e8413c0f2798165e875cd2",
+    "crates/gateway/src/server.rs": "ae87ac9fed47f4be65a78667bb967489d43d7e733557f8599555066f573cb44a",
+    "crates/gateway/src/handlers.rs": "9df5448f2aa002f240224e74a08c283de0faa7e463e73b1ceb95eb662de17c4c",
+    "crates/gateway/src/main.rs": "de6e3f00dbd23dafc1e8820b9d5de6e64e9a0d27b654c31a5e28fe8322510d54",
+    "tests/test_wire.py": "286a669c96d531d2a7fc4490fb72bb29fbeb80116ebdc9b361abedc3200788d5",
+    "target/debug/pg-broker-gateway": "52fb61d8a7464a22f08eadd015374e51cd403bf508f496623caba0b62cb13228"
+  },
+  "scope": "Native PostgreSQL 17.11; default SQL 0.1.7; cloud benchmark binary unchanged",
+  "integration": "62 passed, 1 opt-in crash case skipped; 81.12 seconds",
+  "clippy": "gateway all targets, warnings denied: passed",
+  "unit": "gateway/protocol cargo test: passed",
+  "first_attempt": "Three tests failed before sending requests due to temporary RequestHeader lifetime; corrected and rerun.",
+  "cloud_deployed": false
+}

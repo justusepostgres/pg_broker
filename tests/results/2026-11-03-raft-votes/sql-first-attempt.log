@@ -1,0 +1,52 @@
+....E                                                                    [100%]
+==================================== ERRORS ====================================
+_ ERROR at teardown of test_confirmed_vote_survives_postgres_process_crash[0.1.9] _
+
+request = <SubRequest 'identity_database' for <Function test_confirmed_vote_survives_postgres_process_crash[0.1.9]>>
+
+    @pytest.fixture
+    def identity_database(request):
+        database = 'identity_' + uuid.uuid4().hex
+        version = getattr(request, 'param', '0.1.8')
+        with psycopg.connect(DSN, autocommit=True) as admin:
+            admin.execute(sql.SQL('CREATE DATABASE {}').format(sql.Identifier(database)))
+            dsn = make_conninfo(DSN, dbname=database)
+            try:
+                with psycopg.connect(dsn) as conn:
+                    conn.execute(sql.SQL('CREATE EXTENSION pg_broker VERSION {}').format(sql.Literal(version)))
+                yield dsn
+            finally:
+>               admin.execute(sql.SQL('DROP DATABASE {} WITH (FORCE)').format(sql.Identifier(database)))
+
+tests/test_topic_identity.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <psycopg.Connection [BAD] at 0x107ef6bd0>
+query = Composed([SQL('DROP DATABASE '), Identifier('identity_42c4e1f503984163a85a72117490476c'), SQL(' WITH (FORCE)')])
+params = None
+
+    def execute(
+        self,
+        query: Query,
+        params: Params | None = None,
+        *,
+        prepare: bool | None = None,
+        binary: bool = False,
+    ) -> Cursor[Row]:
+        """Execute a query and return a cursor to read its results."""
+        try:
+            cur = self.cursor()
+            if binary:
+                cur.format = BINARY
+    
+            return cur.execute(query, params, prepare=prepare)
+        except e._NO_TRACEBACK as ex:
+>           raise ex.with_traceback(None)
+E           psycopg.OperationalError: consuming input failed: server closed the connection unexpectedly
+E           	This probably means the server terminated abnormally
+E           	before or while processing the request.
+
+.venv/lib/python3.11/site-packages/psycopg/connection.py:269: OperationalError
+=========================== short test summary info ============================
+ERROR tests/test_raft_votes.py::test_confirmed_vote_survives_postgres_process_crash[0.1.9]
+4 passed, 1 error in 0.95s

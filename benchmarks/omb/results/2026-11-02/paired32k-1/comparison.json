@@ -1,0 +1,53 @@
+{
+  "trials": [
+    {
+      "directory": "benchmarks/omb/results/2026-11-02/paired32k-1",
+      "offered_messages_per_second": 32000,
+      "results": {
+        "kafka": {
+          "file": "benchmarks/omb/results/2026-11-02/paired32k-1/kafka.json",
+          "workload": "32k-1-topic-16-partitions-1kb",
+          "samples": 30,
+          "publish_msg_s_mean": 32027.431410676923,
+          "consume_msg_s_mean": 32027.43144171167,
+          "publish_error_msg_s_max": 0.0,
+          "backlog_first": 0,
+          "backlog_last": 0,
+          "backlog_max": 170,
+          "publish_p99_ms": 11.573,
+          "publish_delay_p99_us": 475,
+          "end_to_end_p99_ms": 12.0,
+          "client_warning_error_matches": 0,
+          "offered_rate_fraction_published": 1.000857231583654,
+          "offered_rate_fraction_consumed": 1.0008572325534897,
+          "backlog_linear_trend_messages_per_second": 0.014927697441601781
+        },
+        "broker": {
+          "file": "benchmarks/omb/results/2026-11-02/paired32k-1/broker.json",
+          "workload": "32k-1-topic-16-partitions-1kb",
+          "samples": 30,
+          "publish_msg_s_mean": 32022.299184249525,
+          "consume_msg_s_mean": 32021.81402405625,
+          "publish_error_msg_s_max": 0.0,
+          "backlog_first": 161,
+          "backlog_last": 146,
+          "backlog_max": 320,
+          "publish_p99_ms": 18.046,
+          "publish_delay_p99_us": 208,
+          "end_to_end_p99_ms": 27.0,
+          "client_warning_error_matches": 0,
+          "offered_rate_fraction_published": 1.0006968495077977,
+          "offered_rate_fraction_consumed": 1.0006816882517577,
+          "backlog_linear_trend_messages_per_second": 0.05268075639599555
+        }
+      },
+      "broker_to_kafka_end_to_end_p99_ratio": 2.25,
+      "conclusion": "Observed fixed-load trial only; no capacity, repeatability, RF=3 or scaling acceptance."
+    }
+  ],
+  "trial_count": 1,
+  "at_least_three_trials": false,
+  "end_to_end_p99_ratios": [
+    2.25
+  ]
+}

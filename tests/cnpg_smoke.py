@@ -10,6 +10,7 @@ import time
 import uuid
 from kafka import KafkaProducer, KafkaConsumer, TopicPartition
 from kafka.admin import KafkaAdminClient, NewTopic
+from kafka.errors import KafkaConnectionError
 from kafka.structs import OffsetAndMetadata
 from confluent_kafka import Producer, Consumer, TopicPartition as RdkPartition
 
@@ -65,7 +66,26 @@ if mode=='seed':
     start=0
 elif mode=='resume':
     state=json.loads(STATE.read_text());start=4
-else:raise ValueError('expected seed or resume')
+elif mode=='no-standby':
+    # Run only after fencing both standbys and confirming the primary still
+    # requires synchronous replication. The topic was created by seed.
+    state=json.loads(STATE.read_text())
+    p=KafkaProducer(bootstrap_servers=ADDRESS,acks='all',retries=0,
+                    request_timeout_ms=12000,max_block_ms=15000)
+    began=time.monotonic()
+    try:
+        p.send(state['topic'],partition=0,value=b'uncertain-no-standby').get(20)
+    except KafkaConnectionError as error:
+        elapsed=time.monotonic()-began
+        assert elapsed>=4.5, (elapsed,repr(error))
+        print(json.dumps({'mode':mode,'result':'PASS','acknowledged':False,
+                          'elapsed_seconds':round(elapsed,2),'error':type(error).__name__}),flush=True)
+    else:
+        raise AssertionError('Produce acknowledged without a required standby')
+    finally:
+        p.close(timeout=0)
+    sys.exit(0)
+else:raise ValueError('expected seed, resume or no-standby')
 python_consume(state,start)
 rdk_consume(state,start)
 print(json.dumps({'mode':mode,'topic':state['topic'],'clients':['kafka-python 2.0.2','confluent-kafka 2.6.1'],'records_per_client':(6-start)*2,'committed_next_offset':4,'result':'PASS'}),flush=True)

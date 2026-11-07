@@ -1,0 +1,51 @@
+{
+  "file": "benchmarks/omb/results/2026-11-04/producebatch75k-2-kafka-interim/artifacts/result.json",
+  "workload": "75k-1-topic-16-partitions-1kb",
+  "samples": 90,
+  "publish_msg_s_mean": 75024.75250937772,
+  "consume_msg_s_mean": 75024.98935003288,
+  "publish_error_msg_s_max": 0.0,
+  "backlog_first": 0,
+  "backlog_last": 44,
+  "backlog_max": 1012,
+  "publish_p99_ms": 195.766,
+  "publish_delay_p99_us": 368,
+  "end_to_end_p99_ms": 206.0,
+  "publish_delay_avg_windows": {
+    "first_us": 47.846119758488896,
+    "last_us": 47.23083878763202,
+    "max_us": 15804.824196604874,
+    "change_us": -0.6152809708568796,
+    "linear_trend_us_per_sample": -1.3949243668917455
+  },
+  "publish_p999_ms": 494.957,
+  "publish_p9999_ms": 825.855,
+  "publish_max_ms": 1020.567,
+  "publish_delay_p999_us": 61409,
+  "publish_delay_p9999_us": 361741,
+  "publish_delay_max_us": 419893,
+  "end_to_end_p999_ms": 510.001,
+  "end_to_end_p9999_ms": 828.003,
+  "end_to_end_max_ms": 1030.003,
+  "producer_histogram_limit": {
+    "cap_us": 60000000,
+    "publish_at_cap": false,
+    "scheduling_delay_at_cap": false,
+    "scope": "Pinned upstream producer metrics clamp at 60s; values at the cap may be censored. This cap does not apply to the end-to-end histogram."
+  },
+  "client_events": {
+    "warning_events": 0,
+    "error_events": 0,
+    "offset_commit_failure_events": 0,
+    "scope": "Entire retained client log, including warmup/shutdown; event counts are not lost-record counts or measurement-only rates."
+  },
+  "measurement": {
+    "timing_verified": true,
+    "samples": 90,
+    "requested_seconds": 900,
+    "measured_seconds": 904.6949999999997,
+    "shortest_interval_seconds": 10.03399999999965,
+    "longest_interval_seconds": 10.118999999999687
+  },
+  "scope": "Completed trial-two Kafka client only; full pair and broker results pending."
+}

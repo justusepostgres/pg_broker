@@ -1,0 +1,14 @@
+{
+  "Cargo.lock": "b8e538d46c7658694702c7e2c718715257e7a604f348a04486a7ff576c917bef",
+  "Cargo.toml": "eaf478a78a3ab1f05d6e813a37dff26cff7fdb53a90de0d96fee6e1d98748d73",
+  "crates/extension/Cargo.toml": "b8d46fef6dd141e0dd14c7caa3d2f2e9bfc475e86493aa5591f8edfe401fd0ad",
+  "crates/extension/src/lib.rs": "c5b939c1f4b3892afaa259d3927fa2cd8392f0a2b30d05c35a005ea9ff324915",
+  "crates/gateway/Cargo.toml": "fbf1f1d87a35aba140164ef4bd4dca08c6a3d485fd925d8484f5c106bc8e6408",
+  "crates/gateway/src/database.rs": "5d8ba33975afb6f2d1779dea11d6517a99524bf445ec3211a96cb0346156a632",
+  "crates/gateway/src/fetch.rs": "4b3efdb0cb899164bdf4406a6d97c8f3b342aa64c2ec2cc767558edd27c48403",
+  "crates/gateway/src/handlers.rs": "a0ca6d41f77cdb792aa7bde0d9be55a8934fc24469171a28faba3caf5ed8398a",
+  "crates/gateway/src/health.rs": "89995e5a6481781d201fc1e785b73585d9afcd3fb3f162e9dd34ae7ad9b7fe65",
+  "crates/gateway/src/main.rs": "d2c33a88cc84aa998fd411ec0e967593ffb454e681e04cc60134933d079983a0",
+  "crates/gateway/src/produce.rs": "d2fd4526298946b1c607e07a6aa24c8fb5e4e07bc124fee4457ad6e8fd247f2d",
+  "crates/gateway/src/server.rs": "e4d8dd98fedaae578333e824f4eede5dd6b073b57afb07e839075f41f92ef5fe"
+}

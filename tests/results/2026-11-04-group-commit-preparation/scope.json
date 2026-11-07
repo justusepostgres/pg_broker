@@ -1,0 +1,6 @@
+{
+  "scope": "Prepared and unit-tested locally; not deployed or performance-verified",
+  "commit_delay_us": 500,
+  "commit_siblings": 1,
+  "requires": "Fresh instrumented broker-only trial after the original timing baseline completes"
+}

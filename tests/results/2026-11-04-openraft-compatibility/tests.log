@@ -1,0 +1,21 @@
+   Compiling openraft-format-probe v0.0.0 (/Users/salah/Documents/ChatGPT/pg_kafka/tests/experiments/openraft-compatibility)
+    Finished `test` profile [unoptimized] target(s) in 0.61s
+     Running unittests src/main.rs (target/openraft-format-probe/debug/deps/openraft_format_probe-d9ab5891353ce9ef)
+
+running 3 tests
+PASS log ID: {"index":42,"leader_id":{"node_id":2,"term":7}}
+PASS committed vote: {"committed":true,"leader_id":{"node_id":2,"term":7}}
+test stream_tests::default_stream_does_not_chunk_a_large_committed_range ... ok
+PASS uncommitted vote: {"committed":false,"leader_id":{"node_id":3,"term":8}}
+PASS stored membership: {"log_id":{"index":42,"leader_id":{"node_id":2,"term":7}},"membership":{"configs":[[1,2,3]],"nodes":{"1":{"addr":"node1"},"2":{"addr":"node2"},"3":{"addr":"node3"}}}}
+PASS blank: {"log_id":{"index":42,"leader_id":{"node_id":2,"term":7}},"payload":"Blank"}
+PASS normal: {"log_id":{"index":42,"leader_id":{"node_id":2,"term":7}},"payload":{"Normal":[1,2,3]}}
+PASS append command envelope: {"log_id":{"index":42,"leader_id":{"node_id":2,"term":7}},"payload":{"Normal":{"appended_at_ms":1700000000123,"data":"00000000000000000000004a0000000002ca010a830000000000000000018bcfe568000000018bcfe56800ffffffffffffffffffffffffffff000000013000000001247265706c6963617465642d7061796c6f616400","expected_offset":0,"op":"append"}}}
+PASS retention command envelope: {"log_id":{"index":42,"leader_id":{"node_id":2,"term":7}},"payload":{"Normal":{"expected_earliest":0,"new_earliest":4096,"op":"retain"}}}
+PASS membership: {"log_id":{"index":42,"leader_id":{"node_id":2,"term":7}},"payload":{"Membership":{"configs":[[1,2,3]],"nodes":{"1":{"addr":"node1"},"2":{"addr":"node2"},"3":{"addr":"node3"}}}}}
+Scope: selected JSON fixtures only; not a storage or consensus migration test.
+test selected_json_fixtures_round_trip ... ok
+test stream_tests::default_stream_fetches_the_whole_range_before_first_poll ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+

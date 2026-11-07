@@ -1,0 +1,12 @@
+{
+  "host": "192.9.149.246",
+  "key": "/Users/salah/Documents/ChatGPT/pg_kafka/.dev/oci-cnpg-key",
+  "known_hosts": "/Users/salah/Documents/ChatGPT/pg_kafka/.dev/oci-omb-client-known-hosts",
+  "label": "017-producebatch75k-1-broker",
+  "unit": "omb-client-017-producebatch75k-1-broker.service",
+  "rate": "75k",
+  "bootstrap": "10.84.0.247:9092",
+  "preflight": false,
+  "phase": "complete",
+  "invocation": "741a702a616c4387a1240cf169f69077"
+}

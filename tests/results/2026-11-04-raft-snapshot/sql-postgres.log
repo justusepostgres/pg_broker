@@ -1,0 +1,61 @@
+2026-11-04 04:54:06.319 +04 [63749] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 04:54:06.319 +04 [63749] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 04:54:06.320 +04 [63749] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 04:54:06.322 +04 [63752] LOG:  database system was shut down at 2026-11-04 04:54:06 +04
+2026-11-04 04:54:06.324 +04 [63749] LOG:  database system is ready to accept connections
+2026-11-04 04:54:06.757 +04 [63763] ERROR:  Snapshot source range is pinned
+2026-11-04 04:54:06.757 +04 [63763] CONTEXT:  PL/pgSQL function raft_snapshot_preserve_source() line 7 at RAISE
+2026-11-04 04:54:06.757 +04 [63763] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND base_offset=0
+2026-11-04 04:54:06.757 +04 [63763] ERROR:  Snapshot source range is pinned
+2026-11-04 04:54:06.757 +04 [63763] CONTEXT:  PL/pgSQL function raft_snapshot_preserve_source() line 7 at RAISE
+2026-11-04 04:54:06.757 +04 [63763] STATEMENT:  UPDATE broker.batches SET appended_at=now() WHERE topic='replica' AND base_offset=0
+2026-11-04 04:54:06.757 +04 [63763] ERROR:  Snapshot source range is pinned
+2026-11-04 04:54:06.757 +04 [63763] CONTEXT:  PL/pgSQL function raft_snapshot_preserve_source() line 7 at RAISE
+	SQL statement "DELETE FROM ONLY "broker"."batches" WHERE $1 OPERATOR(pg_catalog.=) "topic" AND $2 OPERATOR(pg_catalog.=) "partition""
+2026-11-04 04:54:06.757 +04 [63763] STATEMENT:  DELETE FROM broker.topics WHERE name='replica'
+2026-11-04 04:54:06.759 +04 [63763] ERROR:  Snapshot owner fenced
+2026-11-04 04:54:06.759 +04 [63763] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_copy(text,bigint,uuid) line 5 at RAISE
+2026-11-04 04:54:06.759 +04 [63763] STATEMENT:  SELECT public.broker_raft_snapshot_copy($1,$2,$3)
+2026-11-04 04:54:06.763 +04 [63750] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:54:06.768 +04 [63750] LOG:  checkpoint complete: wrote 124 buffers (0.8%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.003 s, total=0.005 s; sync files=93, longest=0.001 s, average=0.001 s; distance=5366 kB, estimate=5366 kB; lsn=0/1A582D8, redo lsn=0/1A58280
+2026-11-04 04:54:06.869 +04 [63768] ERROR:  Snapshot source range is pinned
+2026-11-04 04:54:06.869 +04 [63768] CONTEXT:  PL/pgSQL function raft_snapshot_preserve_source() line 7 at RAISE
+2026-11-04 04:54:06.869 +04 [63768] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND base_offset=0
+2026-11-04 04:54:06.870 +04 [63768] ERROR:  Snapshot source range is pinned
+2026-11-04 04:54:06.870 +04 [63768] CONTEXT:  PL/pgSQL function raft_snapshot_preserve_source() line 7 at RAISE
+2026-11-04 04:54:06.870 +04 [63768] STATEMENT:  UPDATE broker.batches SET appended_at=now() WHERE topic='replica' AND base_offset=0
+2026-11-04 04:54:06.870 +04 [63768] ERROR:  Snapshot source range is pinned
+2026-11-04 04:54:06.870 +04 [63768] CONTEXT:  PL/pgSQL function raft_snapshot_preserve_source() line 7 at RAISE
+	SQL statement "DELETE FROM ONLY "broker"."batches" WHERE $1 OPERATOR(pg_catalog.=) "topic" AND $2 OPERATOR(pg_catalog.=) "partition""
+2026-11-04 04:54:06.870 +04 [63768] STATEMENT:  DELETE FROM broker.topics WHERE name='replica'
+2026-11-04 04:54:06.871 +04 [63768] ERROR:  Snapshot owner fenced
+2026-11-04 04:54:06.871 +04 [63768] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_copy(text,bigint,uuid) line 5 at RAISE
+2026-11-04 04:54:06.871 +04 [63768] STATEMENT:  SELECT public.broker_raft_snapshot_copy($1,$2,$3)
+2026-11-04 04:54:06.876 +04 [63750] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:54:06.878 +04 [63750] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4787 kB, estimate=5308 kB; lsn=0/1F05158, redo lsn=0/1F05100
+2026-11-04 04:54:07.031 +04 [63772] ERROR:  Snapshot count limit; release an obsolete snapshot
+2026-11-04 04:54:07.031 +04 [63772] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_begin(text,bigint) line 11 at RAISE
+2026-11-04 04:54:07.031 +04 [63772] STATEMENT:  SELECT public.broker_raft_snapshot_begin($1,$2)
+2026-11-04 04:54:07.035 +04 [63750] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:54:07.037 +04 [63750] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=5145 kB, estimate=5292 kB; lsn=0/240B910, redo lsn=0/240B8B8
+2026-11-04 04:54:08.425 +04 [63776] ERROR:  Snapshot count limit; release an obsolete snapshot
+2026-11-04 04:54:08.425 +04 [63776] CONTEXT:  PL/pgSQL function public.broker_raft_snapshot_begin(text,bigint) line 11 at RAISE
+2026-11-04 04:54:08.425 +04 [63776] STATEMENT:  SELECT public.broker_raft_snapshot_begin($1,$2)
+2026-11-04 04:54:08.430 +04 [63750] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:54:08.431 +04 [63750] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=5478 kB, estimate=5478 kB; lsn=0/2965398, redo lsn=0/2965340
+2026-11-04 04:54:08.551 +04 [63780] ERROR:  permission denied for function broker_raft_snapshot_begin
+2026-11-04 04:54:08.551 +04 [63780] STATEMENT:  SELECT public.broker_raft_snapshot_begin($1,$2)
+2026-11-04 04:54:08.551 +04 [63780] ERROR:  permission denied for function broker_raft_snapshot_copy
+2026-11-04 04:54:08.551 +04 [63780] STATEMENT:  SELECT public.broker_raft_snapshot_copy($1,$2,$3)
+2026-11-04 04:54:08.551 +04 [63780] ERROR:  permission denied for function broker_raft_snapshot_release
+2026-11-04 04:54:08.551 +04 [63780] STATEMENT:  SELECT public.broker_raft_snapshot_release($1,$2,$3)
+2026-11-04 04:54:08.556 +04 [63750] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:54:08.557 +04 [63750] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=8, longest=0.001 s, average=0.001 s; distance=4795 kB, estimate=5410 kB; lsn=0/2E14280, redo lsn=0/2E14228
+2026-11-04 04:54:08.670 +04 [63785] ERROR:  could not serialize access due to concurrent update
+2026-11-04 04:54:08.670 +04 [63785] CONTEXT:  SQL statement "SELECT 1 FROM broker.partitions WHERE topic=OLD.topic AND partition=OLD.partition FOR UPDATE"
+	PL/pgSQL function raft_snapshot_preserve_source() line 3 at PERFORM
+2026-11-04 04:54:08.670 +04 [63785] STATEMENT:  DELETE FROM broker.batches WHERE topic='replica' AND base_offset=0
+2026-11-04 04:54:08.674 +04 [63750] LOG:  checkpoint starting: immediate force wait
+2026-11-04 04:54:08.675 +04 [63750] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=4, longest=0.001 s, average=0.001 s; distance=4785 kB, estimate=5347 kB; lsn=0/32C0800, redo lsn=0/32C07A8
+2026-11-04 04:54:08.855 +04 [63749] LOG:  received immediate shutdown request
+2026-11-04 04:54:08.857 +04 [63749] LOG:  database system is shut down

@@ -1,0 +1,206 @@
+{
+  "samples": 450,
+  "sample_errors": 0,
+  "valid_intervals": 449,
+  "host_cpu": {
+    "valid_intervals": 449,
+    "missing_intervals": 0,
+    "nonmonotonic_intervals": 0,
+    "counter_fractions": {
+      "cpu0": {
+        "user": 0.30381381857735273,
+        "nice": 0.0,
+        "system": 0.19487185297650073,
+        "idle": 0.33737451562464593,
+        "iowait": 0.059960570146615606,
+        "irq": 0.0,
+        "softirq": 0.08864918760905527,
+        "steal": 0.015330055065829726
+      },
+      "cpu1": {
+        "user": 0.2909869009476151,
+        "nice": 0.0,
+        "system": 0.19933882051920704,
+        "idle": 0.37056619153826126,
+        "iowait": 0.05990240809718433,
+        "irq": 0.0,
+        "softirq": 0.057173910582268166,
+        "steal": 0.022031768315464127
+      },
+      "cpu2": {
+        "user": 0.017465278169530536,
+        "nice": 0.0,
+        "system": 0.01851454875723489,
+        "idle": 0.8514774406823643,
+        "iowait": 0.034050522942921935,
+        "irq": 0.0,
+        "softirq": 0.02957137860616249,
+        "steal": 0.04892083084178579
+      },
+      "cpu3": {
+        "user": 0.016900722101625836,
+        "nice": 0.0,
+        "system": 0.01875027687945776,
+        "idle": 0.9201368892039162,
+        "iowait": 0.0275328932795818,
+        "irq": 0.0,
+        "softirq": 0.007209941080051389,
+        "steal": 0.009469277455367032
+      }
+    },
+    "scope": "Host-wide counters, not container attribution. First eight CPU fields only; guest columns are not added again. Linux iowait accounting is unreliable and is not database wait latency."
+  },
+  "covered_seconds": 898.0591180000009,
+  "requested_seconds": 900.703,
+  "mean_cpu_cores": {
+    "db:usage_usec": 0.7811883883127606,
+    "gateway:usage_usec": 0.3405910533831913
+  },
+  "cpu_counter_deltas": {
+    "db:usage_usec": 701553355,
+    "db:user_usec": 434175747,
+    "db:system_usec": 267377609,
+    "db:throttled_usec": 0,
+    "gateway:usage_usec": 305870901,
+    "gateway:user_usec": 109898476,
+    "gateway:system_usec": 195972425,
+    "gateway:throttled_usec": 0
+  },
+  "max_memory_bytes": {
+    "db": 3404410880,
+    "gateway": 72265728
+  },
+  "active_backend_observations": {
+    "IO:WalSync": 124,
+    "no_reported_wait:": 341,
+    "LWLock:WALWrite": 40,
+    "IO:DataFileExtend": 6,
+    "Client:ClientRead": 1
+  },
+  "scope": "Instrumented samples, not acceptance. Wait counts are observations, not elapsed wait time; no_reported_wait does not prove CPU execution. CPU cores are usage-seconds per covered wall-second.",
+  "database_lifetime": {
+    "seconds": 992.942258,
+    "wal": {
+      "wal_records": 5536780,
+      "wal_fpi": 325,
+      "wal_bytes": 1886577588,
+      "wal_buffers_full": 0,
+      "wal_write": 295610,
+      "wal_sync": 295272,
+      "wal_write_time": 7800.888,
+      "wal_sync_time": 282969.807
+    },
+    "database": {
+      "xact_commit": 478925,
+      "xact_rollback": 0,
+      "blks_read": 137374,
+      "blks_hit": 22904964,
+      "tup_inserted": 1389353,
+      "tup_updated": 836505,
+      "tup_deleted": 2
+    },
+    "wal_timing_enabled": true,
+    "functions": [
+      {
+        "function": "public.broker_append_bytes",
+        "funcid": "16484",
+        "calls": 347330,
+        "total_ms": 217058.595,
+        "self_ms": 71274.753,
+        "mean_total_ms": 0.6249347738461981
+      },
+      {
+        "function": "broker.append_bytes",
+        "funcid": "16483",
+        "calls": 347330,
+        "total_ms": 145781.926,
+        "self_ms": 109850.805,
+        "mean_total_ms": 0.41972166527509863
+      },
+      {
+        "function": "public.broker_commit_many",
+        "funcid": "16618",
+        "calls": 206666,
+        "total_ms": 110006.247,
+        "self_ms": 22364.244,
+        "mean_total_ms": 0.5322900090000291
+      },
+      {
+        "function": "broker.commit_many",
+        "funcid": "16617",
+        "calls": 206666,
+        "total_ms": 87640.066,
+        "self_ms": 69004.25,
+        "mean_total_ms": 0.42406620343936596
+      },
+      {
+        "function": "public.broker_fetch_binary",
+        "funcid": "16482",
+        "calls": 96368,
+        "total_ms": 60104.641,
+        "self_ms": 60104.641,
+        "mean_total_ms": 0.6236991636227793
+      },
+      {
+        "function": "broker.raft_guard_batches",
+        "funcid": "16610",
+        "calls": 347330,
+        "total_ms": 23951.354,
+        "self_ms": 4633.618,
+        "mean_total_ms": 0.06895849480321307
+      },
+      {
+        "function": "broker.raft_require_application",
+        "funcid": "16609",
+        "calls": 347330,
+        "total_ms": 19315.9,
+        "self_ms": 19315.9,
+        "mean_total_ms": 0.05561252987072813
+      },
+      {
+        "function": "broker.expire_members",
+        "funcid": "16472",
+        "calls": 207007,
+        "total_ms": 18663.995,
+        "self_ms": 18663.995,
+        "mean_total_ms": 0.09016117812441125
+      },
+      {
+        "function": "broker.raft_guard_partition",
+        "funcid": "16612",
+        "calls": 347330,
+        "total_ms": 11975.956,
+        "self_ms": 11975.956,
+        "mean_total_ms": 0.03448005067227133
+      },
+      {
+        "function": "public.broker_call",
+        "funcid": "16476",
+        "calls": 935,
+        "total_ms": 391.8,
+        "self_ms": 57.765,
+        "mean_total_ms": 0.41903743315508024
+      },
+      {
+        "function": "broker.dispatch",
+        "funcid": "16473",
+        "calls": 935,
+        "total_ms": 333.802,
+        "self_ms": 303.14,
+        "mean_total_ms": 0.35700748663101606
+      },
+      {
+        "function": "broker.rebalance",
+        "funcid": "16471",
+        "calls": 2,
+        "total_ms": 0.535,
+        "self_ms": 0.535,
+        "mean_total_ms": 0.2675
+      }
+    ],
+    "wal_sync_mean_ms": 0.9583360664065674,
+    "wal_write_mean_ms": 0.026389120801055443,
+    "wal_bytes_per_second": 1899987.2075139338,
+    "scope": "Whole diagnostic lifetime, including warmup and sampler transactions. Database commits include read-only work; they are not Kafka Produce request counts. Function totals include nested calls and must not be added together; statistics can lag activity. Disabled WAL timing is missing latency evidence, not zero latency."
+  }
+}

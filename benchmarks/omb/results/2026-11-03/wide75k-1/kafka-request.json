@@ -1,0 +1,6 @@
+{
+  "label": "017-wide75k-1-kafka",
+  "rate": "75k",
+  "bootstrap": "10.84.0.247:19092",
+  "system": "kafka"
+}

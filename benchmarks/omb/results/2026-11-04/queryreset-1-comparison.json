@@ -1,0 +1,54 @@
+{
+  "scope": "Instrumented broker-only diagnosis; no matched comparison or acceptance",
+  "result": {
+    "file": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-04/queryreset-1/broker.json",
+    "workload": "100k-1-topic-16-partitions-1kb",
+    "samples": 89,
+    "publish_msg_s_mean": 92682.93122464964,
+    "consume_msg_s_mean": 92685.2073674438,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 3307,
+    "backlog_last": 1771,
+    "backlog_max": 3795,
+    "publish_p99_ms": 572.299,
+    "publish_delay_p99_us": 60000255,
+    "end_to_end_p99_ms": 601.003,
+    "publish_delay_avg_windows": {
+      "first_us": 9712734.588278651,
+      "last_us": 60000128.0,
+      "max_us": 60000128.0,
+      "change_us": 50287393.41172135,
+      "linear_trend_us_per_sample": 539491.353442259
+    },
+    "publish_p999_ms": 692.455,
+    "publish_p9999_ms": 1019.167,
+    "publish_max_ms": 1135.527,
+    "publish_delay_p999_us": 60000255,
+    "publish_delay_p9999_us": 60000255,
+    "publish_delay_max_us": 60000255,
+    "end_to_end_p999_ms": 722.003,
+    "end_to_end_p9999_ms": 1047.003,
+    "end_to_end_max_ms": 1165.007,
+    "producer_histogram_limit": {
+      "cap_us": 60000000,
+      "publish_at_cap": false,
+      "scheduling_delay_at_cap": true,
+      "scope": "Pinned upstream producer metrics clamp at 60s; values at the cap may be censored. This cap does not apply to the end-to-end histogram."
+    }
+  },
+  "sampling": {
+    "samples": 496,
+    "sample_errors": 0,
+    "pidstat_exit": -15,
+    "acceptance_run": false,
+    "scope": "Instrumented diagnosis; timing disabled values are not latency evidence."
+  },
+  "measurement": {
+    "timing_verified": true,
+    "samples": 89,
+    "requested_seconds": 900,
+    "measured_seconds": 900.7920000000013,
+    "shortest_interval_seconds": 10.093999999997322,
+    "longest_interval_seconds": 10.161999999996624
+  }
+}

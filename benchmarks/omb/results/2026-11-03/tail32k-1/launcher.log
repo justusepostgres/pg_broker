@@ -1,0 +1,11 @@
+9126f9dceb847db311497fe768d6f866699f1dd77962782e522e3fc8d1d2b73c
+ALTER EXTENSION
+ALTER TABLE
+b0ba4aaab7c47eacdb6cec0e279a8b91aac79d0d75a84c811f8523d69efe2d88
+baseline max publish errors/s 0.0 client warnings/errors 0 relation bytes 250036224
+d3e5dbec30f3288758e7dda9244e095f2c4c0333128335100c05e4987ac8883f
+ALTER EXTENSION
+ALTER EXTENSION
+ALTER TABLE
+b1c266d45487509b825346b38ff66a9e3f4d1abb309b23e8c8f0b11ba0437ab3
+tail max publish errors/s 0.0 client warnings/errors 0 relation bytes 252289024

@@ -1,0 +1,16 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-pair-cached015-32k-1/broker.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32022.299184249525,
+    "consume_msg_s_mean": 32021.81402405625,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 161,
+    "backlog_last": 146,
+    "backlog_max": 320,
+    "publish_p99_ms": 18.046,
+    "publish_delay_p99_us": 208,
+    "end_to_end_p99_ms": 27.0
+  }
+]

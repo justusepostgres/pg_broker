@@ -1,0 +1,137 @@
+{
+  "data": [
+    {
+      "aggregated-datapoints": [
+        {
+          "timestamp": "2026-11-03T23:14:00+00:00",
+          "value": 2179817472.0
+        },
+        {
+          "timestamp": "2026-11-03T23:15:00+00:00",
+          "value": 1330708480.0
+        },
+        {
+          "timestamp": "2026-11-03T23:16:00+00:00",
+          "value": 713580544.0
+        },
+        {
+          "timestamp": "2026-11-03T23:17:00+00:00",
+          "value": 733392896.0
+        },
+        {
+          "timestamp": "2026-11-03T23:18:00+00:00",
+          "value": 822185984.0
+        },
+        {
+          "timestamp": "2026-11-03T23:19:00+00:00",
+          "value": 830271488.0
+        },
+        {
+          "timestamp": "2026-11-03T23:20:00+00:00",
+          "value": 827207680.0
+        },
+        {
+          "timestamp": "2026-11-03T23:21:00+00:00",
+          "value": 821022720.0
+        },
+        {
+          "timestamp": "2026-11-03T23:22:00+00:00",
+          "value": 836411392.0
+        },
+        {
+          "timestamp": "2026-11-03T23:23:00+00:00",
+          "value": 939741184.0
+        },
+        {
+          "timestamp": "2026-11-03T23:24:00+00:00",
+          "value": 641236992.0
+        },
+        {
+          "timestamp": "2026-11-03T23:25:00+00:00",
+          "value": 739680256.0
+        },
+        {
+          "timestamp": "2026-11-03T23:26:00+00:00",
+          "value": 697864192.0
+        },
+        {
+          "timestamp": "2026-11-03T23:27:00+00:00",
+          "value": 776970240.0
+        },
+        {
+          "timestamp": "2026-11-03T23:28:00+00:00",
+          "value": 1018470400.0
+        },
+        {
+          "timestamp": "2026-11-03T23:29:00+00:00",
+          "value": 649035776.0
+        },
+        {
+          "timestamp": "2026-11-03T23:30:00+00:00",
+          "value": 656777216.0
+        },
+        {
+          "timestamp": "2026-11-03T23:31:00+00:00",
+          "value": 852758528.0
+        },
+        {
+          "timestamp": "2026-11-03T23:32:00+00:00",
+          "value": 190988288.0
+        },
+        {
+          "timestamp": "2026-11-03T23:33:00+00:00",
+          "value": 195158016.0
+        },
+        {
+          "timestamp": "2026-11-03T23:34:00+00:00",
+          "value": 3138539520.0
+        },
+        {
+          "timestamp": "2026-11-03T23:35:00+00:00",
+          "value": 4430286848.0
+        },
+        {
+          "timestamp": "2026-11-03T23:36:00+00:00",
+          "value": 4872425472.0
+        },
+        {
+          "timestamp": "2026-11-03T23:37:00+00:00",
+          "value": 4888408064.0
+        },
+        {
+          "timestamp": "2026-11-03T23:38:00+00:00",
+          "value": 4247085056.0
+        },
+        {
+          "timestamp": "2026-11-03T23:39:00+00:00",
+          "value": 4590182400.0
+        },
+        {
+          "timestamp": "2026-11-03T23:40:00+00:00",
+          "value": 4677369856.0
+        },
+        {
+          "timestamp": "2026-11-03T23:41:00+00:00",
+          "value": 5099450368.0
+        },
+        {
+          "timestamp": "2026-11-03T23:43:00+00:00",
+          "value": 5392355328.0
+        }
+      ],
+      "compartment-id": "ocid1.tenancy.oc1..aaaaaaaafe6p7erknwb3ekqbeztffxdnirwuf6kel3nkt2ofrmi7iygx4apa",
+      "dimensions": {
+        "attachmentId": "ocid1.instance.oc1.us-sanjose-1.anzwuljrsjflizycskhftwpeg4nzak4sk2rb7pwrvv3fjxdn7u2qg3474bna",
+        "resourceId": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq"
+      },
+      "metadata": {
+        "displayName": "Write Throughput",
+        "unit": "bytes"
+      },
+      "name": "VolumeWriteThroughput",
+      "namespace": "oci_blockstore",
+      "resolution": null,
+      "resource-group": null
+    }
+  ]
+}

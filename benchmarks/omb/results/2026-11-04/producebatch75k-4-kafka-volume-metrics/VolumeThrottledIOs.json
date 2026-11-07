@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "aggregated-datapoints": [
+        {
+          "timestamp": "2026-11-04T05:55:00+00:00",
+          "value": 76.0
+        },
+        {
+          "timestamp": "2026-11-04T05:56:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T05:57:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T05:58:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T05:59:00+00:00",
+          "value": 28.0
+        },
+        {
+          "timestamp": "2026-11-04T06:00:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T06:01:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T06:02:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T06:03:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T06:04:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T06:06:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T06:08:00+00:00",
+          "value": 4.0
+        },
+        {
+          "timestamp": "2026-11-04T06:09:00+00:00",
+          "value": 0.0
+        },
+        {
+          "timestamp": "2026-11-04T06:10:00+00:00",
+          "value": 16.0
+        },
+        {
+          "timestamp": "2026-11-04T06:11:00+00:00",
+          "value": 0.0
+        }
+      ],
+      "compartment-id": "ocid1.tenancy.oc1..aaaaaaaafe6p7erknwb3ekqbeztffxdnirwuf6kel3nkt2ofrmi7iygx4apa",
+      "dimensions": {
+        "attachmentId": "ocid1.instance.oc1.us-sanjose-1.anzwuljrsjflizycskhftwpeg4nzak4sk2rb7pwrvv3fjxdn7u2qg3474bna",
+        "resourceId": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq"
+      },
+      "metadata": {
+        "displayName": "Throttled IOs",
+        "unit": "operations"
+      },
+      "name": "VolumeThrottledIOs",
+      "namespace": "oci_blockstore",
+      "resolution": null,
+      "resource-group": null
+    }
+  ]
+}

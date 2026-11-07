@@ -1,0 +1,18 @@
+{
+  "postgresql": "17.11",
+  "openraft": "0.9.25",
+  "rust": "1.92.0",
+  "opt_in_sql": "0.1.9",
+  "default_sql": "0.1.7",
+  "rust_postgres_tests_passed": 3,
+  "sql_tests_passed": 11,
+  "clippy": "broker-cluster all targets warnings denied passed",
+  "sha256": {
+    "crates/cluster/src/votes.rs": "90f1806d3494680ad9356ebaaba8ffab7a8832d79e8438a4659c12d061fe60f3",
+    "crates/cluster/tests/votes_postgres.rs": "3ca839596fdb1b186f7eb4487e34dcb88f7867b024b95f26921a7e8feb3fdc95",
+    "crates/extension/sql/pg_broker--0.1.8--0.1.9.sql": "f42d889fa1ba8058c2fe435a8fc6af6a8a3a8a12feae0713c9ffb75565b10465",
+    "tests/test_raft_votes.py": "a61b7b078e58dd5c8a3496bea193c4256e4a0d87dc5506e8c3cb5926ee8f2deb",
+    "tests/test_topic_identity.py": "1a2325d59fc1c2c6e31b77021231a61df643ede3ae223a7fb90d5793d5df5641",
+    "scripts/package-extension.sh": "8e5e85122c74cb3f2bad5bd9e23dae06b0904787068af28c66a7f15945069c4c"
+  }
+}

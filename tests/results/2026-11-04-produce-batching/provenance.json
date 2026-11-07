@@ -1,0 +1,18 @@
+{
+  "timestamp_utc": "2026-11-04T01:10:01.681414+00:00",
+  "postgres": "17.11",
+  "sql": "0.1.7 default; experimental SQL tests use isolated databases",
+  "full_suite_passed": 100,
+  "full_suite_skipped": 4,
+  "targeted_passed": 11,
+  "clippy": "gateway all targets with warnings denied; passed",
+  "initial_failure": "Lock observer only matched old SELECT prefix; replaced with exact blocking PID plus append function matching. Original99pass/1fail retained.",
+  "source_sha256": {
+    "crates/gateway/src/produce.rs": "a36f3312935bdb4db5662afae8d8d7f60011773be64ed86c1d3e1677609d304d",
+    "crates/gateway/src/server.rs": "0209deb584af1756e47c7e900d8edf7d855f45d891ab2ca65646fe8150ab3fba",
+    "tests/test_wire.py": "d1c27e01c2df5c290933a0a88286b58069544337ad792adccd2682131852d685",
+    "tests/test_broker.py": "43a0dc591be08ea9ec4df19d3b9282e9ef69167636e8ea3c38e559d2566ff40e",
+    "Cargo.lock": "8a43979daf21182f69a4f9ece56b66aa88517aa7091c0547ea01eda72b9b7ba8",
+    ".dev/run-produce-batch-full-native.py": "4c019c61d5dcf495414f845e0f643d1eb0d1db86c9b5dcd8d5e1f0e304eb6ac6"
+  }
+}

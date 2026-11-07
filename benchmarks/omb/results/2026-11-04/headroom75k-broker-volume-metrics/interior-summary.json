@@ -1,0 +1,9 @@
+{
+  "scope": "Conservative interior minutes for completed broker phase. Counts are throttled volume IOs, not record loss or individual-stall attribution.",
+  "observed_points": 13,
+  "expected_points": 13,
+  "missing": [],
+  "observed_throttled_ios": 0.0,
+  "start": "2026-11-04T00:51:00+00:00",
+  "end": "2026-11-04T01:03:00+00:00"
+}

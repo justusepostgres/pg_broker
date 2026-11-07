@@ -1,0 +1,1582 @@
+{
+  "scope": "Diagnostic only. GC and safepoint events overlap; do not add their durations. Observed timestamps do not prove complete coverage; retain all rotated segments. No causal attribution or performance acceptance.",
+  "since": "2026-11-03T20:17:44.083000+00:00",
+  "until": "2026-11-03T20:22:44.993000+00:00",
+  "sources": [
+    "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log"
+  ],
+  "first_observed": "2026-11-03T20:16:39.040000+00:00",
+  "last_observed": "2026-11-03T20:22:56.089000+00:00",
+  "counts": {
+    "gc": 59,
+    "safepoint": 78
+  },
+  "max_ms": {
+    "gc": 4.56,
+    "safepoint": 4.768025
+  },
+  "events": [
+    {
+      "completed_at": "2026-11-03T20:17:45.031000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.03808,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 363
+    },
+    {
+      "completed_at": "2026-11-03T20:17:46.031000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.02856,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 364
+    },
+    {
+      "completed_at": "2026-11-03T20:17:47.031000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.04272,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 365
+    },
+    {
+      "completed_at": "2026-11-03T20:17:49.126000+00:00",
+      "kind": "gc",
+      "duration_ms": 3.762,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 379
+    },
+    {
+      "completed_at": "2026-11-03T20:17:49.127000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 3.965661,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 381
+    },
+    {
+      "completed_at": "2026-11-03T20:17:50.127000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.036681,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 382
+    },
+    {
+      "completed_at": "2026-11-03T20:17:51.127000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.03184,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 383
+    },
+    {
+      "completed_at": "2026-11-03T20:17:53.866000+00:00",
+      "kind": "gc",
+      "duration_ms": 3.298,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 397
+    },
+    {
+      "completed_at": "2026-11-03T20:17:53.866000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 3.707859,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 399
+    },
+    {
+      "completed_at": "2026-11-03T20:17:54.867000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.10564,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 400
+    },
+    {
+      "completed_at": "2026-11-03T20:17:58.611000+00:00",
+      "kind": "gc",
+      "duration_ms": 4.56,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 414
+    },
+    {
+      "completed_at": "2026-11-03T20:17:58.611000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 4.768025,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 416
+    },
+    {
+      "completed_at": "2026-11-03T20:18:03.731000+00:00",
+      "kind": "gc",
+      "duration_ms": 3.005,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 430
+    },
+    {
+      "completed_at": "2026-11-03T20:18:03.731000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 3.062296,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 432
+    },
+    {
+      "completed_at": "2026-11-03T20:18:08.832000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.798,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 446
+    },
+    {
+      "completed_at": "2026-11-03T20:18:08.832000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.93733,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 448
+    },
+    {
+      "completed_at": "2026-11-03T20:18:13.950000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.8,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 462
+    },
+    {
+      "completed_at": "2026-11-03T20:18:13.950000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.86265,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 464
+    },
+    {
+      "completed_at": "2026-11-03T20:18:18.950000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.03404,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 465
+    },
+    {
+      "completed_at": "2026-11-03T20:18:19.067000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.859,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 479
+    },
+    {
+      "completed_at": "2026-11-03T20:18:19.067000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.99701,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 481
+    },
+    {
+      "completed_at": "2026-11-03T20:18:23.067000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.02384,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 482
+    },
+    {
+      "completed_at": "2026-11-03T20:18:24.176000+00:00",
+      "kind": "gc",
+      "duration_ms": 2.925,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 496
+    },
+    {
+      "completed_at": "2026-11-03T20:18:24.176000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 3.163016,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 498
+    },
+    {
+      "completed_at": "2026-11-03T20:18:28.912000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.707,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 512
+    },
+    {
+      "completed_at": "2026-11-03T20:18:28.912000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.85837,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 514
+    },
+    {
+      "completed_at": "2026-11-03T20:18:34.014000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.657,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 528
+    },
+    {
+      "completed_at": "2026-11-03T20:18:34.014000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.712969,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 530
+    },
+    {
+      "completed_at": "2026-11-03T20:18:39.119000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.586,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 544
+    },
+    {
+      "completed_at": "2026-11-03T20:18:39.119000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.728489,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 546
+    },
+    {
+      "completed_at": "2026-11-03T20:18:42.120000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.127121,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 547
+    },
+    {
+      "completed_at": "2026-11-03T20:18:43.120000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.115721,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 548
+    },
+    {
+      "completed_at": "2026-11-03T20:18:44.223000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.649,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 562
+    },
+    {
+      "completed_at": "2026-11-03T20:18:44.223000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.800409,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 564
+    },
+    {
+      "completed_at": "2026-11-03T20:18:46.273000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.11744,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 565
+    },
+    {
+      "completed_at": "2026-11-03T20:18:47.273000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.046241,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 566
+    },
+    {
+      "completed_at": "2026-11-03T20:18:49.340000+00:00",
+      "kind": "gc",
+      "duration_ms": 2.527,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 580
+    },
+    {
+      "completed_at": "2026-11-03T20:18:49.340000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 2.579654,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 582
+    },
+    {
+      "completed_at": "2026-11-03T20:18:54.450000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.729,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 596
+    },
+    {
+      "completed_at": "2026-11-03T20:18:54.450000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 2.01245,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 598
+    },
+    {
+      "completed_at": "2026-11-03T20:18:59.573000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.444,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 612
+    },
+    {
+      "completed_at": "2026-11-03T20:18:59.573000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.570408,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 614
+    },
+    {
+      "completed_at": "2026-11-03T20:19:04.692000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.265,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 628
+    },
+    {
+      "completed_at": "2026-11-03T20:19:04.692000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.406008,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 630
+    },
+    {
+      "completed_at": "2026-11-03T20:19:09.803000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.438,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 644
+    },
+    {
+      "completed_at": "2026-11-03T20:19:09.803000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.573848,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 646
+    },
+    {
+      "completed_at": "2026-11-03T20:19:14.804000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.02872,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 647
+    },
+    {
+      "completed_at": "2026-11-03T20:19:14.902000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.286,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 661
+    },
+    {
+      "completed_at": "2026-11-03T20:19:14.902000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.348567,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 663
+    },
+    {
+      "completed_at": "2026-11-03T20:19:20.015000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.217,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 677
+    },
+    {
+      "completed_at": "2026-11-03T20:19:20.015000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.268047,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 679
+    },
+    {
+      "completed_at": "2026-11-03T20:19:25.127000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.305,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 693
+    },
+    {
+      "completed_at": "2026-11-03T20:19:25.128000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.377007,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 695
+    },
+    {
+      "completed_at": "2026-11-03T20:19:30.248000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.192,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 709
+    },
+    {
+      "completed_at": "2026-11-03T20:19:30.248000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.254406,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 711
+    },
+    {
+      "completed_at": "2026-11-03T20:19:35.249000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.09356,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 712
+    },
+    {
+      "completed_at": "2026-11-03T20:19:35.365000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.218,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 726
+    },
+    {
+      "completed_at": "2026-11-03T20:19:35.365000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.536928,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 728
+    },
+    {
+      "completed_at": "2026-11-03T20:19:40.485000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.862,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 742
+    },
+    {
+      "completed_at": "2026-11-03T20:19:40.485000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.92897,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 744
+    },
+    {
+      "completed_at": "2026-11-03T20:19:42.485000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.110241,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 745
+    },
+    {
+      "completed_at": "2026-11-03T20:19:44.485000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.03448,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 746
+    },
+    {
+      "completed_at": "2026-11-03T20:19:45.598000+00:00",
+      "kind": "gc",
+      "duration_ms": 2.207,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 760
+    },
+    {
+      "completed_at": "2026-11-03T20:19:45.598000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 2.270532,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 762
+    },
+    {
+      "completed_at": "2026-11-03T20:19:50.723000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.233,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 776
+    },
+    {
+      "completed_at": "2026-11-03T20:19:50.723000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.290447,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 778
+    },
+    {
+      "completed_at": "2026-11-03T20:19:55.845000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.166,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 792
+    },
+    {
+      "completed_at": "2026-11-03T20:19:55.845000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.226126,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 794
+    },
+    {
+      "completed_at": "2026-11-03T20:20:00.961000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.201,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 808
+    },
+    {
+      "completed_at": "2026-11-03T20:20:00.961000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.255887,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 810
+    },
+    {
+      "completed_at": "2026-11-03T20:20:06.082000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.235,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 824
+    },
+    {
+      "completed_at": "2026-11-03T20:20:06.082000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.520647,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 826
+    },
+    {
+      "completed_at": "2026-11-03T20:20:11.200000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.132,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 840
+    },
+    {
+      "completed_at": "2026-11-03T20:20:11.200000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.188206,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 842
+    },
+    {
+      "completed_at": "2026-11-03T20:20:15.201000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.02744,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 843
+    },
+    {
+      "completed_at": "2026-11-03T20:20:16.326000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.165,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 857
+    },
+    {
+      "completed_at": "2026-11-03T20:20:16.326000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.230646,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 859
+    },
+    {
+      "completed_at": "2026-11-03T20:20:21.445000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.216,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 873
+    },
+    {
+      "completed_at": "2026-11-03T20:20:21.445000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.514488,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 875
+    },
+    {
+      "completed_at": "2026-11-03T20:20:26.571000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.186,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 889
+    },
+    {
+      "completed_at": "2026-11-03T20:20:26.571000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.237726,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 891
+    },
+    {
+      "completed_at": "2026-11-03T20:20:31.712000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.212,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 905
+    },
+    {
+      "completed_at": "2026-11-03T20:20:31.712000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.282767,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 907
+    },
+    {
+      "completed_at": "2026-11-03T20:20:36.832000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.229,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 921
+    },
+    {
+      "completed_at": "2026-11-03T20:20:36.832000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.292367,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 923
+    },
+    {
+      "completed_at": "2026-11-03T20:20:41.946000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.807,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 937
+    },
+    {
+      "completed_at": "2026-11-03T20:20:41.947000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.95973,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 939
+    },
+    {
+      "completed_at": "2026-11-03T20:20:47.057000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.327,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 953
+    },
+    {
+      "completed_at": "2026-11-03T20:20:47.057000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.395327,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 955
+    },
+    {
+      "completed_at": "2026-11-03T20:20:52.189000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.752,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 969
+    },
+    {
+      "completed_at": "2026-11-03T20:20:52.189000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.809009,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 971
+    },
+    {
+      "completed_at": "2026-11-03T20:20:57.297000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.217,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 985
+    },
+    {
+      "completed_at": "2026-11-03T20:20:57.297000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.271927,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 987
+    },
+    {
+      "completed_at": "2026-11-03T20:21:02.418000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.149,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1001
+    },
+    {
+      "completed_at": "2026-11-03T20:21:02.418000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.204486,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1003
+    },
+    {
+      "completed_at": "2026-11-03T20:21:07.535000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.201,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1017
+    },
+    {
+      "completed_at": "2026-11-03T20:21:07.535000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.262847,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1019
+    },
+    {
+      "completed_at": "2026-11-03T20:21:12.669000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.177,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1033
+    },
+    {
+      "completed_at": "2026-11-03T20:21:12.669000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.250966,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1035
+    },
+    {
+      "completed_at": "2026-11-03T20:21:17.787000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.824,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1049
+    },
+    {
+      "completed_at": "2026-11-03T20:21:17.787000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.90845,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1051
+    },
+    {
+      "completed_at": "2026-11-03T20:21:22.912000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.14,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1065
+    },
+    {
+      "completed_at": "2026-11-03T20:21:22.912000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.410127,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1067
+    },
+    {
+      "completed_at": "2026-11-03T20:21:28.031000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.205,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1081
+    },
+    {
+      "completed_at": "2026-11-03T20:21:28.031000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.536888,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1083
+    },
+    {
+      "completed_at": "2026-11-03T20:21:33.183000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.216,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1097
+    },
+    {
+      "completed_at": "2026-11-03T20:21:33.183000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.272007,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1099
+    },
+    {
+      "completed_at": "2026-11-03T20:21:38.302000+00:00",
+      "kind": "gc",
+      "duration_ms": 2.171,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1113
+    },
+    {
+      "completed_at": "2026-11-03T20:21:38.302000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 2.245731,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1115
+    },
+    {
+      "completed_at": "2026-11-03T20:21:43.417000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.222,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1129
+    },
+    {
+      "completed_at": "2026-11-03T20:21:43.417000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.289726,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1131
+    },
+    {
+      "completed_at": "2026-11-03T20:21:48.530000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.291,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1145
+    },
+    {
+      "completed_at": "2026-11-03T20:21:48.530000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.350727,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1147
+    },
+    {
+      "completed_at": "2026-11-03T20:21:53.655000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.297,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1161
+    },
+    {
+      "completed_at": "2026-11-03T20:21:53.656000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.577488,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1163
+    },
+    {
+      "completed_at": "2026-11-03T20:21:58.776000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.307,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1177
+    },
+    {
+      "completed_at": "2026-11-03T20:21:58.777000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.585368,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1179
+    },
+    {
+      "completed_at": "2026-11-03T20:22:03.906000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.759,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1193
+    },
+    {
+      "completed_at": "2026-11-03T20:22:03.906000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.83765,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1195
+    },
+    {
+      "completed_at": "2026-11-03T20:22:09.026000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.182,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1209
+    },
+    {
+      "completed_at": "2026-11-03T20:22:09.026000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.261806,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1211
+    },
+    {
+      "completed_at": "2026-11-03T20:22:14.163000+00:00",
+      "kind": "gc",
+      "duration_ms": 2.142,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1225
+    },
+    {
+      "completed_at": "2026-11-03T20:22:14.163000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 2.203571,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1227
+    },
+    {
+      "completed_at": "2026-11-03T20:22:19.281000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.209,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1241
+    },
+    {
+      "completed_at": "2026-11-03T20:22:19.281000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.262686,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1243
+    },
+    {
+      "completed_at": "2026-11-03T20:22:24.392000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.78,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1257
+    },
+    {
+      "completed_at": "2026-11-03T20:22:24.392000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.846489,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1259
+    },
+    {
+      "completed_at": "2026-11-03T20:22:29.506000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.229,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1273
+    },
+    {
+      "completed_at": "2026-11-03T20:22:29.506000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.505247,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1275
+    },
+    {
+      "completed_at": "2026-11-03T20:22:34.638000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.168,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1289
+    },
+    {
+      "completed_at": "2026-11-03T20:22:34.638000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.303367,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1291
+    },
+    {
+      "completed_at": "2026-11-03T20:22:39.744000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.241,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1305
+    },
+    {
+      "completed_at": "2026-11-03T20:22:39.744000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.295046,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1307
+    },
+    {
+      "completed_at": "2026-11-03T20:22:41.744000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.112601,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1308
+    },
+    {
+      "completed_at": "2026-11-03T20:22:42.744000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 0.022081,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1309
+    },
+    {
+      "completed_at": "2026-11-03T20:22:44.864000+00:00",
+      "kind": "gc",
+      "duration_ms": 1.348,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1323
+    },
+    {
+      "completed_at": "2026-11-03T20:22:44.865000+00:00",
+      "kind": "safepoint",
+      "duration_ms": 1.654049,
+      "source": "/Users/salah/Documents/ChatGPT/pg_kafka/benchmarks/omb/results/2026-11-03/gc32k-1/omb-gc-017-32k-1/client-2026-11-03_20-16-39-26237.log",
+      "line": 1325
+    }
+  ],
+  "windows": [
+    {
+      "sample": 1,
+      "since": "2026-11-03T20:17:44.083000+00:00",
+      "until": "2026-11-03T20:17:54.111000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.415,
+        "publishLatencyMax": 23.31,
+        "endToEndLatency99pct": 12.0,
+        "endToEndLatencyMax": 27.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 7
+      },
+      "pause_max_ms": {
+        "gc": 3.762,
+        "safepoint": 3.965661
+      }
+    },
+    {
+      "sample": 2,
+      "since": "2026-11-03T20:17:54.111000+00:00",
+      "until": "2026-11-03T20:18:04.142000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.851,
+        "publishLatencyMax": 65.708,
+        "endToEndLatency99pct": 13.0,
+        "endToEndLatencyMax": 71.0,
+        "backlog": 166
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 3
+      },
+      "pause_max_ms": {
+        "gc": 4.56,
+        "safepoint": 4.768025
+      }
+    },
+    {
+      "sample": 3,
+      "since": "2026-11-03T20:18:04.142000+00:00",
+      "until": "2026-11-03T20:18:14.172000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.158,
+        "publishLatencyMax": 12.661,
+        "endToEndLatency99pct": 12.0,
+        "endToEndLatencyMax": 17.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.8,
+        "safepoint": 1.93733
+      }
+    },
+    {
+      "sample": 4,
+      "since": "2026-11-03T20:18:14.172000+00:00",
+      "until": "2026-11-03T20:18:24.204000+00:00",
+      "omb": {
+        "publishLatency99pct": 14.161,
+        "publishLatencyMax": 61.857,
+        "endToEndLatency99pct": 16.0,
+        "endToEndLatencyMax": 69.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 4
+      },
+      "pause_max_ms": {
+        "gc": 2.925,
+        "safepoint": 3.163016
+      }
+    },
+    {
+      "sample": 5,
+      "since": "2026-11-03T20:18:24.204000+00:00",
+      "until": "2026-11-03T20:18:34.234000+00:00",
+      "omb": {
+        "publishLatency99pct": 22.957,
+        "publishLatencyMax": 77.479,
+        "endToEndLatency99pct": 27.0,
+        "endToEndLatencyMax": 84.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.707,
+        "safepoint": 1.85837
+      }
+    },
+    {
+      "sample": 6,
+      "since": "2026-11-03T20:18:34.234000+00:00",
+      "until": "2026-11-03T20:18:44.276000+00:00",
+      "omb": {
+        "publishLatency99pct": 10.248,
+        "publishLatencyMax": 70.816,
+        "endToEndLatency99pct": 14.0,
+        "endToEndLatencyMax": 74.0,
+        "backlog": 164
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 4
+      },
+      "pause_max_ms": {
+        "gc": 1.649,
+        "safepoint": 1.800409
+      }
+    },
+    {
+      "sample": 7,
+      "since": "2026-11-03T20:18:44.276000+00:00",
+      "until": "2026-11-03T20:18:54.305000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.59,
+        "publishLatencyMax": 35.271,
+        "endToEndLatency99pct": 12.0,
+        "endToEndLatencyMax": 40.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 1,
+        "safepoint": 3
+      },
+      "pause_max_ms": {
+        "gc": 2.527,
+        "safepoint": 2.579654
+      }
+    },
+    {
+      "sample": 8,
+      "since": "2026-11-03T20:18:54.305000+00:00",
+      "until": "2026-11-03T20:19:04.334000+00:00",
+      "omb": {
+        "publishLatency99pct": 8.985,
+        "publishLatencyMax": 10.843,
+        "endToEndLatency99pct": 11.0,
+        "endToEndLatencyMax": 14.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.729,
+        "safepoint": 2.01245
+      }
+    },
+    {
+      "sample": 9,
+      "since": "2026-11-03T20:19:04.334000+00:00",
+      "until": "2026-11-03T20:19:14.363000+00:00",
+      "omb": {
+        "publishLatency99pct": 10.309,
+        "publishLatencyMax": 68.956,
+        "endToEndLatency99pct": 14.0,
+        "endToEndLatencyMax": 78.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.438,
+        "safepoint": 1.573848
+      }
+    },
+    {
+      "sample": 10,
+      "since": "2026-11-03T20:19:14.363000+00:00",
+      "until": "2026-11-03T20:19:24.396000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.239,
+        "publishLatencyMax": 28.565,
+        "endToEndLatency99pct": 12.0,
+        "endToEndLatencyMax": 28.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 3
+      },
+      "pause_max_ms": {
+        "gc": 1.286,
+        "safepoint": 1.348567
+      }
+    },
+    {
+      "sample": 11,
+      "since": "2026-11-03T20:19:24.396000+00:00",
+      "until": "2026-11-03T20:19:34.428000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.706,
+        "publishLatencyMax": 63.465,
+        "endToEndLatency99pct": 13.0,
+        "endToEndLatencyMax": 68.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.305,
+        "safepoint": 1.377007
+      }
+    },
+    {
+      "sample": 12,
+      "since": "2026-11-03T20:19:34.428000+00:00",
+      "until": "2026-11-03T20:19:44.460000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.145,
+        "publishLatencyMax": 11.434,
+        "endToEndLatency99pct": 12.0,
+        "endToEndLatencyMax": 17.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 4
+      },
+      "pause_max_ms": {
+        "gc": 1.862,
+        "safepoint": 1.92897
+      }
+    },
+    {
+      "sample": 13,
+      "since": "2026-11-03T20:19:44.460000+00:00",
+      "until": "2026-11-03T20:19:54.489000+00:00",
+      "omb": {
+        "publishLatency99pct": 16.907,
+        "publishLatencyMax": 68.897,
+        "endToEndLatency99pct": 20.0,
+        "endToEndLatencyMax": 72.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 3
+      },
+      "pause_max_ms": {
+        "gc": 2.207,
+        "safepoint": 2.270532
+      }
+    },
+    {
+      "sample": 14,
+      "since": "2026-11-03T20:19:54.489000+00:00",
+      "until": "2026-11-03T20:20:04.519000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.219,
+        "publishLatencyMax": 12.123,
+        "endToEndLatency99pct": 12.0,
+        "endToEndLatencyMax": 17.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.201,
+        "safepoint": 1.255887
+      }
+    },
+    {
+      "sample": 15,
+      "since": "2026-11-03T20:20:04.519000+00:00",
+      "until": "2026-11-03T20:20:14.548000+00:00",
+      "omb": {
+        "publishLatency99pct": 11.262,
+        "publishLatencyMax": 66.593,
+        "endToEndLatency99pct": 15.0,
+        "endToEndLatencyMax": 71.0,
+        "backlog": 158
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.235,
+        "safepoint": 1.520647
+      }
+    },
+    {
+      "sample": 16,
+      "since": "2026-11-03T20:20:14.548000+00:00",
+      "until": "2026-11-03T20:20:24.578000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.386,
+        "publishLatencyMax": 26.89,
+        "endToEndLatency99pct": 12.0,
+        "endToEndLatencyMax": 31.0,
+        "backlog": 158
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 3
+      },
+      "pause_max_ms": {
+        "gc": 1.216,
+        "safepoint": 1.514488
+      }
+    },
+    {
+      "sample": 17,
+      "since": "2026-11-03T20:20:24.578000+00:00",
+      "until": "2026-11-03T20:20:34.606000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.885,
+        "publishLatencyMax": 65.797,
+        "endToEndLatency99pct": 13.0,
+        "endToEndLatencyMax": 75.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.212,
+        "safepoint": 1.282767
+      }
+    },
+    {
+      "sample": 18,
+      "since": "2026-11-03T20:20:34.606000+00:00",
+      "until": "2026-11-03T20:20:44.640000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.059,
+        "publishLatencyMax": 11.269,
+        "endToEndLatency99pct": 12.0,
+        "endToEndLatencyMax": 15.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.807,
+        "safepoint": 1.95973
+      }
+    },
+    {
+      "sample": 19,
+      "since": "2026-11-03T20:20:44.640000+00:00",
+      "until": "2026-11-03T20:20:54.669000+00:00",
+      "omb": {
+        "publishLatency99pct": 18.726,
+        "publishLatencyMax": 67.228,
+        "endToEndLatency99pct": 22.0,
+        "endToEndLatencyMax": 72.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.752,
+        "safepoint": 1.809009
+      }
+    },
+    {
+      "sample": 20,
+      "since": "2026-11-03T20:20:54.669000+00:00",
+      "until": "2026-11-03T20:21:04.698000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.595,
+        "publishLatencyMax": 13.453,
+        "endToEndLatency99pct": 13.0,
+        "endToEndLatencyMax": 21.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.217,
+        "safepoint": 1.271927
+      }
+    },
+    {
+      "sample": 21,
+      "since": "2026-11-03T20:21:04.698000+00:00",
+      "until": "2026-11-03T20:21:14.727000+00:00",
+      "omb": {
+        "publishLatency99pct": 12.199,
+        "publishLatencyMax": 66.561,
+        "endToEndLatency99pct": 17.0,
+        "endToEndLatencyMax": 76.0,
+        "backlog": 181
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.201,
+        "safepoint": 1.262847
+      }
+    },
+    {
+      "sample": 22,
+      "since": "2026-11-03T20:21:14.727000+00:00",
+      "until": "2026-11-03T20:21:24.757000+00:00",
+      "omb": {
+        "publishLatency99pct": 10.045,
+        "publishLatencyMax": 42.072,
+        "endToEndLatency99pct": 14.0,
+        "endToEndLatencyMax": 42.0,
+        "backlog": 165
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.824,
+        "safepoint": 1.90845
+      }
+    },
+    {
+      "sample": 23,
+      "since": "2026-11-03T20:21:24.757000+00:00",
+      "until": "2026-11-03T20:21:34.787000+00:00",
+      "omb": {
+        "publishLatency99pct": 10.197,
+        "publishLatencyMax": 71.453,
+        "endToEndLatency99pct": 24.0,
+        "endToEndLatencyMax": 76.0,
+        "backlog": 119
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.216,
+        "safepoint": 1.536888
+      }
+    },
+    {
+      "sample": 24,
+      "since": "2026-11-03T20:21:34.787000+00:00",
+      "until": "2026-11-03T20:21:44.818000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.18,
+        "publishLatencyMax": 12.814,
+        "endToEndLatency99pct": 12.0,
+        "endToEndLatencyMax": 16.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 2.171,
+        "safepoint": 2.245731
+      }
+    },
+    {
+      "sample": 25,
+      "since": "2026-11-03T20:21:44.818000+00:00",
+      "until": "2026-11-03T20:21:54.847000+00:00",
+      "omb": {
+        "publishLatency99pct": 13.799,
+        "publishLatencyMax": 77.344,
+        "endToEndLatency99pct": 17.0,
+        "endToEndLatencyMax": 83.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.297,
+        "safepoint": 1.577488
+      }
+    },
+    {
+      "sample": 26,
+      "since": "2026-11-03T20:21:54.847000+00:00",
+      "until": "2026-11-03T20:22:04.876000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.105,
+        "publishLatencyMax": 12.435,
+        "endToEndLatency99pct": 12.0,
+        "endToEndLatencyMax": 18.0,
+        "backlog": 166
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.759,
+        "safepoint": 1.83765
+      }
+    },
+    {
+      "sample": 27,
+      "since": "2026-11-03T20:22:04.876000+00:00",
+      "until": "2026-11-03T20:22:14.905000+00:00",
+      "omb": {
+        "publishLatency99pct": 11.202,
+        "publishLatencyMax": 67.551,
+        "endToEndLatency99pct": 16.0,
+        "endToEndLatencyMax": 67.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 2.142,
+        "safepoint": 2.203571
+      }
+    },
+    {
+      "sample": 28,
+      "since": "2026-11-03T20:22:14.905000+00:00",
+      "until": "2026-11-03T20:22:24.935000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.206,
+        "publishLatencyMax": 29.563,
+        "endToEndLatency99pct": 12.0,
+        "endToEndLatencyMax": 34.0,
+        "backlog": 166
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.78,
+        "safepoint": 1.846489
+      }
+    },
+    {
+      "sample": 29,
+      "since": "2026-11-03T20:22:24.935000+00:00",
+      "until": "2026-11-03T20:22:34.964000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.488,
+        "publishLatencyMax": 60.923,
+        "endToEndLatency99pct": 13.0,
+        "endToEndLatencyMax": 79.0,
+        "backlog": 0
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 2
+      },
+      "pause_max_ms": {
+        "gc": 1.229,
+        "safepoint": 1.505247
+      }
+    },
+    {
+      "sample": 30,
+      "since": "2026-11-03T20:22:34.964000+00:00",
+      "until": "2026-11-03T20:22:44.993000+00:00",
+      "omb": {
+        "publishLatency99pct": 9.095,
+        "publishLatencyMax": 11.401,
+        "endToEndLatency99pct": 12.0,
+        "endToEndLatencyMax": 15.0,
+        "backlog": 197
+      },
+      "pause_count": {
+        "gc": 2,
+        "safepoint": 4
+      },
+      "pause_max_ms": {
+        "gc": 1.348,
+        "safepoint": 1.654049
+      }
+    }
+  ],
+  "alignment": "Approximate OMB log-time windows. Completion-time matching only; not per-record timing, pause attribution or coverage proof."
+}

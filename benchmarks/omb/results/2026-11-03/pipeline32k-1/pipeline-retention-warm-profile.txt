@@ -1,0 +1,42 @@
+BEGIN
+SET
+                                                         QUERY PLAN                                                          
+-----------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=3072.53..3072.54 rows=1 width=16) (actual rows=1 loops=1)
+   Buffers: shared hit=2063
+   ->  Limit  (cost=2959.89..2970.13 rows=4096 width=20) (actual rows=4096 loops=1)
+         Buffers: shared hit=2063
+         ->  Sort  (cost=2959.89..2971.36 rows=4585 width=20) (actual rows=4096 loops=1)
+               Sort Key: batches.base_offset
+               Sort Method: quicksort  Memory: 514kB
+               Buffers: shared hit=2063
+               ->  Bitmap Heap Scan on batches  (cost=279.41..2681.06 rows=4585 width=20) (actual rows=4574 loops=1)
+                     Recheck Cond: ((topic = 'test-topic-0000000-5FTm0hc'::text) AND (partition = 0))
+                     Heap Blocks: exact=1999
+                     Buffers: shared hit=2060
+                     ->  Bitmap Index Scan on batches_pkey  (cost=0.00..278.27 rows=4585 width=0) (actual rows=4574 loops=1)
+                           Index Cond: ((topic = 'test-topic-0000000-5FTm0hc'::text) AND (partition = 0))
+                           Buffers: shared hit=61
+ Planning:
+   Buffers: shared hit=99
+ Planning Time: 0.379 ms
+ Execution Time: 6.465 ms
+(19 rows)
+
+                                                         QUERY PLAN                                                          
+-----------------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=0.42..3.38 rows=1 width=8) (actual rows=1 loops=1)
+   Buffers: shared hit=4
+   ->  Subquery Scan on page  (cost=0.42..4047.45 rows=1365 width=8) (actual rows=1 loops=1)
+         Filter: (page.appended_at >= (clock_timestamp() - '7 days'::interval))
+         Buffers: shared hit=4
+         ->  Limit  (cost=0.42..3975.77 rows=4096 width=16) (actual rows=1 loops=1)
+               Buffers: shared hit=4
+               ->  Index Scan using batches_pkey on batches  (cost=0.42..4450.37 rows=4585 width=16) (actual rows=1 loops=1)
+                     Index Cond: ((topic = 'test-topic-0000000-5FTm0hc'::text) AND (partition = 0))
+                     Buffers: shared hit=4
+ Planning Time: 0.072 ms
+ Execution Time: 0.032 ms
+(12 rows)
+
+COMMIT

@@ -1,0 +1,8 @@
+{
+  "native_tests": 51,
+  "gateway_build": "passed --locked",
+  "gateway_clippy": "passed --locked -D warnings",
+  "cloud_deployed": false,
+  "scope": "Settings-check fault injection is not a physical standby failover test; existing crash and missing synchronous standby tests were included",
+  "default_sql_tests": 9
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-017-external32k-1-kafka/result.json",
+    "workload": "32k-1-topic-16-partitions-1kb",
+    "samples": 30,
+    "publish_msg_s_mean": 32026.552271598244,
+    "consume_msg_s_mean": 32027.097573952105,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 0,
+    "backlog_last": 0,
+    "backlog_max": 195,
+    "publish_p99_ms": 17.745,
+    "publish_delay_p99_us": 340,
+    "end_to_end_p99_ms": 20.0,
+    "publish_p999_ms": 39.439,
+    "publish_p9999_ms": 122.177,
+    "publish_max_ms": 150.414,
+    "publish_delay_p999_us": 867,
+    "publish_delay_p9999_us": 1921,
+    "publish_delay_max_us": 7611,
+    "end_to_end_p999_ms": 43.0,
+    "end_to_end_p9999_ms": 127.0,
+    "end_to_end_max_ms": 154.0
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "2026-11-04T00:34:43.643490+00:00",
+  "command": "python3 -m unittest discover -s benchmarks/omb/tests -q",
+  "exit_code": 0,
+  "tests_passed": 45,
+  "original_raw_checksums_verified": true,
+  "scope": "Analysis only; no active workload mutation or performance acceptance.",
+  "sha256": {
+    "benchmarks/omb/gateway_events.py": "b16dc9d85c67c9c3e27965e1e0764b4322eae35ed11b55a566ff02703041a4a9",
+    "benchmarks/omb/compare.py": "ddaf3e557d8abb5390fb3f6b970d62d97f7ce44f149e4bb3a0242cb0cc7a9688",
+    "benchmarks/omb/tests/test_gateway_events.py": "300113d8a74f2ca95f0c9d78e799c0de304013e87410f791083a2b736754182a",
+    "benchmarks/omb/tests/test_compare.py": "f32f8011190e1ad3e82e5b359d61fcd2767cb1e5d69ee559ccf72d669e497eeb",
+    "benchmarks/omb/results/2026-11-03/commitbatch75k-comparison-with-gateway-events.json": "d0c249732dfcde70440cd45abc544c9f025fe06d92bd11f05e86774b87b01383"
+  }
+}

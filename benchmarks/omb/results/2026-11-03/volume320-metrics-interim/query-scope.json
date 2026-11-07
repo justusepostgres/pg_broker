@@ -1,0 +1,26 @@
+{
+  "resource_id": "ocid1.bootvolume.oc1.us-sanjose-1.abzwuljrrycvjssqhmct6mtv3v2ocreovo46f2bndpahcmcfv6srrcvkjnnq",
+  "namespace": "oci_blockstore",
+  "start": "2026-11-03T23:14:00Z",
+  "end": "2026-11-03T23:43:00Z",
+  "resolution": "1m",
+  "queries": [
+    [
+      "VolumeThrottledIOs",
+      "sum"
+    ],
+    [
+      "VolumeWriteThroughput",
+      "sum"
+    ],
+    [
+      "VolumeGuaranteedThroughput",
+      "mean"
+    ],
+    [
+      "VolumeGuaranteedIOPS",
+      "mean"
+    ]
+  ],
+  "scope": "Read-only existing OCI metrics, not workload instrumentation; minute aggregates cannot establish individual-stall causality."
+}

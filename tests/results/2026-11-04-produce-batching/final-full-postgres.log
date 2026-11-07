@@ -1,0 +1,68 @@
+2026-11-04 05:05:16.327 +04 [65964] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 05:05:16.328 +04 [65964] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 05:05:16.328 +04 [65964] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 05:05:16.330 +04 [65967] LOG:  database system was shut down at 2026-11-04 05:05:16 +04
+2026-11-04 05:05:16.332 +04 [65964] LOG:  database system is ready to accept connections
+2026-11-04 05:05:30.960 +04 [65965] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:05:31.029 +04 [65965] LOG:  checkpoint complete: wrote 1097 buffers (6.7%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.058 s, sync=0.011 s, total=0.070 s; sync files=415, longest=0.001 s, average=0.001 s; distance=9699 kB, estimate=9699 kB; lsn=0/1E93718, redo lsn=0/1E936C0
+2026-11-04 05:05:31.044 +04 [65965] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:05:31.045 +04 [65965] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=2, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=8729 kB; lsn=0/1E93C60, redo lsn=0/1E93C08
+2026-11-04 05:05:31.893 +04 [66075] ERROR:  permission denied for function broker_append_bytes
+2026-11-04 05:05:31.893 +04 [66075] STATEMENT:  SELECT public.broker_append_bytes($1,$2,$3)
+2026-11-04 05:05:32.399 +04 [66083] ERROR:  new row for relation "batches" violates check constraint "test_1f388a63d85f4553b37d7bcb31dfbe83"
+2026-11-04 05:05:32.399 +04 [66083] DETAIL:  Failing row contains (test_72ad4538521946a0b8bd0712bad7b003, 0, 1, 1, \x00000000000000000000004000000000024d22476800000000000000000000..., 2000, [2000], 2026-11-04 05:05:32.399215+04).
+2026-11-04 05:05:32.399 +04 [66083] CONTEXT:  SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 05:05:32.399 +04 [66083] STATEMENT:  SELECT public.broker_append_bytes($1,$2,$3)
+2026-11-04 05:05:33.217 +04 [66097] ERROR:  requests must be an array
+2026-11-04 05:05:33.217 +04 [66097] CONTEXT:  PL/pgSQL function public.broker_fetch_binary(jsonb) line 6 at RAISE
+2026-11-04 05:05:33.217 +04 [66097] STATEMENT:  SELECT * FROM public.broker_fetch_binary($1)
+2026-11-04 05:05:33.218 +04 [66097] ERROR:  requests must be an array
+2026-11-04 05:05:33.218 +04 [66097] CONTEXT:  PL/pgSQL function public.broker_fetch_binary(jsonb) line 6 at RAISE
+2026-11-04 05:05:33.218 +04 [66097] STATEMENT:  SELECT * FROM public.broker_fetch_binary($1)
+2026-11-04 05:05:33.218 +04 [66097] ERROR:  invalid fetch requests
+2026-11-04 05:05:33.218 +04 [66097] CONTEXT:  PL/pgSQL function public.broker_fetch_binary(jsonb) line 10 at RAISE
+2026-11-04 05:05:33.218 +04 [66097] STATEMENT:  SELECT * FROM public.broker_fetch_binary($1)
+2026-11-04 05:05:33.220 +04 [66097] ERROR:  invalid fetch requests
+2026-11-04 05:05:33.220 +04 [66097] CONTEXT:  PL/pgSQL function public.broker_fetch_binary(jsonb) line 10 at RAISE
+2026-11-04 05:05:33.220 +04 [66097] STATEMENT:  SELECT * FROM public.broker_fetch_binary($1)
+2026-11-04 05:05:56.781 +04 [65965] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:05:56.785 +04 [65965] LOG:  checkpoint complete: wrote 75 buffers (0.5%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.002 s, sync=0.002 s, total=0.005 s; sync files=47, longest=0.001 s, average=0.001 s; distance=4793 kB, estimate=8336 kB; lsn=0/2342268, redo lsn=0/2342210
+2026-11-04 05:05:58.299 +04 [65964] LOG:  received immediate shutdown request
+2026-11-04 05:05:58.303 +04 [65964] LOG:  database system is shut down
+2026-11-04 05:07:38.209 +04 [66756] LOG:  starting PostgreSQL 17.11 (Homebrew) on aarch64-apple-darwin25.6.0, compiled by Apple clang version 21.0.0 (clang-2100.3.34.2), 64-bit
+2026-11-04 05:07:38.210 +04 [66756] LOG:  listening on IPv4 address "127.0.0.1", port 55432
+2026-11-04 05:07:38.210 +04 [66756] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55432"
+2026-11-04 05:07:38.213 +04 [66759] LOG:  database system was shut down at 2026-11-04 05:07:38 +04
+2026-11-04 05:07:38.214 +04 [66756] LOG:  database system is ready to accept connections
+2026-11-04 05:07:52.668 +04 [66757] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:07:52.740 +04 [66757] LOG:  checkpoint complete: wrote 1097 buffers (6.7%); 1 WAL file(s) added, 0 removed, 0 recycled; write=0.061 s, sync=0.010 s, total=0.072 s; sync files=415, longest=0.001 s, average=0.001 s; distance=9699 kB, estimate=9699 kB; lsn=0/1E93720, redo lsn=0/1E936C8
+2026-11-04 05:07:52.754 +04 [66757] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:07:52.755 +04 [66757] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=2, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=8729 kB; lsn=0/1E93C68, redo lsn=0/1E93C10
+2026-11-04 05:07:53.616 +04 [66808] ERROR:  permission denied for function broker_append_bytes
+2026-11-04 05:07:53.616 +04 [66808] STATEMENT:  SELECT public.broker_append_bytes($1,$2,$3)
+2026-11-04 05:07:54.121 +04 [66816] ERROR:  new row for relation "batches" violates check constraint "test_7ded8ee66260497d9c23a450d1a5b490"
+2026-11-04 05:07:54.121 +04 [66816] DETAIL:  Failing row contains (test_cb40ba63b75f4748a1b68fd397243c36, 0, 1, 1, \x00000000000000000000004000000000024d22476800000000000000000000..., 2000, [2000], 2026-11-04 05:07:54.121179+04).
+2026-11-04 05:07:54.121 +04 [66816] CONTEXT:  SQL statement "INSERT INTO broker.batches(topic,partition,base_offset,record_count,data,max_timestamp,timestamps)
+	 VALUES(t,p,off,n,bytes,maximum,ts)"
+	PL/pgSQL function append_bytes(text,integer,bytea,integer,bigint,jsonb) line 6 at SQL statement
+	SQL statement "SELECT broker.append_bytes($1,$2,$3,$4,$5,$6)"
+2026-11-04 05:07:54.121 +04 [66816] STATEMENT:  SELECT public.broker_append_bytes($1,$2,$3)
+2026-11-04 05:07:54.926 +04 [66840] ERROR:  requests must be an array
+2026-11-04 05:07:54.926 +04 [66840] CONTEXT:  PL/pgSQL function public.broker_fetch_binary(jsonb) line 6 at RAISE
+2026-11-04 05:07:54.926 +04 [66840] STATEMENT:  SELECT * FROM public.broker_fetch_binary($1)
+2026-11-04 05:07:54.926 +04 [66840] ERROR:  requests must be an array
+2026-11-04 05:07:54.926 +04 [66840] CONTEXT:  PL/pgSQL function public.broker_fetch_binary(jsonb) line 6 at RAISE
+2026-11-04 05:07:54.926 +04 [66840] STATEMENT:  SELECT * FROM public.broker_fetch_binary($1)
+2026-11-04 05:07:54.927 +04 [66840] ERROR:  invalid fetch requests
+2026-11-04 05:07:54.927 +04 [66840] CONTEXT:  PL/pgSQL function public.broker_fetch_binary(jsonb) line 10 at RAISE
+2026-11-04 05:07:54.927 +04 [66840] STATEMENT:  SELECT * FROM public.broker_fetch_binary($1)
+2026-11-04 05:07:54.928 +04 [66840] ERROR:  invalid fetch requests
+2026-11-04 05:07:54.928 +04 [66840] CONTEXT:  PL/pgSQL function public.broker_fetch_binary(jsonb) line 10 at RAISE
+2026-11-04 05:07:54.928 +04 [66840] STATEMENT:  SELECT * FROM public.broker_fetch_binary($1)
+2026-11-04 05:08:17.937 +04 [66757] LOG:  checkpoint starting: immediate force wait
+2026-11-04 05:08:17.941 +04 [66757] LOG:  checkpoint complete: wrote 75 buffers (0.5%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.002 s, sync=0.002 s, total=0.004 s; sync files=47, longest=0.001 s, average=0.001 s; distance=4794 kB, estimate=8336 kB; lsn=0/23427A0, redo lsn=0/2342748
+2026-11-04 05:08:19.446 +04 [66756] LOG:  received immediate shutdown request
+2026-11-04 05:08:19.449 +04 [66756] LOG:  database system is shut down

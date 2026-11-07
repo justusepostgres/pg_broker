@@ -1,0 +1,22 @@
+{
+  "display-name": "pg-broker-omb-client-1",
+  "shape": "VM.Standard.A1.Flex",
+  "shape-config": {
+    "baseline-ocpu-utilization": null,
+    "gpu-description": null,
+    "gpus": 0,
+    "local-disk-description": null,
+    "local-disks": 0,
+    "local-disks-total-size-in-gbs": null,
+    "max-vnic-attachments": 2,
+    "memory-in-gbs": 12.0,
+    "networking-bandwidth-in-gbps": 2.0,
+    "ocpus": 2.0,
+    "processor-description": "3.0 GHz Ampere\u00ae Altra\u2122",
+    "resource-management": null,
+    "vcpus": 2
+  },
+  "image-id": "ocid1.image.oc1.us-sanjose-1.aaaaaaaahvyjgcnzioecv3gguwui7mq5a4fcjol7b2q54cwvwatmhx2ducoq",
+  "availability-domain": "lJPQ:US-SANJOSE-1-AD-1",
+  "lifecycle-state": "RUNNING"
+}

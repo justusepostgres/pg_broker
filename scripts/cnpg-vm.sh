@@ -13,11 +13,11 @@ case "${1:-help}" in
   k -n cnpg-system rollout status deployment/cnpg-controller-manager --timeout=180s
   ;;
  build)
-  docker build --target cnpg -t pg-broker-postgres:17.5-0.1.1 .
-  docker build --target gateway -t pg-broker-gateway:0.1.1 .
+  docker build --target cnpg -t pg-broker-postgres:17.5-0.1.7 .
+  docker build --target gateway -t pg-broker-gateway:0.1.7 .
   ;;
  deploy)
-  docker save pg-broker-postgres:17.5-0.1.1 pg-broker-gateway:0.1.1 | sudo k3s ctr images import -
+  docker save pg-broker-postgres:17.5-0.1.7 pg-broker-gateway:0.1.7 | sudo k3s ctr images import -
   k apply -k deploy/cnpg
   k -n pg-broker wait cluster/broker-db --for=condition=Ready --timeout=600s
   k -n pg-broker rollout status deployment/gateway --timeout=180s
@@ -27,11 +27,11 @@ case "${1:-help}" in
   k -n pg-broker wait pod/kafka-client --for=condition=Ready --timeout=180s
   k -n pg-broker cp tests/cnpg_smoke.py kafka-client:/tmp/cnpg_smoke.py
   ;;
- seed|resume) k -n pg-broker exec kafka-client -- python /tmp/cnpg_smoke.py "$1" ;;
+ seed|resume|no-standby) k -n pg-broker exec kafka-client -- python /tmp/cnpg_smoke.py "$1" ;;
  restart-gateways)
   k -n pg-broker rollout restart deployment/gateway
   k -n pg-broker rollout status deployment/gateway --timeout=180s
   ;;
  status) k -n pg-broker get clusters,pods,services ;;
- *) echo 'Usage: scripts/cnpg-vm.sh {bootstrap|build|deploy|client|seed|resume|restart-gateways|status}' ;;
+ *) echo 'Usage: scripts/cnpg-vm.sh {bootstrap|build|deploy|client|seed|resume|no-standby|restart-gateways|status}' ;;
 esac

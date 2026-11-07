@@ -1,0 +1,38 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-018-capacity85k-2-broker/result.json",
+    "workload": "85k-1-topic-16-partitions-1kb",
+    "samples": 90,
+    "publish_msg_s_mean": 85037.04557848454,
+    "consume_msg_s_mean": 85036.39304242084,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 1012,
+    "backlog_last": 506,
+    "backlog_max": 15927,
+    "publish_p99_ms": 134.281,
+    "publish_delay_p99_us": 728,
+    "end_to_end_p99_ms": 211.0,
+    "publish_delay_avg_windows": {
+      "first_us": 94.98397401626858,
+      "last_us": 64.33407153307948,
+      "max_us": 495.6053009406817,
+      "change_us": -30.649902483189095,
+      "linear_trend_us_per_sample": 0.13928111103859359
+    },
+    "publish_p999_ms": 338.717,
+    "publish_p9999_ms": 447.701,
+    "publish_max_ms": 538.743,
+    "publish_delay_p999_us": 2164,
+    "publish_delay_p9999_us": 31381,
+    "publish_delay_max_us": 66349,
+    "end_to_end_p999_ms": 428.001,
+    "end_to_end_p9999_ms": 595.003,
+    "end_to_end_max_ms": 705.003,
+    "producer_histogram_limit": {
+      "cap_us": 60000000,
+      "publish_at_cap": false,
+      "scheduling_delay_at_cap": false,
+      "scope": "Pinned upstream producer metrics clamp at 60s; values at the cap may be censored. This cap does not apply to the end-to-end histogram."
+    }
+  }
+]

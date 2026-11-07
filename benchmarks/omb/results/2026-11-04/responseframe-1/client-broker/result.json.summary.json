@@ -1,0 +1,25 @@
+[
+  {
+    "file": "/home/ubuntu/results/omb-client-018-responseframe-1-broker/result.json",
+    "workload": "100k-1-topic-16-partitions-1kb",
+    "samples": 89,
+    "publish_msg_s_mean": 89124.29171682228,
+    "consume_msg_s_mean": 89123.1986815483,
+    "publish_error_msg_s_max": 0.0,
+    "backlog_first": 2783,
+    "backlog_last": 2024,
+    "backlog_max": 4807,
+    "publish_p99_ms": 591.987,
+    "publish_delay_p99_us": 60000255,
+    "end_to_end_p99_ms": 622.003,
+    "publish_p999_ms": 712.327,
+    "publish_p9999_ms": 998.923,
+    "publish_max_ms": 1106.615,
+    "publish_delay_p999_us": 60000255,
+    "publish_delay_p9999_us": 60000255,
+    "publish_delay_max_us": 60000255,
+    "end_to_end_p999_ms": 745.003,
+    "end_to_end_p9999_ms": 1027.003,
+    "end_to_end_max_ms": 1138.007
+  }
+]

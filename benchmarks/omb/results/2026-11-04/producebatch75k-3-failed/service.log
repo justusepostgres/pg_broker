@@ -1,0 +1,74 @@
+Nov 04 02:22:26 pg-broker-omb-verification-1 systemd[1]: Started omb-producebatch017-75k-3.service - /bin/bash /home/ubuntu/pg-broker/benchmarks/omb/oci-pair.sh 017-producebatch75k-3 75k broker-first off.
+Nov 04 02:22:26 pg-broker-omb-verification-1 sudo[139641]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker ps -q
+Nov 04 02:22:26 pg-broker-omb-verification-1 sudo[139641]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:26 pg-broker-omb-verification-1 sudo[139641]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:26 pg-broker-omb-verification-1 sudo[139656]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker volume inspect omb-pair-017-producebatch75k-3-data
+Nov 04 02:22:26 pg-broker-omb-verification-1 sudo[139656]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:26 pg-broker-omb-verification-1 sudo[139656]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:26 pg-broker-omb-verification-1 sudo[139666]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker image inspect sha256:6821d31236114005fd88bc092f63721b540538169b8f048e09771ed68e24da19 --format {{.Id}}
+Nov 04 02:22:26 pg-broker-omb-verification-1 sudo[139666]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:26 pg-broker-omb-verification-1 sudo[139666]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:26 pg-broker-omb-verification-1 sudo[139675]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker run --rm sha256:6821d31236114005fd88bc092f63721b540538169b8f048e09771ed68e24da19 sha256sum /opt/pgsql/lib/pg_broker.so
+Nov 04 02:22:26 pg-broker-omb-verification-1 sudo[139675]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:26 pg-broker-omb-verification-1 sudo[139675]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:27 pg-broker-omb-verification-1 sudo[139805]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker run -d --name omb-pair-017-producebatch75k-3-db --cpuset-cpus=0,1 --memory=8g --network host --env-file broker-omb.env -v omb-pair-017-producebatch75k-3-data:/data sha256:6821d31236114005fd88bc092f63721b540538169b8f048e09771ed68e24da19 container-db.sh
+Nov 04 02:22:27 pg-broker-omb-verification-1 sudo[139805]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:27 pg-broker-omb-verification-1 bash[139806]: e3797606822cd8400d8f30a27fd6eb48dd96a9b6ea07f1994670630517259968
+Nov 04 02:22:27 pg-broker-omb-verification-1 sudo[139805]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:27 pg-broker-omb-verification-1 sudo[139869]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker exec omb-pair-017-producebatch75k-3-db test -f /data/.broker-ready
+Nov 04 02:22:27 pg-broker-omb-verification-1 sudo[139869]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:27 pg-broker-omb-verification-1 sudo[139869]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[139928]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker exec omb-pair-017-producebatch75k-3-db test -f /data/.broker-ready
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[139928]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[139928]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[139955]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker exec omb-pair-017-producebatch75k-3-db psql -U postgres -Atc 'SELECT extversion FROM pg_extension WHERE extname=\'pg_broker\''
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[139955]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[139955]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[139986]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-producebatch75k-3/pg_broker--0.1.5--0.1.6.sql omb-pair-017-producebatch75k-3-db:/opt/pgsql/share/extension/
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[139986]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[139986]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[139995]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker cp /home/ubuntu/results/omb-pair-017-producebatch75k-3/pg_broker--0.1.6--0.1.7.sql omb-pair-017-producebatch75k-3-db:/opt/pgsql/share/extension/
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[139995]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[139995]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[140005]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker exec omb-pair-017-producebatch75k-3-db psql -U postgres -v ON_ERROR_STOP=1 -c 'ALTER EXTENSION pg_broker UPDATE TO \'0.1.7\'' -c 'ALTER TABLE broker.batches ALTER data SET COMPRESSION lz4'
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[140005]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:28 pg-broker-omb-verification-1 bash[140006]: ALTER EXTENSION
+Nov 04 02:22:28 pg-broker-omb-verification-1 bash[140006]: ALTER TABLE
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[140005]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[140036]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker exec omb-pair-017-producebatch75k-3-db psql -U postgres -v ON_ERROR_STOP=1 -c 'ALTER SYSTEM SET wal_init_zero = \'off\'' -c 'SELECT pg_reload_conf()'
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[140036]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:28 pg-broker-omb-verification-1 bash[140037]: ALTER SYSTEM
+Nov 04 02:22:28 pg-broker-omb-verification-1 bash[140037]:  pg_reload_conf
+Nov 04 02:22:28 pg-broker-omb-verification-1 bash[140037]: ----------------
+Nov 04 02:22:28 pg-broker-omb-verification-1 bash[140037]:  t
+Nov 04 02:22:28 pg-broker-omb-verification-1 bash[140037]: (1 row)
+Nov 04 02:22:28 pg-broker-omb-verification-1 sudo[140036]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:29 pg-broker-omb-verification-1 sudo[140113]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker exec omb-pair-017-producebatch75k-3-db psql -U postgres -Atc 'SELECT current_setting(\'wal_init_zero\'),current_setting(\'wal_recycle\'),current_setting(\'wal_segment_size\'),current_setting(\'wal_sync_method\'),current_setting(\'fsync\'),current_setting(\'full_page_writes\'),current_setting(\'synchronous_commit\')'
+Nov 04 02:22:29 pg-broker-omb-verification-1 sudo[140113]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:29 pg-broker-omb-verification-1 sudo[140113]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:29 pg-broker-omb-verification-1 sudo[140144]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker run -d --name omb-pair-017-producebatch75k-3-gateway --cpuset-cpus=0,1 --memory=1g --network host --env-file broker-omb.env --env LISTEN_ADDR=10.84.0.247:9092 --env ADVERTISED_HOST=10.84.0.247 -v /home/ubuntu/candidate-producebatch017/pg-broker-gateway:/usr/local/bin/pg-broker-gateway:ro sha256:6821d31236114005fd88bc092f63721b540538169b8f048e09771ed68e24da19
+Nov 04 02:22:29 pg-broker-omb-verification-1 sudo[140144]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:29 pg-broker-omb-verification-1 bash[140145]: 8b5982499aa1febdb28e38f31091b08fc165daba0c093d442af392819d2ad623
+Nov 04 02:22:29 pg-broker-omb-verification-1 sudo[140144]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:22:29 pg-broker-omb-verification-1 sudo[140202]:   ubuntu : PWD=/home/ubuntu ; USER=root ; COMMAND=/usr/bin/docker inspect omb-pair-017-producebatch75k-3-db omb-pair-017-producebatch75k-3-gateway --format '{{.Name}} {{.HostConfig.CpusetCpus}} {{.HostConfig.Memory}}'
+Nov 04 02:22:29 pg-broker-omb-verification-1 sudo[140202]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:22:29 pg-broker-omb-verification-1 sudo[140202]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:49:09 pg-broker-omb-verification-1 bash[139637]: Client handoff timed out: broker
+Nov 04 02:49:09 pg-broker-omb-verification-1 sudo[142757]:   ubuntu : PWD=/home/ubuntu/pg-broker ; USER=root ; COMMAND=/usr/bin/systemctl stop omb-pair-017-producebatch75k-3-kafka omb-pair-017-producebatch75k-3-kafka-recovery
+Nov 04 02:49:09 pg-broker-omb-verification-1 sudo[142757]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:49:09 pg-broker-omb-verification-1 sudo[142757]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:49:09 pg-broker-omb-verification-1 sudo[142759]:   ubuntu : PWD=/home/ubuntu/pg-broker ; USER=root ; COMMAND=/usr/bin/docker stop omb-pair-017-producebatch75k-3-gateway
+Nov 04 02:49:09 pg-broker-omb-verification-1 sudo[142759]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:49:19 pg-broker-omb-verification-1 sudo[142759]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:49:19 pg-broker-omb-verification-1 sudo[142812]:   ubuntu : PWD=/home/ubuntu/pg-broker ; USER=root ; COMMAND=/usr/bin/docker inspect --format {{.State.Running}} omb-pair-017-producebatch75k-3-db
+Nov 04 02:49:19 pg-broker-omb-verification-1 sudo[142812]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:49:19 pg-broker-omb-verification-1 sudo[142812]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:49:19 pg-broker-omb-verification-1 sudo[142821]:   ubuntu : PWD=/home/ubuntu/pg-broker ; USER=root ; COMMAND=/usr/bin/docker kill --signal=SIGINT omb-pair-017-producebatch75k-3-db
+Nov 04 02:49:19 pg-broker-omb-verification-1 sudo[142821]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:49:19 pg-broker-omb-verification-1 sudo[142821]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:49:19 pg-broker-omb-verification-1 sudo[142837]:   ubuntu : PWD=/home/ubuntu/pg-broker ; USER=root ; COMMAND=/usr/bin/docker wait omb-pair-017-producebatch75k-3-db
+Nov 04 02:49:19 pg-broker-omb-verification-1 sudo[142837]: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
+Nov 04 02:49:19 pg-broker-omb-verification-1 sudo[142837]: pam_unix(sudo:session): session closed for user root
+Nov 04 02:49:19 pg-broker-omb-verification-1 systemd[1]: omb-producebatch017-75k-3.service: Main process exited, code=exited, status=1/FAILURE
+Nov 04 02:49:19 pg-broker-omb-verification-1 systemd[1]: omb-producebatch017-75k-3.service: Failed with result 'exit-code'.
+Nov 04 02:49:19 pg-broker-omb-verification-1 systemd[1]: omb-producebatch017-75k-3.service: Consumed 2.199s CPU time, 19.2M memory peak, 0B memory swap peak.
